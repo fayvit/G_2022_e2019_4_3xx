@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Name: DetalhesDoOlho_4
+  m_EditorClassIdentifier: Assembly-CSharp::MaskedTexture
+  subsection: 04000000
+  coresEditaveis:
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 0
+    registro: 1
+  baseTex: {fileID: 2800000, guid: 829ffa957722e574fa47dba8b65a0781, type: 3}
+  maskTex: {fileID: 2800000, guid: 135a3ab4205ca5f45855bb87eddf9356, type: 3}
+  meshParent: 0

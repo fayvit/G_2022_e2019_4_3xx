@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: rostoBase
+  m_Shader: {fileID: -6465566751694194690, guid: de15745301c7d6e4fa5489853e8303e1,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalheDaSobrancelha:
+        m_Texture: {fileID: 2800000, guid: d0362d1f2a3cde7469262dc6de3eb50f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalhesBrancoDosOlhos:
+        m_Texture: {fileID: 2800000, guid: 9f6aa8917143f864a90305f972a08fbd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalhesDaBarba:
+        m_Texture: {fileID: 2800000, guid: 493a6b3f7300d6c43bb7dcb78200c486, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalhesDaIris:
+        m_Texture: {fileID: 2800000, guid: f0969c92c16a05e4facaddbc3d52fb19, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalhesDaPupila:
+        m_Texture: {fileID: 2800000, guid: 791b7f8f9525b904c8f8a14d518a9163, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetalhesDaUmidade:
+        m_Texture: {fileID: 2800000, guid: a75b307601d9bc14cbb5868f4fd4ac00, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c8c90355ca2aad347ad60fe305f522fb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDaBarba:
+        m_Texture: {fileID: 2800000, guid: 090ceaae0b0de874ea7f684adad0973d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDaIris:
+        m_Texture: {fileID: 2800000, guid: 914b09d7d41227345a043d71709d72bf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDaPupila:
+        m_Texture: {fileID: 2800000, guid: f1e777213ddf0b4439ccba89c1c79d08, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDaSobrancelha:
+        m_Texture: {fileID: 2800000, guid: 008a7de3489d1b24e909a4278b27985a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDaUmidade:
+        m_Texture: {fileID: 2800000, guid: 529c2ea3b95c3d347a9261ecd8aa4bcc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MascaraDoBrancoDosOlhos:
+        m_Texture: {fileID: 2800000, guid: 39fde4918ad629740b2ba2e501ef3662, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: c5304b00a3b929b42bd2ab4564807fe6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Fresnel_Angle: -2.5
+    - _Fresnel_Size: 0.1
+    - _GlossMapScale: 1
+    - _Gloss_size: 10
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _ShadowAttenFactor: 0.15
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BrancoDosOlhos: {r: 1, g: 0.9529412, b: 0.7411765, a: 1}
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _CorDaBarba: {r: 0.2, g: 0.09960785, b: 0.10117648, a: 1}
+    - _CorDaIris: {r: 0.6, g: 0.21882354, b: 0.21176472, a: 1}
+    - _CorDaSobrancelha: {r: 0.4, g: 0.08784314, b: 0.08470588, a: 1}
+    - _CorDaUmidade: {r: 0.6862745, g: 1, b: 1, a: 1}
+    - _CorPupila: {r: 0.4, g: 0.24313727, b: 0.089411765, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0}
+    - _MyBaseColor: {r: 1, g: 0.8627451, b: 0.5803922, a: 1}
+    - _ShadingBlacks: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0}
+    - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}

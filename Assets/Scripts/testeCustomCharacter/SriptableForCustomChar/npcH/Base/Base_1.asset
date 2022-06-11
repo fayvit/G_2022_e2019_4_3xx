@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Name: Base_1
+  m_EditorClassIdentifier: 
+  subsection: 0100000007000000030000000f00000002000000090000000a0000000b0000000c0000000d000000
+  coresEditaveis:
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 1
+    registro: 0
+  mesh: {fileID: 6782957024018738368, guid: b56277914cf5f9b48bf4b5f5fc38019f, type: 3}
+  textureSign:
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    id: 3
+    baseTextureID: 0
+    maskedTextureID: 1
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    id: 4
+    baseTextureID: 2
+    maskedTextureID: 3
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    id: 5
+    baseTextureID: 10
+    maskedTextureID: 11
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    id: 6
+    baseTextureID: 4
+    maskedTextureID: 5
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    id: 7
+    baseTextureID: 6
+    maskedTextureID: 7
