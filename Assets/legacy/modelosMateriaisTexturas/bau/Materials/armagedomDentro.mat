@@ -121,7 +121,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
     - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0.6}
-    - _MyBaseColor: {r: 0.8, g: 0.6862745, b: 0.46666667, a: 0}
+    - _MyBaseColor: {r: 0.8962264, g: 0.7072828, b: 0.34242615, a: 0}
     - _ShadingBlacks: {r: 0.08235294, g: 0.08235294, b: 0.08235294, a: 0}
     - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

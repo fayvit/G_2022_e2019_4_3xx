@@ -50,6 +50,7 @@ namespace TalkSpace
             textoDoBotao = TextBank.RetornaFraseDoIdioma(TextKey.textoBaseDeAcao);
 
             NPC = esseNpc;
+            esseNpc.GO_Reference = gameObject;
             base.Start();
         }
 

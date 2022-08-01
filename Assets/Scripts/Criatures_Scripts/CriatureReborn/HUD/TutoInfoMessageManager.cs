@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FayvitMessageAgregator;
 using FayvitSupportSingleton;
-using FayvitBasicTools;
 using Criatures2021;
 using TextBankSpace;
-using FayvitSounds;
 
 namespace Criatures2021Hud
 {
@@ -37,7 +35,7 @@ namespace Criatures2021Hud
 
             MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
             {
-                myHero = AbstractGlobalController.Instance.Players[0].Manager.transform.gameObject
+                myHero = MyGlobalController.MainCharTransform.gameObject
             });
         }
 

@@ -204,7 +204,7 @@ public struct ListToSaveCustomizationContainer
                 );
         if (dccd != null)
             instance.dccd = dccd;
-        //Debug.Log(instance.dccd + " : " + dccd);
+        Debug.Log("No momento do save se resgata o dicionario:"+instance.dccd + " : " + dccd+" Numero no dicionarios: "+dccd.Count);
     }
 
     public void CreateList(string dicKey)

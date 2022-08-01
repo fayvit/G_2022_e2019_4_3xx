@@ -54,20 +54,11 @@ namespace Criatures2021Hud
 
         public void InvokeAction()
         {
-            MessageAgregator<MsgInvokeActionFromHud>.Publish();
+            MessageAgregator<MsgInvokeActionFromHud>.Publish(new MsgInvokeActionFromHud()
+            { 
+                actionHudManagerActive=Active
+            });
         }
     }
 
-    public struct MsgInvokeActionFromHud : IMessageBase { }
-
-    public struct MsgRequestShowActionHud : IMessageBase
-    {
-        public string infoText;
-        public string infoCommand;
-        public GameObject request;
-    }
-
-    public struct MsgRequestHideActionHud : IMessageBase {
-        public GameObject request;
-    }
 }

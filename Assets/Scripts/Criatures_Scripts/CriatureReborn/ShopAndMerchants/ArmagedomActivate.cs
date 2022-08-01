@@ -529,7 +529,7 @@ namespace Criatures2021
             AbstractGameController.Instance.MyKeys.MudaCont(KeyCont.armagedoms, (int)k);
 
             dispara.StartTextDisplay();
-            manager = AbstractGlobalController.Instance.Players[0].Manager.transform.GetComponent<CharacterManager>();
+            manager = MyGlobalController.MainPlayer;
             manager.Dados.UltimoArmagedom = indiceDesseArmagedom;
 
             CameraApplicator.cam.StartShowPointCamera(transform,new SinglePointCameraProperties() { 

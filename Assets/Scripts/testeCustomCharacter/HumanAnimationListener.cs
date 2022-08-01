@@ -101,7 +101,12 @@ public class HumanAnimationListener : MonoBehaviour
 
     private void OnRequestAnimateFallJump(AnimateFallMessage obj)
     {
-        OnStartJump(new AnimateStartJumpMessage() { gameObject = obj.gameObject });
+        if (obj.gameObject == gameObject)
+        {
+            A.Play(jumpAnimationName);
+            A.SetBool(jumpAnimationBool, true);
+            A.SetBool(groundedBool, false);
+        }
     }
 
     private void OnEndCapture(MsgEndOfCaptureAnimate obj)
@@ -216,6 +221,7 @@ public class HumanAnimationListener : MonoBehaviour
 public struct MsgRequestHumanDamage : IMessageBase {
     public GameObject gameObject;
     public PetAttackBase esseGolpe;
+    public bool autoReturnToMove;
 }
 
 public struct MsgDesyncStandardAnimation : IMessageBase

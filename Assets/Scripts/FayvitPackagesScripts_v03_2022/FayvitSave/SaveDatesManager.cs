@@ -57,13 +57,30 @@ namespace FayvitSave
             }
         }
 
-        public static void SalvarAtualizandoDados()
+        public static void RemoverSavesNulosDaLista()
         {
-            Debug.Log("Fazer o SaveDates");
-            //if (s.SavedGames.Count > s.IndiceDoJogoAtualSelecionado)
-            //    s.SavedGames[s.IndiceDoJogoAtualSelecionado] = (new SaveDates());
-            //else
-            //    s.SavedGames.Add(new SaveDates());
+            List<int> remover = new List<int>();
+            for (int i = 0; i < s.SaveProps.Count; i++)
+            {
+                Debug.Log("problema no indice? " + (s.SavedGames.Count <= s.SaveProps[i].indiceDoSave)+" indice do save: "+ s.SaveProps[i].indiceDoSave);
+                if(s.SavedGames.Count > s.SaveProps[i].indiceDoSave)
+                    Debug.Log( " problema de nulidade? " + (s.SavedGames[s.SaveProps[i].indiceDoSave]==null));
+
+                if (s.SavedGames.Count<=s.SaveProps[i].indiceDoSave|| s.SavedGames[s.SaveProps[i].indiceDoSave] == null)
+                    remover.Add(i);
+            }
+
+            for (int i = remover.Count - 1; i >= 0; i--)
+                s.RemoveSaveDates(remover[i]);
+        }
+
+        public static void SalvarAtualizandoDados(SaveDates S)
+        {
+            Debug.Log("Testando novo o SaveDates");
+            if (s.SavedGames.Count > s.IndiceDoJogoAtualSelecionado)
+                s.SavedGames[s.IndiceDoJogoAtualSelecionado] = S;
+            else
+                s.SavedGames.Add(S);
 
             Save();
             //loadSave.Save(new SaveDates());
@@ -119,7 +136,9 @@ namespace FayvitSave
 
             lista = SaveProps;
 
-            SavedGames[p.indiceDoSave] = null;
+            if(SavedGames.Count>p.indiceDoSave)
+                SavedGames[p.indiceDoSave] = null;
+
             lista.Remove(p);
 
             Save();
@@ -259,7 +278,8 @@ namespace FayvitSave
     {
         public string nome;
         public int indiceDoSave;
-        public System.DateTime ultimaJogada;
+        public System.DateTime ultimaJogada;           
+
 
         public int CompareTo(object obj)
         {

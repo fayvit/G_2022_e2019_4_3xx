@@ -56,6 +56,7 @@ public class ProvisionalStartGame   : MonoBehaviour
             Debug.Log(character);
 
             CharacterManager c = character.gameObject.AddComponent<CharacterManager>();
+            c.InTeste = true;
             AbstractGlobalController.Instance.Players.Add(
                 new PlayersInGameDb() { 
                 Control = FayvitCommandReader.Controlador.teclado,

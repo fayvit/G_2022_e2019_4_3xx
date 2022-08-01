@@ -11,7 +11,7 @@ namespace FayvitLoadScene
     [System.Serializable]
     public class SceneLoader : MonoBehaviour, ISceneLoader
     {
-        [SerializeField] private LoadBar loadBar;
+        //[SerializeField] private LoadBar loadBar;
 
         private SaveDates S;
         private AsyncOperation[] a2;
@@ -84,7 +84,7 @@ namespace FayvitLoadScene
                 SceneManager.UnloadSceneAsync(NomesCenasEspeciais.menuInicial.ToString());
             }
 
-            loadBar = FindObjectOfType<LoadBar>();
+            //loadBar = FindObjectOfType<LoadBar>();
 
             AditiveLoadScene(NomesCenasEspeciais.ComunsDeFase);
             SceneManager.sceneLoaded -= IniciarCarregamento;
@@ -100,13 +100,13 @@ namespace FayvitLoadScene
         {
 
             SceneManager.sceneLoaded -= IniciarCarregamentoComComuns;
-            loadBar = FindObjectOfType<LoadBar>();
+            //loadBar = FindObjectOfType<LoadBar>();
             ComunsCarregado();
         }
 
         void ComunsCarregado()
         {
-            if(StaticInstanceExistence<IGameController>.SchelduleExistence(ComunsCarregado,this,()=> {
+            if (StaticInstanceExistence<IGameController>.SchelduleExistence(ComunsCarregado, this, () => {
                 return AbstractGameController.Instance;
             }))
             //if (ExistenciaDoController.AgendaExiste(ComunsCarregado, this))
@@ -120,17 +120,17 @@ namespace FayvitLoadScene
                 else
                     S = null;
 
-                if (S == null)
+                if (S == null || S.VariaveisChave == null || S.VariaveisChave.CenasAtivas == null)
                 {
                     fase = FasesDoLoad.carregando;
                     aSerCarregado = 1;
                     a2 = new AsyncOperation[1];
-                    a2[0] = AditiveLoadScene(NomesCenas.TutoScene);
+                    a2[0] = AditiveLoadScene(NomesCenas.cenaTeste);
 
                 }
                 else
                 {
-
+                    
                     NomesCenas[] N2 = DescarregarCenasDesnecessarias(S.VariaveisChave.CenasAtivas.ToArray());
 
                     numCarregador = 0;
@@ -167,7 +167,7 @@ namespace FayvitLoadScene
         {
             fase = FasesDoLoad.carregando;
             NomesCenas[] N = PegueAsCenasPorCarregar(S.VariaveisChave.CenasAtivas.ToArray());
-
+            Debug.Log("numero de cenas carregando: " + N.Length);
 
             aSerCarregado = N.Length;
 
@@ -190,15 +190,15 @@ namespace FayvitLoadScene
 
         void SetarCenaPrincipal(Scene scene, LoadSceneMode mode)
         {
-            if (S != null)
+            if (S != null&&S.VariaveisChave!=null&&S.VariaveisChave.CenasAtivas!=null)
             {
-                Debug.Log(S.VariaveisChave.CenaAtiva.ToString() + " : " + scene.name);
+                //Debug.Log(S.VariaveisChave.CenaAtiva.ToString() + " : " + scene.name);
                 if (scene.name == S.VariaveisChave.CenaAtiva.ToString())
                 {
                     PedirAtualizacaoDeDados(scene);
                 }
             }
-            else if (scene.name == NomesCenas.TutoScene.ToString())
+            else if (scene.name == NomesCenas.cenaTeste.ToString())
             {
                 PedirAtualizacaoDeDados(scene);
             }
@@ -312,7 +312,7 @@ namespace FayvitLoadScene
                     else
                         progresso = 1;
 
-                    loadBar.ValorParaBarra(Mathf.Min(progresso, tempo / tempoMin, 1));
+                    //loadBar.ValorParaBarra(Mathf.Min(progresso, tempo / tempoMin, 1));
 
                     if (podeIr && tempo >= tempoMin)
                     {
@@ -337,10 +337,11 @@ namespace FayvitLoadScene
             MessageAgregator<FadeInComplete>.AddListener(OnFadeInComplete);
             //EventAgregator.AddListener(EventKey.fadeInComplete, );
 
-            SceneManager.SetActiveScene(
-               SceneManager.GetSceneByName(AbstractGameController.Instance.MyKeys.CenaAtiva.ToString()));
+            Debug.Log("cena inalcançavel: " + AbstractGameController.Instance.MyKeys.CenaAtiva.ToString());
+            //SceneManager.SetActiveScene(
+            //   SceneManager.GetSceneByName(AbstractGameController.Instance.MyKeys.CenaAtiva.ToString()));
 
-            SaveDatesManager.SalvarAtualizandoDados();
+            //SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.SaveDates());
 
             fase = FasesDoLoad.eventInProgress;
 
@@ -349,6 +350,55 @@ namespace FayvitLoadScene
             //GameController.g.ModificacoesDaCena();
             Time.timeScale = 1;
             Physics2D.gravity = new Vector2(0, -0.8f);
+
+            if (!GameObject.FindWithTag("MainCamera"))
+            {
+                MessageAgregator<MsgRequestCam>.Publish();
+            }
+
+            Debug.Log("cena ativa para musica: " + SceneManager.GetActiveScene().name);
+            NomesCenas n = StringForEnum.GetEnum<NomesCenas>(SceneManager.GetActiveScene().name);
+            MessageAgregator<MsgChangeMusicIfNew>.Publish(new MsgChangeMusicIfNew()
+            {
+                nmcvc = Criatures2021.MusicDictionary.GetSceneMusic(n)
+            });
+
+            SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            {
+                if (!FindObjectOfType<Criatures2021.CharacterManager>() && S != null && ((Criatures2021.SaveDates)S).Ccd != null)
+                {
+                    GameObject Ggg = CombinerSingleton.Instance.GetCombination(((Criatures2021.SaveDates)S).Ccd);
+                    Criatures2021.CharacterManager c = Ggg.AddComponent<Criatures2021.CharacterManager>();
+                    c.InTeste = false;
+                    c.transform.position = S.Posicao;
+                    c.transform.rotation = S.Rotacao;
+                    c.Ccd = ((Criatures2021.SaveDates)S).Ccd;
+
+                    SceneManager.MoveGameObjectToScene(Ggg, SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()));
+
+                    SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                    {
+                        c.Dados = (Criatures2021.DadosDeJogador)S.Dados;//((Criatures2021.SaveDates)S).EssesDados;
+                        c.InicializarPet();
+                        Criatures2021.MyGameController.LoadSavedCharacters();
+                    });
+
+                    AbstractGlobalController.Instance.Players = new System.Collections.Generic.List<IPlayersInGameDb>() {
+                    new PlayersInGameDb()
+                    {
+                        Control = FayvitCommandReader.Controlador.teclado,
+                        DbState = PlayerDbState.ocupadoLocal,
+                        Manager = c
+                    }
+                    };
+
+                    SetHeroCamera.Set(c.transform);
+                    //MessageAgregator<Criatures2021.MsgChangeToHero>.Publish(new Criatures2021.MsgChangeToHero()
+                    //{
+                    //    myHero = Ggg
+                    //});
+                }
+            });
         }
 
         //private void OnFadeOutComplete(IGameEvent obj)
@@ -374,7 +424,6 @@ namespace FayvitLoadScene
         private void OnFadeInComplete(FadeInComplete obj)
         {
             Physics2D.gravity = new Vector2(0, -9.8f);
-            Debug.Log("cena ativa para musica: " + SceneManager.GetActiveScene().name);
 
             Destroy(gameObject);
 
@@ -408,7 +457,9 @@ namespace FayvitLoadScene
         CenaTesteNumberTwo,
         TutoScene,
         CenaTesteNumber3,
-        MAST_Teste
+        MAST_Teste,
+        acampamentoDaResistencia,
+        cavernaAcampamentoKatids
     }
 
     public enum NomesCenasEspeciais
@@ -418,7 +469,9 @@ namespace FayvitLoadScene
         ComunsDeFase,
         CenaDeCarregamento,
         menuInicial,
-        LoadScene
+        LoadScene,
+        cutsceneIntro,
+        SelectCriature
     }
 
     public struct MsgUpdateDates : IMessageBase

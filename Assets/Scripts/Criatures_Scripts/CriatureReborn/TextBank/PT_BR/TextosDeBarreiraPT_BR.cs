@@ -24,7 +24,13 @@ namespace TextBankSpace
             "Existe um mecanismo com as engrenagens emperradas. Parece que a graxa perdeu a viscosidade",
             /*ID=12*/
             "Pedras empilhadas, talvez um impacto forte possa move-las"
-        } }
+        } },
+            { 
+            TextKey.infosDebarreiraasParaGolpes,new List<string>()
+            { 
+            "Tente atacar as barreiras quando não estiver sendo perseguido por um criature hostil "
+            }
+            }
     };
     }
 }

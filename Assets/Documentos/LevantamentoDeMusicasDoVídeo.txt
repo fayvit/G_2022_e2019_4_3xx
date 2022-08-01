@@ -1,0 +1,56 @@
+Odeon -> cidade animada
+Magoado -> cidade animada
+Pedacinho do céu -> cidade calma / historia pesada / tema de personagem profundo
+naquele tempo -> cidade calma (poderia ser do quartel da resistencia)
+As Rosas Não falam -> edição de personagem / cidade calma / tema de personagem calmo
+Choro n1 -> cidade animada / luta amigavel / tema de personagem energetico
+Noites cariocas -> tema de cidade normal (poderia ser tema do quartel da resistencia)
+Choro Chorando para paulinho Nogueira -> tema de personagem / cidade calma
+tempo de criança -> tema contando historias / tema de personagem / tema de cidade animada
+naquela mesa -> tema triste / poderia ser tema de mundo aberto
+carinhoso -> tema de afeto 
+Lamentos -> tema calmo / cidade calma 
+Tico Tico no Fubá v1 -> tema de batalha (comun ou não)
+Brasileirinho -> tema de batalha (comum ou especial/ treinadores)
+Sampa -> tema de cidade / tema de personagem / poderia ser do quartel da resistencia
+Xodó da baiana -> tema de personagem importante / tema de passagens importantes
+Schottish -> Tema de cidade enigmatica(ou engraçada) / tema de passagens leves
+Chorrindo -> tema de personagem / tema de cidade normal
+Divagando -> tema de situações de aperto / tema de batalha especial / batalha com treinador
+Dr. Sabe Tudo -> tema de cidade comum / tema de mundo (poderia) / tema de personagem carismático
+Brejeiro -> tema de cidade / tema de personagem / tema de vamos junto!!(apoio)
+Caixa de Fósforo -> tema de cidade com novidades / tema de personagem ativo / tema de situação ativa
+Noturno -> tema de cidade / tema de mundo / tema de personagem / tema de vamos junto!!(apoio)
+
+tema para cidades
+
+animada -> Odeon/magoado/Choro n1/tempo de criança
+calma -> Pedacinho do céu / naquele Tempo / As Rosas não falam / Choro Chorando / Lamentos
+normal -> Noites Cariocas/Sampa/chorrindo/Dr.SabeTudo/Brejeiro/Noturno
+Enigmatica/engraçada -> Schottish
+Com Novidades -> Caixa de Fósforo
+
+tema para personagens
+Profundo -> Pedacinho do céu
+Calmo -> As Rosas não falam
+Energetico -> Choro n1 / Caixa de Fósforo
+Normal -> Choro Chorando / tempo de criança / Sampa / Chorrinho / Brejeiro
+Afeto -> Carinhoso
+Importante -> Xodó da baiana
+Leve ->Schottish
+Carismático -> Dr. Sabe Tudo
+personagem Otimista -> Noturno
+
+tema de Batalha
+Comum -> tico tico no fubá v2
+Treinador rotineiro -> tico tico no fubá v1
+Especial -> Brasileirinho
+Treinador -> Divagando
+
+
+
+
+
+
+
+

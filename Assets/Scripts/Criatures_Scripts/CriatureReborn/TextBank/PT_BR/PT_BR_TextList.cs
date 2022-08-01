@@ -21,10 +21,7 @@ namespace TextBankSpace
                     ColocaTextos(ref txt, CustomizationTextsPT_BR.txt);
                     ColocaTextos(ref txt, TutoInfoPT_BR.txt);
                     ColocaTextos(ref txt, PT_BR_TextosIniciais.txt);
-                    //ColocaTextos(ref txt, TextosDaCavernaInicialPT_BR.txt);
-                    //ColocaTextos(ref txt, TextosDeKatidsPT_BR.txt);
-                    //ColocaTextos(ref txt, TextosDeMarjanPT_BR.txt);
-                    //ColocaTextos(ref txt, TextosDeInfoPT_BR.txt);
+                    ColocaTextos(ref txt, PT_BR_TextosDeKatids.txt);
                 }
 
                 return txt;

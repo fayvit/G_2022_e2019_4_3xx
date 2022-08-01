@@ -843,7 +843,8 @@ public class CustomizationManagerMenu : MonoBehaviour
             MessageAgregator<MsgEnterInListOptions>.Publish();
 
 
-        }else if (Input.GetKeyDown(KeyCode.Alpha5))
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
 #if UNITY_EDITOR
             #region loadOfTheArrrayConfirmation
@@ -884,6 +885,58 @@ public class CustomizationManagerMenu : MonoBehaviour
             {
                 estado = EstadoDoMenu.main; cMenu.ChangeInteractiveButtons(true);
             }, "Deseja tentar carregar um pernogem do vetor de personagens?", hideSelections: true);
+            #endregion
+#endif
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+#if UNITY_EDITOR
+            #region CreateAddList
+            if (Jolt)
+                StartCharactersSavedMenu(MyJoltSpace.SaveDatesForJolt.instance.ccds.ccds);
+            else
+            {
+                ToSaveCustomizationContainer.Instance.Load();
+                StartCharactersSavedMenu(SumCharLists.Lccd);
+            }
+            MessageAgregator<MsgEnterInListOptions>.Publish();
+            #endregion
+#endif
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+#if UNITY_EDITOR
+            #region SaveAddList
+            estado = EstadoDoMenu.confirmacaoAberta;
+            confirmation.StartConfirmationPanel(() =>
+            {
+                SumCharLists.SaveSumChars();
+                estado = EstadoDoMenu.main;
+            }, () =>
+            {
+                estado = EstadoDoMenu.main;
+            }, "<Color=yellow>Atenção</color>\n Você está usando a opção de salvar no arquivo somando com os personagens do arquivo base." +
+            "Está certo que quer fazer isso?", hideSelections: true);
+            
+            #endregion
+#endif
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+#if UNITY_EDITOR
+            #region salvandoBlocosDeTexto
+            estado = EstadoDoMenu.confirmacaoAberta;
+            confirmation.StartConfirmationPanel(() =>
+            {
+                SumCharLists.SalvarBlocoDeNotas();
+                estado = EstadoDoMenu.main;
+            }, () =>
+            {
+                estado = EstadoDoMenu.main;
+            }, "<Color=yellow>Atenção</color>\n Você está salvando um bloco de notas com os bytes em JSOn dos personagens na área de trabalho." +
+            "Está certo que quer fazer isso?", hideSelections: true);
+
             #endregion
 #endif
         }

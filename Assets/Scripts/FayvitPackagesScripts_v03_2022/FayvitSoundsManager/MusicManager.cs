@@ -19,7 +19,7 @@ namespace FayvitSounds
 
         public MusicaComVolumeConfig ToRememberMusic { get; private set; }
 
-        public MusicaComVolumeConfig CurrentActiveMusic { get; private set; }
+        public MusicaComVolumeConfig CurrentActiveMusic { get; private set; } = new MusicaComVolumeConfig();
 
         public float ActiveVel { get; set; } = 0.25f;
 
@@ -93,6 +93,22 @@ namespace FayvitSounds
         public void StartMusicRememberingCurrent(string esseClip, float volumeAlvo = 1, float vel = -1)
         {
             StartMusicRememberingCurrent((AudioClip)Resources.Load(esseClip), volumeAlvo);
+        }
+
+        public void StartMusicIf(AudioClip esseClip, float volumeAlvo = 1, float vel = -1)
+        {
+            if(CurrentActiveMusic!=null && CurrentActiveMusic.Musica!=esseClip)
+                StartMusic(esseClip, volumeAlvo, vel);
+        }
+
+        public void StartMusicIf(NameMusicaComVolumeConfig esseClip, float vel = -1)
+        {
+            StartMusicIf((AudioClip)Resources.Load(esseClip.Musica.ToString()), esseClip.Volume, vel);
+        }
+
+        public void StartMusicIf(NameMusic esseClip, float volumeAlvo = 1, float vel = -1)
+        {
+            StartMusicIf((AudioClip)Resources.Load(esseClip.ToString()), volumeAlvo, vel);
         }
 
         public void StartMusic(NameMusicaComVolumeConfig esseClip, float vel = -1)

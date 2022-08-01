@@ -103,7 +103,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - CloudColor: {r: 1, g: 1, b: 1, a: 0}
+    - CloudColor: {r: 0.8537736, g: 1, b: 0.98050314, a: 0}
     - CloudSpeed: {r: 0.00125, g: 0.00125, b: 101.6, a: 100.22}
     - DistorcionSpeed: {r: 0.005, g: 0.01, b: 0, a: -0.1}
     - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}

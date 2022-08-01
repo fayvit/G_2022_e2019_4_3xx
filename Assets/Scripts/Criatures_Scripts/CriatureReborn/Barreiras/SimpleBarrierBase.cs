@@ -98,18 +98,38 @@ namespace Criatures2021
             //GameController.g.MyKeys.VerificaAutoShift(ChaveEspecial));
 
             if (EsseGolpeAtiva(nomeDoGolpe))
-                estado = BarrierEventsState.ativou;
-
-
-
-            if (estado == BarrierEventsState.ativou)
             {
-                FluxoDeBotao();
-                //acaoEfetivada.SetActive(true);
-                EfetivadorDaAcao();
-                tempoDecorrido = 0;
-                AbstractGameController.Instance.MyKeys.MudaAutoShift(Chave, true);
+                IamTarget.StaticStart(
+                    MyGlobalController.MainPlayer.ActivePet,
+                    () =>
+                    {
+                        estado = BarrierEventsState.ativou;
+                        FluxoDeBotao();
+                        //acaoEfetivada.SetActive(true);
+                        EfetivadorDaAcao();
+                        tempoDecorrido = 0;
+                        AbstractGameController.Instance.MyKeys.MudaAutoShift(Chave, true);
+                    }, () => {
+                        MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+                        {
+                            message = TextBank.RetornaFraseDoIdioma(TextKey.infosDebarreiraasParaGolpes)
+                        });
+                    }
+                    );
+                
             }
+            //    estado = BarrierEventsState.ativou;
+
+
+
+            //if (estado == BarrierEventsState.ativou)
+            //{
+            //    FluxoDeBotao();
+            //    //acaoEfetivada.SetActive(true);
+            //    EfetivadorDaAcao();
+            //    tempoDecorrido = 0;
+            //    AbstractGameController.Instance.MyKeys.MudaAutoShift(Chave, true);
+            //}
         }
         public void BotaoInfo()
         {

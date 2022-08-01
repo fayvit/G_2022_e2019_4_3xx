@@ -6,6 +6,7 @@ namespace FayvitSave
 {
     public interface DadosDeJogador { }
 
+    [System.Serializable]
     public abstract class SaveDates
     {
         public SaveDates(NomesCenas[] cenasAtivas) { }
@@ -13,9 +14,9 @@ namespace FayvitSave
 
         protected abstract void SetarSaveDates();
 
-        public DadosDeJogador Dados { get; private set; }
+        public DadosDeJogador Dados { get; protected set; }
 
-        public KeyVar VariaveisChave { get; private set; }
+        public KeyVar VariaveisChave { get; protected set; }
 
         public abstract Vector3 Posicao { get; }
 

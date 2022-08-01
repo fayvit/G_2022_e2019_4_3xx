@@ -1,5 +1,6 @@
 ﻿namespace Criatures2021
 {
+    [System.Serializable]
     public class Regador : EnergyItemBase
     {
         public Regador(int estoque = 1) : base(new ItemFeatures(NameIdItem.regador)

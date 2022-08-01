@@ -22,6 +22,7 @@ namespace FayvitCommandReader
                 baseDic[CommandConverterInt.menuMoveToList] = new List<int> { 3 };
                 baseDic[CommandConverterInt.updateMenu] = new List<int> { 6 };
                 baseDic[CommandConverterInt.pauseMenu] = new List<int> { 7 };
+                baseDic[CommandConverterInt.deletarSave] = new List<int> { 6 };
 
 
                 return baseDic;

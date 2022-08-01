@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace Criatures2021
 {
+    [System.Serializable]
     public class ProjetilFeatures
     {
 

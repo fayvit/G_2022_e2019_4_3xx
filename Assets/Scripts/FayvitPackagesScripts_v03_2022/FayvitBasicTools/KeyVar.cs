@@ -14,7 +14,7 @@ namespace FayvitBasicTools
         private Dictionary<string, bool> autoShift = new Dictionary<string, bool>();
         private Dictionary<string, bool> enemyShift = new Dictionary<string, bool>();
 
-        public NomesCenas CenaAtiva { get; set; } = NomesCenas.TutoScene;
+        public NomesCenas CenaAtiva { get; set; } = NomesCenas.cenaTeste;
 
         public List<NomesCenas> CenasAtivas { get; set; } = new List<NomesCenas>();
 
@@ -176,7 +176,6 @@ namespace FayvitBasicTools
         sempretrue = -2,
         nula = -1,
         sempreFalso = 0,
-        inTutorial = 1
     }
 
     public enum KeyCont

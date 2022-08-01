@@ -9,6 +9,7 @@ namespace Criatures2021
     public class StatusTemporarioBase
     {
         [SerializeField] private DatesForTemporaryStatus dados;
+        [System.NonSerialized] private PetManager cDoAfetado;
 
         public PetBase OAfetado { get; set; }
 
@@ -20,7 +21,8 @@ namespace Criatures2021
             set { dados = value; }
         }
 
-        public PetManager CDoAfetado { get; set; }
+        
+        public PetManager CDoAfetado { get=>cDoAfetado; set=>cDoAfetado=value; }
 
         // Use this for initialization
         public virtual void Start()
@@ -99,12 +101,17 @@ namespace Criatures2021
 
         public virtual void StatusHitUpdater() { }
 
+        public virtual void RetiraParticulaDeStatus()
+        {
+            if (CDoAfetado != null && Particula != null)
+                Object.Destroy(Particula.gameObject);
+        }
+
         public virtual void RetiraComponenteStatus()
         {
             //Debug.Log("Retira componmen status está em observação");
-            if (CDoAfetado != null && Particula != null)
-                Object.Destroy(Particula.gameObject);
 
+            RetiraParticulaDeStatus();
             
             //if (GameController.g.ContStatus.StatusDoHeroi.Contains(this))
             //    GameController.g.ContStatus.StatusDoHeroi.Remove(this);

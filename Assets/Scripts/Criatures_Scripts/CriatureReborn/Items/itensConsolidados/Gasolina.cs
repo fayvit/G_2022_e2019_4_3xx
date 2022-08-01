@@ -1,5 +1,6 @@
 ﻿namespace Criatures2021
 {
+    [System.Serializable]
     public class Gasolina : EnergyItemBase
     {
         public Gasolina(int estoque = 1) : base(new ItemFeatures(NameIdItem.gasolina)

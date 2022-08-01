@@ -125,6 +125,28 @@ namespace FayvitMove
 
             if (noChao && timeOfRising > features.minTimeJump)
                 NotJumping();
+            else if (!noChao && timeOfRising > features.minTimeJump)
+            {
+                RaycastHit hit;
+
+                //if(Physics.SphereCast(transform.position+.5f*controle.height*Vector3.up,1.1f*controle.radius,transform.forward,out hit,.1f)
+                //    &&
+                //    hit.collider.gameObject.CompareTag("cenario")
+                //    )
+                if (Physics.Raycast(transform.position, transform.forward, out hit, 1.2f * controle.radius)
+                    ||
+                    Physics.Raycast(transform.position, transform.right, out hit, 1.2f * controle.radius)
+                    ||
+                    Physics.Raycast(transform.position, -transform.forward, out hit, 1.2f * controle.radius)
+                    ||
+                    Physics.Raycast(transform.position, -transform.right, out hit, 1.2f * controle.radius)
+                    )
+                {
+                    Debug.Log("pegou um cenario");
+                    verticalMove = FallingHorizontalMove(1.5f*features.inJumpSpeed* hit.normal)
+                        + FallingVerticalMove(amortecimento);
+                }
+            }
         }
 
         Vector3 FallingVerticalMove(float damping)
@@ -145,8 +167,28 @@ namespace FayvitMove
         {
 
             if (features.isJumping)
+            {
                 MessageAgregator<AnimateDownJumpMessage>.Publish(
                     new AnimateDownJumpMessage() { gameObject = controle.gameObject });
+
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, Vector3.down, out hit))
+                {
+
+                    float angle = Vector3.Angle(hit.normal, Vector3.up);
+                    if (angle>65 && angle<85)
+                    {
+
+                        MessageAgregator<MsgSlopeSlip>.Publish(new MsgSlopeSlip()
+                        {
+                            slipped = transform.gameObject,
+                            hit=hit,
+                            angle = angle
+                        });
+
+                    }
+                }
+            }
                 //EventAgregator.Publish(new GameEvent(EventKey.animateDownJump,controle.gameObject));
 
             features.isJumping = false;
@@ -154,5 +196,12 @@ namespace FayvitMove
             
             verticalMove = Vector3.zero;
         }
+    }
+
+    public struct MsgSlopeSlip : IMessageBase
+    {
+        public GameObject slipped;
+        public RaycastHit hit;
+        public float angle;
     }
 }

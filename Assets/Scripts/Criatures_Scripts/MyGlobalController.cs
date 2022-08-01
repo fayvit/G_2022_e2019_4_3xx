@@ -10,6 +10,7 @@ namespace Criatures2021
 {
     public class MyGlobalController : AbstractGlobalController
     {
+        private static CharacterManager mainManager;
 
         protected override void Start()
         {
@@ -41,11 +42,25 @@ namespace Criatures2021
             base.OnDestroy();
         }
 
+        public static CharacterManager MainPlayer {
+            get {
+                if (mainManager == null)
+                    mainManager = MainCharTransform.GetComponent<CharacterManager>();
+
+                return mainManager;
+            }
+        }
+
+        public static Transform MainCharTransform => Instance.Players[0].Manager.transform;
+
         private void OnTriggerAggressiveResponse(MsgEnterInAggressiveResponse obj)
         {
+            
             if (obj.enemyPet.PetFeat.meusAtributos.PV.Corrente > 0
                 &&
                 Music.CurrentActiveMusic.Musica != ResourcesFolders.GetClip(NameMusic.TicoTicoNoFuba_v1)
+                &&
+                !MainPlayer.ContraTreinador
                 )
             {
                 Music.StartMusicRememberingCurrent(NameMusic.TicoTicoNoFuba_v1);

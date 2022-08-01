@@ -7,8 +7,10 @@ namespace Criatures2021
     public class ProvisionalEnemyInstantiate : MonoBehaviour
     {
         [SerializeField] private List<PetManager> emCampo = new List<PetManager>();
-        [SerializeField] private int maxCriatures = 5;
         [SerializeField] private float timeToSpawn = 7.5f;
+        public int maxCriatures = 5;
+        public Vector2 xVertePosition = new Vector2(450, 470);
+        public Vector2 zVertePosition = new Vector2(510, 530);
 
         private float tempoDecorrido = 0;
 
@@ -52,9 +54,9 @@ namespace Criatures2021
                     PetName.Izicuolo
                 };
             Vector3 V = new Vector3(
-                    Random.Range(450, 470),
+                    Random.Range(xVertePosition.x, xVertePosition.y),
                     1,
-                    Random.Range(510, 530)
+                    Random.Range(zVertePosition.x, zVertePosition.y)
                     );
             int x = Random.Range(0, opcoes.Count);
             //emCampo.Add(WildPetInitialize.Initialize(PetName.Rocketler, 11, V));

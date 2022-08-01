@@ -38,6 +38,7 @@ namespace FayvitCommandReader
             { 14,new List<KeyCode>{KeyCode.Mouse2} },
             { 15,new List<KeyCode>{KeyCode.Alpha3} },
             { 16,new List<KeyCode>{KeyCode.Alpha4} },
+            { 17,new List<KeyCode>{KeyCode.Delete} },
 
         };
 

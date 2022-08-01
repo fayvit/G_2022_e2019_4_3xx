@@ -40,7 +40,8 @@ namespace FayvitCommandReader
         menuMoreWhite,
         menuOpenList,
         menuMoveToList,
-        pauseMenu
+        pauseMenu,
+        deletarSave
     }
 
     public enum CommandConverterString

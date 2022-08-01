@@ -55,6 +55,7 @@ public class CustomizationCamManager : MonoBehaviour
         DirectionalCamera cDir = CameraApplicator.cam.Cdir;
         if (mudandoCam)
         {
+            
             tempoDecorrido += Time.deltaTime;
             cDir.SphericalDistance = Mathf.Lerp(startDistance, dtForCam.distance, tempoDecorrido / TEMPO_MUDANDO_CAM);
             cDir.VarVerticalHeightPoint = Mathf.Lerp(startHeight, dtForCam.height, tempoDecorrido / TEMPO_MUDANDO_CAM);
@@ -65,6 +66,7 @@ public class CustomizationCamManager : MonoBehaviour
         }
         else
         {
+            
             Vector3 V = new Vector3(
                 -CurrentCommander.GetAxis(CommandConverterString.camX),
                 -CurrentCommander.GetAxis(CommandConverterString.camY),
@@ -81,6 +83,7 @@ public class CustomizationCamManager : MonoBehaviour
 
             if (CameraApplicator.cam)
             {
+                
                 if (foi)
                 {
                     CameraApplicator.cam.ValoresDeCamera(V.x, 0, false, false);
@@ -150,7 +153,7 @@ public class CustomizatioDatesForCam
 
         switch(sdb)
         {
-            case SectionDataBase.barba: return SetOfSectionDB.cabeca;
+            case SectionDataBase.barba       :return SetOfSectionDB.cabeca;
             case SectionDataBase.@base       :return SetOfSectionDB.cabeca;
             case SectionDataBase.cabelo      :return SetOfSectionDB.cabeca;
             case SectionDataBase.globoOcular :return SetOfSectionDB.cabeca;

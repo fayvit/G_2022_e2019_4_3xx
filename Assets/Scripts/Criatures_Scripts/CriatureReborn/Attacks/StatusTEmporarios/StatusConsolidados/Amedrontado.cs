@@ -30,8 +30,11 @@ namespace Criatures2021
 
         public override void RetiraComponenteStatus()
         {
-            int indice = ContemStatus(StatusType.amedrontado, OAfetado);
-            CDoAfetado.Mov.ModSpeed *= CDoAfetado.MeuCriatureBase.StatusTemporarios[indice].Quantificador;
+            if (CDoAfetado != null)
+            {
+                int indice = ContemStatus(StatusType.amedrontado, OAfetado);
+                CDoAfetado.Mov.ModSpeed *= CDoAfetado.MeuCriatureBase.StatusTemporarios[indice].Quantificador;
+            }
             base.RetiraComponenteStatus();
         }
     }

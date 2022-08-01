@@ -52,7 +52,7 @@ public class FindClothColliderChild : MonoBehaviour
         Transform paiProcurado = transform;
         Transform paiDoPai = transform.parent;
 
-        while (paiDoPai != null)
+        while (paiDoPai != null && !paiDoPai.CompareTag("Finish"))
         {
             paiProcurado = paiDoPai;
             paiDoPai = paiDoPai.parent;

@@ -24,9 +24,9 @@ namespace FayvitMove
 
         public int StaminaPoints { get => staminaPoints; }
         public int MaxStaminaPoints { get => maxStaminaPoints; }
-        public System.Action OnChangeStaminaPoints { get; set; }
-        public System.Action OnZeroedStamina { get; set; }
-        public System.Action OnRegenZeroedStamina { get; set; }
+        [System.NonSerialized] public System.Action OnChangeStaminaPoints;
+        [System.NonSerialized] public System.Action OnZeroedStamina;
+        [System.NonSerialized] public System.Action OnRegenZeroedStamina;
 
         public void ConsumeStamina(uint val, bool restarTime = true)
         {

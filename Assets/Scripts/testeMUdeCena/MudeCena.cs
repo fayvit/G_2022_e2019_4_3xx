@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FayvitMessageAgregator;
 using FayvitBasicTools;
@@ -7,7 +6,7 @@ using FayvitSupportSingleton;
 using FayvitLoadScene;
 using Spawns;
 using UnityEngine.SceneManagement;
-
+using Criatures2021;
 
 namespace ChangeScene
 {
@@ -19,24 +18,50 @@ namespace ChangeScene
 
         private bool carregouCena;
         private bool terminouFadeOut;
+        private bool iniciouLoad;
 
         private int numCenasParaCarregar = 0;
         private int contCenasCaregadas = 0;
         private NomesCenas cenaAtiva;
         private Transform personagem;
 
+        public static void MudarCena(NomesCenas[] cenasParaCarregar,SpawnID idPos,Transform personagem)
+        {
+            GameObject G = new GameObject();
+            MudeCena mc = G.AddComponent<MudeCena>();
+            mc.nomeCenasParaCarregar = cenasParaCarregar;
+            mc.idPos = idPos;
+            mc.IniciarMudarCena(personagem);
+        }
+
+        private void IniciarMudarCena(Transform T)
+        {
+            personagem = T;
+            MessageAgregator<FadeOutComplete>.AddListener(OnFadeOutComplete);
+            MessageAgregator<FadeInComplete>.AddListener(OnFadeInComplete);
+            MessageAgregator<MsgRequestFadeOut>.Publish();
+
+            SceneManager.LoadSceneAsync(NomesCenasEspeciais.CenaDeCarregamento.ToString(), LoadSceneMode.Additive);
+
+            SceneManager.sceneLoaded += CarregouCenaDeLoader;
+        }
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player" && Time.timeScale>0)
+            if (other.tag == "Player" && Time.timeScale>0 && !iniciouLoad)
             {
-                personagem = other.transform;
-                MessageAgregator<FadeOutComplete>.AddListener(OnFadeOutComplete);
-                MessageAgregator<FadeInComplete>.AddListener(OnFadeInComplete);
-                MessageAgregator<MsgRequestFadeOut>.Publish();
-
-                SceneManager.LoadSceneAsync("LoadScene", LoadSceneMode.Additive);
-
-                SceneManager.sceneLoaded += CarregouCenaDeLoader;
+                iniciouLoad = true;
+                IniciarMudarCena(other.transform);
+            }
+            else if (other.CompareTag("Criature"))
+            {
+                if (!iniciouLoad)
+                {
+                    MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+                    {
+                        pet = other.gameObject
+                    });
+                }
             }
         }
 
@@ -52,7 +77,7 @@ namespace ChangeScene
 
         private void CarregouCenaDeLoader(Scene arg0, LoadSceneMode arg1)
         {
-            if (arg0.name == "LoadScene")
+            if (arg0.name == NomesCenasEspeciais.CenaDeCarregamento.ToString())
             {
                 SceneManager.sceneLoaded -= CarregouCenaDeLoader;
                 carregouCena = true;
@@ -71,6 +96,13 @@ namespace ChangeScene
             Time.timeScale = 0;
             contCenasCaregadas = 0;
             cenaAtiva = nomeCenasParaCarregar[0];
+
+            Debug.Log("cena ativa para musica: " + cenaAtiva);
+            
+            MessageAgregator<MsgChangeMusicIfNew>.Publish(new MsgChangeMusicIfNew()
+            {
+                nmcvc = MusicDictionary.GetSceneMusic(cenaAtiva)
+            });
 
             VerifiqueProcedimento();
         }
@@ -127,7 +159,7 @@ namespace ChangeScene
 
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName(cenaAtiva.ToString()));
 
-
+                MyGameController.LoadSavedCharacters();
             }
         }
 
@@ -136,12 +168,12 @@ namespace ChangeScene
             SceneManager.activeSceneChanged -= OnActiveSceneChanged;
 
             Transform spawnPoint = SpawnPointMark.GetSpawnPointById(idPos).transform;
-            Debug.Log(spawnPoint + " : " + spawnPoint.position);
+            //Debug.Log(spawnPoint + " : " + spawnPoint.position);
             personagem.GetComponent<CharacterController>().enabled = false;
 
             
                 
-            personagem.SetPositionAndRotation(spawnPoint.position, Quaternion.identity);
+            personagem.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
             FayvitCam.CameraApplicator.cam.Cdir.RequireImmediateFocusPosition();
             
 
@@ -181,11 +213,10 @@ namespace ChangeScene
 
 
     }
-
-    public struct MsgChangeGameScene : IMessageBase
-    {
-        public Transform personagem;
-    }
-
     
+}
+
+public struct MsgChangeGameScene : IMessageBase
+{
+    public Transform personagem;
 }

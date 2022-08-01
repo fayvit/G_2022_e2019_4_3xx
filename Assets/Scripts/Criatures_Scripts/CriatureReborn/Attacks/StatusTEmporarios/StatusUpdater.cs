@@ -15,11 +15,15 @@ namespace Criatures2021
             for (int i = 0; i < statusDoHeroi.Count; i++)
             {
                 if (statusDoHeroi[i].OAfetado == target)
+                {
+                    //statusDoHeroi[i].RetiraParticulaDeStatus();
                     removiveis.Add(i);
+                }
             }
 
-            for (int i = removiveis.Count-1; i > -1; i--)
-                statusDoHeroi.RemoveAt(removiveis[i]);
+            for (int i = removiveis.Count - 1; i > -1; i--)
+                //statusDoHeroi.RemoveAt(removiveis[i]);
+                StatusDoHeroi[removiveis[i]].RetiraComponenteStatus();
         }
 
         public void VerificaRemoveStatus(StatusTemporarioBase S)

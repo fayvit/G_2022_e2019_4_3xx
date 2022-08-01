@@ -2,6 +2,7 @@ using FayvitCommandReader;
 using FayvitMessageAgregator;
 using FayvitSounds;
 using FayvitUI;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,6 +65,7 @@ namespace FayvitBasicTools
             if (Players == null)
                 Players = new List<IPlayersInGameDb>();
 
+            MessageAgregator<MsgChangeMusicIfNew>.AddListener(OnRequestChangeMusicIfNew);            
             MessageAgregator<MsgRequestSfx>.AddListener(OnRequestSfx);
             MessageAgregator<MsgStartMusic>.AddListener(OnRequestStartMusic);
             MessageAgregator<MsgStopMusic>.AddListener(OnRequestStopMusic);
@@ -77,6 +79,7 @@ namespace FayvitBasicTools
 
         protected virtual void OnDestroy()
         {
+            MessageAgregator<MsgChangeMusicIfNew>.RemoveListener(OnRequestChangeMusicIfNew);
             MessageAgregator<MsgRequestSfx>.RemoveListener(OnRequestSfx);
             MessageAgregator<MsgStartMusic>.RemoveListener(OnRequestStartMusic);
             MessageAgregator<MsgStopMusic>.RemoveListener(OnRequestStopMusic);
@@ -86,6 +89,20 @@ namespace FayvitBasicTools
             MessageAgregator<MsgRequestFadeIn>.RemoveListener(OnRequestFadeIn);
             MessageAgregator<MsgRequestFadeOut>.RemoveListener(OnRequestFadeOut);
 
+        }
+
+        private void OnRequestChangeMusicIfNew(MsgChangeMusicIfNew obj)
+        {
+            float vol = 1;
+            if (obj.changeVolume)
+                vol = obj.volumeVal;
+
+            if (obj.nmcvc != null)
+                music.StartMusicIf(obj.nmcvc);
+            else if (obj.clip != null)
+                music.StartMusicIf(obj.clip, vol);
+            else if (obj.nameMusic != NameMusic.empty)
+                music.StartMusicIf(obj.nameMusic, vol);
         }
 
         private void OnRequestFadeOut(MsgRequestFadeOut obj)
@@ -189,6 +206,14 @@ namespace FayvitBasicTools
         public AudioClip clip;
         public SoundEffectID sfxId;
         public string sfxName;
+    }
+    public struct MsgChangeMusicIfNew : IMessageBase
+    {
+        public bool changeVolume;
+        public float volumeVal;
+        public NameMusic nameMusic;
+        public AudioClip clip;
+        public NameMusicaComVolumeConfig nmcvc;
     }
     public struct MsgStartMusic:IMessageBase
     {

@@ -26,10 +26,10 @@ namespace Criatures2021
             CA = MonoBehaviour.Instantiate(CA, position, Quaternion.identity)
                 as GameObject;
 
+            Scene S = SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString());
 
-            SceneManager.MoveGameObjectToScene(CA,
-            SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString())
-            );
+            if(S.isLoaded)
+            SceneManager.MoveGameObjectToScene(CA,S);
             return CA;
         }
 

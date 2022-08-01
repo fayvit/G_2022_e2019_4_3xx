@@ -68,6 +68,8 @@ namespace Criatures2021Hud
 
         private void OnChangeHp(MsgChangeHP obj)
         {
+            Debug.Log(owner);
+
             if(owner)
                 if (obj.gameObject == owner.gameObject)
                 {

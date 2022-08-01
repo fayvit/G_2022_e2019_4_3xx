@@ -306,7 +306,8 @@ namespace TextBankSpace
                     "{0} não precisa usar esse item nesse momento",
                     "Você não pode tentar capturar criatures de um treinador",
                     "Você não pode usar pergaminho de fuga contra treinadores",
-                    "Trave a mira em um criature para usar esse item"
+                    "Trave a mira em um criature para usar esse item",
+                    "Você não pode retornar para o controle do heroi enquanto luta contra um treinador"
                 }},
 
                 {TextKey.shopInfoItem,new List<string>()
@@ -512,6 +513,10 @@ namespace TextBankSpace
                 "Certifique-se que a direção de movimento não está bloqueada"    
             }
         },
+            { 
+            TextKey.menuInicial,new List<string>()
+                { "Iniciar Jogo", "Carregar jogo salvo", "Linguagem", "Creditos" }
+            },
      //   {
      //       TextKey.menuDePause,new List<string>()
      //       {
@@ -526,7 +531,7 @@ namespace TextBankSpace
                 "Conversar",
                 "Voltar ao Jogo"
             }
-        }
+        },
 
     };
     }

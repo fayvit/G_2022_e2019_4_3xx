@@ -2,7 +2,6 @@
 using FayvitSounds;
 using FayvitMessageAgregator;
 using FayvitBasicTools;
-using Criatures2021Hud;
 
 namespace TalkSpace
 {

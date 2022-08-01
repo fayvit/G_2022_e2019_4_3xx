@@ -115,6 +115,15 @@ namespace FayvitMove
         //}
         #endregion
 
+
+
+        public void RecalculeGroundCheck()
+        {
+            groundCheck.position = Controller.transform.position
+                            + Controller.center + .5f * Controller.height * Vector3.down;
+            groundCheck.SetParent(Controller.transform);
+        }
+
         private Transform GroundCheck
         {
             get
@@ -124,9 +133,7 @@ namespace FayvitMove
                     if (Controller != null)
                     {
                         groundCheck = new GameObject().transform;
-                        groundCheck.position = Controller.transform.position
-                            + Controller.center + .5f * Controller.height * Vector3.down;
-                        groundCheck.SetParent(Controller.transform);
+                        RecalculeGroundCheck();
                         groundCheck.name = "ground check";
                     }
                 }
@@ -142,6 +149,7 @@ namespace FayvitMove
             {
                 // bool noChao = false;
                 isGrounded = false;
+                
                 Vector3 overCapsPos = GroundCheck.position + Controller.height * .25f * Vector3.up;
                 Collider[] colliders = Physics.OverlapCapsule(GroundCheck.position, overCapsPos, Controller.radius * overlapTaxRadius);
                     //Physics.OverlapSphere(GroundCheck.position, groundedRadius, 1);
@@ -151,8 +159,8 @@ namespace FayvitMove
                 {
                     if (Controller.transform.gameObject.name == "teste")
                         Debug.Log(colliders[i].name);
-
-                    if (colliders[i].gameObject != Controller.transform.gameObject)
+                    if(!FayvitBasicTools.HierarchyTools.EstaNaHierarquia(Controller.transform,colliders[i].transform))
+                    //if (colliders[i].gameObject != Controller.transform.gameObject)
                     {
                         //noChao = true;
                         retornoDonoChao = true;

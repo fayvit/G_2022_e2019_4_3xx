@@ -1,5 +1,6 @@
 ﻿namespace Criatures2021
 {
+    [System.Serializable]
     public class Inseticida : EnergyItemBase
     {
         public Inseticida(int estoque = 1) : base(new ItemFeatures(NameIdItem.inseticida)

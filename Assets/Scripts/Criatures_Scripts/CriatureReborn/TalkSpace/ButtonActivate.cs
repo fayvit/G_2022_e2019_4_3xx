@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using FayvitBasicTools;
-using Criatures2021;
 using FayvitMessageAgregator;
 
-namespace Criatures2021Hud
-{
     public abstract class ButtonActivate : MonoBehaviour
     {
         //[SerializeField] protected GameObject btn;
@@ -145,4 +142,16 @@ namespace Criatures2021Hud
         public abstract void FuncaoDoBotao();
     }
 
+    public struct MsgRequestShowActionHud : IMessageBase
+    {
+        public string infoText;
+        public string infoCommand;
+        public GameObject request;
+    }
+
+public struct MsgRequestHideActionHud : IMessageBase
+{
+    public GameObject request;
 }
+
+//}

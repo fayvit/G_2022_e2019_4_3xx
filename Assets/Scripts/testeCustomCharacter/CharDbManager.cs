@@ -17,6 +17,7 @@ public class CharDbManager
 
     private int guard;
     private List<CustomizationContainerDates> currentList;
+    Dictionary<string, List<CustomizationContainerDates>> dccd;
     private LocalState estado = LocalState.emEspera;
 
     private enum LocalState
@@ -73,6 +74,8 @@ public class CharDbManager
         }
         else if (CurrentCommander.GetButtonDown(CommandConverterInt.starterMenuConfirm))
         {
+            Debug.Log("apertei para salvar e jolt vale: " + Jolt+" : "+currentList[guard]+" : "+charDbMenu.LabelOfSelectedOption);
+
             if (Jolt)
                 MyJoltSpace.SaveAndLoadInJolt.SaveList(charDbMenu.LabelOfSelectedOption, currentList[guard]);
             else
@@ -249,6 +252,23 @@ public class CharDbManager
             TextBank.RetornaListaDeTextoDoIdioma(TextKey.frasesDoCharDbMenu)[4]
             /*"Deseja copiar esse personagem para uma lista de personagens?"*/, hideSelections: true);
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+#if UNITY_EDITOR
+            guard = charDbMenu.SelectedOption;
+            charDbMenu.FinishHud();
+
+            if (StartListSavedMenu(useSum: true))
+            {
+                estado = LocalState.listSelectOpened;
+            }
+            else
+            {
+                StartCharStandardVector(currentList, guard);
+            }
+#endif
+        }
+
     }
 
     private void SingleMessageOpened()
@@ -295,11 +315,21 @@ public class CharDbManager
         estado = LocalState.baseMenuOpened;
     }
 
-    public bool StartListSavedMenu(int indice = 0)
+    public bool StartListSavedMenu(int indice = 0,bool useSum =false)
     {
-        Dictionary<string, List<CustomizationContainerDates>> dccd = Jolt ?
-            MyJoltSpace.SaveDatesForJolt.instance.lccds.dccd :
-            ListToSaveCustomizationContainer.Instance.dccd;
+        if (useSum)
+            dccd = SumCharLists.Dccd;
+        else
+        {
+            if (!Jolt)
+                ListToSaveCustomizationContainer.Instance.Load();
+
+            dccd = Jolt ?
+                MyJoltSpace.SaveDatesForJolt.instance.lccds.dccd :
+                ListToSaveCustomizationContainer.Instance.dccd;
+        }
+
+
         if (dccd.Count > 0)
         {
             string[] ss = dccd.Keys.ToArray();
@@ -313,9 +343,7 @@ public class CharDbManager
 
     void ConfirmSelectList(int x=0)
     {
-        List<CustomizationContainerDates> lccd = !Jolt ?
-                ListToSaveCustomizationContainer.Instance.dccd[charDbMenu.LabelOfSelectedOption] :
-                MyJoltSpace.SaveDatesForJolt.instance.lccds.dccd[charDbMenu.LabelOfSelectedOption];
+        List<CustomizationContainerDates> lccd = dccd[charDbMenu.LabelOfSelectedOption];
 
         if (lccd.Count > 0)
         {
@@ -368,14 +396,15 @@ public class CharDbManager
             confirmation.StartConfirmationPanel(
                 () =>
                 {
+                    dccd.Remove(charDbMenu.LabelOfSelectedOption);
                     if (Jolt)
                     {
-                        MyJoltSpace.SaveDatesForJolt.instance.lccds.dccd.Remove(charDbMenu.LabelOfSelectedOption);
+                        //MyJoltSpace.SaveDatesForJolt.instance.lccds.dccd.Remove(charDbMenu.LabelOfSelectedOption);
                         MyJoltSpace.SaveAndLoadInJolt.Save();
                     }
                     else
                     {
-                        ListToSaveCustomizationContainer.Instance.dccd.Remove(charDbMenu.LabelOfSelectedOption);
+                        //ListToSaveCustomizationContainer.Instance.dccd.Remove(charDbMenu.LabelOfSelectedOption);
                         ListToSaveCustomizationContainer.Instance.SaveLoaded();
                     }
 

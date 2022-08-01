@@ -6,19 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/cenas/menuInicial.unity
+    guid: 98bc00f8d5eb7934babd217bd705b1d6
+  - enabled: 0
     path: Assets/cenas/JoltLoad.unity
     guid: 0303af64746d3924aa3793438bc61640
   - enabled: 1
     path: Assets/cenas/ComunsDeFase.unity
     guid: edc2b5876fb84654d9596ceffcb555be
-  - enabled: 0
-    path: Assets/cenas/CenaTesteNumberTwo.unity
+  - enabled: 1
+    path: Assets/cenas/cutsceneIntro.unity
     guid: 7e350fe3c6ab11d4eb4e276b96399b6d
-  - enabled: 0
+  - enabled: 1
     path: Assets/cenas/cenaTeste.unity
     guid: 3190d7013873e994daf1a49c7a0e2e38
-  - enabled: 0
-    path: Assets/cenas/LoadScene.unity
+  - enabled: 1
+    path: Assets/cenas/CenaDeCarregamento.unity
     guid: 1f9d3bbef67758c4ca4ad0b8efa73201
   - enabled: 0
     path: Assets/cenas/CenaTesteNumber3.unity
@@ -26,7 +29,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/cenas/MAST_Teste.unity
     guid: 6c406d6d951eda44ba1047ef6672736d
-  - enabled: 1
+  - enabled: 0
     path: Assets/cenas/cenaTeste_indoAoJolt.unity
     guid: e38a8a541ff7cfb49b4e4ff73fb15bcf
+  - enabled: 1
+    path: Assets/cenas/SelectCriature.unity
+    guid: ed49601b5d7595f47aa77c53520579a9
+  - enabled: 1
+    path: Assets/cenas/acampamentoDaResistencia.unity
+    guid: f9dc8bf11ec5f4f4aa42e2cb7f43d8e4
+  - enabled: 1
+    path: Assets/cenas/cavernaAcampamentoKatids.unity
+    guid: 37cdf84935db07c4fa271d64554ef9db
   m_configObjects: {}

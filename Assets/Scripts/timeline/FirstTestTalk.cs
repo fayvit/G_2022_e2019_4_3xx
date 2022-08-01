@@ -55,15 +55,23 @@ public class FirstTestTalk : MonoBehaviour
 
         switch (estado)
         {
-            case LocalState.conversaInicial:               
+            case LocalState.conversaInicial:
+
+                //Debug.Log(P.time);
 
                 if (DisplayTextManager.instance.DisplayText.UpdateTexts(inputNext, inputFinish, conversa.ToArray()))
                 {
                     IniciarSegundoTrack();
                     estado = LocalState.emEspera;
-                    
+
                 }
-                break;
+
+                //if (P.time > (6 + 24f / 60))
+                //{
+                //    P.initialTime = 5;
+                //    P.Stop();
+                //}
+            break;
 
             case LocalState.segundoTrack:
 
@@ -72,7 +80,12 @@ public class FirstTestTalk : MonoBehaviour
 
                 if (DisplayTextManager.instance.DisplayText.UpdateTexts(inputNext, inputFinish, conversa_b.ToArray()))
                 {
-                    
+                    AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() =>
+                    {
+                        AbstractGlobalController.Instance.FadeV.StartFadeIn();
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("SelectCriature",UnityEngine.SceneManagement.LoadSceneMode.Additive);
+                        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("cutsceneIntro");
+                    });
                     estado = LocalState.emEspera;
                     
                 }
@@ -111,6 +124,8 @@ public class FirstTestTalk : MonoBehaviour
         }
 
         P.Stop();
+        P.initialTime = 5;
+        
     }
 
     

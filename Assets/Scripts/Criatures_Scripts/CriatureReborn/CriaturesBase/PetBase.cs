@@ -9,9 +9,9 @@ namespace Criatures2021
     public class PetBase
     {
         [SerializeField] private PetName petId;
-        [SerializeField] private PetFeatures petFeat;
-        [SerializeField] private PetAttackManager atkManager;
-        [SerializeField] private MoveFeatures movFeat;
+        [ SerializeField] private PetFeatures petFeat;
+        [ SerializeField] private PetAttackManager atkManager;
+        [ SerializeField] private MoveFeatures movFeat;
         [SerializeField] private List<DatesForTemporaryStatus> statusTemporarios = new List<DatesForTemporaryStatus>();
         [SerializeField] private StaminaManager stManager;
 
@@ -116,7 +116,7 @@ namespace Criatures2021
             //    //        GameController.g.ContStatus.StatusDoHeroi[j].RetiraComponenteStatus();
             //}
 
-            statusTemporarios.Clear();
+            //statusTemporarios.Clear();
 
             MessageAgregator<MsgClearNegativeStatus>.Publish(new MsgClearNegativeStatus()
             {

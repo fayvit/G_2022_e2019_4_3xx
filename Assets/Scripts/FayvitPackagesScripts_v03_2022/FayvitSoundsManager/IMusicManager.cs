@@ -35,7 +35,13 @@ namespace FayvitSounds
         TicoTicoNoFuba_v1 = 2,
         Noturno_toLoop=3,
         xodoDaBaiana=4,
-        Schottish_choro=5
+        Schottish_choro=5,
+        TicoTicoNoFuba_v2 = 6,
+        AsRosasNaoFalam = 7,
+        CaixaDeFosforo = 8,
+        Brasileirinho = 9,
+        choroChorandoParaPaulinhoNogueira = 10,
+        NaqueleTempo = 11
     }
 
     [System.Serializable]

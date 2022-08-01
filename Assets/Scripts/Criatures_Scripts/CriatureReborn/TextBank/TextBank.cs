@@ -186,6 +186,21 @@ namespace TextBankSpace
         primeiroArmagedomMensCurta,
         RandomHooliganInicial,
         LanceLutzInicial,
-        frasesDaLutaContraTreinador
+        frasesDaLutaContraTreinador,
+        infosDebarreiraasParaGolpes,
+        caesarAntesDaLutaTuto,
+        primeiraPerguntaMeEnfrentar,
+        caesarDepoisDeVencido,
+        caesarDepoisDeVencidoOsMedalhoes,
+        vitoriaSobreCaesar,
+        menuInicial,
+        katids1,
+        katids2,
+        katids3,
+        katids4,
+        katids5,
+        katids6,
+        katids7,
+        katids8
     }
 }

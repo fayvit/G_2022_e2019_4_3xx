@@ -1,6 +1,5 @@
 ﻿using FayvitMessageAgregator;
 using FayvitSupportSingleton;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,7 +76,7 @@ public class CombinerSingleton : MonoBehaviour
         //Debug.Log("getCOmbination");
         lGuid.Add(new MeshCombinationGUID()
         {
-            guid = Guid.NewGuid().ToString(),
+            guid = System.Guid.NewGuid().ToString(),
             tCombiner = new TesteMeshCombiner()
         });
         return lGuid[lGuid.Count-1].tCombiner.StartCombiner(ccd,baseM,baseH, lGuid[lGuid.Count-1].guid);

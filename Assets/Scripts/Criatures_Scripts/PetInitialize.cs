@@ -34,7 +34,7 @@ namespace Criatures2021
             PetManager Cc = G.GetComponent<PetManager>();
             MonoBehaviour.Destroy(Cc);
             PetManagerCharacter C = G.AddComponent<PetManagerCharacter>();
-            C.T_Dono = dono;
+            C.T_Dono = dono.GetComponent<CharacterManager>();
             C.MeuCriatureBase = cBase;
 
             StatusReplacer.VerificaInsereParticulaDeStatus(C);

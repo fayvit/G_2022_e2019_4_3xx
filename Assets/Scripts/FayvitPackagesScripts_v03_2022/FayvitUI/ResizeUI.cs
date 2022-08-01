@@ -24,8 +24,9 @@ namespace FayvitUI
 
         public static void InHorizontal(RectTransform redimensionado, GameObject item, int num)
         {
+            HorizontalLayoutGroup horiz = redimensionado.GetComponent<HorizontalLayoutGroup>();
             redimensionado.sizeDelta
-                = new Vector2(num * item.GetComponent<RectTransform>().rect.width
+                = new Vector2(num * (item.GetComponent<RectTransform>().rect.width+horiz.spacing)+horiz.padding.left+horiz.padding.right
                 - (redimensionado.rect.width - redimensionado.sizeDelta.x),
                  redimensionado.sizeDelta.y);
         }

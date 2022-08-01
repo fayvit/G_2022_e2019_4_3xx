@@ -16,6 +16,7 @@ namespace FayvitCam
         [SerializeField] private ShowSinglePointCam cShow;
         [SerializeField] private FocarAdversario focarAdv;
         [SerializeField] private float timeStandToAutoAdjustment = 1;
+        [SerializeField] private bool autoInicializarCamDir;
         [SerializeField,Tooltip("A camera deve ser setada no inspector ou no script")] 
         private ShakeCam shake;
         [ Header("Target Transform"),SerializeField] private Transform target;
@@ -57,7 +58,8 @@ namespace FayvitCam
         {
             cam = this;
             //basic.Start(transform);
-            cDir.SetStartFeaturesElements(transform,target);
+            if(autoInicializarCamDir)
+                cDir.SetStartFeaturesElements(transform,target);
             MessageAgregator<RequestShakeCamMessage>.AddListener(OnRequestShakeCam);
             MessageAgregator<ControlableReachedMessage>.AddListener(OnControlableReached);
             //EventAgregator.AddListener(EventKey.requestShakeCam, OnRequestShakeCam);
@@ -157,7 +159,8 @@ namespace FayvitCam
                 break;
             }
 
-            shake.Update();
+            if(shake!=null)
+                shake.Update();
         }
 
         public void RemoveMira()
@@ -178,7 +181,7 @@ namespace FayvitCam
 
         public void FocusForDirectionalCam(Transform T, float height, float distance,float varHeightCamera)
         {
-            Debug.Log("varheighrcamera: "+varHeightCamera);
+            //Debug.Log("varheighrcamera: "+varHeightCamera);
 
             target = T;
             cDir.SetFeatures(new CamFeatures()

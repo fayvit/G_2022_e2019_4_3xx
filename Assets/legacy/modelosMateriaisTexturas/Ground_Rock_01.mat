@@ -4,43 +4,62 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Ground_Rock_01
-  m_Shader: {fileID: 4800000, guid: 48dca5b99d113b8d11006bab44295342, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 8766daa385f3daa4cbd0d8940e3e7a48,
+    type: 3}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - NormalMap:
+        m_Texture: {fileID: 2800000, guid: e83173149eff9b54690527e4b3f5f849, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7EF83A14:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 04ff8a54c73d5ec44bf7177d3730f1d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Ramp
-      second:
+    - _MyBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9338622d5cbb8234087562057c99f726, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
         m_Texture: {fileID: 2800000, guid: 4a056241e2722dc46a7262a8e7073fd9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Shading_Gradient:
+        m_Texture: {fileID: 2800000, guid: c5304b00a3b929b42bd2ab4564807fe6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
+    - <noninit>: 0
+    - NormalFactor: 1
+    - _Fresnel_Angle: -5
+    - _Fresnel_Size: 0.1
+    - _Gloss_size: 10
+    - _ShadowAttenFactor: 0.5
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 1.43217e-34, b: 0, a: 1.4321626e-34}
-    - first:
-        name: _Color
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - <noninit>: {r: 0, g: 1.43217e-34, b: 0, a: 1.4321626e-34}
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0.6}
+    - _MyBaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadingBlacks: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+    - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}

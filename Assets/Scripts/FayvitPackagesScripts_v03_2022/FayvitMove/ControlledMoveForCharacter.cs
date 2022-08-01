@@ -102,11 +102,13 @@ namespace FayvitMove
         public bool UpdatePosition(float pathDistanceCheck = 1, bool run = false)
         {
             bool retorno = false;
-            if (path != null)
+            if (path != null && mov.Controller!=null)
             {
                 if (indiceDaDirecao < path.corners.Length)
                 {
                     Vector3 pos = oControlado.transform.position;
+
+                    //Debug.Log(Vector3.Distance(path.corners[indiceDaDirecao], pos)+" : "+ path.corners[indiceDaDirecao]);
 
                     if (Vector3.Distance(path.corners[indiceDaDirecao], pos) < pathDistanceCheck /*&& mov.NoChao()*/)
                         indiceDaDirecao++;

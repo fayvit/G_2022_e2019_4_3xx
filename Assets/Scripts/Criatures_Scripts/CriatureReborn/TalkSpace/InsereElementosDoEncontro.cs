@@ -5,28 +5,38 @@ namespace Criatures2021
 {
     public class InsereElementosDoEncontro
     {
+        static void ColocaTreinadorEmPosicao(CharacterManager manager, Transform trainer)
+        {
+            Debug.Log("quem é o trainer?: " + trainer);
+            CharacterController controle = trainer.GetComponent<CharacterController>();
+            controle.enabled = false;
+            trainer.position = Vector3.up + MelhoraInstancia3D.PosParaDeslocamento(trainer.transform.position + 40 * manager.transform.forward, trainer.transform.position);
+            Transform aux = manager.ActivePet.transform;
+
+            //FayvitSupportSingleton.SupportSingleton.Instance.InvokeOnCountFrame(() =>
+            //{
+            controle.enabled = true;
+            //},100);
+
+            Vector3 V = DirectionOnThePlane.InTheUp(trainer.position, aux.position + 3 * aux.forward);
+            trainer.rotation = Quaternion.LookRotation(V);
+        }
 
         public static void EncontroDeTreinador(CharacterManager manager, Transform trainer)
         {
-            
 
+            manager.ContraTreinador = true;
+
+            ColocaTreinadorEmPosicao(manager, trainer);
+            
             AnimacaoDeEncontro(manager.transform.position);
             AdicionaCilindroEncontro(manager.transform.position);
-            AlternanciaParaCriature(manager);
+            //AlternanciaParaCriature(manager);
             ImpedeMovimentoDoCriature(manager.ActivePet);
             AlteraPosDoCriature(manager);
             ColocaOHeroiNaPOsicaoDeEncontro(manager);
 
-            Debug.Log("quem é o trainer?: "+trainer);
-            CharacterController controle = trainer.GetComponent<CharacterController>();
-            controle.enabled = false;
-            trainer.SetPositionAndRotation(Vector3.up+MelhoraInstancia3D.PosEmparedado(manager.transform.position + 40 * manager.transform.forward, trainer.position),
-                Quaternion.identity);
-            Transform aux = manager.ActivePet.transform;
-            controle.enabled = true;
-
-            Vector3 V = Vector3.ProjectOnPlane(aux.position + 3 * aux.forward - trainer.position, Vector3.up);
-            trainer.rotation = Quaternion.LookRotation(V);
+           
         }
 
         protected static void ColocaOHeroiNaPOsicaoDeEncontro(CharacterManager manager)
@@ -34,9 +44,8 @@ namespace Criatures2021
             CharacterController controle = manager.GetComponent<CharacterController>();
             controle.enabled = false;
                 
-            manager.transform.position = 2*Vector3.up+MelhoraInstancia3D.PosEmparedado(
-                manager.transform.position - 40f * manager.transform.forward,
-                manager.transform.position
+            manager.transform.position = 2*Vector3.up+MelhoraInstancia3D.ProcuraPosNoMapa(
+                manager.transform.position - 40f * manager.transform.forward
                 );//40f * tHeroi.forward;
 
 
@@ -58,6 +67,10 @@ namespace Criatures2021
             GameObject anima = ResourcesFolders.GetGeneralElements(GeneralParticles.encontro);
 
             MonoBehaviour.Destroy(MonoBehaviour.Instantiate(anima, posHeroi, Quaternion.identity), 2);
+            MessageAgregator<FayvitBasicTools.MsgRequestSfx>.Publish(new FayvitBasicTools.MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.encontro
+            });
         }
         protected static void AdicionaCilindroEncontro(Vector3 posHeroi)
         {
