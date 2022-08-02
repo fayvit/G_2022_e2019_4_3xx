@@ -42,7 +42,7 @@ namespace TextBankSpace
                 "De barco pelo rio, é possivel chegar a cidade de <color=yellow>Tamaraset</color>",
                 "Em Tamaraset existe uma arena divina para o deus da escuridão"
             }},
-            { 
+            {
             TextKey.katids5,new List<string>()
             {
             "O Imperador <color=orange>Logan</color> durante muitos anos (quase todo o seu império) foi um homem justo e que levou o povo a prosperidade",
@@ -57,7 +57,7 @@ namespace TextBankSpace
             "Tenho medo de um dia chegar a minha vez!!"
             }
             },
-            { 
+            {
             TextKey.katids6,new List<string>()
             {
             "Bem-vindo forasteiro, aqui é a cidade de <color=yellow>Katids</color>",
@@ -67,7 +67,7 @@ namespace TextBankSpace
             "Aparentemente quem não pode pagar é levado como escravo para as minhas de <color=cyan>Gemas Laranjes</color>"
             }
             },
-            { 
+            {
             TextKey.katids7,new List<string>()
             {
             "Hoje em dia todas as crianças já nascem brincando com as tecnologias oferecidas por <color=cyan>Armagedom</color>.",
@@ -79,7 +79,7 @@ namespace TextBankSpace
             "Você já aprisionou um Criature utilizando uma Carta Luva??"
             }
             },
-            { 
+            {
             TextKey.katids8,new List<string>()
             {
             "No deserto da predominância existe uma grande Universidade.\n\r Nela existem grandes estudiosos de renome",
@@ -94,7 +94,56 @@ namespace TextBankSpace
             "Dizem também que:\n\r A história da humanidade até os dias de hoje é a história da luta de classes.",
             "Eu não entendo muito bem sobre isso, mas isso faz muito sentido quando a gente ouve um estudioso falando."
             }
+            },
+            {
+            TextKey.armagedomDeKatids,new List<string>()
+            {
+            "Olá estranho!! Bem vindo ao armagedom da cidade de <color=yellow>Katids</color>",
+            "Nossa pequena cidade encrustada entre montanhas tem o prazer de receber sua nobre visita"
             }
+            },
+            {
+            TextKey.armagedomDeKatidsCurto,new List<string>()
+            {
+            "Bem vindo ao armagedom da cidade de <color=yellow>Katids</color>"
+            }
+            },
+            {
+            TextKey.npcDoArmagedomDeKatids,new List<string>()
+            {
+            "Foi uma alegria muito grande quando a conexão com <color=cyan>Armagedom</color> chegou a cidade de <color=yellow>Katids</color>",
+            "Muitas requisições foram feitas, muita burocracia enfrentada, muita luta até chegar a essa instalação",
+            "O império nunca deu muita atenção a essa parte remota dos seus dominios, se não fosse a represa talvez nem fossemos considerados parte dele",
+            "Durante muito tempo morar em katids trazia um sentimento de abandono em relação ao poder central",
+            "Agora com Armagedom, tudo mudou, me sinto positivo e otimista"
+            }
+            },
+            {
+            TextKey.npcShopKatids,new List<string>()
+            {
+            "Faz pouco tempo eu passei por apuros aqui na minha loja.",
+            "Cobradores de impostos do império vieram até aqui conferir minha documentação",
+            "Eles fuçaram e revisaram tudo, diziam que me levariam as minas se algo estivesse errado",
+            "E eu demorei a encontrar a documentação dos ultimos impostos",
+            "Suei muito!! Achei que nessa eu ia",
+            "Agora tenho que ficar preparado para a proxima fiscalização",
+            "Nunca mexi com picareta. Como vou me tornar um mineiro escravizado?"
+            }
+            },
+            {
+            TextKey.primeiraConversaShopKatids,new List<string>()
+            {
+            "Chapéu!!! e roupa usada!!! Quem tem?",
+            "Brincadeiras a parte, vamos às vendas."
+            }
+            },
+            {
+            TextKey.conversaShopKatids,new List<string>()
+            {
+            "Bem vindo a loja de <color=yellow>Katis</color>",
+            "Vamos às vendas"
+            }
+            },
         };
     }
 }

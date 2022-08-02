@@ -201,6 +201,14 @@ namespace TextBankSpace
         katids5,
         katids6,
         katids7,
-        katids8
+        katids8,
+        armagedomDeKatids,
+        armagedomDeKatidsCurto,
+        npcDoArmagedomDeKatids,
+        frasesDeShoping,
+        comprarOuVender,
+        npcShopKatids,
+        primeiraConversaShopKatids,
+        conversaShopKatids
     }
 }

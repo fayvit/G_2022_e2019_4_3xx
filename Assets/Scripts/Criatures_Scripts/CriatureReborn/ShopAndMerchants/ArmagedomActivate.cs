@@ -1,34 +1,22 @@
 ﻿using UnityEngine;
 using Criatures2021Hud;
-using FayvitUI;
 using FayvitCam;
 using FayvitBasicTools;
 using TextBankSpace;
-using TalkSpace;
 using FayvitMessageAgregator;
 using FayvitSupportSingleton;
 
 namespace Criatures2021
 {
-    public class ArmagedomActivate : ButtonActivate
+    public class ArmagedomActivate :MerchantBase
     {
-        [SerializeField] private ScheduledTalkManager NPC = null;
-        [SerializeField] private ScheduledTalkManager NPCfalasIniciais = null;
-        [SerializeField] private Sprite fotoDoNPC;
         [SerializeField] private IndiceDeArmagedoms indiceDesseArmagedom = IndiceDeArmagedoms.daCavernaInicial;
-        [SerializeField] private Transform charRef;
-        [SerializeField] private string ID;
-
-        private MsgSendExternalPanelCommand commands;
-        private CharacterManager manager;
+        
         private fasesDoArmagedom fase = fasesDoArmagedom.emEspera;
-        private TextDisplay dispara;
         private PetReplaceManager replace;
         private float tempoDecorrido = 0;
         private string tempString;
-        //private string[] t;
         private string[] frasesDeArmagedom = TextBank.RetornaListaDeTextoDoIdioma(TextKey.frasesDeArmagedom).ToArray();
-        private string[] txtDeOpcoes = TextBank.RetornaListaDeTextoDoIdioma(TextKey.menuDeArmagedom).ToArray();
         
 
         private enum fasesDoArmagedom
@@ -49,18 +37,8 @@ namespace Criatures2021
         private const float TEMPO_DE_CURA = 2.5F;
         void Start()
         {
-            
-            if (StaticInstanceExistence<DisplayTextManager>.SchelduleExistence(Start, this, () => {
-                return DisplayTextManager.instance;
-            }))
-            { 
-                textoDoBotao = TextBank.RetornaFraseDoIdioma(TextKey.textoBaseDeAcao);
-                if (StaticInstanceExistence<IGameController>.SchelduleExistence(Start, this, () => { return AbstractGameController.Instance; }))
-                {
-                    dispara = DisplayTextManager.instance.DisplayText;
-                    //t = TextBank.RetornaListaDeTextoDoIdioma(TextKey.primeiroArmagedom).ToArray();
-                }
-            }
+            txtDeOpcoes = TextBank.RetornaListaDeTextoDoIdioma(TextKey.menuDeArmagedom).ToArray();
+            StartBase();
         }
 
         new void Update()
@@ -83,22 +61,26 @@ namespace Criatures2021
                     }
                     break;
                 case fasesDoArmagedom.escolhaInicial:
-                    CameraApplicator.cam.FocusInPoint(8,2/*, -1, true*/);
-                    if (!dispara.LendoMensagemAteOCheia(commands.confirmButton))
-                    {
-                        
-                        ContainerBasicMenu.instance.Menu.ChangeOption(-commands.vChange);
+                    #region AntesDaClasseBase
+                    //CameraApplicator.cam.FocusInPoint(8,2/*, -1, true*/);
+                    //if (!dispara.LendoMensagemAteOCheia(commands.confirmButton))
+                    //{
 
-                        if(commands.confirmButton)
-                            OpcaoEscolhida(ContainerBasicMenu.instance.Menu.SelectedOption);
+                    //    ContainerBasicMenu.instance.Menu.ChangeOption(-commands.vChange);
 
-                    }
+                    //    if(commands.confirmButton)
+                    //        OpcaoEscolhida(ContainerBasicMenu.instance.Menu.SelectedOption);
 
-                    if (commands.returnButton)
-                    {
-                        OpcaoEscolhida(txtDeOpcoes.Length - 1);
-                    }
-                    break;
+                    //}
+
+                    //if (commands.returnButton)
+                    //{
+                    //    OpcaoEscolhida(txtDeOpcoes.Length - 1);
+                    //} 
+                    #endregion
+
+                    EscolhaInicial();
+                break;
                 case fasesDoArmagedom.curando:
 
                     tempoDecorrido += Time.deltaTime;
@@ -145,18 +127,7 @@ namespace Criatures2021
             }
         }
 
-        private void OnValidate()
-        {
-            BuscadorDeID.Validate(ref ID, this);
-        }
-
-        void LigarMenu()
-        {
-            ContainerBasicMenu.instance.SetPercentSizeInTheParent(.65f, .25f, .99f, .75f);
-            ContainerBasicMenu.instance.Menu.StartHud(OpcaoEscolhida, txtDeOpcoes);
-        }
-
-        void OpcaoEscolhida(int opcao)
+        protected override void OpcaoEscolhida(int opcao)
         {
             //ActionManager.ModificarAcao(GameController.g.transform, () => { });
 
@@ -180,21 +151,25 @@ namespace Criatures2021
             }
         }
 
-        private void IniciarConversar()
+        protected override void IniciarConversar()
         {
-            //dispara.OffPanels();
-            NPC.Start();
-            SomDoIniciar();
-            //if (condicoesComplementares != null)
-            //    for (int i = 0; i < condicoesComplementares.Length; i++)
-            //        AbstractGameController.Instance.MyKeys.MudaShift(condicoesComplementares[i], true);
+            base.IniciarConversar();
 
-            MessageAgregator<MsgChangeShiftKey>.Publish(new MsgChangeShiftKey() { change = true, sKey = ID });
+            #region EnviadoParaClasseBase
+            ////dispara.OffPanels();
+            //NPC.Start();
+            //SomDoIniciar();
+            ////if (condicoesComplementares != null)
+            ////    for (int i = 0; i < condicoesComplementares.Length; i++)
+            ////        AbstractGameController.Instance.MyKeys.MudaShift(condicoesComplementares[i], true);
 
-            FluxoDeBotao();
+            //MessageAgregator<MsgChangeShiftKey>.Publish(new MsgChangeShiftKey() { change = true, sKey = ID });
 
-            
-            NPC.IniciaConversa();
+            //FluxoDeBotao();
+
+
+            //NPC.IniciaConversa(); 
+            #endregion
 
             fase = fasesDoArmagedom.activeTalk;
 
@@ -251,14 +226,8 @@ namespace Criatures2021
 
                 MessageAgregator<MsgReturnToArmgdMenu>.AddListener(OnReturnToArmagedomMenu);
 
-                //g.HudM.EntraCriatures.IniciarEssaHUD(armagedados, AoEscolherumCriature);
-                //GameController.g.HudM.Painel.AtivarNovaMens(frasesDeArmagedom[2], 30);
                 fase = fasesDoArmagedom.armagedadosAberto;
 
-                //ActionManager.ModificarAcao(GameController.g.transform, () =>
-                //{
-                //    AoEscolherumCriature(GameController.g.HudM.EntraCriatures.OpcaoEscolhida);
-                //});
             }
             else
             {
@@ -307,7 +276,7 @@ namespace Criatures2021
                 
 
                 MessageAgregator<MsgEndReplaceForArmagedom>.AddListener(OnEndReplace);
-                //replace = new ReplaceManager(g.Manager, g.Manager.CriatureAtivo.transform, FluxoDeRetorno.armagedom);
+                
                 fase = fasesDoArmagedom.fazendoUmaTroca;
             }
             else if (obj.entra >= 0 && obj.sai > 0)
@@ -342,8 +311,7 @@ namespace Criatures2021
             });
             LigarMenu();
             EntraFrasePossoAjudar();
-            //GameController.g.HudM.EntraCriatures.FinalizarHud();
-            //GameController.g.HudM.Painel.EsconderMensagem();
+            
         }
 
         #region suprimido
@@ -475,34 +443,11 @@ namespace Criatures2021
             fase = fasesDoArmagedom.curando;
         }
 
-        public void VoltarAoJogo()
-        {
-            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-            {
-                sfxId = FayvitSounds.SoundEffectID.Book1
-            });
-
-            MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
-            {
-                myHero = manager.gameObject
-            });
-
-            MessageAgregator<FillTextDisplayMessage>.Publish();
-            dispara.OffPanels();
-            
-            fase = fasesDoArmagedom.emEspera;
-            
-            MessageAgregator<MsgSendExternalPanelCommand>.RemoveListener(OnReceiveCommands);
-
-            MessageAgregator<MsgReturnGameElmentsHud>.Publish();
-        }
-
         void EntraFrasePossoAjudar()
         {
             dispara.TurnPanels();
             dispara.StartShowMessage(frasesDeArmagedom[9], fotoDoNPC);
             fase = fasesDoArmagedom.escolhaInicial;
-            
         }
 
         public override void SomDoIniciar()
@@ -513,41 +458,27 @@ namespace Criatures2021
             });
         }
 
+        public override void VoltarAoJogo()
+        {
+            base.VoltarAoJogo();
+            fase = fasesDoArmagedom.emEspera;
+        }
+
         public void BotaoArmagedom()
         {
-            SomDoIniciar();
-            commands = new MsgSendExternalPanelCommand();
-            MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveCommands);
-
-            FluxoDeBotao();
-
-            CameraApplicator.cam.StartExibitionCam(transform, 1);
-            MessageAgregator<MsgHideGameElmentsHud>.Publish();
+            BaseStartMerchant();
             
             IndiceDeArmagedoms k = (IndiceDeArmagedoms)AbstractGameController.Instance.MyKeys.VerificaCont(KeyCont.armagedoms);
             k |= indiceDesseArmagedom;
             AbstractGameController.Instance.MyKeys.MudaCont(KeyCont.armagedoms, (int)k);
 
-            dispara.StartTextDisplay();
-            manager = MyGlobalController.MainPlayer;
+            
             manager.Dados.UltimoArmagedom = indiceDesseArmagedom;
 
-            CameraApplicator.cam.StartShowPointCamera(transform,new SinglePointCameraProperties() { 
-                velOrTimeFocus=0.75f,
-                withTime=true
-            });
-
             fase = fasesDoArmagedom.mensInicial;
-            NPCfalasIniciais.Start();
-            NPCfalasIniciais.IniciaConversa();
-            Vector3 dir = charRef.parent.position - manager.transform.position;
-            CharRotateTo.RotateDir(dir, manager.gameObject);
-            CharRotateTo.RotateDir(-dir, charRef.parent.gameObject);
-        }
+            
 
-        private void OnReceiveCommands(MsgSendExternalPanelCommand obj)
-        {
-            commands = obj;
+            
         }
 
         public override void FuncaoDoBotao()

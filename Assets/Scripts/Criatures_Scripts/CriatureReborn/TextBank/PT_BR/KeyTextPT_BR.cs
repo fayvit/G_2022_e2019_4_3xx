@@ -176,11 +176,13 @@ namespace TextBankSpace
                         "Sim",
                         "Não"
                     }},
-     //           {TextKey.comprarOuVender,new List<string>()
-     //               {
-     //                   "Comprar",
-     //                   "Vender"
-     //               }},
+                {TextKey.comprarOuVender,new List<string>()
+                    {
+                        "Comprar",
+                        "Vender",
+                        "Conversar",
+                        "Sair"
+                    }},
                 {
                     TextKey.frasesDeArmagedom,new List<string>()
                     {
@@ -203,16 +205,17 @@ namespace TextBankSpace
      //                   "No que posso te ajudar??"
      //               }
      //           },
-     //           {
-     //               TextKey.frasesDeShoping,new List<string>()
-     //               {
-     //                   "Tenho excelentes produtos pra você estranho. Gostaria de comprar algo?",
-     //                   "O que você gostaria de vender? estranho...",
-     //                   "Muito obrigado por sua compra, estranho...",
-     //                   "Excelente negocio, estranho...",
-     //                   "Espero fazer negocios com você novamente, estranho..."
-     //               }
-     //           },
+                {
+                    TextKey.frasesDeShoping,new List<string>()
+                    {
+                        "Tenho excelentes produtos pra você estranho. Gostaria de comprar algo?",
+                        "O que você gostaria de vender? estranho...",
+                        "Muito obrigado por sua compra, estranho...",
+                        "Excelente negocio, estranho...",
+                        "Espero fazer negocios com você novamente, estranho...",
+                        "No que posso te ajudar?"
+                    }
+                },
      //   {
      //       TextKey.textosParaQuantidadesEmShop,new List<string>()
      //       {

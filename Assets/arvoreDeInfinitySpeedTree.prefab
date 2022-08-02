@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3648246053554515059}
   - component: {fileID: 8132934482406141034}
   m_Layer: 0
-  m_Name: arvoreDeInfinityBase
+  m_Name: arvoreDeInfinitySpeedTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
