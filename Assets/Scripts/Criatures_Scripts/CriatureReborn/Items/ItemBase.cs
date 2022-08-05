@@ -10,11 +10,13 @@ namespace Criatures2021
     public class ItemBase: System.ICloneable
     {
         [SerializeField] private NameIdItem nomeID;
+        [SerializeField] private ItemNature itemNature;
         [SerializeField] private bool usavel;
         [SerializeField] private int acumulavel;
         [SerializeField] private int estoque;
         [SerializeField] private int valor;
         [SerializeField] private bool nosItensRapidos;
+        
 
         //private GameObject gAlvoDoItem;
         [System.NonSerialized] private GameObject dono;
@@ -41,6 +43,8 @@ namespace Criatures2021
         {
             get { return nomeID; }
         }
+
+        public ItemNature Item_Nature => itemNature;
 
         public bool NosItensRapidos { get => nosItensRapidos; set => nosItensRapidos = value; }
 
@@ -162,9 +166,9 @@ namespace Criatures2021
             return retorno;
         }
 
-        protected static ItemBase ProcuraItemNaLista(NameIdItem nome,List<ItemBase> lista)
+        public static ItemBase ProcuraItemNaLista(NameIdItem nome,List<ItemBase> lista)
         {
-            ItemBase retorno = new ItemBase(new ItemFeatures());
+            ItemBase retorno = new ItemBase(new ItemFeatures(NameIdItem.generico));
             for (int i = lista.Count - 1; i > -1; i--)
             {
                 if (lista[i].ID == nome)
@@ -269,6 +273,7 @@ namespace Criatures2021
     public struct ItemFeatures
     {
         public NameIdItem NomeID;
+        public ItemNature itemNature;
         public bool consumivel;
         public int acumulavel;
         public int estoque;
@@ -282,6 +287,7 @@ namespace Criatures2021
         public ItemFeatures(NameIdItem nome)
         {
             this.NomeID = nome;
+            this.itemNature = ItemNature.consumivel;
             this.consumivel = true;
             this.acumulavel = 99;
             this.estoque = 1;
@@ -309,6 +315,14 @@ namespace Criatures2021
         finalizaUsaItem,
         updateParticular,
         emEspera
+    }
+
+    public enum ItemNature
+    { 
+        nula=-1,
+        consumivel,
+        chave,
+        pergGolpe
     }
 
     public enum NameIdItem

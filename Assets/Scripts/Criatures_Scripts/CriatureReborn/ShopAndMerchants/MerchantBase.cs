@@ -12,8 +12,8 @@ namespace Criatures2021
     public abstract class MerchantBase : ButtonActivate
     {
         [SerializeField] private Transform charRef;
-        [SerializeField] private string ID;
 
+        [SerializeField] protected string ID;
         [SerializeField] protected ScheduledTalkManager NPC = null;
         [SerializeField] protected ScheduledTalkManager NPCfalasIniciais = null;
         [SerializeField] protected Sprite fotoDoNPC;

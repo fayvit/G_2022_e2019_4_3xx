@@ -49,6 +49,7 @@ namespace FayvitSounds
         XP_Heal07 = 30,
         Darkness8 = 31,
         encontro = 32,
-        Monster3 = 33
+        Monster3 = 33,
+        Shop = 34
     }
 }

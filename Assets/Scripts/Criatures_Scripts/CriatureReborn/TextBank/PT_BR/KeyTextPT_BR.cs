@@ -213,7 +213,14 @@ namespace TextBankSpace
                         "Muito obrigado por sua compra, estranho...",
                         "Excelente negocio, estranho...",
                         "Espero fazer negocios com você novamente, estranho...",
-                        "No que posso te ajudar?"
+                        "No que posso te ajudar?",
+                        "Me desculpe estranho mas parece que tudo que eu tinha desse item já foi vendido.",
+                        "A menor quantidade que você pode comprar é 1",
+                        "A maior quantidade que você pode comprar é {0}",//ID=8
+                        "Desculpe estranho, mas parece que você só pode pagar por {0} unidades.",
+                        "Desculpe estranho, mas parece que você não tem cristais suficientes para pagar por esse item",
+                        "Me desculpe estranho mas eu não posso comprar esse item",
+                        "Parece que você não tem nenhum item para vender."
                     }
                 },
      //   {
@@ -419,7 +426,7 @@ namespace TextBankSpace
      //       {
      //           "Eu sou um estudante, estudo para me tornar um sacerdote de <color=cyan>Log</color>, o deus da sabedoria e conhecimento",
      //           "Por isso, ainda sei escrever poucos pergaminhos, na verdade, apenas dois que posso dizer uteis",
-     //           "O pergaminho de Sinara, deusa dos criatures, quando lido aumenta em 4 pontos o limite de vida d e um criature",
+     //           "O pergaminho de Sinara, deusa dos criatures, quando lido aumenta em 4 pontos o limite de vida de um criature",
      //           "O pergaminho de Alana, deusa da fertilidade, quando lido aumenta em 4 pontos o limite de energia de um criature",
      //           "Espero que esse pergaminhos sejam úteis pra você viajante"
      //       }

@@ -477,8 +477,6 @@ namespace Criatures2021
 
             fase = fasesDoArmagedom.mensInicial;
             
-
-            
         }
 
         public override void FuncaoDoBotao()

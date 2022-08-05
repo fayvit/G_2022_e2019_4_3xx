@@ -13,7 +13,7 @@ namespace Criatures2021
         [SerializeField, ArrayElementTitle("nomeID")] private List<ItemBase> itens = new List<ItemBase>();
         [SerializeField] private int cristais = 0;
 
-        public int Cristais { get => cristais; set => cristais = value; }
+        public int Cristais { get => cristais; }
         public int ItemSai { get; set; } = 0;
         public int MaxCarregaveis { get; set; } = 5;
 
@@ -26,6 +26,25 @@ namespace Criatures2021
         public List<PetBase> CriaturesArmagedados { get=>criaturesArmagedados; set=>criaturesArmagedados=value; }
         public LivroDosCriatures Livro { get; set; } = new LivroDosCriatures();
 
+        /// <summary>
+        /// Adiciona o valor amount ao total de cristais, amount deve ser positivo
+        /// </summary>
+        /// <param name="amount">Um inteiro positivo</param>
+        public void AdicionarCristais(int amount)
+        {
+            cristais += Mathf.Max(amount,0);
+        }
+
+        /// <summary>
+        /// Remove o valor amount ao total de cristais. Se amount foi maior que o numero de cristais, cristais recebe zero. O valor Amount deve ser positivo
+        /// </summary>
+        /// <param name="amount">Um inteiro positivo</param>
+        public void RemoverCristais(int amount)
+        { 
+            cristais = Mathf.Max(0,cristais- Mathf.Max(0, amount));
+        }
+
+
         public void DadosLimpos()
         {
             criaturesAtivos = new List<PetBase>();
@@ -36,6 +55,7 @@ namespace Criatures2021
 
         public void InicializadorDosDados()
         {
+            cristais = 100;
             CriaturesArmagedados = new List<PetBase>() {
                 new PetBase(PetName.Trude,7),
                 new PetBase(PetName.Galfo,11),

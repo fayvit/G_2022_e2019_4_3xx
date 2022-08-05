@@ -211,7 +211,7 @@ namespace Criatures2021
         {
             if (obj.atacker == ActivePet.gameObject)
             {
-                dados.Cristais += (ContraTreinador? 2:1)*obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo;
+                dados.AdicionarCristais((ContraTreinador? 2:1)*obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo);
                 MessageAgregator<MsgChangeCristalCount>.Publish(new MsgChangeCristalCount()
                 {
                     newCristalCount =  dados.Cristais

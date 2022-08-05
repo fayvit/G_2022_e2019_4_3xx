@@ -16,8 +16,7 @@ namespace Criatures2021Hud
         [SerializeField] private GameObject speedIcon;
 
         private ItemBase thisItem;
-
-
+        protected GameObject AmountContainer => amountTxt.transform.parent.gameObject;
         public Image OptionImage { get { return optionImage; } set { optionImage = value; } }
 
         private void Start()

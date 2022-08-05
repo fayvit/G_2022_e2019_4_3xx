@@ -337,10 +337,15 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\LevelUp\PetupLevel.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\LevelUp\SimulateLevelPass.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\LevelUp\UpDeNivel.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\A_ShopOption.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\AmountHudManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\ArmagedomActivate.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\ArmagedomsLocations.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\GridShopItemMenu.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\MerchantBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\ShopActivate.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\ShopHudManager.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\ShopAndMerchants\ShopShowItemManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\ButtonActivate.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\DisplayTextManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\IniciarComTrueSeNaoConversado.cs" />
