@@ -22,6 +22,7 @@ namespace FayvitBasicTools
         activeConfirmationOpened,
         stopped,
         NonBlockPanelOpened,
-        inDamage
+        inDamage,
+        withKeyDjey
     }
 }

@@ -21,6 +21,11 @@ namespace Criatures2021
                 velocidadeDeGolpe = 28,
             });
 
+            FayvitMessageAgregator.MessageAgregator<FayvitBasicTools.MsgRequestSfx>.Publish(new FayvitBasicTools.MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.XP010_System10
+            });
+
             DustInTheWind d = gameObject.AddComponent<DustInTheWind>();
             d.tempoDeRepeticao = .1f;
             MonoBehaviour.Destroy(d, petAttack.TempoDeMoveMax);

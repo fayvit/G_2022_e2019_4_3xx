@@ -19,6 +19,7 @@ public class HumanAnimationListener : MonoBehaviour
     [SerializeField] private string captureAnimationName = "capturou";
     [SerializeField] private string damageAnimationName = "DanoPrincipal";
     [SerializeField] private string pushAnimate = "Empurrando";
+    [SerializeField] private string mounted = "montado";
     [SerializeField] private float newRotationFactor = .001f;
 
     private Animator A;
@@ -42,6 +43,8 @@ public class HumanAnimationListener : MonoBehaviour
         MessageAgregator<MsgRequestHumanDamage>.AddListener(OnRequestDamageAnimate);
         MessageAgregator<MsgStartPushElement>.AddListener(OnStartPushElement);
         MessageAgregator<MsgChangeToHero>.AddListener(OnChangeToHero);
+        MessageAgregator<MsgRequestMountedAnimation>.AddListener(OnMounted);
+        MessageAgregator<MsgExitKeyDjey>.AddListener(OnExitKeyDjey);
     }
 
     private void OnDestroy()
@@ -59,6 +62,21 @@ public class HumanAnimationListener : MonoBehaviour
         MessageAgregator<MsgRequestHumanDamage>.RemoveListener(OnRequestDamageAnimate);
         MessageAgregator<MsgStartPushElement>.RemoveListener(OnStartPushElement);
         MessageAgregator<MsgChangeToHero>.RemoveListener(OnChangeToHero);
+        MessageAgregator<MsgRequestMountedAnimation>.RemoveListener(OnMounted);
+        MessageAgregator<MsgExitKeyDjey>.RemoveListener(OnExitKeyDjey);
+    }
+
+    private void OnExitKeyDjey(MsgExitKeyDjey obj)
+    {
+        A.Play("padrao");
+    }
+
+    private void OnMounted(MsgRequestMountedAnimation obj)
+    {
+        if (gameObject == obj.gameObject)
+        {
+            A.Play(mounted);
+        }
     }
 
     private void OnChangeToHero(MsgChangeToHero obj)
@@ -226,5 +244,9 @@ public struct MsgRequestHumanDamage : IMessageBase {
 
 public struct MsgDesyncStandardAnimation : IMessageBase
 {
+    public GameObject gameObject;
+}
+
+public struct MsgRequestMountedAnimation : IMessageBase {
     public GameObject gameObject;
 }

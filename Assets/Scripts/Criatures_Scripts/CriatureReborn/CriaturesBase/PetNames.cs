@@ -80,5 +80,7 @@
     Galfo,
     Trude,
     Saga,
-    Xaiber
+    Xaiber,
+    KeyDjey,
+    KeyBoard
 }

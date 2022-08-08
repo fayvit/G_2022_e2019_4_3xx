@@ -44,8 +44,10 @@ namespace Criatures2021
 
                     itensParaVenda[i].limitado = keyVar.VerificaAutoCont(ID + "item" + i);
 
-                    keyVar.MudaAutoShift(ID,true);
                 }
+
+                keyVar.MudaAutoShift(ID, true);
+
                 txtDeOpcoes = TextBank.RetornaListaDeTextoDoIdioma(TextKey.comprarOuVender).ToArray();
                 frasesDeShoping = TextBank.RetornaListaDeTextoDoIdioma(keyFrasesDoShoping).ToArray();
                 StartBase();

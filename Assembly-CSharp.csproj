@@ -203,6 +203,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\EnemyIaBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\FindByOwner.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\IamTarget.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\KeyDjeyTransportManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\LivroDosCriatures.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\PetManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Charactersmanager\PetManagerCharacter.cs" />

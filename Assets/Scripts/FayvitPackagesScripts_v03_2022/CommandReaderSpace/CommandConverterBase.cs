@@ -29,6 +29,7 @@ namespace FayvitCommandReader
             { CommandConverterInt.menuMoveToList,new List<int>{16} },
             { CommandConverterInt.pauseMenu,new List<int>{6} },
             { CommandConverterInt.deletarSave,new List<int>{17} },
+            { CommandConverterInt.keyDjeyAction,new List<int>{3} },
         };
 
         protected Dictionary<CommandConverterString, List<string>> dicCommandConverterString 

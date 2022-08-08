@@ -459,7 +459,8 @@ namespace FayvitLoadScene
         CenaTesteNumber3,
         MAST_Teste,
         acampamentoDaResistencia,
-        cavernaAcampamentoKatids
+        cavernaAcampamentoKatids,
+        planicieDeKatids
     }
 
     public enum NomesCenasEspeciais

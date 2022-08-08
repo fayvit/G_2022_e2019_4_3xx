@@ -125,7 +125,7 @@ namespace FayvitMove
 
             if (noChao && timeOfRising > features.minTimeJump)
                 NotJumping();
-            else if (!noChao && timeOfRising > features.minTimeJump)
+            else if (!noChao && timeOfRising > 0.5f*features.maxTimeJump)
             {
                 RaycastHit hit;
 

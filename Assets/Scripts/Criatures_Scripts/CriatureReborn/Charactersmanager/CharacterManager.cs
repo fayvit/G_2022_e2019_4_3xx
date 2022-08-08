@@ -7,6 +7,7 @@ using FayvitMove;
 using FayvitMessageAgregator;
 using Criatures2021Hud;
 using TextBankSpace;
+using System;
 
 namespace Criatures2021
 {
@@ -86,6 +87,7 @@ namespace Criatures2021
             MessageAgregator<MsgBlockPetAdvanceInTrigger>.AddListener(OnPetTriggerBlockable);
             MessageAgregator<MsgChangeGameScene>.AddListener(OnChangeGameScene);
             MessageAgregator<MsgSlopeSlip>.AddListener(OnSlopeSlip);
+            MessageAgregator<MsgExitKeyDjey>.AddListener(OnExitKeyDjey);
 
         }
 
@@ -113,6 +115,16 @@ namespace Criatures2021
             MessageAgregator<MsgBlockPetAdvanceInTrigger>.RemoveListener(OnPetTriggerBlockable);
             MessageAgregator<MsgChangeGameScene>.RemoveListener(OnChangeGameScene);
             MessageAgregator<MsgSlopeSlip>.RemoveListener(OnSlopeSlip);
+            MessageAgregator<MsgExitKeyDjey>.RemoveListener(OnExitKeyDjey);
+        }
+
+        private void OnExitKeyDjey(MsgExitKeyDjey obj)
+        {
+            if (obj.usuario == gameObject)
+            {
+                ThisState = obj.returnState;
+                mov.Controller.enabled = true;
+            }
         }
 
         private void OnSlopeSlip(MsgSlopeSlip obj)
@@ -523,6 +535,9 @@ namespace Criatures2021
                     mov.MoveApplicator(Vector3.zero);
                     ControlCamera();
                 break;
+                case CharacterState.withKeyDjey:
+                    //ControlCamera();
+                break;
             }
 
         }
@@ -646,6 +661,17 @@ namespace Criatures2021
                     //    gerente.Dados.TempoDoUltimoUsoDeItem = Time.time;
                     StartUseItem(FluxoDeRetorno.heroi);
                     //ThisState = CharacterState.stopedWithStoppedCam;
+                }
+                else if (CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction))
+                {
+                    ThisState = CharacterState.withKeyDjey;
+                    mov.MoveApplicator(Vector3.zero);
+                    mov.Controller.enabled = false;
+                    KeyDjeyTransportManager.StartKeyDjeyTransport(transform,Ccd.PersBase==PersonagemBase.masculino);
+                    MessageAgregator<MsgRequestMountedAnimation>.Publish(new MsgRequestMountedAnimation()
+                    {
+                        gameObject = gameObject
+                    });
                 }
             }
         }

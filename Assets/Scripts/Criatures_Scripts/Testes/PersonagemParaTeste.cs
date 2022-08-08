@@ -76,7 +76,9 @@ public class PersonagemParaTeste : MonoBehaviour
                     }
                     };
 
-        
+        AbstractGlobalController.Instance.Music.StartMusic(MusicDictionary.GetSceneMusic(
+            StringForEnum.GetEnum(SceneManager.GetActiveScene().name,NomesCenas.acampamentoDaResistencia)
+            ));
 
         return Ggg;
     }

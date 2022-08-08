@@ -55,5 +55,6 @@ public class ResourcesFolders {
 public enum GeneralElements
 { 
     passouDeNivel,
-    cilindroEncontro
+    cilindroEncontro,
+    keydjeyParticle
 }

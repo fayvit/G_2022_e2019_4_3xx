@@ -50,6 +50,8 @@ namespace FayvitSounds
         Darkness8 = 31,
         encontro = 32,
         Monster3 = 33,
-        Shop = 34
+        Shop = 34,
+        XP010_System10 = 35,
+        keyDjeySound = 36
     }
 }
