@@ -7,7 +7,7 @@ using FayvitMove;
 using FayvitMessageAgregator;
 using Criatures2021Hud;
 using TextBankSpace;
-using System;
+using FayvitSupportSingleton;
 
 namespace Criatures2021
 {
@@ -16,6 +16,9 @@ namespace Criatures2021
         [SerializeField] private BasicMove mov;
         [SerializeField] private DadosDeJogador dados;
         [SerializeField] private DamageState damageState;
+
+        private bool podeIrAoKeyDjey = true;
+        private const float INTERVALO_KEY_DJEY = .25F;
 
         public bool ContraTreinador { get; set; }
         public bool InTeste { get; set; }
@@ -122,6 +125,10 @@ namespace Criatures2021
         {
             if (obj.usuario == gameObject)
             {
+                podeIrAoKeyDjey = false;
+                SupportSingleton.Instance.InvokeInSeconds(() => {
+                    podeIrAoKeyDjey = true;
+                },INTERVALO_KEY_DJEY);
                 ThisState = obj.returnState;
                 mov.Controller.enabled = true;
             }
@@ -554,7 +561,8 @@ namespace Criatures2021
                 MessageAgregator<MsgRequestNewAttackHud>.Publish(new MsgRequestNewAttackHud()
                 {
                     fluxo = fluxo,
-                    oAprendiz = dados.CriaturesAtivos[0]
+                    oAprendiz = dados.CriaturesAtivos[0],
+                    golpePorAprender =dados.CriaturesAtivos[0].GolpesPorAprender[0]
                 });
             }
         }
@@ -662,7 +670,7 @@ namespace Criatures2021
                     StartUseItem(FluxoDeRetorno.heroi);
                     //ThisState = CharacterState.stopedWithStoppedCam;
                 }
-                else if (CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction))
+                else if (CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeIrAoKeyDjey)
                 {
                     ThisState = CharacterState.withKeyDjey;
                     mov.MoveApplicator(Vector3.zero);

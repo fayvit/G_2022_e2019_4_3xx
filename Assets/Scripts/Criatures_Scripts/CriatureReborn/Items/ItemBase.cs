@@ -183,7 +183,9 @@ namespace Criatures2021
             List<ItemBase> lista
             /*FluxoDeRetorno fluxo = FluxoDeRetorno.heroi*/)
         {
+            
             int indice = lista.IndexOf(nomeItem);
+            Debug.Log("NOme do item: "+nomeItem+" : "+nomeItem.ID+" indice "+indice+" : ramanho da lista"+lista.Count);
             if (indice > -1)
                 if (lista[indice].Estoque >= 1)
                 {
@@ -314,7 +316,8 @@ namespace Criatures2021
         selecaoDeItem,
         finalizaUsaItem,
         updateParticular,
-        emEspera
+        emEspera,
+        oneMessageOpened
     }
 
     public enum ItemNature
@@ -374,6 +377,7 @@ namespace Criatures2021
         pergaminhoDeAnanda,
         canetaSagradaDeLog,
         pergSinara,
-        pergAlana
+        pergAlana,
+        pergTempestadeEletrica
     }
 }

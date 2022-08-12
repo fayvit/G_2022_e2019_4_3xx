@@ -15,6 +15,9 @@ namespace Criatures2021
         private DamageState damageState;
         private Transform usuario;
         private LocalState state = LocalState.onFree;
+        private bool podeVoltarProTtreinador;
+
+        private const float TEMPO_PODE_MUDAR = .25f;
 
         private enum LocalState
         { 
@@ -56,6 +59,10 @@ namespace Criatures2021
         // Start is called before the first frame update
         void Start()
         {
+            SupportSingleton.Instance.InvokeInSeconds(() =>
+            {
+                podeVoltarProTtreinador = true;
+            }, TEMPO_PODE_MUDAR);
             damageState = new DamageState(transform);
             move = new BasicMove(new MoveFeatures()
             {
@@ -123,7 +130,7 @@ namespace Criatures2021
                         GetCommander.GetButton(CommandConverterInt.jump)
                         );
 
-                    if (GetCommander.GetButtonDown(CommandConverterInt.keyDjeyAction))
+                    if (GetCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeVoltarProTtreinador)
                     {
                         ParticulasComSom(usuario);
                         MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
@@ -132,7 +139,13 @@ namespace Criatures2021
                             returnState = CharacterState.onFree
                         });
 
+                        MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+                        {
+                            pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
+                        });
+
                         usuario.parent = null;
+                        usuario.rotation =  DirectionOnThePlane.Rotation(usuario.forward);
                         Destroy(gameObject);
                     }
                     break;
@@ -163,6 +176,6 @@ namespace Criatures2021
     public struct MsgExitKeyDjey : IMessageBase
     {
         public GameObject usuario;
-        public FayvitBasicTools.CharacterState returnState;
+        public CharacterState returnState;
     }
 }

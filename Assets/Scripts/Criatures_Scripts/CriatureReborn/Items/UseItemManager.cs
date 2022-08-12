@@ -76,7 +76,7 @@ namespace Criatures2021
                             {
                                 myHero = dono
                             });
-                            break;
+                        break;
                         case FluxoDeRetorno.menuHeroi:
                         case FluxoDeRetorno.menuCriature:
                             //GameController.g.HudM.PauseM.FinalizaUsoDeItemComMenu();

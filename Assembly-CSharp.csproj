@@ -306,6 +306,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\UpperLargeMessage.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\YesOrNoMenu.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\AnimateCapturePose.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\AttackLearnItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\CaptureManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ChestManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ConsumableItemBase.cs" />
@@ -313,6 +314,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemAntiStatusBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemFactory.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ModifyPetItemBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\QuantitativeItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\RecoveryItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\UseItemManager.cs" />
@@ -326,6 +328,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Gasolina.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Inseticida.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\MacaItem.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\PergTempestadeEletrica.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Pilha.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Quartzo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Regador.cs" />
@@ -373,6 +376,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\KeyTextPT_BR.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PT_BR_TextList.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PT_BR_TextosDeKatids.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PT_BR_TextosDeMarjan.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PT_BR_TextosDeMenus.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PT_BR_TextosIniciais.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TextBank\PT_BR\PetDescriptionPT_BR.cs" />
@@ -580,6 +584,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\Tonemapper.shader" />
+    <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\VortexEffect.shader" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\NoiseAndGrain.shader" />

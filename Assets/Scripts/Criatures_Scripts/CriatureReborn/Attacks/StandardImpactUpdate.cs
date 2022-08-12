@@ -147,6 +147,9 @@ namespace Criatures2021
         animaPE,
         animaAntiStatus,
         curaDeArmagedom,
-        encontro
+        encontro,
+        particulaDaDefesaPergaminhoFora,
+        particulaDoAtaquePergaminhoFora,
+        particulaDoPoderPergaminhoFora
     }
 }

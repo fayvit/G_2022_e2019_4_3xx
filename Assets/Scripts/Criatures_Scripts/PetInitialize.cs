@@ -18,7 +18,9 @@ namespace Criatures2021
         {
 
             GameObject CA = ResourcesFolders.GetPet(criature.NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
-            CA = MonoBehaviour.Instantiate(CA, dono.position - 3 * dono.forward, Quaternion.identity)
+            CA = MonoBehaviour.Instantiate(CA, 
+                MelhoraInstancia3D.ProcuraPosNoMapa(dono.position - 3 * dono.forward,5)
+                , Quaternion.identity)
                 as GameObject;
 
             

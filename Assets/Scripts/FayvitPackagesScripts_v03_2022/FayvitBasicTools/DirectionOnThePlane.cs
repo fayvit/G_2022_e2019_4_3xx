@@ -28,4 +28,11 @@ public class DirectionOnThePlane : MonoBehaviour
     {
         get { return NormalizedInTheUp(Vector3.zero, Random.insideUnitSphere); }
     }
+
+    public static Quaternion Rotation(Vector3 forward)
+    {
+        
+
+        return Quaternion.LookRotation(InTheUp(forward));
+    }
 }

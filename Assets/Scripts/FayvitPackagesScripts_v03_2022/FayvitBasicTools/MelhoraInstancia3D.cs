@@ -33,21 +33,23 @@ public class MelhoraInstancia3D
         return retorno;
     }
 
-    public static Vector3 ProcuraPosNoMapa(Vector3 pontoAlvo)
+    public static Vector3 ProcuraPosNoMapa(Vector3 pontoAlvo,float customVarDir=.1f)
     {
         Vector3 retorno = pontoAlvo;
         RaycastHit hit = new RaycastHit();
         if (Physics.Raycast(pontoAlvo, Vector3.up, out hit))
         //if (hit.transform.name == terra)
         {
+            Debug.Log("down catch");
             retorno = hit.point;
 
 
         }
 
-        if (Physics.Raycast(pontoAlvo + 0.1f * Vector3.up, Vector3.down, out hit))
+        if (Physics.Raycast(pontoAlvo + customVarDir * Vector3.up, Vector3.down, out hit))
         // if (hit.transform.name == terra)
         {
+            Debug.Log("up catch");
             retorno = hit.point;
         }
 

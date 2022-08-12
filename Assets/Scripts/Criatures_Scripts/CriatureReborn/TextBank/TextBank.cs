@@ -209,6 +209,12 @@ namespace TextBankSpace
         comprarOuVender,
         npcShopKatids,
         primeiraConversaShopKatids,
-        conversaShopKatids
+        conversaShopKatids,
+        marjan1,
+        marjan2,
+        marjan3,
+        marjan4,
+        aprendeuGolpeEsquecendo,
+        naoAprendeuGolpeNovo
     }
 }

@@ -10,7 +10,8 @@ public class CriarBoxxle : MonoBehaviour
     [SerializeField] private GameObject cornerTower;
     [SerializeField] private Texture2D tex;
     [SerializeField] private List<ColorPar> colorPares;
-    [SerializeField] private bool getColor;
+    [SerializeField] private bool getAllColor;
+    [SerializeField] private bool getNewColor;
     [SerializeField] private bool criar;
 
     [System.Serializable]
@@ -29,10 +30,16 @@ public class CriarBoxxle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (getColor)
+        if (getAllColor)
         {
-            GetColors();
-            getColor = false;
+            GetColors(true);
+            getAllColor = false;
+        }
+
+        if (getNewColor)
+        {
+            GetColors(false);
+            getNewColor = false;
         }
 
         if (criar)
@@ -84,9 +91,11 @@ public class CriarBoxxle : MonoBehaviour
             Instantiate(G, new Vector3(x, 0, y), G.transform.rotation, pai.transform);
     }
 
-    void GetColors()
+    void GetColors(bool news)
     {
-        colorPares = new List<ColorPar>();
+        if(news)
+            colorPares = new List<ColorPar>();
+
         for (int i = 0; i < tex.width; i++)
             for (int j = 0; j < tex.height; j++)
             {

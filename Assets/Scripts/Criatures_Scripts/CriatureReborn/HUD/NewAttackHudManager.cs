@@ -17,6 +17,8 @@ namespace Criatures2021Hud
         private int hChange;
         private bool confirmButton;
         private bool returnButton;
+        private bool ePergaminho;
+        private PetAttackDb golpePorAprender;
         private LocalState lState = LocalState.inStand;
         private PetBase oAprendiz;
         private FluxoDeRetorno fluxo;
@@ -33,24 +35,38 @@ namespace Criatures2021Hud
         void Start()
         {
             MessageAgregator<MsgRequestNewAttackHud>.AddListener(OnRequestNewAttackHud);
+            MessageAgregator<MsgSimpleShowAttack>.AddListener(OnRequestSimpleShow);
+            MessageAgregator<MsgHideSimpleAttackShow>.AddListener(OnRequestHideSimpleShow);
         }
 
         private void OnDestroy()
         {
             MessageAgregator<MsgRequestNewAttackHud>.RemoveListener(OnRequestNewAttackHud);
+            MessageAgregator<MsgSimpleShowAttack>.RemoveListener(OnRequestSimpleShow);
+            MessageAgregator<MsgHideSimpleAttackShow>.RemoveListener(OnRequestHideSimpleShow);
+        }
+
+        private void OnRequestHideSimpleShow(MsgHideSimpleAttackShow obj)
+        {
+            showHud.EndHud();
+        }
+
+        private void OnRequestSimpleShow(MsgSimpleShowAttack obj)
+        {
+            showHud.Start(AttackFactory.GetAttack(obj.attackDb.Nome), obj.attackDb.ModPersonagem);
         }
 
         private void OpenSimpleNewAttackLearn(MsgRequestNewAttackHud obj)
         {
             lState = LocalState.showOpened;
 
-            List<PetAttackDb> learnings = obj.oAprendiz.GolpesPorAprender;
             
             
-            showHud.Start(AttackFactory.GetAttack(learnings[0].Nome),learnings[0].ModPersonagem);
+            
+            showHud.Start(AttackFactory.GetAttack(golpePorAprender.Nome),golpePorAprender.ModPersonagem);
 
             OpenMessageAndSchelduleReadInputs(string.Format(TextBank.RetornaFraseDoIdioma(TextKey.aprendeuGolpe),
-                    oAprendiz.GetNomeEmLinguas, PetAttackBase.NomeEmLinguas(learnings[0].Nome)));
+                    oAprendiz.GetNomeEmLinguas, PetAttackBase.NomeEmLinguas(golpePorAprender.Nome)));
         }
 
         private void OpenMessageAndSchelduleReadInputs(string s,bool bestFit  =false)
@@ -72,10 +88,10 @@ namespace Criatures2021Hud
             lState = LocalState.tryLearnOpened;
             
             tryLearn.StartHud(obj.oAprendiz.GerenteDeGolpes.meusGolpes.ToArray(),
-                AttackFactory.GetAttack(obj.oAprendiz.GolpesPorAprender[0].Nome),obj.oAprendiz);
+                AttackFactory.GetAttack(golpePorAprender.Nome),obj.oAprendiz);
 
             OpenMessageAndSchelduleReadInputs(string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[1],
-                    oAprendiz.GetNomeEmLinguas, PetAttackBase.NomeEmLinguas(obj.oAprendiz.GolpesPorAprender[0].Nome))+"\n\r"+
+                    oAprendiz.GetNomeEmLinguas, PetAttackBase.NomeEmLinguas(golpePorAprender.Nome))+"\n\r"+
                     string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[2], oAprendiz.GetNomeEmLinguas),
                     true
                     );
@@ -87,6 +103,8 @@ namespace Criatures2021Hud
             returnButton = false;
             confirmButton = false;
             oAprendiz = obj.oAprendiz;
+            golpePorAprender = obj.golpePorAprender;
+            ePergaminho = obj.dePergaminho;
 
             if (obj.oAprendiz.GerenteDeGolpes.meusGolpes.Count < 4)
             {
@@ -110,7 +128,7 @@ namespace Criatures2021Hud
         {
             
             showHud.EndHud();
-            oAprendiz.GerenteDeGolpes.meusGolpes.Add(AttackFactory.GetAttack(oAprendiz.GolpesPorAprender[0].Nome));
+            oAprendiz.GerenteDeGolpes.meusGolpes.Add(AttackFactory.GetAttack(golpePorAprender.Nome));
             MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
             {
                 sfxId = FayvitSounds.SoundEffectID.VinhetinhaCompletaComFim
@@ -122,26 +140,33 @@ namespace Criatures2021Hud
 
         }
 
-        void ComunsDeFinalizacao()
+        void ComunsDeFinalizacao(string message="")
         {
-
-            oAprendiz.GolpesPorAprender.RemoveAt(0);
-
-            if (oAprendiz.GolpesPorAprender.Count <= 0)
+            if (ePergaminho)
             {
-                RequisitarFluxoNormalDeJogo();
+                EndHud(message);
+            }
+            else
+            {
+                oAprendiz.GolpesPorAprender.RemoveAt(0);
 
+                if (oAprendiz.GolpesPorAprender.Count <= 0)
+                {
+                    EndHud();
+
+                }
             }
         }
 
-        void RequisitarFluxoNormalDeJogo()
+        void EndHud(string message = "")
         {
             lState = LocalState.inStand;
 
             MessageAgregator<MsgEndNewAttackHud>.Publish(new MsgEndNewAttackHud()
             {
                 fluxo = fluxo,
-                oAprendiz = oAprendiz
+                oAprendiz = oAprendiz,
+                message=message
             });
 
             MessageAgregator<MsgRequestHideUpperLargeMessage>.Publish();
@@ -189,7 +214,7 @@ namespace Criatures2021Hud
                     {
                         tryLearn.EndHud();
 
-                        RequisitarFluxoNormalDeJogo();
+                        EndHud();
 
                         MessageAgregator<MsgCloseNewAttackHudNonFinally>.Publish();
                     }
@@ -212,33 +237,41 @@ namespace Criatures2021Hud
 
         void ConfirmaEsquece(int esquecido)
         {
-            string nome2 = PetAttackBase.NomeEmLinguas(oAprendiz.GolpesPorAprender[0].Nome);
+            string nome2 = PetAttackBase.NomeEmLinguas(golpePorAprender.Nome);
+            string message = "";
             if (esquecido == 4)
             {
-                ComunsDeFinalizacao();
+                message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[6],
+                    oAprendiz.GetNomeEmLinguas, nome2);
 
-                MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+                ComunsDeFinalizacao(message);
+
+                if (!ePergaminho)
                 {
-                    message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[6],
-                    oAprendiz.GetNomeEmLinguas,nome2)
-                });
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.VinhetinhaCurta
-                });
+                    MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+                    {
+                        message = message
+                    });
+
+                    MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                    {
+                        sfxId = FayvitSounds.SoundEffectID.VinhetinhaCurta
+                    });
+                }
             }
             else
             {
                 string nome1 = oAprendiz.GerenteDeGolpes.meusGolpes[esquecido].GetNomeEmLinguas;
-                
-                oAprendiz.GerenteDeGolpes.meusGolpes[esquecido] = AttackFactory.GetAttack(oAprendiz.GolpesPorAprender[0].Nome);
-                ComunsDeFinalizacao();
+                message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[5],
+                        oAprendiz.GetNomeEmLinguas, nome1, nome2);
+                oAprendiz.GerenteDeGolpes.meusGolpes[esquecido] = AttackFactory.GetAttack(golpePorAprender.Nome);
+                ComunsDeFinalizacao(message);
 
-                MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
-                {
-                    message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.aprendeuGolpe)[5],
-                    oAprendiz.GetNomeEmLinguas, nome1, nome2)
-                });
+                if(!ePergaminho)
+                    MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+                    {
+                        message = message
+                    });
 
                 //MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
                 //{
@@ -266,10 +299,20 @@ namespace Criatures2021Hud
     {
         public PetBase oAprendiz;
         public FluxoDeRetorno fluxo;
+        public PetAttackDb golpePorAprender;
+        public bool dePergaminho;
     }
 
     public struct MsgEndNewAttackHud : IMessageBase {
         public PetBase oAprendiz;
         public FluxoDeRetorno fluxo;
+        public string message;
     }
+
+    public struct MsgSimpleShowAttack : IMessageBase
+    {
+        public PetAttackDb attackDb;
+    }
+
+    public struct MsgHideSimpleAttackShow : IMessageBase { }
 }

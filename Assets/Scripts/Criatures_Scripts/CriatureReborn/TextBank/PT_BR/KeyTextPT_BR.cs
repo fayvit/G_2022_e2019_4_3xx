@@ -137,18 +137,18 @@ namespace TextBankSpace
      //                   "<color=orange>{0}</color> deixará de aprender o golpe <color=yellow>{1}</color>. Você está certo disso?"
      //               }
      //           },
-     //           {
-     //               TextKey.aprendeuGolpeEsquecendo,new List<string>()
-     //               {
-     //                   "<color=orange>{0}</color> esqueceu <color=yellow>{1}</color> e aprendeu <color=yellow>{2}</color>"
-     //               }
-     //           },
-     //           {
-     //               TextKey.naoAprendeuGolpeNovo,new List<string>()
-     //               {
-     //                   "<color=orange>{0}</color> não aprendeu o ataque <color=yellow>{1}</color> e manteve seus quatro ataques conhecidos"
-     //               }
-     //           },
+               {
+                   TextKey.aprendeuGolpeEsquecendo,new List<string>()
+                   {
+                       "<color=orange>{0}</color> esqueceu <color=yellow>{1}</color> e aprendeu <color=yellow>{2}</color>"
+                   }
+               },
+               {
+                   TextKey.naoAprendeuGolpeNovo,new List<string>()
+                   {
+                       "<color=orange>{0}</color> não aprendeu o ataque <color=yellow>{1}</color> e manteve seus quatro ataques conhecidos"
+                   }
+               },
                 {
                     TextKey.foiParaArmagedom,new List<string>()
                     {
@@ -305,7 +305,7 @@ namespace TextBankSpace
                     "Perg. GosmaAcida","Perg.Multiplicar","Perg. Ventânia",/*ID = 33*/
                     "Perg. Ventos Cortantes","Perg. Olhar Enfraquecedor","Perg.Olhar Mal","Condecoração Beta","Perg. do Furacão de Folhas","Explosivos","Medalhão das Águas",
                     "Tinteiro Sagrado de Log","Perg. de Laurense","Perg. de Boutjoi","Perg. de Ananda",/*ID = 45*/
-                    "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Sabre"
+                    "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Tempestade Eletrica"
                 }},
 
 

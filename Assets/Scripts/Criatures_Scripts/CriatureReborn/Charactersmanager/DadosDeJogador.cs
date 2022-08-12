@@ -57,7 +57,7 @@ namespace Criatures2021
         {
             cristais = 100;
             CriaturesArmagedados = new List<PetBase>() {
-                new PetBase(PetName.Trude,7),
+                new PetBase(PetName.Trude,5),
                 new PetBase(PetName.Galfo,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Vampire,13),
@@ -166,6 +166,7 @@ namespace Criatures2021
             //ItemFactory.Get(NameIdItem.pergaminhoDePerfeicao,14),
             ItemFactory.Get(NameIdItem.maca,1),
             ItemFactory.Get(NameIdItem.cartaLuva,1),
+            ItemFactory.Get(NameIdItem.pergTempestadeEletrica,1),
             ItemFactory.Get(NameIdItem.tonico,10),
             ItemFactory.Get(NameIdItem.amuletoDaCoragem,10),
             ItemFactory.Get(NameIdItem.antidoto,10),
@@ -208,7 +209,7 @@ namespace Criatures2021
         }
 
         /// <summary>
-        /// Verifica se um criature está com golpes por aprender
+        /// Verifica se um criature estï¿½ com golpes por aprender
         /// </summary>
         /// <param name="qualIndice">Indice do criature no vetor de criatures ativos</param>
         /// <returns></returns>

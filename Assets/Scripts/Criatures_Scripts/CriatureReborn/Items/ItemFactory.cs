@@ -52,6 +52,9 @@ namespace Criatures2021
                 case NameIdItem.repolhoComOvo:
                     retorno = new RepolhoComOvo(estoque);
                 break;
+                case NameIdItem.pergTempestadeEletrica:
+                    retorno = new PergTempestadeEletrica(estoque);
+                break;
                 //case nomeIDitem.pergArmagedom:
                 //    retorno = new MbPergaminhoDeArmagedom(estoque);
                 //    break;
