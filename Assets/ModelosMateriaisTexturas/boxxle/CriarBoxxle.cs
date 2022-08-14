@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CriarBoxxle : MonoBehaviour
 {
-    [SerializeField] private GameObject pai;
+    [SerializeField] private GameObject paiDoPai;
     [SerializeField] private GameObject upperGlass;
     [SerializeField] private GameObject cornerTower;
     [SerializeField] private Texture2D tex;
@@ -14,6 +14,7 @@ public class CriarBoxxle : MonoBehaviour
     [SerializeField] private bool getNewColor;
     [SerializeField] private bool criar;
 
+    private GameObject pai;
     [System.Serializable]
     private struct ColorPar
     {
@@ -44,6 +45,8 @@ public class CriarBoxxle : MonoBehaviour
 
         if (criar)
         {
+            pai = Criatures2021.InstanceSupport.InstancieLigando(paiDoPai, paiDoPai.transform.position, default);
+            pai.transform.parent = transform;
             Vector3 guardPos = pai.transform.position;
             pai.transform.position = Vector3.zero;
             for (int i = 0; i < tex.width; i++)

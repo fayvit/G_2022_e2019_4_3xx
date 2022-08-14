@@ -1338,6 +1338,8 @@ MonoBehaviour:
           taxa: 0.2
       mNivel:
         _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
       distanciaFundamentadora: 0.2
     atkManager:
       golpeEscolhido: 0
@@ -1371,6 +1373,7 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
+    varHeightCamera: 0.25
     alturaCameraLuta: 0.25
     distanciaCameraLuta: 4.5
   controll:
@@ -1473,7 +1476,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5750474d243ea7047bc58554d6677432, type: 2}
+  - {fileID: 2100000, guid: 25e9f615c007d924a99f561b9ae93547, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

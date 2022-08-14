@@ -305,7 +305,8 @@ namespace TextBankSpace
                     "Perg. GosmaAcida","Perg.Multiplicar","Perg. Ventânia",/*ID = 33*/
                     "Perg. Ventos Cortantes","Perg. Olhar Enfraquecedor","Perg.Olhar Mal","Condecoração Beta","Perg. do Furacão de Folhas","Explosivos","Medalhão das Águas",
                     "Tinteiro Sagrado de Log","Perg. de Laurense","Perg. de Boutjoi","Perg. de Ananda",/*ID = 45*/
-                    "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Tempestade Eletrica"
+                    "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Tempestade Eletrica","Brasão de Laurense","Brasão de Ananda",
+                    "Brasão de Boutjoi"
                 }},
 
 
@@ -359,7 +360,7 @@ namespace TextBankSpace
                     " O pergaminho do Olhar Enfraquecedor ajuda um Criature a aprender o golpe Olhar Enfraquecedor",
                     " O pergaminho do Olhar Mal ajuda um Criature a aprender o golpe Olhar Mal",
                     " A condecoração que você recebeu do Capitão Espinha de Peixe.",
-                    " O pergaminho do Furacão de Folhas pode ensinar o golpe Furacão de Folhas para um Criature do tipo Planta",
+                    " O pergaminho do Furacão de Folhas pode ensinar o golpe Furacão de Folhas para um Criature com a capacidade de aprende-lo",
                     "Os Explosivos necessários para desobstruir o caminho para Afarenga",
                     "O medalhão das Águas do Deus Drag conseguido com Omar Water",
                     "Um recipiente contendo a tinta utilizada pelos sacerdotes de Log para escrever pergaminhos",
@@ -369,7 +370,10 @@ namespace TextBankSpace
                     "A caneta usada por sacerdotes de Log para escrever pergaminhos mágicos",
                     "O pergaminho em nome de Sinara, deusa mãe dos criatures, quando lido, aumenta em 4 pontos a vida máximo de um criature",
                     "O pergaminho em nome de Alana, deusa da fertilidade, quando lido, aumenta em 4 pontos a energia máxima de um criature",
-                    "O pergaminho de Sabre pode ensinar a habilidade Sabre para um Criature com a capacidade de aprende-la"
+                    "O pergaminho de Tempestade Eletrica pode ensinar o golpe Tempestade Eletrica para um Criature com a capacidade de aprende-la",
+                    "Um brasão em homenagem a Laurense o deus da força e da coragem",
+                    "Um brasão em homenagem a Ananda a deusa da magia",
+                    "Um brasão em homenagem a Boutjoi o deus da natureza, terras e plantações",
 
                 }},
                 {TextKey.textoBaseDeAcao,new List<string>()
@@ -384,27 +388,27 @@ namespace TextBankSpace
                     "Segundo Armagedom"
                 }
                 },
-     //   {
-     //       TextKey.usarPergaminhoDeLaurense,new List<string>()
-     //       {
-     //           "O pergaminho de Laurense pode aumentar 1 ponto de Ataque de um criature. Em quem gostaria de usar?",
-     //           "O criature {0} nivel {1} aumentou 1 ponto em seu ataque"
-     //       }
-     //   },
-     //   {
-     //       TextKey.usarPergaminhoDeBoutjoi,new List<string>()
-     //       {
-     //           "O pergaminho de Boutjoi pode aumentar 1 ponto de Defesa de um criature. Em quem gostaria de usar?",
-     //           "O criature {0} nivel {1} aumentou 1 ponto em sua defesa"
-     //       }
-     //   },
-     //   {
-     //       TextKey.usarPergaminhoDeAnanda,new List<string>()
-     //       {
-     //           "O pergaminho de Ananda pode aumentar 1 ponto de Poder de um criature. Em quem gostaria de usar?",
-     //           "O criature {0} nivel {1} aumentou 1 ponto em seu poder"
-     //       }
-     //   },
+        {
+            TextKey.usarPergaminhoDeLaurense,new List<string>()
+            {
+                "O pergaminho de Laurense pode aumentar 1 ponto de Ataque de um criature. Em quem gostaria de usar?",
+                "O criature {0} nivel {1} aumentou 1 ponto em seu ataque"
+            }
+        },
+        {
+            TextKey.usarPergaminhoDeBoutjoi,new List<string>()
+            {
+                "O pergaminho de Boutjoi pode aumentar 1 ponto de Defesa de um criature. Em quem gostaria de usar?",
+                "O criature {0} nivel {1} aumentou 1 ponto em sua defesa"
+            }
+        },
+        {
+            TextKey.usarPergaminhoDeAnanda,new List<string>()
+            {
+                "O pergaminho de Ananda pode aumentar 1 ponto de Poder de um criature. Em quem gostaria de usar?",
+                "O criature {0} nivel {1} aumentou 1 ponto em seu poder"
+            }
+        },
      //   {
      //       TextKey.ComecandoConversaComIan,new List<string>()
      //       {
@@ -540,6 +544,15 @@ namespace TextBankSpace
                 "Meus criatures armagedados",
                 "Conversar",
                 "Voltar ao Jogo"
+            }
+        },{
+            TextKey.godPushPuzzleActivate,new List<string>()
+            {
+                "Gostaria de usar {0} {1} para ativar o desafio {2}",
+                "da força",
+                "do poder",
+                "da resistência",
+                "Você não tem {0} {1}!"
             }
         },
 

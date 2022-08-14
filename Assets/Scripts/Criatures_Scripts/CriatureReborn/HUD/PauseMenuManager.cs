@@ -159,14 +159,14 @@ namespace Criatures2021Hud
             state = LocalState.oneMessageOpened;
         }
 
-        private void OnUseQuantitativeItem(MsgUsingQuantitativeItem obj)
+        void UsouQuantitativeItem(bool temMaisPraUsar)
         {
-            TuinManager.RequestDecreaseTuin();
+            
             state = LocalState.emEspera;
 
             SupportSingleton.Instance.InvokeInSeconds(() =>
             {
-                if (obj.temMaisParausar)
+                if (temMaisPraUsar)
                 {
                     listaDeItens[itemMenu.SelectedOption].IniciaUsoDeMenu(dono.gameObject, listaDeItens);
                     state = LocalState.escolhendoEmQuemUsar;
@@ -177,6 +177,28 @@ namespace Criatures2021Hud
                     RetornarDoEscolhaEmQuemUsar();
                 }
             }, .5f);
+        }
+
+        private void OnUseQuantitativeItem(MsgUsingQuantitativeItem obj)
+        {
+            TuinManager.RequestDecreaseTuin();
+            if (obj.confirmarRetorno)
+            {
+                state = LocalState.oneMessageOpened;
+                AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
+                {
+                    MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                    {
+                        sfxId = FayvitSounds.SoundEffectID.Book1
+                    });
+                    UsouQuantitativeItem(obj.temMaisParausar);
+                },obj.mensagemDeRetorno);
+            }
+            else
+            {
+                UsouQuantitativeItem(obj.temMaisParausar);
+            }
+            
         }
 
         void PosicionarItemRef(int indice)
@@ -607,6 +629,8 @@ namespace Criatures2021Hud
     public struct MsgUsingQuantitativeItem : IMessageBase
     {
         public bool temMaisParausar;
+        public bool confirmarRetorno;
+        public string mensagemDeRetorno;
     }
 
     public struct MsgNotUseItem : IMessageBase

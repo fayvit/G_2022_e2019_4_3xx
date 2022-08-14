@@ -1,9 +1,10 @@
 ﻿using FayvitMessageAgregator;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Criatures2021Hud;
 using TextBankSpace;
+using FayvitBasicTools;
+using FayvitSupportSingleton;
 
 namespace Criatures2021
 {
@@ -59,6 +60,10 @@ namespace Criatures2021
             });
             MessageAgregator<MsgStartExternalInteraction>.Publish();
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveCommands);
+            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.painelAbrindo
+            });
             commands = new MsgSendExternalPanelCommand();
             ContainerBasicMenu.instance.SetPercentSizeInTheParent(.6f,.4f,.95f,.95f);
             ContainerBasicMenu.instance.Menu.StartHud(OpcaoEscolhida, NomesDosCriaturesAtivos());
@@ -80,6 +85,7 @@ namespace Criatures2021
             this.Dono = dono;
             this.Lista = lista;
             InicioComum();
+            eMenu = false;
         }
 
         //public override void IniciaUsoDeHeroi(GameObject dono)
@@ -100,10 +106,11 @@ namespace Criatures2021
 
         protected virtual bool AtualizaUsoDoPergaminho()
         {
+            Debug.Log(Estado);
             switch (Estado)
             {
                 case ItemUseState.selecaoDeItem:
-                    ContainerBasicMenu.instance.Menu.ChangeOption(commands.vChange);
+                    ContainerBasicMenu.instance.Menu.ChangeOption(-commands.vChange);
                     if (commands.confirmButton)
                     {
                         OpcaoEscolhida(ContainerBasicMenu.instance.Menu.SelectedOption);
@@ -130,7 +137,7 @@ namespace Criatures2021
                     //    OpcaoEscolhida(GameController.g.HudM.Menu_Basico.OpcaoEscolhida);
                     //} 
                     #endregion
-                    break;
+                break;
                 case ItemUseState.animandoBraco:
                     if (!AnimaB.AnimaTroca(true))
                     {
@@ -140,7 +147,7 @@ namespace Criatures2021
                         });
 
                         Estado = ItemUseState.aplicandoItem;
-                        InstanceSupport.InstancieEDestrua(Particula, Dono.transform.position, 1);
+                        InstaciarParticulaComSom();
 
                         //AplicaEfeito(opcaoEscolhida);
 
@@ -160,7 +167,7 @@ namespace Criatures2021
                     {
                         AplicaEfeito(opcaoEscolhida);
                     }
-                    break;
+                break;
                 case ItemUseState.oneMessageOpened:
                     MyGlobalController.Instance.OneMessage.ThisUpdate(commands.confirmButton || commands.returnButton);
                 break;
@@ -172,6 +179,7 @@ namespace Criatures2021
 
         public override void IniciaUsoComCriature(GameObject dono, List<ItemBase> lista)
         {
+            eMenu = false;
             CharacterManager manager = dono.GetComponent<CharacterManager>();
             this.Dono = dono;
             this.Lista = lista;
@@ -217,6 +225,21 @@ namespace Criatures2021
             return nomes.ToArray();
         }
 
+        void InstaciarParticulaComSom()
+        {
+            
+            InstanceSupport.InstancieEDestrua(Particula,
+                                Dono.transform.position, 1);
+
+            SupportSingleton.Instance.InvokeInSeconds(() =>
+            {
+                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                {
+                    sfxId = FayvitSounds.SoundEffectID.XP_Heal02
+                });
+            }, .125f);
+        }
+
         protected virtual void OpcaoEscolhida(int escolha)
         {
             commands = new MsgSendExternalPanelCommand();
@@ -236,26 +259,44 @@ namespace Criatures2021
             else
             {
                 TempoDecorrido = 0;
-                InstanceSupport.InstancieEDestrua(Particula,
-                            manager.transform.position, 1);
+                InstaciarParticulaComSom();
                 Estado = ItemUseState.aplicandoItem;
             }
+
+            MessageAgregator<MsgRequestHideUpperLargeMessage>.Publish();
+            ContainerBasicMenu.instance.Menu.FinishHud();
+            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.Book1
+            });
         }
 
         protected virtual void AplicaEfeito(int indice) { }
 
         protected void Finaliza()
         {
+            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.Book1
+            });
             MessageAgregator<MsgSendExternalPanelCommand>.RemoveListener(OnReceiveCommands);
             Estado = ItemUseState.finalizaUsaItem;
+            
         }
 
         protected virtual void EntraNoModoFinalizacao(PetBase C)
         {
 
             Estado = ItemUseState.emEspera;
-            FayvitSupportSingleton.SupportSingleton.Instance.InvokeInSeconds(() =>
+            
+            SupportSingleton.Instance.InvokeInSeconds(() =>
             {
+                MessageAgregator<MsgStartExternalInteraction>.Publish();
+                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                {
+                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo
+                });
+                Estado = ItemUseState.oneMessageOpened;
                 MyGlobalController.Instance.OneMessage.StartMessagePanel(Finaliza, string.Format(
                 textoDaMensInicial[1],
                 C.GetNomeEmLinguas, C.G_XP.Nivel));
@@ -271,18 +312,20 @@ namespace Criatures2021
             #endregion
         }
 
+        #region Suprimido
         //System.Collections.IEnumerator MensComAtraso(PetBase C)
         //{
         //    yield return new WaitForSeconds(1f);
         //    MyGlobalController.Instance.OneMessage.StartMessagePanel(Finaliza, string.Format(
         //    textoDaMensInicial[1],
         //    C.GetNomeEmLinguas, C.G_XP.Nivel));
-            
+
         //    //GameController.g.HudM.UmaMensagem.ConstroiPainelUmaMensagem(Finaliza,
         //    //    string.Format(
         //    //    textoDaMensInicial[1],
         //    //    C.NomeEmLinguas, C.G_XP.Nivel));
-        //}
+        //} 
+        #endregion
     }
 
 }

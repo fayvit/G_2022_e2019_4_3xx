@@ -148,7 +148,7 @@ namespace Criatures2021
             ItemBase Ib = MyGlobalController.MainPlayer.Dados.Itens[obj];
             ShopHudManager.instance.ChangeInteractiveButtons(false);
 
-            if (Ib.Item_Nature == ItemNature.chave)
+            if (Ib.Item_Nature == ItemNature.chave||Ib.Valor<=0)
             {
 
                 state = LocalState.oneMessageOpened;

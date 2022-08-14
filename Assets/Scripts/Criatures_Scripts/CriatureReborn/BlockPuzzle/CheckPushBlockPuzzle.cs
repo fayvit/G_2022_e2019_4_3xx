@@ -116,7 +116,8 @@ namespace Criatures2021
             
             cc.enabled = false;
             cc.transform.position
-                = GetComponentInChildren<TriggerReturnToStandardCam>().transform.position;
+                = MelhoraInstancia3D.ProcuraPosNoMapa(
+                GetComponentInChildren<TriggerReturnToStandardCam>().transform.position,1);
             cc.enabled = true;
 
             for (int i=0;i<observados.Count;i++)

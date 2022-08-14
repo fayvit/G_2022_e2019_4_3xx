@@ -64,18 +64,18 @@ namespace Criatures2021
                 //case nomeIDitem.pergaminhoDeFuga:
                 //    retorno = new MbPergaminhoDeFuga(estoque);
                 //    break;
-                //case nomeIDitem.tinteiroSagradoDeLog:
-                //    retorno = new TinteiroSagradaDeLog(estoque);
-                //    break;
-                //case nomeIDitem.pergaminhoDeLaurense:
-                //    retorno = new PergaminhoDeLaurense(estoque);
-                //    break;
-                //case nomeIDitem.pergaminhoDeAnanda:
-                //    retorno = new PergaminhoDeAnanda(estoque);
-                //    break;
-                //case nomeIDitem.pergaminhoDeBoutjoi:
-                //    retorno = new PergaminhoDeBoutjoi(estoque);
-                //    break;
+                case NameIdItem.tinteiroSagradoDeLog:
+                    retorno = new TinteiroSagradaDeLog(estoque);
+                break;
+                case NameIdItem.pergaminhoDeLaurense:
+                    retorno = new PergaminhoDeLaurense(estoque);
+                break;
+                case NameIdItem.pergaminhoDeAnanda:
+                    retorno = new PergaminhoDeAnanda(estoque);
+                break;
+                case NameIdItem.pergaminhoDeBoutjoi:
+                    retorno = new PergaminhoDeBoutjoi(estoque);
+                break;
                 //case nomeIDitem.canetaSagradaDeLog:
                 //    retorno = new CanetaSagradaDeLog(estoque);
                 //    break;
@@ -99,7 +99,16 @@ namespace Criatures2021
                     break;
                 case NameIdItem.tonico:
                     retorno = new Tonico(estoque);
-                    break;
+                break;
+                case NameIdItem.brasaoDeLaurense:
+                    retorno = new BrasaoDeLaurense(estoque);
+                break;
+                case NameIdItem.brasaoDeAnanda:
+                    retorno = new BrasaoDeAnanda(estoque);
+                break;
+                case NameIdItem.brasaoDeBoutjoi:
+                    retorno = new BrasaoDeBoutjoi(estoque);
+                break;
                     //case nomeIDitem.pergOlharEnfraquecedor:
                     //    retorno = new PergOlharEnfraquecedor(estoque);
                     //    break;

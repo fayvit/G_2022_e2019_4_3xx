@@ -215,6 +215,10 @@ namespace TextBankSpace
         marjan3,
         marjan4,
         aprendeuGolpeEsquecendo,
-        naoAprendeuGolpeNovo
+        naoAprendeuGolpeNovo,
+        usarPergaminhoDeLaurense,
+        usarPergaminhoDeBoutjoi,
+        usarPergaminhoDeAnanda,
+        godPushPuzzleActivate
     }
 }

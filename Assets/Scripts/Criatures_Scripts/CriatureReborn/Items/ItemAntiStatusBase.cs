@@ -23,6 +23,7 @@ namespace Criatures2021
 
         public override void IniciaUsoComCriature(GameObject dono, List<ItemBase> lista)
         {
+            eMenu = false;
             Lista = lista;
             IniciaUsoDesseItem(dono, VerificaPodeUsarStatus(dono.GetComponent<CharacterManager>().ActivePet.MeuCriatureBase));
         }
@@ -36,6 +37,7 @@ namespace Criatures2021
         {
             Lista = lista;
             IniciaUsoDesseItem(dono, VerificaPodeUsarStatus(dono.GetComponent<CharacterManager>().ActivePet.MeuCriatureBase));
+            eMenu = false;
         }
 
         public override bool AtualizaUsoDeHeroi()

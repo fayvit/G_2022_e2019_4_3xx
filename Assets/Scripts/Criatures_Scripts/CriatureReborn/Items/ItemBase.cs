@@ -325,7 +325,8 @@ namespace Criatures2021
         nula=-1,
         consumivel,
         chave,
-        pergGolpe
+        pergGolpe,
+        usoParticular
     }
 
     public enum NameIdItem
@@ -378,6 +379,9 @@ namespace Criatures2021
         canetaSagradaDeLog,
         pergSinara,
         pergAlana,
-        pergTempestadeEletrica
+        pergTempestadeEletrica,
+        brasaoDeLaurense,
+        brasaoDeAnanda,
+        brasaoDeBoutjoi
     }
 }

@@ -12,6 +12,8 @@ namespace Criatures2021
     public class ConsumableItemBase : ItemBase
     {
         [System.NonSerialized] protected PetManager CriatureAlvoDoItem;
+        protected bool confirmarRetorno;
+        protected bool eMenu;
         private const float TEMPO_DE_ANIMA_CURA_1 = 1.5f;
 
         public ConsumableItemBase(ItemFeatures C) : base(C) { }
@@ -22,6 +24,7 @@ namespace Criatures2021
         {
             Dono = dono;
             Lista = lista;
+            eMenu = true;
 
             MessageAgregator<MsgMenuStartUseItem>.Publish(new MsgMenuStartUseItem()
             {
@@ -85,10 +88,11 @@ namespace Criatures2021
 
                 ItemBase refi = ProcuraItemNaLista(ID, Lista);
 
-                MessageAgregator<MsgUsingQuantitativeItem>.Publish(new MsgUsingQuantitativeItem()
-                {
-                    temMaisParausar = refi.ID == ID && refi.Estoque > 0
-                });
+                if(!confirmarRetorno)
+                    MessageAgregator<MsgUsingQuantitativeItem>.Publish(new MsgUsingQuantitativeItem()
+                    {
+                        temMaisParausar = refi.ID == ID && refi.Estoque > 0
+                    });
                 
 
                 //ItemQuantitativo.AplicacaoDoItemComMenu(manager, C, valor, VerificaTemMaisParaUsar);

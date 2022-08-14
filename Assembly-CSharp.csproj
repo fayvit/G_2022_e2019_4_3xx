@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\LayerTent.cs" />
+    <Compile Include="Assets\ModelosMateriaisTexturas\boxxle\CollectorStatue.cs" />
     <Compile Include="Assets\ModelosMateriaisTexturas\boxxle\CriarBoxxle.cs" />
     <Compile Include="Assets\MudaLayer.cs" />
     <Compile Include="Assets\RPG Character Animation Pack_vantigo\Code\CameraController.cs" />
@@ -314,26 +315,33 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemAntiStatusBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ItemFactory.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ModifyIntrinsicAtributeBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\ModifyPetItemBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\QuantitativeItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\RecoveryItem.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\UnusableItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\UseItemManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Adubo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\AguaTonica.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\AmuletoDaCoragem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Antidoto.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Aura.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\BrasaoDeLaurense.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\CartaLuva.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Estrela.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Gasolina.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Inseticida.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\MacaItem.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\PergTempestadeEletrica.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\PergaminhoDeAnanda.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\PergaminhoDeBoutjoi.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\PergaminhoDeLaurense.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Pilha.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Quartzo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Regador.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\RepolhoComOvo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Seiva.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\TinteiroSagradaDeLog.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Tonico.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Items\itensConsolidados\Ventilador.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\LevelUp\GerenciadorDeExperiencia.cs" />

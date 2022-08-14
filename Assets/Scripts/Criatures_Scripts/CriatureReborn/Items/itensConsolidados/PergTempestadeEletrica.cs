@@ -9,7 +9,8 @@ namespace Criatures2021
     {
         public PergTempestadeEletrica(int estoque = 1) : base(new ItemFeatures(NameIdItem.pergTempestadeEletrica)
         {
-            valor = 440
+            valor = 440,
+            itemNature = ItemNature.pergGolpe
         })
         {
             Estoque = estoque;

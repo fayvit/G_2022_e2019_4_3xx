@@ -25,7 +25,7 @@ namespace Criatures2021
             aprendiSemEsquecer
         }
 
-        public AttackLearnItem(ItemFeatures cont) : base(cont) { }
+        public AttackLearnItem(ItemFeatures cont) : base(cont) { confirmarRetorno = true; }
 
         protected virtual string NomeBasico
         {
@@ -38,19 +38,21 @@ namespace Criatures2021
             {
                 case EstadoDoAprendeGolpe.baseUpdate:
                     return base.AtualizaUsoDoPergaminho();
-                case EstadoDoAprendeGolpe.esperandoConfirmacaoDeEsquecimento:
-                    if (Commands.confirmButton)
-                    { 
-                    
-                    }
-                    //if (GameController.g.CommandR.DisparaAcao())
-                    //{
-                    //    GameController.g.HudM.P_Golpe.gameObject.SetActive(false);
-                    //    GameController.g.HudM.Painel.EsconderMensagem();
-                    //    base.OpcaoEscolhida(indiceDoEscolhido);
-                    //    estadoDoAprendeGolpe = EstadoDoAprendeGolpe.baseUpdate;
-                    //}
-                    break;
+                #region FoiDesnecessario
+                //case EstadoDoAprendeGolpe.esperandoConfirmacaoDeEsquecimento:
+                //    if (Commands.confirmButton)
+                //    { 
+
+                //    }
+                //    //if (GameController.g.CommandR.DisparaAcao())
+                //    //{
+                //    //    GameController.g.HudM.P_Golpe.gameObject.SetActive(false);
+                //    //    GameController.g.HudM.Painel.EsconderMensagem();
+                //    //    base.OpcaoEscolhida(indiceDoEscolhido);
+                //    //    estadoDoAprendeGolpe = EstadoDoAprendeGolpe.baseUpdate;
+                //    //}
+                //    break; 
+                #endregion
                 case EstadoDoAprendeGolpe.aprendiSemEsquecer:
                 case EstadoDoAprendeGolpe.esperandoConfirmacaoDoNaoAprender:
                     if (Commands.confirmButton)
@@ -206,20 +208,33 @@ namespace Criatures2021
             }
             else if (!usara.diferenteDeNulo)
             {
-                MyGlobalController.Instance.OneMessage.StartMessagePanel(() => { Finaliza(); },
-                    string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.itens)[5],
+                string m = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.itens)[5],
                     C.GetNomeEmLinguas, NomeBasico
-                    )
                     );
+                if (eMenu)
+                {
+                    MessageAgregator<MsgNotUseItem>.Publish(new MsgNotUseItem()
+                    {
+                        notMessage = m
+                    });
+                }else
+                MyGlobalController.Instance.OneMessage.StartMessagePanel(() => { Finaliza(); },m);
                 //MensDeUsoDeItem.MensNaoPodeAprenderGolpe(NomeBasico, C.NomeEmLinguas);
             }
             else if (usara.jaTem)
             {
-                MyGlobalController.Instance.OneMessage.StartMessagePanel(() => { Finaliza(); },
-                    string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.itens)[4],
+                string m = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.itens)[4],
                     C.GetNomeEmLinguas, NomeEmLinguas(ID), PetAttackBase.NomeEmLinguas(GolpePorAprender(C))
-                    )
                     );
+                if (eMenu)
+                {
+                    MessageAgregator<MsgNotUseItem>.Publish(new MsgNotUseItem()
+                    {
+                        notMessage = m
+                    });
+                }
+                else
+                    MyGlobalController.Instance.OneMessage.StartMessagePanel(() => { Finaliza(); },m);
                 //MensDeUsoDeItem.MensjaConheceGolpe(C.NomeEmLinguas, MbItens.NomeEmLinguas(ID), GolpeBase.NomeEmLinguas(GolpePorAprender(C)));
             }
 
@@ -382,7 +397,7 @@ MyGlobalController.Instance.OneMessage.StartMessagePanel(TrocouComMenu,string.Fo
         protected override void EntraNoModoFinalizacao(PetBase C)
         {
             Estado = ItemUseState.emEspera;
-
+            AttackNameId nomeDoGolpe = GolpePorAprender(C);
             //if (GameController.g.HudM.MenuDePause.EmPause)
             //{
             //    Finaliza();
@@ -390,33 +405,51 @@ MyGlobalController.Instance.OneMessage.StartMessagePanel(TrocouComMenu,string.Fo
             // else 
             //if (!esqueceu)
             //{
+            if (eMenu)
+            {
+
+                ItemBase refi = ProcuraItemNaLista(ID, Lista);
+
+                MessageAgregator<MsgUsingQuantitativeItem>.Publish(new MsgUsingQuantitativeItem()
+                {
+                    temMaisParausar = refi.ID == ID && refi.Estoque > 0,
+                    confirmarRetorno = confirmarRetorno,
+                    mensagemDeRetorno = esqueceu ? virtualMessage : string.Format(TextBank.RetornaFraseDoIdioma(TextKey.aprendeuGolpe),
+                            C.GetNomeEmLinguas,
+                            PetAttackBase.NomeEmLinguas(nomeDoGolpe))
+                });
+            }
+            else
+            {
                 MessageAgregator<MsgStartExternalInteraction>.Publish();
 
-                AttackNameId nomeDoGolpe = GolpePorAprender(C);
-               MessageAgregator<MsgRequestUpperLargeMessage>.Publish(new MsgRequestUpperLargeMessage(){
-                   message = esqueceu?virtualMessage:string.Format(TextBank.RetornaFraseDoIdioma(TextKey.aprendeuGolpe),
-                           C.GetNomeEmLinguas,
-                           PetAttackBase.NomeEmLinguas(nomeDoGolpe)),
-                           hideTime = 30
-               });
+                
+                MessageAgregator<MsgRequestUpperLargeMessage>.Publish(new MsgRequestUpperLargeMessage()
+                {
+                    message = esqueceu ? virtualMessage : string.Format(TextBank.RetornaFraseDoIdioma(TextKey.aprendeuGolpe),
+                            C.GetNomeEmLinguas,
+                            PetAttackBase.NomeEmLinguas(nomeDoGolpe)),
+                    hideTime = 30
+                });
                 MessageAgregator<MsgSimpleShowAttack>.Publish(new MsgSimpleShowAttack()
                 {
                     attackDb = C.GerenteDeGolpes.ProcuraGolpeNaLista(C.NomeID, nomeDoGolpe)
                 });
 
 
-            //    MyGlobalController.Instance.OneMessage.StartMessagePanel(
-                           
-            //                , 30
-            //                );
+                //    MyGlobalController.Instance.OneMessage.StartMessagePanel(
 
-            //    GameController.g.HudM.P_Golpe.Aciona(PegaUmGolpeG2.RetornaGolpe(nomeDoGolpe));
-               estadoDoAprendeGolpe = EstadoDoAprendeGolpe.aprendiSemEsquecer;
-            //}
-            //else if (esqueceu)
-            //{
-            ////    GameController.g.StartCoroutine(TerminaDaquiAPouco());
-            //}
+                //                , 30
+                //                );
+
+                //    GameController.g.HudM.P_Golpe.Aciona(PegaUmGolpeG2.RetornaGolpe(nomeDoGolpe));
+                estadoDoAprendeGolpe = EstadoDoAprendeGolpe.aprendiSemEsquecer;
+                //}
+                //else if (esqueceu)
+                //{
+                ////    GameController.g.StartCoroutine(TerminaDaquiAPouco());
+                //}
+            }
         }
 
         IEnumerator TerminaDaquiAPouco()

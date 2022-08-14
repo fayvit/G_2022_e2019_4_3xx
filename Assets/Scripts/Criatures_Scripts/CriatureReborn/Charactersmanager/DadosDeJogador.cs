@@ -91,7 +91,7 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Trude,7),
+                new PetBase(PetName.Trude,5),
                 new PetBase(PetName.Galfo,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Vampire,13),
@@ -179,8 +179,10 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.seiva,10),
             ItemFactory.Get(NameIdItem.pilha,10),
             ItemFactory.Get(NameIdItem.estrela,10),
-            ItemFactory.Get(NameIdItem.quartzo,10),
-            ItemFactory.Get(NameIdItem.adubo,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
+            ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
+            ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
+            ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
             //ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
             //ItemFactory.Get(NameIdItem.pergFuracaoDeFolhas,5),
             //ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),
