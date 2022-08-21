@@ -440,13 +440,7 @@ namespace Criatures2021
                         {
                             if (MeuCriatureBase.StManager.VerifyStaminaAction() && Roll.Start(V, gameObject))
                             {
-                                gameObject.layer = 2;
-                                Controll.Mov.ApplicableGravity = false;
-                                GameObject G = Resources.Load<GameObject>("particles/" + GeneralParticles.rollParticles.ToString());
-                                Destroy(Instantiate(G, transform.position, Quaternion.identity, transform), 3);
-                                Controll.Mov.UseRollSpeed = true;
-                                MeuCriatureBase.StManager.ConsumeStamina(20);
-                                State = LocalState.inDodge;
+                                StartDodge();
                             }
                         }
                         else if (CurrentCommander.GetButtonDown(CommandConverterInt.criatureChange))
@@ -491,13 +485,6 @@ namespace Criatures2021
                         State = inControll ? LocalState.onFree : LocalState.following;
                     }
                 break;
-                case LocalState.inDodge:
-                    InRollState();
-                break;
-                case LocalState.returnOfRoll:
-                    if (Roll.ReturnTime())
-                        EndRollState();
-                break;
                 case LocalState.nonReturnableDamage:
                     if (DamageState.Update())
                     {
@@ -537,44 +524,10 @@ namespace Criatures2021
 
         }
 
-        void EndRollState()
+        protected override void EndRollState()
         {
-            gameObject.layer = 0;
-            Controll.Mov.ApplicableGravity = true;
-            Controll.Mov.UseRollSpeed = false;
-            Controll.Mov.MoveApplicator(Vector3.zero);
+            base.EndRollState();
             CurrentCommander.DirectionalVector();
-            State = LocalState.onFree;
-        }
-
-        void InRollState()
-        {
-
-            if (Roll.Update())
-            {
-                if (Roll.RequestAttack)
-                {
-                    if (MeuCriatureBase.StManager.VerifyStaminaAction())
-                    {
-                        //estado = MotionMoveState.inExternalAction;
-                        //FayvitMoveEventAgregator.Publish(new FayvitMoveEvent(FayvitMoveEventKey.posRollAttack, gameObject));
-                        MeuCriatureBase.StManager.ConsumeStamina(40);
-                    }
-                    else
-                        State = LocalState.returnOfRoll;
-                }
-                else
-                    State = LocalState.returnOfRoll;
-
-                Controll.Mov.MoveApplicator(Vector3.zero);
-            }
-            else
-            {
-                //if (CurrentCommander.GetButtonDown(5))
-                //    Roll.RequestAttack = true;
-
-                Controll.Mov.MoveApplicator(Roll.DirOfRoll, true);
-            }
         }
 
         void VerificaFocarInimigo()

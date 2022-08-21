@@ -78,11 +78,14 @@ namespace Criatures2021Hud
                 venda? osItensParaVenda[indice].limitado:MyGameController.Instance.MyKeys.VerificaAutoCont(IDdoChop+"item"+indice)
                 , I.ID == NameIdItem.generico ? 0 : I.Estoque);
 
-            showAttack.EndHud();
+            ItemBase Ib = ItemFactory.Get(osItensParaVenda[indice].nomeDoItem);
+            //showAttack.EndHud();
 
-            Debug.Log("caso seja item para aprender ataque alterar aqui");
-            //if(I.Item_Nature==ItemNature.pergGolpe)
-            //    showAttack.Start(I.)
+            Debug.Log("caso seja item para aprender ataque alterar aqui: "+Ib.Item_Nature);
+            if (Ib.Item_Nature == ItemNature.pergGolpe)
+                showAttack.Start(AttackFactory.GetAttack(((AttackLearnItem)Ib).GolpeDoPergaminho[0]), 0);
+            else
+                showAttack.EndHud();
         }
 
         internal void ChangeOption(int vChange,int hChange)

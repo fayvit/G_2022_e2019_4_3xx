@@ -70,6 +70,8 @@ namespace Criatures2021
                 {
                     fallSpeed = 18,
                     inJumpSpeed = 9,
+                    risingSpeed=7,
+                    jumpHeight=3
                 },
                 runSpeed = 18,
                 walkSpeed = 9

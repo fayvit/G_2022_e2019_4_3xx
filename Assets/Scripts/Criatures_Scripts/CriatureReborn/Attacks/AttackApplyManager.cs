@@ -24,7 +24,12 @@ namespace Criatures2021
             esseGolpe.IniciaGolpe(gameObject);
             tempoDecorrido -= tempoDeInstancia;
 
-
+            MessageAgregator<MsgInvokeStartAtk>.Publish(new MsgInvokeStartAtk()
+            {
+                atacado = focado,
+                atacante = gameObject,
+                atk = esseGolpe
+            });
             //GolpePersonagem.RetornaGolpePersonagem(gameObject, esseGolpe.Nome).TempoDeInstancia;
             //gerente = GetComponent<CreatureManager>();
             //ParaliseNoTempo();
@@ -99,5 +104,11 @@ namespace Criatures2021
 
     public struct MsgFreedonAfterAttack : IMessageBase {
         public GameObject gameObject;
+    }
+
+    public struct MsgInvokeStartAtk : IMessageBase {
+        public GameObject atacante;
+        public GameObject atacado;
+        public PetAttackBase atk;
     }
 }

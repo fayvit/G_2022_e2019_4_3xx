@@ -144,6 +144,116 @@ namespace TextBankSpace
             "Vamos às vendas"
             }
             },
+            {
+            TextKey.falandoPrimeiroComIan,new List<string>()
+            {
+                "Ola viajante! Meu nome é <color=orange>Ian</color>.",
+                "Eu estudo para ser um sacerdote de <color=cyan>Log</color>, o deus da sabedoria e conhecimento.",
+                "Eu estou com um grave problema viajante.",
+                "Um ser repugnante e mediocre roubou a caneta sagrada que eu usava para escrever pergaminhos",
+                "Ele se esgueirou por entre aquelas pedras...",
+                "Se você puder me ajudar, recuperando minha caneta, poderei te recompensar escrevendo pergaminhos para você"
+            }
+        },
+        {
+            TextKey.falandoPrimeiroComDerek,new List<string>()
+            {
+                "Ola viajante, eu sou <color=orange>Derek</color>, sou um paladino de <color=cyan>Laurense</color>, o deus da coragem",
+                "Estou aqui descansando um pouco antes de retomar minha viajem.",
+                "Estou numa missão muito importante e preciso chegar até o templo da sabedoria",
+                "mas faz algum tempo estou sendo seguido por um sujeitinho mal encarado",
+                "Acredito que ele esteja agora me aguardando na sombra da represa",
+                "Tenha muito cuidado com ele!"
+            }
+        },
+        {
+            TextKey.IanDepoisDeDerek,new List<string>()
+            {
+                "Ola viajante! Meu nome é <color=orange>Ian</color>.",
+                "Eu estudo para ser um sacerdote de <color=cyan>Log</color>, o deus da sabedoria e conhecimento.",
+                "Você deve ter encontrado por entre as montanhas aquele sujeitinho repugnante e mediocre que me roubou",
+                "Ele me tomou a caneta sagrada que eu usava para escrever pergaminhos!",
+                "Se você puder me ajudar, recuperando minha caneta, poderei te recompensar escrevendo pergaminhos para você"
+            }
+        },
+        {
+            TextKey.DerekDepoisDeIan,new List<string>()
+            {
+                "Então você quer me tomar a caneta sagrada de Log??",
+                "Prepare-se para lutar!!"
+            }
+        },
+        {
+            TextKey.DerekDerrotado,new List<string>()
+            {
+                "Não acredito que você me venceu!!",
+                "Você deve ser um lacaio daquele mal carater!!",
+                "Ouça o que eu digo viajante! Nos encontraremos de novo",
+                "E quando nos encontrarmos você poderá não ter a mesma sorte"
+            }
+        },
+        {
+            TextKey.IanComCaneta,new List<string>()
+            {
+                "Muito obrigado viajante!! Você recuperou a minha caneta!",
+                "A partir de agora escreverei pergaminhos para você",
+                "Mas para escreve-los precisarei do material adequado",
+                "Para cada pergaminho que eu escrever para você preciso de uma quantidade de tinta sagrada",
+                "Os <color=orange>Clérigos de Log</color> costumam esconder alguns tinteiros nos caminhos de Orion",
+                "Me traga <color=cyan>tinteiros sagrados de Log</color> e escreverei pergaminhos para você"
+            }
+        },
+        {
+            TextKey.ComecandoConversaComIanMercante,new List<string>()
+            {
+                "Olá viajante!! Gostaria que eu escrevesse pergaminhos para você?"
+            }
+        },
+        {
+            TextKey.opcoesDeIan,new List<string>()
+            {
+                "Escrever pergaminho de Sinara",
+                "Escrever pergaminho de Alana",
+                "Conversar",
+                "Sair"
+            }
+        },
+        {
+            TextKey.conversaBasicaDeIan,new List<string>()
+            {
+                "Eu sou um estudante, estudo para me tornar um sacerdote de <color=cyan>Log</color>, o deus da sabedoria e conhecimento",
+                "Por isso, ainda sei escrever poucos pergaminhos, na verdade, apenas dois que posso dizer uteis",
+                "O pergaminho de Sinara, deusa dos criatures, quando lido aumenta em 4 pontos o limite de vida d e um criature",
+                "O pergaminho de Alana, deusa da fertilidade, quando lido aumenta em 4 pontos o limite de energia de um criature",
+                "Espero que esse pergaminhos sejam úteis pra você viajante"
+            }
+        },
+        {
+            TextKey.conversaBasicaDeIan2,new List<string>()
+            {
+                "Estou numa jornada em direção ao norte, tenho contas a acertar com um sujeitinho na cidade de <color=yellow>Cyzor</color>",
+                "Ficarei aqui por mais algum tempo, mas logo precisarei retomar minha viajem",
+                "Portanto, se quiser que escreva pergaminhos para você, volte logo,",
+                "caso contrario, poderá não me encontrar mais aqui"
+            }
+        },
+        {
+            TextKey.despedidabasicaDeIan,new List<string>()
+            {
+                "Até mais viajante, volte logo para que eu escreva mais pergaminhos para você. Logo voltarei para minha jornada"
+            }
+        },
+        {
+            TextKey.frasesDeVendaDeIan,new List<string>()
+            {
+                "No que posso te ajudar?",
+                "Para que eu escreva um {0} para você, preciso de {1} tinteiro sagrado de Log e {2} cristais. Gostaria que eu escrevesse?",
+                "Infelizmente, parece que você não tem os requisitos necessários para a compra, viajante",
+                "Ho How, parece que teremos um pergaminho!!",
+                "Receba seu pergaminho viajante",
+                "Gostaria que eu escrevesse mais um pergaminho?",
+            }
+        },
         };
     }
 }

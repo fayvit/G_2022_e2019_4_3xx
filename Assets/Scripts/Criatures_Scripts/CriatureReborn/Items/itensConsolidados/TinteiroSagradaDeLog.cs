@@ -4,10 +4,9 @@
     [System.Serializable]
     public class TinteiroSagradaDeLog : UnusableItem
     {
-        public TinteiroSagradaDeLog(int estoque) : base(new ItemFeatures() {
+        public TinteiroSagradaDeLog(int estoque) : base(new ItemFeatures(NameIdItem.tinteiroSagradoDeLog) {
             consumivel = false,
             itemNature = ItemNature.usoParticular,
-            NomeID = NameIdItem.tinteiroSagradoDeLog,
             nosItensRapidos = false,
             valor = 0
         

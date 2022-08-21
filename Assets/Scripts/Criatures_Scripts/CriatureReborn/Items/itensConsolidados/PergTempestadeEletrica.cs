@@ -9,7 +9,7 @@ namespace Criatures2021
     {
         public PergTempestadeEletrica(int estoque = 1) : base(new ItemFeatures(NameIdItem.pergTempestadeEletrica)
         {
-            valor = 440,
+            valor = 1220,
             itemNature = ItemNature.pergGolpe
         })
         {
@@ -19,7 +19,7 @@ namespace Criatures2021
                 string.Format(TextBank.RetornaFraseDoIdioma(TextKey.emQuem),ItemBase.NomeEmLinguas(NameIdItem.pergTempestadeEletrica)),
                 TextBank.RetornaFraseDoIdioma(TextKey.aprendeuGolpe),
                 };
-            Particula = GeneralParticles.particulaDaDefesaPergaminhoFora;
+            Particula = GeneralParticles.particulaDoAtaquePergaminhoFora;
 
             golpeDoPergaminho = new AttackNameId[1]
             {

@@ -52,6 +52,15 @@ namespace FayvitUI
             uma.SetarOpcao(acao, Opcoes[indice]);
         }
 
+        public void ThisUpdate(int change, bool confirmButton)
+        {
+            if(change!=0)
+                ChangeOption(change);
+            else
+            if (confirmButton)
+                acao(SelectedOption);
+        }
+
         protected override void AfterFinisher()
         {
             acao = null;

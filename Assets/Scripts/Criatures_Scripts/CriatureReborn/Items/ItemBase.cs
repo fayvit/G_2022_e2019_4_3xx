@@ -37,6 +37,7 @@ namespace Criatures2021
             this.estoque = cont.estoque;
             this.valor = cont.valor;
             this.nosItensRapidos = cont.nosItensRapidos;
+            this.itemNature = cont.itemNature;
         }
 
         public NameIdItem ID
@@ -382,6 +383,13 @@ namespace Criatures2021
         pergTempestadeEletrica,
         brasaoDeLaurense,
         brasaoDeAnanda,
-        brasaoDeBoutjoi
+        brasaoDeBoutjoi,
+        pergTurboDeAgua,
+        pergHidroBomba,
+        pergLaminaDeFolha,
+        pergTempesdadeDeFolhas,
+        pergBolaDeFogo,
+        pergRajadaDeFogo,
+        pergTosteAtaque
     }
 }

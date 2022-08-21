@@ -5,6 +5,7 @@ using Criatures2021Hud;
 using TextBankSpace;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
+using FayvitSupportSingleton;
 
 namespace Criatures2021
 {
@@ -128,6 +129,11 @@ namespace Criatures2021
             MessageAgregator<MsgPushBlockReturnToStartPosition>.AddListener(OnRequestStartPosition);
 
             myLight.color = colorBase;
+
+           SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            {
+                VerifyCheck(sound:false);
+            });
             
         }
 
@@ -144,6 +150,8 @@ namespace Criatures2021
 
                 myLight.color = colorBase;
                 GetComponentInChildren<MeshRenderer>().material.SetColor("EmiterColor", colorBase);
+
+                VerifyCheck(sound:false);
             }
         }
 
@@ -215,35 +223,41 @@ namespace Criatures2021
                             blockReturnCam=true
                         });
 
-                        RaycastHit hit;
-                        Vector3 refPosition = transform.position + 0.1f * Vector3.up;
-                        if (Physics.Raycast(refPosition, Vector3.down, out hit, .7f))
-                        {
-                            if (hit.collider.GetComponent<CheckableBlock>())
-                            {
-                                MessageAgregator<MsgRequest3dSound>.Publish(new MsgRequest3dSound()
-                                {
-                                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo,
-                                    sender = transform
-                                });
-                                MessageAgregator<MsgChangeCheck>.Publish(new MsgChangeCheck()
-                                {
-                                    check = true,
-                                    checkable = hit.collider.gameObject
-                                });
-
-                                myLight.color = colorCheck;
-                                GetComponentInChildren<MeshRenderer>().material.SetColor("EmiterColor", colorCheck);
-
-                                Debug.Log("Esse é um bloco de check;");
-                            }
+                        
+                        VerifyCheck(sound:true);
 
                             
-                        }
+                        
 
                         player.GetComponent<CharacterController>().enabled = true;
                     }
                     break;
+            }
+        }
+
+        void VerifyCheck(bool sound)
+        {
+            RaycastHit hit;
+            Vector3 refPosition = transform.position + 0.1f * Vector3.up;
+            if (Physics.Raycast(refPosition, Vector3.down, out hit, .7f))
+            {
+                if (hit.collider.GetComponent<CheckableBlock>())
+                {
+                    if(sound)
+                        MessageAgregator<MsgRequest3dSound>.Publish(new MsgRequest3dSound()
+                        {
+                            sfxId = FayvitSounds.SoundEffectID.painelAbrindo,
+                            sender = transform
+                        });
+                    MessageAgregator<MsgChangeCheck>.Publish(new MsgChangeCheck()
+                    {
+                        check = true,
+                        checkable = hit.collider.gameObject
+                    });
+
+                    myLight.color = colorCheck;
+                    GetComponentInChildren<MeshRenderer>().material.SetColor("EmiterColor", colorCheck);
+                }
             }
         }
     }

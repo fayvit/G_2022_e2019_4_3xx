@@ -43,7 +43,7 @@ namespace TalkSpace
             }
         }
 
-        new protected void Update()
+        protected override void Update()
         {
             base.Update();
 

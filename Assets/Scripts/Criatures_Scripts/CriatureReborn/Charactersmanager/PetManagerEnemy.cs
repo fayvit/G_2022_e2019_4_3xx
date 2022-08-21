@@ -4,6 +4,7 @@ using FayvitMove;
 using FayvitSupportSingleton;
 using System.Collections.Generic;
 using FayvitMessageAgregator;
+using System;
 
 namespace Criatures2021
 {
@@ -34,6 +35,8 @@ namespace Criatures2021
             MessageAgregator<MsgStartUseItem>.AddListener(OnPlayerPetStartUseItem);
             MessageAgregator<MsgStartReplacePet>.AddListener(OnStartReplacePet);
             MessageAgregator<MsgTargetEnemy>.AddListener(OnTargetEnemy);
+            MessageAgregator<MsgRequestCpuRoll>.AddListener(OnRequestCpuRoll);
+            
 
 
         }
@@ -47,6 +50,16 @@ namespace Criatures2021
             MessageAgregator<MsgStartUseItem>.RemoveListener(OnPlayerPetStartUseItem);
             MessageAgregator<MsgStartReplacePet>.RemoveListener(OnStartReplacePet);
             MessageAgregator<MsgTargetEnemy>.RemoveListener(OnTargetEnemy);
+            MessageAgregator<MsgRequestCpuRoll>.RemoveListener(OnRequestCpuRoll);
+        }
+
+        private void OnRequestCpuRoll(MsgRequestCpuRoll obj)
+        {
+            if (obj.sender == gameObject && State==LocalState.onFree)
+            {
+                Roll.Start(obj.dir, gameObject);
+                StartDodge();
+            }
         }
 
         private void OnTargetEnemy(MsgTargetEnemy obj)
@@ -181,6 +194,12 @@ namespace Criatures2021
         public void SetStartVigilance(LocalState s = LocalState.onFree)
         {
             State = s;
+        }
+
+        public void ChangeIaType(EnemyIaBase ia)
+        {
+            enemyIa = ia;
+            enemyIa.Start(transform, MeuCriatureBase, Controll);
         }
     }
 

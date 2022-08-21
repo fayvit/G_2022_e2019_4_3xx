@@ -176,12 +176,18 @@ namespace FayvitBasicTools
         sempretrue = -2,
         nula = -1,
         sempreFalso = 0,
+        conversouPrimeiroComIan = 1,
+        conversouPrimeiroComDerek = 2,
+        venceuDerekPrimeiraVez = 3,
+        entregouCanetaDeIan = 4,
     }
 
     public enum KeyCont
     {
         nula = -1,
         indiceZero = 0,
-        armagedoms = 1
+        armagedoms = 1,
+        pergSinaraComprados = 2,
+        pergAlanaComprados = 3
     }
 }

@@ -17,6 +17,7 @@ namespace Criatures2021
         protected int indiceDoEscolhido = -1;
         protected EstadoDoAprendeGolpe estadoDoAprendeGolpe = EstadoDoAprendeGolpe.baseUpdate;
 
+        public AttackNameId[] GolpeDoPergaminho => golpeDoPergaminho;
         protected enum EstadoDoAprendeGolpe
         {
             baseUpdate,

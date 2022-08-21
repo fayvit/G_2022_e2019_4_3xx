@@ -24,7 +24,7 @@ namespace Criatures2021
             { DetectHeroResponse.ignoreTax,.05f },
         };
 
-        private ControlledMoveForCharacter controll;
+        protected ControlledMoveForCharacter controll;
         private PetManager heroPet;
         private GameObject petOwner;
         private Vector3 movePosition;
@@ -43,12 +43,15 @@ namespace Criatures2021
         private const float MOD_DISTANCIA_DE_ATAQUE = 14;
         private const float TargetUpdateTax = .5f;
 
+        protected Transform MeuTransform => transform;
+
         public enum IaState
         { 
             stand,
             standMove,
             rivalElectedWithAgressive,
-            stopped
+            stopped,
+            atkResponse
         }
 
         public bool PodeAtualizar { get; set; } = true;
@@ -86,7 +89,7 @@ namespace Criatures2021
             }
         }
         
-        public void Start(Transform T,PetBase P, ControlledMoveForCharacter controll)
+        public virtual void Start(Transform T,PetBase P, ControlledMoveForCharacter controll)
         {
             this.controll = controll;
             myPet = P;
@@ -222,7 +225,18 @@ namespace Criatures2021
                     AplicaIaDeAtaque();
                     myPet.StManager.StaminaRegen(false);
                 break;
+                case IaState.atkResponse:
+                    UpdateAtkResponse();
+                break;
             }
+        }
+
+        protected void EnterInAtkResponse() { state = IaState.atkResponse; }
+        protected void ExitOutAtkResponse() { state = IaState.rivalElectedWithAgressive; }
+
+        protected virtual void UpdateAtkResponse()
+        { 
+        
         }
 
         void VerifiqueSigaOuAtaque(PetAttackBase GB, PetAtributes A)

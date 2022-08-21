@@ -52,6 +52,7 @@ namespace FayvitSounds
         Monster3 = 33,
         Shop = 34,
         XP010_System10 = 35,
-        keyDjeySound = 36
+        keyDjeySound = 36,
+        Fire6 = 37
     }
 }

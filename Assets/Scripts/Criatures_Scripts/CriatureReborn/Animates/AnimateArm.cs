@@ -120,7 +120,7 @@ namespace Criatures2021
 
                             //FayvitSupportSingleton.SupportSingleton.Instance.InvokeOnCountFrame(() =>
                             //{
-                                C.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(posCriature);
+                                C.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(posCriature,1);
                             //});
                             
                             C.transform.parent = AbstractGameController.Instance.ThisGameObject.transform;
@@ -137,7 +137,7 @@ namespace Criatures2021
                         if (treinador)
                         {
                             Debug.Log("inimigo");
-                            posCriature = MelhoraInstancia3D.ProcuraPosNoMapa(posCriature);
+                            posCriature = MelhoraInstancia3D.ProcuraPosNoMapa(posCriature,1);
                             C = WildPetInitialize.Initialize(oInstanciado, posCriature).gameObject;
 
 

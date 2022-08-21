@@ -26,7 +26,7 @@ namespace TalkSpace
 
         public void ChangeTalkKey(TextKey chave)
         {
-            conversa = TextBank.RetornaListaDeTextoDoIdioma(chave).ToArray();
+            chaveDaConversa = chave;
         }
 
         public void ChangeSpriteView(Sprite S)

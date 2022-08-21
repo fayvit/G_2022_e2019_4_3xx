@@ -306,7 +306,9 @@ namespace TextBankSpace
                     "Perg. Ventos Cortantes","Perg. Olhar Enfraquecedor","Perg.Olhar Mal","Condecoração Beta","Perg. do Furacão de Folhas","Explosivos","Medalhão das Águas",
                     "Tinteiro Sagrado de Log","Perg. de Laurense","Perg. de Boutjoi","Perg. de Ananda",/*ID = 45*/
                     "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Tempestade Eletrica","Brasão de Laurense","Brasão de Ananda",
-                    "Brasão de Boutjoi"
+                    "Brasão de Boutjoi","Perg. do Turbo de Agua","Perg. da Hidro Bomba","Perg. da Lâmina de Folhas","Perg. da Tempestade de Folhas",/*ID=54*/
+                    "Perg. da Bola de Fogo","Perg. da Rajada de Fogo","Perg. do Toste Ataque"
+
                 }},
 
 
@@ -374,6 +376,13 @@ namespace TextBankSpace
                     "Um brasão em homenagem a Laurense o deus da força e da coragem",
                     "Um brasão em homenagem a Ananda a deusa da magia",
                     "Um brasão em homenagem a Boutjoi o deus da natureza, terras e plantações",
+                    " O pergaminho pode ensinar o golpe Turbo de Agua para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Hidro Bomba para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Lâmina de Folhas para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Tempestade de Folhas para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Bola de Fogo para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Rajada de Fogo para um Criature com a capacidade de aprende-lo",
+                    " O pergaminho pode ensinar o golpe Toste Ataque para um Criature com a capacidade de aprende-lo",
 
                 }},
                 {TextKey.textoBaseDeAcao,new List<string>()

@@ -6,6 +6,7 @@ using TextBankSpace;
 using Criatures2021;
 using FayvitCam;
 using FayvitSounds;
+using FayvitMove;
 
 namespace TalkSpace
 {
@@ -14,7 +15,7 @@ namespace TalkSpace
         
         [SerializeField] private string chaveDaLuta;
         [SerializeField] private bool perguntaParaComecar = true;
-        [SerializeField] private PetsForBattle[] criaturesDoTreinador;
+        [SerializeField,ArrayElementTitle("pet.petId")] private PetsForBattle[] criaturesDoTreinador;
         [SerializeField] private ScheduledTalkManager npcAntesDaLuta;
         [SerializeField] private ScheduledTalkManager npcAoGanharLuta;
         [SerializeField] private ScheduledTalkManager npcDepoisDaLutaGanha;
@@ -47,7 +48,8 @@ namespace TalkSpace
         private ThisState state = ThisState.emEspera;
         private AnimateArm animaB;
         private GameObject myActivePet;
-        private MsgSendExternalPanelCommand commands = new MsgSendExternalPanelCommand();
+
+        protected MsgSendExternalPanelCommand Commands { get; private set; } = new MsgSendExternalPanelCommand();
 
         private enum ThisState
         {
@@ -65,15 +67,22 @@ namespace TalkSpace
             fraseDaFinalizacao,
             finalizacao,
             verificandoMaisItens,
-            conversaDeLutaGanha
+            conversaDeLutaGanha,
+            atividadeExterna
         }
 
         public Transform MeuTransform { get => transform.parent; }
         public CharacterManager Manager{ get; set; }
 
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             BuscadorDeID.Validate(ref chaveDaLuta, this, "chaveDaLuta");
+            if (npcAntesDaLuta!=null)
+            {
+                npcAntesDaLuta.OnVallidate();
+                npcAoGanharLuta.OnVallidate();
+                npcDepoisDaLutaGanha.OnVallidate();
+            }
         }
 
         private void Start()
@@ -97,7 +106,7 @@ namespace TalkSpace
             }
         }
 
-        new void Update()
+        protected override void Update()
         {
             base.Update();
 
@@ -105,7 +114,7 @@ namespace TalkSpace
             {
                 case ThisState.conversaAntesDaLuta:
                     #region conversa antes da luta
-                    if (npcAntesDaLuta.Update(commands.confirmButton, commands.returnButton))
+                    if (npcAntesDaLuta.Update(Commands.confirmButton, Commands.returnButton))
                     {
 
                         DisplayTextManager.instance.DisplayText.OffPanels();
@@ -133,7 +142,7 @@ namespace TalkSpace
                 break;
                 case ThisState.perguntaComecarBatalha:
                     #region pergunta para iniciar batalha
-                    if (!DisplayTextManager.instance.DisplayText.LendoMensagemAteOCheia(commands.confirmButton))
+                    if (!DisplayTextManager.instance.DisplayText.LendoMensagemAteOCheia(Commands.confirmButton))
                     {
                         YesOrNoMenu.instance.Menu.StartHud(YesOrNoResponse,
                             TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao).ToArray());
@@ -142,9 +151,9 @@ namespace TalkSpace
                     #endregion
                 break;
                 case ThisState.menuAberto:
-                    YesOrNoMenu.instance.Menu.ChangeOption(commands.vChange);
+                    YesOrNoMenu.instance.Menu.ChangeOption(Commands.vChange);
 
-                    if (commands.confirmButton)
+                    if (Commands.confirmButton)
                         YesOrNoResponse(YesOrNoMenu.instance.Menu.SelectedOption);
                 break;
                 case ThisState.animacaoDeEncontro:
@@ -177,8 +186,13 @@ namespace TalkSpace
                 break;
                 case ThisState.frasePreInicio:
                     #region frasePreInicio
-                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(commands.confirmButton,false,conversa))
+                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(Commands.confirmButton,false,conversa))
                     {
+                        MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
+                        {
+                            nmcvc = musicaDaLuta
+                        });
+
                         animaB = new AnimateArm(MeuTransform, Manager.transform, true);
                         Transform aux = Manager.ActivePet.transform;
                         animaB.PosCriature = aux.position + 3 * aux.forward;
@@ -189,7 +203,7 @@ namespace TalkSpace
                     break;
                 #endregion
                 case ThisState.animandoBraco:
-                    FayvitMessageAgregator.MessageAgregator<FayvitMove.ChangeMoveSpeedMessage>.Publish(new FayvitMove.ChangeMoveSpeedMessage()
+                    MessageAgregator<ChangeMoveSpeedMessage>.Publish(new ChangeMoveSpeedMessage()
                     {
                         velocity = Vector3.zero,
                         gameObject = gameObject
@@ -218,7 +232,7 @@ namespace TalkSpace
                     #endregion
                 break;
                 case ThisState.fraseDeVitoria:
-                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(commands.confirmButton, commands.returnButton, conversa))
+                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(Commands.confirmButton, Commands.returnButton, conversa))
                     {
                         VerificaContinuidadeDaBatalha();
                     }
@@ -232,8 +246,11 @@ namespace TalkSpace
                 break;
                 case ThisState.fraseDaFinalizacao:
                     #region frase da finalizacao
-                    if (npcAoGanharLuta.Update(commands.confirmButton, commands.returnButton))
+                    if (npcAoGanharLuta.Update(Commands.confirmButton, Commands.returnButton))
                     {
+
+                        OnDefeatedTrainer();
+
                         if (recompensasFimDeLuta.Length <= 0)
                         {
                             state = ThisState.finalizacao;
@@ -250,7 +267,7 @@ namespace TalkSpace
                 break;
                 case ThisState.verificandoMaisItens:
                     #region verificando mais itens
-                    if (commands.confirmButton)
+                    if (Commands.confirmButton)
                     {
                         if (indiceDoEnviado + 1 > recompensasFimDeLuta.Length)
                         {
@@ -274,7 +291,7 @@ namespace TalkSpace
                     VoltarAoModoPasseio();
                 break;
                 case ThisState.conversaDeLutaGanha:
-                    if (npcDepoisDaLutaGanha.Update(commands.confirmButton, commands.returnButton))
+                    if (npcDepoisDaLutaGanha.Update(Commands.confirmButton, Commands.returnButton))
                     {
                         VoltarAoModoPasseio();
                     }
@@ -282,7 +299,9 @@ namespace TalkSpace
             }
         }
 
-        private void VoltarAoModoPasseio()
+        protected virtual void OnDefeatedTrainer() { }
+
+        protected void VoltarAoModoPasseio()
         {
             if (Manager == null)
             {
@@ -328,7 +347,7 @@ namespace TalkSpace
                 DisplayTextManager.instance.DisplayText.StartTextDisplay();
                 state = ThisState.fraseDeVitoria;
                 
-                commands = new MsgSendExternalPanelCommand();
+                Commands = new MsgSendExternalPanelCommand();
                 MessageAgregator<MsgStartExternalInteraction>.Publish();
                 MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
                 {
@@ -406,6 +425,11 @@ namespace TalkSpace
             DisplayTextManager.instance.DisplayText.OffPanels();
         }
 
+        protected virtual void ElementosDoEncontro()
+        {
+            InsereElementosDoEncontro.EncontroDeTreinador(Manager, MeuTransform);
+        }
+
         private void IniciarLutaContraTreinador()
         {
             npcOriginalPosition = MeuTransform.position;
@@ -415,11 +439,11 @@ namespace TalkSpace
 
             tempoDecorrido = 0;
             CameraApplicator.cam.OffCamera(); /*StartExibitionCam(transform, 1, true);*/
-            InsereElementosDoEncontro.EncontroDeTreinador(Manager, MeuTransform);
-            MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
-            {
-                nmcvc = musicaDaLuta
-            });
+            ElementosDoEncontro();
+            //MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
+            //{
+            //    nmcvc = musicaDaLuta
+            //});
             state = ThisState.animacaoDeEncontro;
 
             MessageAgregator<MsgStartAnimateArmToFight>.Publish(new MsgStartAnimateArmToFight()
@@ -428,10 +452,10 @@ namespace TalkSpace
             });
         }
 
-        public override void FuncaoDoBotao()
+        protected virtual void PreparandoConversa()
         {
             FluxoDeBotao();
-            commands = new MsgSendExternalPanelCommand();
+            Commands = new MsgSendExternalPanelCommand();
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveCommands);
 
             Transform player = MyGlobalController.MainCharTransform;
@@ -443,6 +467,13 @@ namespace TalkSpace
                 nmcvc = temaDoTreinador
             });
 
+            state = ThisState.atividadeExterna;
+        }
+
+        public override void FuncaoDoBotao()
+        {
+            PreparandoConversa();
+
             if (!AbstractGameController.Instance.MyKeys.VerificaAutoShift(chaveDaLuta))
             {   
                 npcAntesDaLuta.Start();
@@ -453,7 +484,7 @@ namespace TalkSpace
                 //    conversa = BancoDeTextos.RetornaListaDeTextoDoIdioma(StringParaEnum.ObterEnum(chaveDepoisDeFinalizado, chaveDaFinalizacao)).ToArray();
             }
             else {
-                FluxoDeBotao();
+                
                 npcDepoisDaLutaGanha.Start();
                 npcDepoisDaLutaGanha.IniciaConversa();
                 state = ThisState.conversaDeLutaGanha;
@@ -464,7 +495,7 @@ namespace TalkSpace
 
         private void OnReceiveCommands(MsgSendExternalPanelCommand obj)
         {
-            commands = obj;
+            Commands = obj;
         }
     }
 

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using FayvitMessageAgregator;
 using Criatures2021;
 using TextBankSpace;
-using System;
 
 namespace Criatures2021Hud
 {

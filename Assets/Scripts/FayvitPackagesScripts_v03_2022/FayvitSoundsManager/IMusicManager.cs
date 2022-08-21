@@ -41,7 +41,9 @@ namespace FayvitSounds
         CaixaDeFosforo = 8,
         Brasileirinho = 9,
         choroChorandoParaPaulinhoNogueira = 10,
-        NaqueleTempo = 11
+        NaqueleTempo = 11,
+        choro_N1 = 12,
+        Chorrindo = 13
     }
 
     [System.Serializable]

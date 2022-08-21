@@ -57,6 +57,7 @@ namespace TalkSpace
         private void OnValidate()
         {
             BuscadorDeID.Validate(ref ID, this);
+            esseNpc.OnVallidate();
         }
 
         public override void FuncaoDoBotao()

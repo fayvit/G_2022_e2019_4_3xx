@@ -57,6 +57,7 @@ namespace Criatures2021
         {
             cristais = 100;
             CriaturesArmagedados = new List<PetBase>() {
+                new PetBase(PetName.DogMour,5),
                 new PetBase(PetName.Trude,5),
                 new PetBase(PetName.Galfo,11),
                 new PetBase(PetName.Wisks,7),
@@ -91,7 +92,7 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Trude,5),
+                new PetBase(PetName.Florest,5),
                 new PetBase(PetName.Galfo,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Vampire,13),
@@ -170,7 +171,7 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.tonico,10),
             ItemFactory.Get(NameIdItem.amuletoDaCoragem,10),
             ItemFactory.Get(NameIdItem.antidoto,10),
-            ItemFactory.Get(NameIdItem.aura,10),
+            ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
             ItemFactory.Get(NameIdItem.ventilador,10),
             ItemFactory.Get(NameIdItem.gasolina,10),
             ItemFactory.Get(NameIdItem.regador,10),

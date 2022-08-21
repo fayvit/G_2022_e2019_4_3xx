@@ -23,7 +23,9 @@ namespace TextBankSpace
             "Parece que há um motor eletrico sem bateria.",
             "Existe um mecanismo com as engrenagens emperradas. Parece que a graxa perdeu a viscosidade",
             /*ID=12*/
-            "Pedras empilhadas, talvez um impacto forte possa move-las"
+            "Pedras empilhadas, talvez um impacto forte possa move-las",
+            "A graxa das engrenagens secou! Para funcionar é preciso adicionar alguma viscosidade",
+            "Até você se tornar consciente o inconsiente irá dirigir sua vida"
         } },
             { 
             TextKey.infosDebarreiraasParaGolpes,new List<string>()

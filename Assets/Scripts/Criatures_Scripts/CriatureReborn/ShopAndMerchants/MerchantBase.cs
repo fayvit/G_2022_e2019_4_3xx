@@ -39,9 +39,11 @@ namespace Criatures2021
                 }
             }
         }
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             BuscadorDeID.Validate(ref ID, this);
+            NPC.OnVallidate();
+            NPCfalasIniciais.OnVallidate();
         }
 
         protected void EscolhaInicial()

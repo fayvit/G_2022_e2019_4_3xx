@@ -27,16 +27,17 @@ namespace Criatures2021
 
         private void OnValidate()
         {
-#if UNITY_EDITOR
-            if (string.IsNullOrEmpty(Chave) && gameObject.scene.name != null)
-            {
-                // ID = BuscadorDeID.GetUniqueID(gameObject, ID.ToString());
+            BuscadorDeID.Validate(ref chave, this, "chave");
+//#if UNITY_EDITOR
+//            if (string.IsNullOrEmpty(Chave) && gameObject.scene.name != null)
+//            {
+//                // ID = BuscadorDeID.GetUniqueID(gameObject, ID.ToString());
 
-                Chave = GetInstanceID() + "_" + gameObject.scene.name + "_Barreira";
-                //ID = System.Guid.NewGuid().ToString();
-                BuscadorDeID.SetUniqueIdProperty(this, Chave, "chave");
-            }
-#endif
+//                Chave = GetInstanceID() + "_" + gameObject.scene.name + "_Barreira";
+//                //ID = System.Guid.NewGuid().ToString();
+//                BuscadorDeID.SetUniqueIdProperty(this, Chave, "chave");
+//            }
+//#endif
         }
 
         private bool VerificaGolpeNaLista(AttackNameId nomeDoGolpe)

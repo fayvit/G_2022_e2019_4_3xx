@@ -29,7 +29,7 @@ namespace Criatures2021
 
         protected override void EfetivadorDaAcao() { }
 
-        new void Start()
+        new protected void Start()
         {
             originalPosition = barras.position;
             hidePosition = barras.position - 8 * Vector3.up;
@@ -81,6 +81,7 @@ namespace Criatures2021
                 //EventAgregator.Publish(new StandardSendStringEvent(gameObject, SoundEffectID.Item.ToString(), EventKey.disparaSom));
                 Estado = BarrierEventsState.emEspera;
                 VoltarAoFLuxoDeJogo();
+                barras.gameObject.SetActive(false);
             }
         }
 
@@ -115,13 +116,13 @@ namespace Criatures2021
                     break;
                 case BarrierEventsState.ativou:
                     AtivacaoEspecifica();
-                    break;
+                break;
                 case BarrierEventsState.barrasDescendo:
                     BarraDescendo();
-                    break;
+                break;
                 case BarrierEventsState.apresentaFinalizaAcao:
                     ApresentacaoDeFinalizacaoEspecifica();
-                    break;
+                break;
             }
         }
     }

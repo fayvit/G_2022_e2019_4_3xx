@@ -5153,7 +5153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   distanciaParaAcionar: 4.6
-  chave: 638038_barreiraEletrica_Barreira
+  chave: 
   ativaveis: 
   todoDoTipo: 1
   tipoParaAtivar: 6
@@ -131667,6 +131667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3199773478587315668}
+  - component: {fileID: 4970301375292743929}
   m_Layer: 12
   m_Name: containerDasBarras
   m_TagString: Untagged
@@ -131692,6 +131693,19 @@ Transform:
   m_Father: {fileID: 4692985774310528}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4970301375292743929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190485179890734689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.538732, y: 147.33173, z: 11.0069}
+  m_Center: {x: -0.29912376, y: 73.16586, z: -5.8736277}
 --- !u!1 &7199938952681710457
 GameObject:
   m_ObjectHideFlags: 0

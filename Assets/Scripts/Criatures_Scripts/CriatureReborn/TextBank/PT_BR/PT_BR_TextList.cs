@@ -22,6 +22,8 @@ namespace TextBankSpace
                     ColocaTextos(ref txt, TutoInfoPT_BR.txt);
                     ColocaTextos(ref txt, PT_BR_TextosIniciais.txt);
                     ColocaTextos(ref txt, PT_BR_TextosDeKatids.txt);
+                    ColocaTextos(ref txt, PT_BR_TextosDeMarjan.txt);
+                    ColocaTextos(ref txt, PT_BR_TextosDosDevotos.txt);
                 }
 
                 return txt;

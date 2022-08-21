@@ -28,7 +28,7 @@ public class CharRotateTo : MonoBehaviour
 
     private void OnDestroy()
     {
-        MessageAgregator<MsgStartAnimateArmToFight>.AddListener(OnStartAnimateFight);
+        MessageAgregator<MsgStartAnimateArmToFight>.RemoveListener(OnStartAnimateFight);
     }
 
     private void OnStartAnimateFight(MsgStartAnimateArmToFight obj)

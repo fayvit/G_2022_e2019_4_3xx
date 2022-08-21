@@ -109,15 +109,39 @@ namespace Criatures2021
                 case NameIdItem.brasaoDeBoutjoi:
                     retorno = new BrasaoDeBoutjoi(estoque);
                 break;
-                    //case nomeIDitem.pergOlharEnfraquecedor:
-                    //    retorno = new PergOlharEnfraquecedor(estoque);
-                    //    break;
-                    //case nomeIDitem.pergOlharMal:
-                    //    retorno = new PergOlharMal(estoque);
-                    //    break;
-                    //case nomeIDitem.pergFuracaoDeFolhas:
-                    //    retorno = new PergFuracaoDeFolhas(estoque);
-                    //    break;
+                case NameIdItem.pergDeRajadaDeAgua:
+                    retorno = new PergRajadaDeAgua(estoque);
+                break;
+                case NameIdItem.pergTurboDeAgua:
+                    retorno = new PergTurboDeAgua(estoque);
+                break;
+                case NameIdItem.pergHidroBomba:
+                    retorno = new PergHidroBomba(estoque);
+                break;
+                case NameIdItem.pergBolaDeFogo:
+                    retorno = new PergBolaDeFogo(estoque);
+                    break;
+                case NameIdItem.pergRajadaDeFogo:
+                    retorno = new PergRajadaDeFogo(estoque);
+                    break;
+                case NameIdItem.pergTosteAtaque:
+                    retorno = new PergTosteAtaque(estoque);
+                break;
+                //case nomeIDitem.pergOlharEnfraquecedor:
+                //    retorno = new PergOlharEnfraquecedor(estoque);
+                //    break;
+                //case nomeIDitem.pergOlharMal:
+                //    retorno = new PergOlharMal(estoque);
+                //    break;
+                case NameIdItem.pergLaminaDeFolha:
+                    retorno = new PergLaminaDeFolha(estoque);
+                break;
+                case NameIdItem.pergFuracaoDeFolhas:
+                    retorno = new PergFuracaoDeFolhas(estoque);
+                break;
+                case NameIdItem.pergTempesdadeDeFolhas:
+                    retorno = new PergTempestadeDeFolhas(estoque);
+                break;
                     //case nomeIDitem.pergVentosCortantes:
                     //    retorno = new PergVentosCortantes(estoque);
                     //    break;

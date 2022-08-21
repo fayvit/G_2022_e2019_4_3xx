@@ -5,12 +5,13 @@ namespace Criatures2021
 {
     public class InsereElementosDoEncontro
     {
-        static void ColocaTreinadorEmPosicao(CharacterManager manager, Transform trainer)
+        static void ColocaTreinadorEmPosicao(CharacterManager manager, Transform trainer,Vector3 basePosition=default)
         {
+            
             Debug.Log("quem é o trainer?: " + trainer);
             CharacterController controle = trainer.GetComponent<CharacterController>();
             controle.enabled = false;
-            trainer.position = Vector3.up + MelhoraInstancia3D.PosParaDeslocamento(trainer.transform.position + 40 * manager.transform.forward, trainer.transform.position);
+            trainer.position = Vector3.up + MelhoraInstancia3D.PosParaDeslocamento(basePosition + 40 * manager.transform.forward, trainer.transform.position);
             Transform aux = manager.ActivePet.transform;
 
             //FayvitSupportSingleton.SupportSingleton.Instance.InvokeOnCountFrame(() =>
@@ -22,30 +23,32 @@ namespace Criatures2021
             trainer.rotation = Quaternion.LookRotation(V);
         }
 
-        public static void EncontroDeTreinador(CharacterManager manager, Transform trainer)
+        public static void EncontroDeTreinador(CharacterManager manager, Transform trainer,Vector3 basePosition=default)
         {
+            if (basePosition == default)
+                basePosition = manager.transform.position;
 
             manager.ContraTreinador = true;
 
-            ColocaTreinadorEmPosicao(manager, trainer);
+            ColocaTreinadorEmPosicao(manager, trainer,basePosition);
             
             AnimacaoDeEncontro(manager.transform.position);
-            AdicionaCilindroEncontro(manager.transform.position);
+            AdicionaCilindroEncontro(basePosition);
             //AlternanciaParaCriature(manager);
             ImpedeMovimentoDoCriature(manager.ActivePet);
-            AlteraPosDoCriature(manager);
-            ColocaOHeroiNaPOsicaoDeEncontro(manager);
+            AlteraPosDoCriature(manager,basePosition);
+            ColocaOHeroiNaPOsicaoDeEncontro(manager,basePosition);
 
            
         }
 
-        protected static void ColocaOHeroiNaPOsicaoDeEncontro(CharacterManager manager)
+        protected static void ColocaOHeroiNaPOsicaoDeEncontro(CharacterManager manager,Vector3 basePosition)
         {
             CharacterController controle = manager.GetComponent<CharacterController>();
             controle.enabled = false;
                 
             manager.transform.position = 2*Vector3.up+MelhoraInstancia3D.ProcuraPosNoMapa(
-                manager.transform.position - 40f * manager.transform.forward
+                basePosition - 40f * manager.transform.forward
                 );//40f * tHeroi.forward;
 
 
@@ -53,12 +56,15 @@ namespace Criatures2021
             controle.enabled = true;
         }
 
-        protected static void AlteraPosDoCriature(CharacterManager manager)
+        protected static void AlteraPosDoCriature(CharacterManager manager,Vector3 basePosition)
         {
             Transform X = manager.ActivePet.transform;
+            X.GetComponent<CharacterController>().enabled = false;
 
-            X.position = manager.transform.position;//new melhoraPos().novaPos(posHeroi,X.transform.lossyScale.y);
+            X.position = basePosition;//new melhoraPos().novaPos(posHeroi,X.transform.lossyScale.y);
             X.rotation = manager.transform.rotation;
+
+            X.GetComponent<CharacterController>().enabled = true;
         }
 
         protected static void AnimacaoDeEncontro(Vector3 posHeroi)

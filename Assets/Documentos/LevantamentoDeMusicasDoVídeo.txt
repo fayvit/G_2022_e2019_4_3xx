@@ -36,10 +36,13 @@ Calmo -> As Rosas não falam
 Energetico -> Choro n1 / Caixa de Fósforo
 Normal -> Choro Chorando / tempo de criança / Sampa / Chorrinho / Brejeiro
 Afeto -> Carinhoso
-Importante -> Xodó da baiana
-Leve ->Schottish
+Importante -> Xodó da baiana -> Caesar
+Leve ->Schottish -> Hooligan
 Carismático -> Dr. Sabe Tudo
-personagem Otimista -> Noturno
+personagem Otimista -> Noturno -> Lance Lutz
+	Choro_N1 -> Ian
+	Chorrinho -> Derek
+	Caixa de Fósforo -> Treinador COmum entre as batalhas
 
 tema de Batalha
 Comum -> tico tico no fubá v2

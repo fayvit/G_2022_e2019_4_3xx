@@ -59,7 +59,7 @@ public class CriarBoxxle : MonoBehaviour
             GameObject G = Instantiate(upperGlass, pai.transform.position, Quaternion.identity, pai.transform);
             G.transform.localPosition = new Vector3(tex.width / 2, 4f, tex.height / 2);
             G.transform.localScale = new Vector3(tex.width, 1, tex.height);
-            criar = false;
+            
 
             G = Instantiate(cornerTower, pai.transform.position, Quaternion.identity, pai.transform);
             G.transform.localPosition = new Vector3(-1, 0, -1);
@@ -70,6 +70,7 @@ public class CriarBoxxle : MonoBehaviour
             G = Instantiate(cornerTower, pai.transform.position, Quaternion.identity, pai.transform);
             G.transform.localPosition = new Vector3(tex.width, 0, tex.height);
 
+            criar = false;
         }
     
     }
