@@ -25,11 +25,12 @@ namespace Criatures2021
         };
 
         protected ControlledMoveForCharacter controll;
+        protected PetBase myPet;
         private PetManager heroPet;
         private GameObject petOwner;
         private Vector3 movePosition;
         private Vector3 originalPosition;
-        private PetBase myPet;
+        
 
         private float timeCount = 0;        
         private float standTimeToMoveMax = 10;
@@ -229,6 +230,11 @@ namespace Criatures2021
                     UpdateAtkResponse();
                 break;
             }
+        }
+
+        public void RequestJump(Vector3 dir)
+        {
+            controll.Mov.MoveApplicator(dir, startJump: true, pressJump: true);
         }
 
         protected void EnterInAtkResponse() { state = IaState.atkResponse; }

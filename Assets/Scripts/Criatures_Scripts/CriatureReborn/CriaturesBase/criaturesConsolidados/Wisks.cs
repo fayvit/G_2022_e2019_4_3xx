@@ -14,7 +14,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("esqueleto/corpo.001/coluna/anteBraco_R/braco_R/mao_R",
                                         new Vector3(0,0,0),
-                                        new Vector3(-0.26f,-0,0)),
+                                        new Vector3(-0.26f,-0,0),.8f),
                 Nome = AttackNameId.tapa,
                 TaxaDeUso = 0.5f
             },

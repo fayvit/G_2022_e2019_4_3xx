@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using FayvitMessageAgregator;
 using FayvitBasicTools;
 
@@ -36,6 +35,7 @@ namespace Criatures2021
                 sender = G.transform
             });
                 //GameController.g.El.retorna(carac.prepara.ToString());
+
             MonoBehaviour.Destroy(
             MonoBehaviour.Instantiate(instancia, G.transform.position, Quaternion.LookRotation(G.transform.forward)), 5);
         }

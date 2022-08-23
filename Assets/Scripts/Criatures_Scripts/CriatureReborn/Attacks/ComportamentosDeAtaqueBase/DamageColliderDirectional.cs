@@ -29,7 +29,7 @@ namespace Criatures2021
                 float sinal = 1;
                 if (Vector3.Angle(dir, alvo.transform.position - transform.position) > 100)
                     sinal = -1;
-                dir = Vector3.Slerp(dir, sinal * (alvo.transform.position - transform.position), 2.9f * Time.deltaTime);
+                dir = Vector3.Slerp(dir, sinal * (alvo.transform.position - transform.position), 9f * Time.deltaTime);
                 dir = new Vector3(dir.x, 0, dir.z);
                 dir.Normalize();
                 /*

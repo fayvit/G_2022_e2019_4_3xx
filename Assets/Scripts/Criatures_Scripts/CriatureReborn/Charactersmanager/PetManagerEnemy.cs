@@ -36,7 +36,9 @@ namespace Criatures2021
             MessageAgregator<MsgStartReplacePet>.AddListener(OnStartReplacePet);
             MessageAgregator<MsgTargetEnemy>.AddListener(OnTargetEnemy);
             MessageAgregator<MsgRequestCpuRoll>.AddListener(OnRequestCpuRoll);
-            
+            MessageAgregator<MsgRequestAtkResponse>.AddListener(OnRequestJump);
+
+
 
 
         }
@@ -51,6 +53,15 @@ namespace Criatures2021
             MessageAgregator<MsgStartReplacePet>.RemoveListener(OnStartReplacePet);
             MessageAgregator<MsgTargetEnemy>.RemoveListener(OnTargetEnemy);
             MessageAgregator<MsgRequestCpuRoll>.RemoveListener(OnRequestCpuRoll);
+            MessageAgregator<MsgRequestAtkResponse>.AddListener(OnRequestJump);
+        }
+
+        private void OnRequestJump(MsgRequestAtkResponse obj)
+        {
+            if (obj.sender == gameObject && State == LocalState.onFree)
+            {
+                obj.acao?.Invoke();
+            }
         }
 
         private void OnRequestCpuRoll(MsgRequestCpuRoll obj)
@@ -122,8 +133,8 @@ namespace Criatures2021
         {
             base.OnCriatureDefeated(obj);
 
-            Debug.Log("é um trainer: "+obj.defeated.GetComponent<PetManagerTrainer>());
-            Debug.Log("enemyIa hero pet: " + enemyIa.HeroPet);
+            //Debug.Log("é um trainer: "+obj.defeated.GetComponent<PetManagerTrainer>());
+            //Debug.Log("enemyIa hero pet: " + enemyIa.HeroPet);
             if (obj.defeated == gameObject)
             {
                 SupportSingleton.Instance.InvokeInSeconds(() =>
@@ -138,7 +149,7 @@ namespace Criatures2021
             else if (obj.defeated.GetComponent<PetManagerTrainer>()
                 && obj.defeated.GetComponent<PetManagerTrainer>().enemyIa.HeroPet==enemyIa.HeroPet)
             {
-                Debug.Log("chamou o eait channge to pet");
+                //Debug.Log("chamou o eait channge to pet");
                 enemyIa.WaitPetChange(enemyIa.HeroPet as PetManagerCharacter);
             }
             //else if (obj.atacker == gameObject)

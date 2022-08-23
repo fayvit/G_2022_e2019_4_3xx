@@ -7,8 +7,9 @@ namespace Criatures2021
     {
         [SerializeField] private PetName pet;
         [SerializeField] private int nivel;
-        [SerializeField] private PetAttackBase[] atksCustomizados;
+        [SerializeField] private AttackNameId[] atksCustomizados;
         [SerializeField] private EnemyIaPercent iaPercent;
+
         //[SerializeField] ConsumableAttribute pv;
         //[SerializeField] ConsumableAttribute pe;
         //[SerializeField] IntrinsicAttribute ataque;
@@ -22,7 +23,9 @@ namespace Criatures2021
             if (atksCustomizados != null && atksCustomizados.Length > 0)
             {
                 P.MeuCriatureBase.GerenteDeGolpes.meusGolpes = new System.Collections.Generic.List<PetAttackBase>();
-                P.MeuCriatureBase.GerenteDeGolpes.meusGolpes.AddRange(atksCustomizados);
+                foreach (var v in atksCustomizados)    
+                    P.MeuCriatureBase.GerenteDeGolpes.meusGolpes.Add(AttackFactory.GetAttack(v));
+                
             }
 
             ((PetManagerEnemy)P).ChangeIaType(iaPercent);

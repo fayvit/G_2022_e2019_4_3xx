@@ -269,12 +269,14 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\DarkenScreenDamageManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\IanChangeToMerchantManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SlopeSlipManager.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SpawnWildBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerSaidaDaCavernaLutaComCaesar.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\WaitCustomizationForStartCutscene.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\PetVigilanceListener.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\ProvisionalEnemyInstantiate.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\SpawnPetForVigilance.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\SpawnPetOnLoad.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\SpawnWithDistance.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\TriggerForPetVigilance.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\WildPetInitialize.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\A_PetMenuOption.cs" />

@@ -38,7 +38,8 @@ namespace Criatures2021
             returnOfRoll,
             NonBlockPanelOpened,
             externalPanelOpened,
-            nonReturnableDamage
+            nonReturnableDamage,
+            externalJumpRequest
         }
 
         public PetBase MeuCriatureBase

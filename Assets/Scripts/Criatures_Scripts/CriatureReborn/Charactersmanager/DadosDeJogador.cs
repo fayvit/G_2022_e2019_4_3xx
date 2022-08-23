@@ -92,7 +92,7 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Florest,5),
+                new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Galfo,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Vampire,13),
@@ -131,7 +131,7 @@ namespace Criatures2021
                 Livro.AdicionaCapturado(v.NomeID);
             }
 
-            CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
+            
             CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
             CriaturesAtivos[2].PetFeat.meusAtributos.PV.Corrente = 1;
             CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;

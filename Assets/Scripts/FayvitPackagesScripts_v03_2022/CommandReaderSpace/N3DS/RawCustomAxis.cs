@@ -79,7 +79,7 @@ namespace FayvitCommandReader
             if (retorno != 0)
                 lerpVal[esseGatilho] = Mathf.Lerp(lerpVal[esseGatilho], retorno, 5 * Time.fixedDeltaTime);
             else if (lerpVal[esseGatilho] > deathVal|| lerpVal[esseGatilho] < -deathVal)
-                lerpVal[esseGatilho] = Mathf.Lerp(lerpVal[esseGatilho], retorno, 5 * Time.fixedDeltaTime);
+                lerpVal[esseGatilho] = Mathf.Lerp(lerpVal[esseGatilho], retorno, 15 * Time.fixedDeltaTime);
             else
                 lerpVal[esseGatilho] = 0;
 

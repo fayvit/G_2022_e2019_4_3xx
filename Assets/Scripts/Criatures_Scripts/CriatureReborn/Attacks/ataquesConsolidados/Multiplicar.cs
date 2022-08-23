@@ -5,7 +5,7 @@ using FayvitMessageAgregator;
 namespace Criatures2021
 {
     [System.Serializable]
-    public class Multiplicar :PetAttackBase
+    public class Multiplicar : PetAttackBase
     {
         [System.NonSerialized] private CharacterController controle;
         private ImpactFeatures carac;

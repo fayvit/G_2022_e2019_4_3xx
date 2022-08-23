@@ -42,7 +42,7 @@ namespace Criatures2021
             {
                 Nome = AttackNameId.chicoteDeCalda,
                 NivelDoGolpe = 1,
-                Colisor = new Colisor("Armação/Bone/Bone.003/Bone.004/Bone.005/Bone.006/rabo",2),
+                Colisor = new Colisor("Armação/Bone/Bone.003/Bone.004/Bone.005/Bone.006/rabo",1.25f),
                 TaxaDeUso = 0.5f
             },
             new PetAttackDb()
