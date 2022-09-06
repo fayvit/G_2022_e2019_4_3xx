@@ -351,8 +351,8 @@ GameObject:
   - component: {fileID: 3282174284424529454}
   - component: {fileID: 4372444711541942294}
   - component: {fileID: 8806156}
-  - component: {fileID: 5228219731895664470}
-  m_Layer: 0
+  - component: {fileID: 2821548133719529735}
+  m_Layer: 13
   m_Name: Xuash
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -429,9 +429,13 @@ MonoBehaviour:
   groundedNameBool: noChao
   jumpAnimationStateName: pulando
   atkBool: atacando
+  damageStateName: dano1
   emDanoBool: dano1
+  emDano_2Bool: dano2
+  defeatedBool: cair
+  rollStateName: Roll
   A: {fileID: 0}
---- !u!114 &5228219731895664470
+--- !u!114 &2821548133719529735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440,24 +444,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 2399796066513923052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a38a348b39ade846a22ac794915fea1, type: 3}
+  m_Script: {fileID: 11500000, guid: 233d010bd126a7e4d971c12c145e305c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
   meuCriatureBase:
-    petId: 6
+    petId: 0
     petFeat:
       meusTipos: 
       contraTipos: []
+      meusAtributos:
+        pv:
+          basico: 3
+          corrente: 14
+          maximo: 14
+          modMaximo: 0
+          taxa: 0.2
+        pe:
+          basico: 7
+          corrente: 30
+          maximo: 30
+          modMaximo: 0
+          taxa: 0.2
+        ataque:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
+        defesa:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
+        poder:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
       mNivel:
         _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
       distanciaFundamentadora: 0.2
     atkManager:
       golpeEscolhido: 0
       listaDeGolpes: []
       meusGolpes: []
     movFeat:
-      slowSpeed: 1
+      rollSpeed: 1
       walkSpeed: 2
       runSpeed: 6
       rotAlways: 0
@@ -474,15 +514,25 @@ MonoBehaviour:
         isJumping: 0
         wasJumping: 0
     statusTemporarios: []
+    stManager:
+      staminaPoints: 100
+      maxStaminaPoints: 100
+      velToTotalRegen: 13
+      zeroedVelToTotalRegen: 30
+      runConsumeTax: 0.25
+      blockingSlowness: 0.25
+      zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
-    alturaCameraLuta: 0.25
-    distanciaCameraLuta: 4.5
+    varHeightCamera: 0.25
+    alturaCameraLuta: 1
+    distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
       movFeatures:
-        slowSpeed: 1
+        rollSpeed: 1
         walkSpeed: 2
         runSpeed: 6
         rotAlways: 0
@@ -498,8 +548,13 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
+  roll:
+    totalTimeInRoll: 0.5
+    intervalInTheRoll: 0.3
+    returnTime: 0.15
+    imunoTax: 0.75
   targetUpdateTax: 1
 --- !u!1 &2876015398314030727
 GameObject:
@@ -1260,7 +1315,6 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

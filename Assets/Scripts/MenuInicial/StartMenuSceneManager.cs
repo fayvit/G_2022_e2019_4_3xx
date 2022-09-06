@@ -9,6 +9,7 @@ using FayvitLoadScene;
 using TextBankSpace;
 using FayvitSave;
 using FayvitCommandReader;
+using Criatures2021;
 
 public class StartMenuSceneManager : MonoBehaviour
 {
@@ -44,9 +45,14 @@ public class StartMenuSceneManager : MonoBehaviour
         c.maxCriatures = 12;
 
         SaveDatesManager.Load();
-        SaveDatesManager.RemoverSavesNulosDaLista();
+        //SaveDatesManager.RemoverSavesNulosDaLista();
 
-
+        for (int i = 0; i < SaveDatesManager.s.SavedGames.Count; i++)
+            Debug.Log("Save dates: " + i + " é nulo?: " + (SaveDatesManager.s.SavedGames[i] == null));
+        for (int i = 0; i < SaveDatesManager.s.SaveProps.Count; i++)
+        {
+            Debug.Log("save props: "+SaveDatesManager.s.SaveProps[i] + " : " + SaveDatesManager.s.SaveProps[i].indiceDoSave);
+        }
     }
 
     void MenuPrincipal()
@@ -113,10 +119,11 @@ public class StartMenuSceneManager : MonoBehaviour
                 SaveDatesManager.s.SavedGames[p.indiceDoSave] = null;
 
             lp.Remove(p);
+            lp.Sort();
 
             SaveDatesManager.Save();
 
-            lp.Sort();
+            
 
             if (lp.Count > 0)
                 MenuDeCarregarJogo();
@@ -128,6 +135,8 @@ public class StartMenuSceneManager : MonoBehaviour
         }, DeletarNao, "Deseja deletar o arquivo de save "+ lp[obj].nome+"?");
         state = LocalState.confirmationOpened;
     }
+
+    [SerializeField] private string DebugAutoKeyval;
 
     private void EscolhiQualCarregar(int indice)
     {
@@ -142,12 +151,20 @@ public class StartMenuSceneManager : MonoBehaviour
             indiceDoSave = p.indiceDoSave
         };
 
+        SaveDates S = null;
+        if (SaveDatesManager.s.SavedGames.Count>p.indiceDoSave)
+            S = SaveDatesManager.s.SavedGames[p.indiceDoSave];
+
         SaveDatesManager.s.SaveProps.Sort();
 
         SaveDatesManager.Save();
 
         containerDeLoads.FinishHud();
-        SceneLoader.IniciarCarregamento(p.indiceDoSave);
+
+        AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(()=> {
+            SceneLoader.IniciarCarregamento(p.indiceDoSave);
+        });
+        
 
         
     }
@@ -161,26 +178,39 @@ public class StartMenuSceneManager : MonoBehaviour
 
         if (lista != null)
         {
-            int maior = -1;
-            for (int i = 0; i < lista.Count; i++)
-            {
-                if (lista[i].indiceDoSave > maior)
-                    maior = lista[i].indiceDoSave;
-            }
+            //int maior = -1;
+            //for (int i = 0; i < lista.Count; i++)
+            //{
+            //    if (lista[i].indiceDoSave > maior)
+            //        maior = lista[i].indiceDoSave;
+            //}
 
-            prop.indiceDoSave = maior + 1;
+            prop.indiceDoSave = PropriedadesDeSave.PrimeiroIndiceLivre(lista.ToArray());
             lista.Add(prop);
         }
         else
             lista = new List<PropriedadesDeSave>() { prop };
+
+        if (SaveDatesManager.s.SavedGames.Count > prop.indiceDoSave)
+            SaveDatesManager.s.SavedGames[prop.indiceDoSave] = new Criatures2021.CriaturesSaveDates(false);
+        else
+        {
+            Criatures2021.CriaturesSaveDates cs = new Criatures2021.CriaturesSaveDates(false);
+            SaveDatesManager.s.SavedGames.Add(cs);
+            Debug.Log("O indice pedido para criar foi: "
+                + prop.indiceDoSave + " e a criação me deu o indice" + SaveDatesManager.s.SavedGames.IndexOf(cs));
+        }
+
+
+
 
         SaveDatesManager.s.SaveProps = lista;
         SaveDatesManager.Save();
 
         state = LocalState.externalAction;
         AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() => {
-            SceneLoader.IniciarCarregamento(lista.Count-1);
-            SceneManager.sceneLoaded += SeraHoraDoFadeIn;
+            SceneLoader.IniciarCarregamento(prop.indiceDoSave);
+            //SceneManager.sceneLoaded += SeraHoraDoFadeIn;
         });
     }
 

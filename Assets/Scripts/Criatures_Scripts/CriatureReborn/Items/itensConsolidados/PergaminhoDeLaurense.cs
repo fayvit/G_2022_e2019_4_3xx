@@ -13,6 +13,7 @@ namespace Criatures2021
         {
             Estoque = estoque;
             TextoDaMensagemInicial = TextBank.RetornaListaDeTextoDoIdioma(TextKey.usarPergaminhoDeLaurense).ToArray();
+            Particula = GeneralParticles.particulaDoAtaquePergaminhoFora;
         }
 
         protected override void AplicaEfeito(int indice)            

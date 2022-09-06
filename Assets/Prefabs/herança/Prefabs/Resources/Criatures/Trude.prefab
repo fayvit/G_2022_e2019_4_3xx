@@ -133,6 +133,7 @@ MonoBehaviour:
     varHeightCamera: 0.25
     alturaCameraLuta: 1
     distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -153,7 +154,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5
@@ -171,6 +172,10 @@ PrefabInstance:
     - target: {fileID: 100050, guid: 8b44853fecca1e94e86452b7a04ce62c, type: 3}
       propertyPath: m_Name
       value: Trude
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 8b44853fecca1e94e86452b7a04ce62c, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 100050, guid: 8b44853fecca1e94e86452b7a04ce62c, type: 3}
       propertyPath: m_TagString

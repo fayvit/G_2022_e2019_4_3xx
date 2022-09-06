@@ -130,7 +130,17 @@ namespace Criatures2021Hud
                 case 0:
                     
                     itemMenu.GetTransformContainer.parent.gameObject.SetActive(true);
-                    RetornaParaMudandoItens();
+                    //RetornaParaMudandoItens();
+                    itemMenu.FinishHud();
+                    petMenu.FinishHud();
+
+                    MessageAgregator<MsgChangeOptionUI>.RemoveListener(OnChangeUI);
+                    MessageAgregator<MsgSendExternalPanelCommand>.RemoveListener(OnReceiveExternalCommand);
+
+                    OnRequestPauseMenu(new MsgRequestPauseMenu()
+                    {
+                        dono = dono
+                    });
                     
                 break;
                 case 1:
@@ -187,10 +197,6 @@ namespace Criatures2021Hud
                 state = LocalState.oneMessageOpened;
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                 {
-                    MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                    {
-                        sfxId = FayvitSounds.SoundEffectID.Book1
-                    });
                     UsouQuantitativeItem(obj.temMaisParausar);
                 },obj.mensagemDeRetorno);
             }
@@ -378,6 +384,8 @@ namespace Criatures2021Hud
             cmd = new MsgSendExternalPanelCommand();
             petMenu.FinishHud();
             itemMenu.FinishHud();
+            menuzinho.FinishHud();
+            itemRef.gameObject.SetActive(false);
             state = LocalState.emEspera;
         }
 
@@ -391,7 +399,7 @@ namespace Criatures2021Hud
             tabsManager.ChangeToDefaulState();
             FinalizarAbas();
             itemMenu.GetTransformContainer.parent.gameObject.SetActive(true);
-            RetornaParaMudandoItens();
+            
             container.SetActive(true);
             dono = obj.dono;
             listaDeItens = dono.Dados.Itens;
@@ -401,8 +409,19 @@ namespace Criatures2021Hud
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveExternalCommand);
 
             petMenu.StatHud(PetsMenuAction, petList);
-            petMenu.RemoveHighlights();
             itemMenu.StartHud(ItemMenuAction, listaDeItens.ToArray());
+            if (listaDeItens.Count > 0)
+            {
+                RetornaParaMudandoItens();
+                petMenu.RemoveHighlights();
+            }
+            else
+            {
+                state = LocalState.mudandoPets;
+                infoText.text = "";
+            }
+
+            itemMenu.GetTransformContainer.gameObject.SetActive(true);
         }
 
         private void OnChangeUI(MsgChangeOptionUI obj)
@@ -412,7 +431,9 @@ namespace Criatures2021Hud
                 int columns = itemMenu.ColCellCount();
                 //Debug.Log(antSelected + " : " + itemMenu.SelectedOption + " : " + columns);
 
-                if (antSelected % columns == columns - 1 && itemMenu.SelectedOption % columns == 0)
+                if ((antSelected % columns == columns - 1 && itemMenu.SelectedOption % columns == 0)
+                    ||
+                    antSelected==listaDeItens.Count-1 && itemMenu.SelectedOption%listaDeItens.Count==0)
                 {
                     itemMenu.ChangeSelectionTo(antSelected);
                     itemMenu.RemoveHighlights();
@@ -478,9 +499,9 @@ namespace Criatures2021Hud
             cmd = new MsgSendExternalPanelCommand();
             RetornaParaMudandoPets();
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveExternalCommand);
-            SupportSingleton.Instance.InvokeOnCountFrame(() =>
+            SupportSingleton.Instance.InvokeOnEndFrame(() =>
             {
-                MessageAgregator<MsgFinishStatsMenu>.AddListener(OnFinishStatsMenu);
+                MessageAgregator<MsgFinishStatsMenu>.RemoveListener(OnFinishStatsMenu);
             });
         }
 
@@ -554,7 +575,7 @@ namespace Criatures2021Hud
                     case LocalState.mudandoPets:
                         #region mudandoPets
                         petMenu.ChangeOption(-cmd.vChange);
-                        if (cmd.hChange < 0)
+                        if (cmd.hChange < 0 && listaDeItens.Count>0)
                         {
                             state = LocalState.mudandoItens;
                             petMenu.RemoveHighlights();

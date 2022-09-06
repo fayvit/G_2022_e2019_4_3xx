@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using FayvitMessageAgregator;
+using CustomizationSpace;
 
 public class InfoTextureManager : MonoBehaviour
 {
@@ -61,5 +62,3 @@ public class InfoTextureManager : MonoBehaviour
         
     }
 }
-
-public struct MsgEnterInListOptions : IMessageBase { }

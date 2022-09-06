@@ -108,7 +108,9 @@ namespace Criatures2021
                         //acaoEfetivada.SetActive(true);
                         EfetivadorDaAcao();
                         tempoDecorrido = 0;
+                        Debug.Log("valor da chave antes: "+Chave+" : "+AbstractGameController.Instance.MyKeys.VerificaAutoShift(Chave));
                         AbstractGameController.Instance.MyKeys.MudaAutoShift(Chave, true);
+                        Debug.Log("valor da chave depois: " + Chave + " : " + AbstractGameController.Instance.MyKeys.VerificaAutoShift(Chave));
                     }, () => {
                         MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
                         {
@@ -131,6 +133,7 @@ namespace Criatures2021
             //    AbstractGameController.Instance.MyKeys.MudaAutoShift(Chave, true);
             //}
         }
+
         public void BotaoInfo()
         {
             SomDoIniciar();

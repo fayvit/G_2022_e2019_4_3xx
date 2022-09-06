@@ -1,8 +1,8 @@
 ﻿using FayvitMessageAgregator;
 using UnityEngine;
 using UnityEngine.UI;
-using TextBankSpace;
 using FayvitBasicTools;
+//using TextBankSpace;
 
 namespace FayvitUI
 {
@@ -35,8 +35,8 @@ namespace FayvitUI
             string textoDoPainel = "",
             bool selectedYes = false,
             bool cancelIsNo = true,
-            bool hideSelections = false,
-            bool ignoreStandardLabelYesOrNo = false
+            bool hideSelections = false
+            //bool ignoreStandardLabelYesOrNo=false
             )
         {
 
@@ -61,11 +61,11 @@ namespace FayvitUI
 
             this.cancelIsNo = cancelIsNo;
 
-            if (!ignoreStandardLabelYesOrNo)
-            {
-                ChangeBtnNoText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao)[1]);
-                ChangeBtnYesText(TextBank.RetornaFraseDoIdioma(TextKey.simOuNao));
-            }
+            //if (!ignoreStandardLabelYesOrNo)
+            //{
+            //    ChangeBtnNoText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao)[1]);
+            //    ChangeBtnYesText(TextBank.RetornaFraseDoIdioma(TextKey.simOuNao));
+            //}
         }
 
         // Update is called once per frame

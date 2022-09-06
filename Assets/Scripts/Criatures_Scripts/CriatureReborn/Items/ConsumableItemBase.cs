@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Criatures2021Hud;
 using TextBankSpace;
 using FayvitBasicTools;
+using FayvitCam;
 
 namespace Criatures2021
 {
@@ -81,6 +82,14 @@ namespace Criatures2021
                 if (Consumivel)
                     RetirarUmItem(Lista, this, 1);
 
+                if (eMenu)
+                {
+                    MessageAgregator<MsgStartUseItemWithMenu>.Publish(new MsgStartUseItemWithMenu()
+                    {
+                        usuario = Dono
+                    });
+                }
+
                 AcaoDoItemConsumivel(indice);
 
                 //Debug.LogError("Aplicação do item com menu não implementado");
@@ -137,6 +146,7 @@ namespace Criatures2021
             Transform pet = CriatureAlvoDoItem.transform;
             if (podeUsar && temTipo && RetirarUmItem(Lista, this, 1))
             {
+                CameraApplicator.cam.RemoveMira();
                 //GameController.g.HudM.ModoCriature(false);
                 InicializacaoComum(dono, pet);
                 Estado = ItemUseState.animandoBraco;

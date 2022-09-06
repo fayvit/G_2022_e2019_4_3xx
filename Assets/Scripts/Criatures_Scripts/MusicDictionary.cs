@@ -12,6 +12,10 @@ namespace Criatures2021
             {
                 Musica = NameMusic.choroChorandoParaPaulinhoNogueira
             } },
+            { NomesCenas.cenaTeste,new NameMusicaComVolumeConfig()
+            {
+                Musica = NameMusic.AsRosasNaoFalam
+            } },
             { 
             NomesCenas.cavernaAcampamentoKatids, new NameMusicaComVolumeConfig()
             { 

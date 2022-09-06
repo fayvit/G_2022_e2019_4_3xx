@@ -21,7 +21,7 @@ namespace FayvitCam
 
         public static List<int> IgnoreLayers = new List<int>()
         {
-            8,12
+            8,12,14
         };
 
         public static int IgnoreLayerMask { get {
@@ -122,7 +122,7 @@ namespace FayvitCam
 
             if (estavaAcionado != f)
             {
-                tempoAvancando = Mathf.Clamp(1-tempoAvancando,0,1);
+                tempoAvancando = 0;// Mathf.Clamp(1-tempoAvancando,0,1);
                 startPos = pos;
             }
             estavaAcionado = f;

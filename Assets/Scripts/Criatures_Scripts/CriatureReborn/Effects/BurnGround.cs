@@ -51,6 +51,7 @@ namespace Criatures2021
 
                 if (dano)
                 {
+
                     DamageManager.VerificaDano(emQ.gameObject, emQ.gameObject, new PetAttackBase(new PetAttackFeatures()));
                     //Dano.VerificaDano(emQ.gameObject, emQ.gameObject, new GolpeBase(new ContainerDeCaracteristicasDeGolpe()));
                 }

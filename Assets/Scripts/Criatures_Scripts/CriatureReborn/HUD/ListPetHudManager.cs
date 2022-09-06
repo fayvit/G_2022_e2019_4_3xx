@@ -127,7 +127,7 @@ namespace Criatures2021Hud
             
 
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(acao,
-                    texto
+                    texto,hideOpenSound:true
                     );
                 thisState = LocalState.singleMessageOpened;
                 

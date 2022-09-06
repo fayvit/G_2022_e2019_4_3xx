@@ -84,7 +84,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Armature/spine"),
                 Nome = AttackNameId.olharMal,
-                TaxaDeUso = .25f,
+                TaxaDeUso = .125f,
                 DistanciaEmissora = 0.5f
             },
             new PetAttackDb()

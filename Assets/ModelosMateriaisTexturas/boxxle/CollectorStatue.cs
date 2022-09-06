@@ -23,7 +23,7 @@ namespace Criatures2021
             oneMessageOpened,
         }
 
-        new void Start()
+        void Start()
         {
             if (StaticInstanceExistence<IGameController>.SchelduleExistence(Start, this, () =>
             {
@@ -99,10 +99,7 @@ namespace Criatures2021
             else
             {
                 state = LocalState.oneMessageOpened;
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo
-                });
+                
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(Finalizar,
                     string.Format(godPuzzleMessages[4], quantidade, ItemBase.NomeEmLinguas(itemCusto)));
             }

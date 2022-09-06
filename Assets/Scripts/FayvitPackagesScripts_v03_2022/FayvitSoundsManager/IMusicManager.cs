@@ -43,7 +43,8 @@ namespace FayvitSounds
         choroChorandoParaPaulinhoNogueira = 10,
         NaqueleTempo = 11,
         choro_N1 = 12,
-        Chorrindo = 13
+        Chorrindo = 13,
+        Lamentos = 14
     }
 
     [System.Serializable]

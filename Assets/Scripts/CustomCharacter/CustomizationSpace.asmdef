@@ -1,0 +1,19 @@
+{
+    "name": "CustomizationSpace",
+    "references": [
+        "GUID:7619b49cb0105244a8b03bf1200c432c",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:1cba85c4aaf1b394cb6b39ce0f047b82",
+        "GUID:070c168cc28ea3a4c975d6e77542fd58",
+        "GUID:3ca3ebb3d49704547ae2605b1e860db6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

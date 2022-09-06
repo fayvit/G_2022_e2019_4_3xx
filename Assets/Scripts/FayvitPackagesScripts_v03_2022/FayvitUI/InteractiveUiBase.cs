@@ -263,7 +263,7 @@ namespace FayvitUI
             else
                 SupportSingleton.Instance.InvokeOnEndFrame(() =>
                 {
-                    ChangeSelectionTo(selectIndex);
+                    ChangeSelectionTo(selectIndex,ignoreSound:true);
                 });
 
         }
@@ -392,7 +392,7 @@ namespace FayvitUI
             HighlightSelected(uma);
         }
 
-        public void ChangeSelectionTo(int qual,int rowCellCount=-1)
+        public void ChangeSelectionTo(int qual,int rowCellCount=-1,bool ignoreSound=false)
         {
             AnOption[] umaS = variableSizeContainer.GetComponentsInChildren<AnOption>();
             RemoveAllHighlights(umaS);
@@ -405,6 +405,7 @@ namespace FayvitUI
             if (s != null)
                 s.value = destiny;
 
+            if(!ignoreSound)
             MessageAgregator<MsgChangeOptionUI>.Publish(new MsgChangeOptionUI()
             {
                 parentOfScrollRect = menuScrollRect.transform.parent.gameObject,

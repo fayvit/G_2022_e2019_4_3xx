@@ -39,7 +39,7 @@ namespace Criatures2021
                     AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() => {
                         CharacterController controle = other.GetComponent<CharacterController>();
                         controle.enabled = false;
-                        controle.transform.position = heroTargetPosition.position;
+                        controle.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa (heroTargetPosition.position);
                         AbstractGlobalController.Instance.FadeV.StartFadeInWithAction(() =>
                         {
                             controle.enabled = true;

@@ -53,6 +53,8 @@ namespace FayvitSounds
         Shop = 34,
         XP010_System10 = 35,
         keyDjeySound = 36,
-        Fire6 = 37
+        Fire6 = 37,
+        finalisaAcaoPositiva = 38,
+        ItemImportante = 39
     }
 }

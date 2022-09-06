@@ -191,11 +191,10 @@ namespace Criatures2021
                 if (lista[indice].Estoque >= 1)
                 {
                     lista[indice].Estoque--;
-                    //GameController g = GameController.g;
+                    
 
                     Debug.Log("Condição para ser perguntada antes desse metodo [casos de não poder usar, como em luta e etc...]");
-                    //if (g.UsarTempoDeItem == UsarTempoDeItem.sempre || (g.UsarTempoDeItem == UsarTempoDeItem.emLuta && g.estaEmLuta))
-                    //    gerente.Dados.TempoDoUltimoUsoDeItem = Time.time;
+              
 
                     MessageAgregator<MsgItemAmountChange>.Publish(new MsgItemAmountChange()
                     {
@@ -205,19 +204,10 @@ namespace Criatures2021
                     if (lista[indice].Estoque == 0)
                     {
                         Debug.Log("metodo para remover item quando acionado [Parece estar funcionando]");
-                        //Debug.Log("Tira daí");
-                        //g.FinalizaHuds();
-                        //lista.Remove(gerente.Dados.Itens[indice]);
+                        
                         lista.RemoveAt(indice);
 
-                        //if (gerente.Dados.itemSai > lista.Count - 1)
-                        //    gerente.Dados.itemSai = 0;
-
-                    /*Essa parte ja não fazia nada*/
-                        //if (fluxo == FluxoDeRetorno.menuCriature || fluxo == FluxoDeRetorno.menuHeroi)
-                        //{
-                        //    GameController.g.StartCoroutine(VoltarDosItensQuandoNaoTemMais());
-                        //}
+                        
                     }
                     return true;
                 }
@@ -232,16 +222,10 @@ namespace Criatures2021
             {
                 usuario = dono
             });
-            //Manager = GameController.g.Manager;
+            
             TempoDecorrido = 0;
 
-            //Manager.Estado = EstadoDePersonagem.parado;
-            //Manager.CriatureAtivo.PararCriatureNoLocal();
-            ////Manager.Mov.Animador.PararAnimacao();
-
-            //if (GameController.g.estaEmLuta)
-            //    GameController.g.InimigoAtivo.PararCriatureNoLocal();
-
+            
             AnimaB = new AnimateArm(dono.transform, alvoDoItem);
             
 
@@ -253,14 +237,8 @@ namespace Criatures2021
 
             Debug.Log("pedindo religamento de botoes [em observação]");
 
-            //GameController.g.HudM.MenuDePause.ReligarBotoesDoPainelDeItens();
+            
         }
-
-        //static IEnumerator VoltarDosItensQuandoNaoTemMais()
-        //{
-        //    yield return new WaitForSecondsRealtime(1f);
-        //    //GameController.g.HudM.P_EscolheUsoDeItens.VoltarDosItens();
-        //}
 
         public static string NomeEmLinguas(NameIdItem ID)
         {
@@ -300,6 +278,11 @@ namespace Criatures2021
     }
 
     public struct MsgStartUseItem : IMessageBase
+    {
+        public GameObject usuario;
+    }
+
+    public struct MsgStartUseItemWithMenu : IMessageBase
     {
         public GameObject usuario;
     }

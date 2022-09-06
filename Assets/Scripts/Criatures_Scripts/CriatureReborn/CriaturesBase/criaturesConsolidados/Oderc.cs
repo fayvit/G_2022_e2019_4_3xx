@@ -50,7 +50,7 @@ namespace Criatures2021
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 8,
                 Colisor = new Colisor("esqueleto/centro/c1/c2/cabeca/bocaC"),
-                TaxaDeUso = 1.25f
+                TaxaDeUso = .125f
 
             },
         };

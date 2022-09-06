@@ -4,7 +4,6 @@ using FayvitMove;
 using FayvitSupportSingleton;
 using System.Collections.Generic;
 using FayvitMessageAgregator;
-using System;
 
 namespace Criatures2021
 {
@@ -37,23 +36,46 @@ namespace Criatures2021
             MessageAgregator<MsgTargetEnemy>.AddListener(OnTargetEnemy);
             MessageAgregator<MsgRequestCpuRoll>.AddListener(OnRequestCpuRoll);
             MessageAgregator<MsgRequestAtkResponse>.AddListener(OnRequestJump);
+            MessageAgregator<MsgClearPetTarget>.AddListener(OnRequestClearTarget);
 
 
+            SupportSingleton.Instance.InvokeInSeconds(VerifiqueChao, Random.Range(1f,5f));
+
+        }
+
+        void VerifiqueChao()
+        {
+            if (this != null)
+            {
+                if (transform.position.y < -100)
+                    Destroy(gameObject);
 
 
+                SupportSingleton.Instance.InvokeInSeconds(VerifiqueChao, Random.Range(1f, 5f));
+            }
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
 
+            MessageAgregator<MsgClearNegativeStatus>.Publish(new MsgClearNegativeStatus()
+            {
+                target = MeuCriatureBase
+            });
             MessageAgregator<MsgEnemyRequestAttack>.RemoveListener(OnRequestAttack);
             MessageAgregator<MsgPlayerPetDefeated>.RemoveListener(OnPlayerDefeated);
             MessageAgregator<MsgStartUseItem>.RemoveListener(OnPlayerPetStartUseItem);
             MessageAgregator<MsgStartReplacePet>.RemoveListener(OnStartReplacePet);
             MessageAgregator<MsgTargetEnemy>.RemoveListener(OnTargetEnemy);
             MessageAgregator<MsgRequestCpuRoll>.RemoveListener(OnRequestCpuRoll);
-            MessageAgregator<MsgRequestAtkResponse>.AddListener(OnRequestJump);
+            MessageAgregator<MsgRequestAtkResponse>.RemoveListener(OnRequestJump);
+            MessageAgregator<MsgClearPetTarget>.RemoveListener(OnRequestClearTarget);
+        }
+
+        private void OnRequestClearTarget(MsgClearPetTarget obj)
+        {
+            enemyIa.RequestClearTarget(obj.owner);
         }
 
         private void OnRequestJump(MsgRequestAtkResponse obj)
@@ -90,11 +112,50 @@ namespace Criatures2021
         private void OnStartReplacePet(MsgStartReplacePet obj)
         {
             enemyIa.WaitPetChange(obj.dono);
+            AddStoppedUntilChageToPet(obj.dono);
         }
 
         private void OnPlayerPetStartUseItem(MsgStartUseItem obj)
         {
             enemyIa.WaitPetChange(obj.usuario);
+            AddStoppedUntilChageToPet(obj.usuario);
+        }
+
+        private void AddStoppedUntilChageToPet(GameObject dono)
+        {
+            if (enemyIa != null && enemyIa.PetOwner && dono == enemyIa.PetOwner)
+            {
+                PararCriatureNoLocal();
+                MessageAgregator<MsgChangeToPet>.AddListener(OnChangeToPet);
+            }
+            
+        }
+
+        private void OnChangeToPet(MsgChangeToPet obj)
+        {
+            Debug.Log("Change to pet do enemy");
+            Debug.Log(enemyIa);
+            Debug.Log(enemyIa.PetOwner);
+            Debug.Log(enemyIa.PetOwner+" : "+obj.dono);
+
+
+
+            if (enemyIa != null && enemyIa.PetOwner != null && obj.dono.gameObject == enemyIa.PetOwner)
+            {
+                State = LocalState.onFree;
+                SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                {
+                    MessageAgregator<MsgChangeToPet>.RemoveListener(OnChangeToPet);
+                });
+            }
+            else
+            {
+                SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                {
+                    MessageAgregator<MsgChangeToPet>.RemoveListener(OnChangeToPet);
+                });
+            }
+
         }
 
         private void OnPlayerDefeated(MsgPlayerPetDefeated obj)
@@ -146,15 +207,15 @@ namespace Criatures2021
                     Destroy(gameObject);
                 }, 4);
             }
-            else if (obj.defeated.GetComponent<PetManagerTrainer>()
-                && obj.defeated.GetComponent<PetManagerTrainer>().enemyIa.HeroPet==enemyIa.HeroPet)
-            {
-                //Debug.Log("chamou o eait channge to pet");
-                enemyIa.WaitPetChange(enemyIa.HeroPet as PetManagerCharacter);
-            }
+            //else if (obj.defeated.GetComponent<PetManagerTrainer>()
+            //    && obj.defeated.GetComponent<PetManagerTrainer>().enemyIa.HeroPet == enemyIa.HeroPet)
+            //{
+            //    //Debug.Log("chamou o eait channge to pet");
+            //    enemyIa.WaitPetChange(enemyIa.HeroPet as PetManagerCharacter);
+            //}
             //else if (obj.atacker == gameObject)
             //{ 
-            
+
             //}
         }
 
@@ -217,5 +278,10 @@ namespace Criatures2021
     public struct MsgNewSeen : IMessageBase
     {
         public PetName name;
+    }
+
+    public struct MsgClearPetTarget : IMessageBase
+    {
+        public GameObject owner;
     }
 }

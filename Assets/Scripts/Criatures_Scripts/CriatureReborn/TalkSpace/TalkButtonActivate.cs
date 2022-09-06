@@ -108,18 +108,3 @@ namespace TalkSpace
     }    
 }
 
-public struct MsgSendExternalPanelCommand : IMessageBase
-{
-    public bool confirmButton;
-    public bool returnButton;
-    public bool extraButton;
-    public bool leftChangeButton;
-    public bool rightChangeButton;
-    public bool pauseMenu;
-    public int hChange;
-    public int vChange;   
-    public int leftTrigger;
-    public int rightTrigger;
-}
-public struct MsgStartExternalInteraction : IMessageBase { }
-public struct MsgFinishExternalInteraction : IMessageBase { }

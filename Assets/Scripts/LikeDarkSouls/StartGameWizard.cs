@@ -7,6 +7,7 @@ using FayvitLoadScene;
 using FayvitBasicTools;
 using FayvitCam;
 using FayvitSupportSingleton;
+using CustomizationSpace;
 
 namespace FayvitLikeDarkSouls
 {

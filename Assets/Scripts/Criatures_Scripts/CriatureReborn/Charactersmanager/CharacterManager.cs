@@ -8,6 +8,8 @@ using FayvitMessageAgregator;
 using Criatures2021Hud;
 using TextBankSpace;
 using FayvitSupportSingleton;
+using FayvitSave;
+using CustomizationSpace;
 
 namespace Criatures2021
 {
@@ -18,13 +20,13 @@ namespace Criatures2021
         [SerializeField] private DamageState damageState;
 
         private bool podeIrAoKeyDjey = true;
-        private const float INTERVALO_KEY_DJEY = .25F;
+        private const float INTERVALO_KEY_DJEY = .75F;
 
         public bool ContraTreinador { get; set; }
         public bool InTeste { get; set; }
         public CharacterState ThisState { get; private set; } = CharacterState.notStarted;
         public PetManager ActivePet { get; private set; }
-        public CustomizationContainerDates Ccd { get; set; }
+        public CustomizationSpace.CustomizationContainerDates Ccd { get; set; }
 
         [SerializeField] private CharacterState returnState;
 
@@ -78,6 +80,7 @@ namespace Criatures2021
             MessageAgregator<MsgRequestChangeSelectedItemWithPet>.AddListener(OnRequestChangeSelectedItem);
             MessageAgregator<MsgRequestUseItem>.AddListener(OnRequestUseItem);
             MessageAgregator<MsgStartUseItem>.AddListener(OnStartUseItem);
+            MessageAgregator<MsgStartUseItemWithMenu>.AddListener(OnStartUseItemWithMenu);
             MessageAgregator<MsgPlayerPetDefeated>.AddListener(OnPlayerPetDefeated);
             MessageAgregator<MsgGetChestItem>.AddListener(OnGetChestItem);
             MessageAgregator<MsgEndNewAttackHud>.AddListener(OnFinishNewAttackHud);
@@ -106,6 +109,7 @@ namespace Criatures2021
             MessageAgregator<MsgRequestChangeSelectedItemWithPet>.RemoveListener(OnRequestChangeSelectedItem);
             MessageAgregator<MsgRequestUseItem>.RemoveListener(OnRequestUseItem);
             MessageAgregator<MsgStartUseItem>.RemoveListener(OnStartUseItem);
+            MessageAgregator<MsgStartUseItemWithMenu>.RemoveListener(OnStartUseItemWithMenu);
             MessageAgregator<MsgPlayerPetDefeated>.RemoveListener(OnPlayerPetDefeated);
             MessageAgregator<MsgGetChestItem>.RemoveListener(OnGetChestItem);
             MessageAgregator<MsgEndNewAttackHud>.RemoveListener(OnFinishNewAttackHud);
@@ -129,8 +133,12 @@ namespace Criatures2021
                 SupportSingleton.Instance.InvokeInSeconds(() => {
                     podeIrAoKeyDjey = true;
                 },INTERVALO_KEY_DJEY);
+
                 ThisState = obj.returnState;
+                Debug.Log(transform.position);
                 mov.Controller.enabled = true;
+                
+
             }
         }
 
@@ -178,16 +186,19 @@ namespace Criatures2021
                 GameObject G = Resources.Load<GameObject>("particles/" + GeneralParticles.rollParticles.ToString());
                 Destroy(Instantiate(G, ActivePet.transform.position, Quaternion.identity, transform), 3);
                 Destroy(ActivePet.gameObject);
-                SeletaDeCriatures();
+                InicializarPet();
+                Destroy(Instantiate(G, ActivePet.transform.position, Quaternion.identity, transform), 3);
+
                 SetHeroCamera.Set(transform);
-                FayvitSupportSingleton.SupportSingleton.Instance.InvokeInSeconds(() =>
+                SupportSingleton.Instance.InvokeInSeconds(() =>
                 {
                     MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
                     {
                         myHero = gameObject
                     });
-                },.25f);
-                Destroy(Instantiate(G, ActivePet.transform.position, Quaternion.identity, transform), 3);
+                }, .25f);
+
+
             }
         }
 
@@ -237,6 +248,9 @@ namespace Criatures2021
                 });
 
                 dados.Livro.AdicionaDerrotado(obj.doDerrotado.NomeID);
+
+                if (ActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0)
+                    SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
             }
         }
 
@@ -265,6 +279,14 @@ namespace Criatures2021
         {
             dados.AdicionaItem(obj.nameItem, obj.quantidade);
             ChangeSelectedItem(0);
+
+            if (obj.nameItem == NameIdItem.cristais)
+            {
+                MessageAgregator<MsgChangeCristalCount>.Publish(new MsgChangeCristalCount()
+                {
+                    newCristalCount = dados.Cristais
+                });
+            }
         }
 
         private void OnPlayerPetDefeated(MsgPlayerPetDefeated obj)
@@ -287,15 +309,52 @@ namespace Criatures2021
                             armagedom = false,
                             dono = this
                         });
-                    }, message);
+                    }, message,hideOpenSound:true);
 
                     ThisState = CharacterState.activeSingleMessageOpened;
                 }
                 else
                 {
-                    Debug.LogError("Ir para o armagedom");
+                    MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
+                    {
+                        nmcvc = new FayvitSounds.NameMusicaComVolumeConfig()
+                        {
+                            Musica = FayvitSounds.NameMusic.Lamentos,
+                        },
+                        changeVel=true,
+                        newVel  = .75f
+                    });
+
+                    SupportSingleton.Instance.InvokeInSeconds(() =>
+                    {
+                        AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
+                        {
+
+                            ThisState = CharacterState.stopedWithStoppedCam;
+                            AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() =>
+                            {
+                                ContraTreinador = false;
+                                ReturnToArmagedomAfterDefeated.StartReturn(this);
+                            });
+                        }, TextBank.RetornaListaDeTextoDoIdioma(TextKey.apresentaDerrota)[2],hideOpenSound:true);
+
+                        ThisState = CharacterState.activeSingleMessageOpened;
+
+                        Debug.Log("Ir para o armagedom em atenção");
+                    }, 1.5f);
                 }
             }
+        }
+
+        private void OnChangeGameSceneToArmagedom(MsgChangeGameScene obj)
+        {
+            if(!InTeste)
+                SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+
+            SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            {
+                MessageAgregator<MsgChangeGameScene>.RemoveListener(OnChangeGameSceneToArmagedom);
+            });
         }
 
         private void OnStartUseItem(MsgStartUseItem obj)
@@ -304,19 +363,34 @@ namespace Criatures2021
 
             if (obj.usuario == gameObject)
             {
-                if (dados.Itens.Count > 0)
-                {
-                    if (dados.ItemSai > dados.Itens.Count - 1)
-                        dados.ItemSai = 0;
-                }
-
                 ThisState = CharacterState.stopedWithStoppedCam;
-                MessageAgregator<MsgChangeSelectedItem>.Publish(new MsgChangeSelectedItem()
-                {
-                    nameItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].ID : NameIdItem.generico,
-                    quantidade = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].Estoque : 0
-                });
+
+                VerifySelectedItem();
             }
+        }
+
+        private void OnStartUseItemWithMenu(MsgStartUseItemWithMenu obj)
+        {
+            if (obj.usuario == gameObject)
+            {
+                VerifySelectedItem();
+            }
+        }
+
+        private void VerifySelectedItem()
+        {
+            if (dados.Itens.Count > 0)
+            {
+                if (dados.ItemSai > dados.Itens.Count - 1)
+                    dados.ItemSai = 0;
+            }
+
+
+            MessageAgregator<MsgChangeSelectedItem>.Publish(new MsgChangeSelectedItem()
+            {
+                nameItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].ID : NameIdItem.generico,
+                quantidade = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].Estoque : 0
+            });
         }
 
         private void OnRequestChangeSelectedItem(MsgRequestChangeSelectedItemWithPet obj)
@@ -340,7 +414,16 @@ namespace Criatures2021
         {
             if (obj.dono == gameObject && obj.fluxo == FluxoDeRetorno.criature)
             {
-                PublishChangeToPet(obj.lockTarget);
+                if (ActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0)
+                    PublishChangeToPet(obj.lockTarget);
+                else
+                {
+                    OnPlayerPetDefeated(new MsgPlayerPetDefeated()
+                    {
+                        dono = gameObject,
+                        pet = (PetManagerCharacter)ActivePet
+                    });
+                }
             }
         }
 
@@ -410,6 +493,11 @@ namespace Criatures2021
         {
             if (obj.myHero == gameObject && ThisState != CharacterState.onFree)
             {
+                podeIrAoKeyDjey = false;
+                SupportSingleton.Instance.InvokeInSeconds(() => {
+                    podeIrAoKeyDjey = true;
+                }, INTERVALO_KEY_DJEY);
+
                 ThisState = CharacterState.onFree;
                 if(!obj.blockReturnCam)
                     SetHeroCamera.Set(transform);
@@ -442,12 +530,17 @@ namespace Criatures2021
             }
         }
 
-        private void RequisitarHudElements()
+        public void RequisitarHudElements()
         {
             MessageAgregator<MsgStartGameElementsHud>.Publish(new MsgStartGameElementsHud()
             {
                 petname = dados.CriaturesAtivos.Count > 1 ? dados.CriaturesAtivos[dados.CriatureSai + 1].NomeID : PetName.nulo,
-                nameItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].ID : NameIdItem.generico,
+                nameItem = dados.Itens.Count > 0 
+                    ? (
+                        dados.Itens.Count>dados.ItemSai?
+                        dados.Itens[dados.ItemSai].ID:dados.Itens[0].ID 
+                    )
+                    : NameIdItem.generico,
                 countItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].Estoque : 0,
                 temGolpePorAprender = dados.TemGolpesPorAprender(),
                 countCristals = dados.Cristais
@@ -673,9 +766,10 @@ namespace Criatures2021
                 else if (CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeIrAoKeyDjey)
                 {
                     ThisState = CharacterState.withKeyDjey;
+                    mov.MoveApplicator(transform.forward * Time.deltaTime);
                     mov.MoveApplicator(Vector3.zero);
                     mov.Controller.enabled = false;
-                    KeyDjeyTransportManager.StartKeyDjeyTransport(transform,Ccd.PersBase==PersonagemBase.masculino);
+                    KeyDjeyTransportManager.StartKeyDjeyTransport(transform,Ccd.PersBase== CustomizationSpace.PersonagemBase.masculino);
                     MessageAgregator<MsgRequestMountedAnimation>.Publish(new MsgRequestMountedAnimation()
                     {
                         gameObject = gameObject
@@ -690,7 +784,6 @@ namespace Criatures2021
             {
                 UseItemManager useItem = gameObject.AddComponent<UseItemManager>();
                 useItem.StartFields(gameObject, dados.Itens, dados.ItemSai, fluxo);
-                CameraApplicator.cam.RemoveMira();
             }
         }
 
@@ -763,10 +856,7 @@ namespace Criatures2021
         public GameObject dono;
     }
 
-    public struct MsgRequestExternalMoviment : IMessageBase
-    {
-        public GameObject oMovimentado;
-    }
+    
 
     public struct MsgRequestPauseMenu : IMessageBase
     {
@@ -774,6 +864,11 @@ namespace Criatures2021
     }
 
     public struct MsgFinishPauseMenu : IMessageBase
+    {
+        public CharacterManager dono;
+    }
+
+    public struct MsgStartRerturnToArmagedom : IMessageBase
     {
         public CharacterManager dono;
     }

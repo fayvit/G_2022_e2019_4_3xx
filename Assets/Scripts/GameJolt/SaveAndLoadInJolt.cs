@@ -4,6 +4,7 @@ using GameJolt.API;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
 using System.Collections.Generic;
+using CustomizationSpace;
 
 namespace MyJoltSpace
 {

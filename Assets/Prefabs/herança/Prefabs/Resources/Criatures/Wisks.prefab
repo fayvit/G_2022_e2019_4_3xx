@@ -18,6 +18,29 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &2603189116510449556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119930430197513358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46aa399f29e4c51478fd7d610c557e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velAnimatorString: velocidade
+  jumpNameBool: pulo
+  groundedNameBool: noChao
+  jumpAnimationStateName: pulando
+  atkBool: atacando
+  damageStateName: dano1
+  emDanoBool: dano1
+  emDano_2Bool: dano2
+  defeatedBool: cair
+  rollStateName: Roll
+  A: {fileID: 0}
 --- !u!114 &6892512672348910356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,8 +130,10 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
+    varHeightCamera: 0.25
     alturaCameraLuta: 1
     distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -129,7 +154,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5
@@ -137,29 +162,6 @@ MonoBehaviour:
     returnTime: 0.15
     imunoTax: 0.75
   targetUpdateTax: 1
---- !u!114 &2603189116510449556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119930430197513358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa399f29e4c51478fd7d610c557e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velAnimatorString: velocidade
-  jumpNameBool: pulo
-  groundedNameBool: noChao
-  jumpAnimationStateName: pulando
-  atkBool: atacando
-  damageStateName: dano1
-  emDanoBool: dano1
-  emDano_2Bool: dano2
-  defeatedBool: cair
-  rollStateName: Roll
-  A: {fileID: 0}
 --- !u!1001 &1119930430197545518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,6 +172,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: caf67a8b837d1b243adc5c3a62b32d45, type: 3}
       propertyPath: m_Name
       value: Wisks
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: caf67a8b837d1b243adc5c3a62b32d45, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: caf67a8b837d1b243adc5c3a62b32d45, type: 3}
       propertyPath: m_TagString

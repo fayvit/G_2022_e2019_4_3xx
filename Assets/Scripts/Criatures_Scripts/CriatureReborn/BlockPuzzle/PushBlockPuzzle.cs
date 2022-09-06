@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Criatures2021Hud;
+//using Criatures2021Hud;
 using TextBankSpace;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
@@ -47,7 +47,7 @@ namespace Criatures2021
         public override void FuncaoDoBotao()
         {
             SomDoIniciar();
-            player = MyGlobalController.MainCharTransform;
+            player = AbstractGlobalController.Instance.Players[0].Manager.transform;
             Vector3[] direcoes = new Vector3[4] {
             Vector3.forward,
             Vector3.right,

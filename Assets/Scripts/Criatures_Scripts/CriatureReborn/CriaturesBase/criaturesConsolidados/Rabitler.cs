@@ -16,7 +16,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Armação/corpoBase/corpoP/bracoD/maoD"),
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
-                TaxaDeUso = 0.25f
+                TaxaDeUso = 0.125f
             },
             /***********************************/
             new PetAttackDb()

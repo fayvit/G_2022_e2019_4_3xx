@@ -5,13 +5,16 @@ namespace Criatures2021
 {
     public class InsereElementosDoEncontro
     {
-        static void ColocaTreinadorEmPosicao(CharacterManager manager, Transform trainer,Vector3 basePosition=default)
+        static void ColocaTreinadorEmPosicao(CharacterManager manager, Transform trainer,Vector3 basePosition,TipoDeAfastamento tipo)
         {
             
             Debug.Log("quem é o trainer?: " + trainer);
             CharacterController controle = trainer.GetComponent<CharacterController>();
             controle.enabled = false;
-            trainer.position = Vector3.up + MelhoraInstancia3D.PosParaDeslocamento(basePosition + 40 * manager.transform.forward, trainer.transform.position);
+            trainer.position = 2*Vector3.up 
+                + MelhoraInstancia3D.ProcuraPosPorTipo(basePosition + 40 * manager.transform.forward, trainer.position, tipo);
+            //trainer.position = MelhoraInstancia3D.ProcuraPosNoMapa(basePosition + 40 * manager.transform.forward)+2*Vector3.up;
+            //trainer.position = Vector3.up + MelhoraInstancia3D.PosParaDeslocamento(basePosition + 40 * manager.transform.forward, trainer.transform.position);
             Transform aux = manager.ActivePet.transform;
 
             //FayvitSupportSingleton.SupportSingleton.Instance.InvokeOnCountFrame(() =>
@@ -23,33 +26,42 @@ namespace Criatures2021
             trainer.rotation = Quaternion.LookRotation(V);
         }
 
-        public static void EncontroDeTreinador(CharacterManager manager, Transform trainer,Vector3 basePosition=default)
+        public static void EncontroDeTreinador(
+            CharacterManager manager, 
+            Transform trainer,
+            Vector3 basePosition=default,
+            TipoDeAfastamento tipoDeAfastamento = TipoDeAfastamento.posNoMapa)
         {
             if (basePosition == default)
                 basePosition = manager.transform.position;
 
             manager.ContraTreinador = true;
 
-            ColocaTreinadorEmPosicao(manager, trainer,basePosition);
+            ColocaTreinadorEmPosicao(manager, trainer,basePosition,tipoDeAfastamento);
             
             AnimacaoDeEncontro(manager.transform.position);
             AdicionaCilindroEncontro(basePosition);
             //AlternanciaParaCriature(manager);
             ImpedeMovimentoDoCriature(manager.ActivePet);
             AlteraPosDoCriature(manager,basePosition);
-            ColocaOHeroiNaPOsicaoDeEncontro(manager,basePosition);
+            ColocaOHeroiNaPOsicaoDeEncontro(manager,basePosition,tipoDeAfastamento);
 
            
         }
 
-        protected static void ColocaOHeroiNaPOsicaoDeEncontro(CharacterManager manager,Vector3 basePosition)
+        protected static void ColocaOHeroiNaPOsicaoDeEncontro(CharacterManager manager,Vector3 basePosition,TipoDeAfastamento tipoDeAfast)
         {
             CharacterController controle = manager.GetComponent<CharacterController>();
             controle.enabled = false;
-                
-            manager.transform.position = 2*Vector3.up+MelhoraInstancia3D.ProcuraPosNoMapa(
-                basePosition - 40f * manager.transform.forward
-                );//40f * tHeroi.forward;
+
+            manager.transform.position = 2 * Vector3.up + MelhoraInstancia3D.ProcuraPosPorTipo(
+                    basePosition - 40f * manager.transform.forward,
+                    manager.transform.position,
+                    tipoDeAfast
+                );
+            //manager.transform.position = 2*Vector3.up+MelhoraInstancia3D.ProcuraPosNoMapa(
+            //    basePosition - 40f * manager.transform.forward
+            //    );//40f * tHeroi.forward;
 
 
             //manager.gameObject.AddComponent<gravidadeGambiarra>();

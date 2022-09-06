@@ -1,0 +1,16 @@
+{
+    "name": "ActivateElements",
+    "references": [
+        "GUID:7619b49cb0105244a8b03bf1200c432c",
+        "GUID:070c168cc28ea3a4c975d6e77542fd58"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

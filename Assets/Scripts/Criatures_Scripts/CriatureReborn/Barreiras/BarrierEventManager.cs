@@ -15,9 +15,11 @@ namespace Criatures2021
         [SerializeField] private GameObject acaoEfetivada;
         [SerializeField] private GameObject finalizaAcao;
         
-
+       
         new void Update()
         {
+            
+
             if (JaIniciaou)
             {
                 switch (Estado)

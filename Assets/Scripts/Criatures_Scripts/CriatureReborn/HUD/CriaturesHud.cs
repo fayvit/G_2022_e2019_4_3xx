@@ -152,23 +152,7 @@ namespace Criatures2021Hud
 //    public string level;
 //}
 
-public struct MsgChangeHP : IMessageBase
-{
-    public GameObject gameObject;
-    public PetBase target;
-    public int currentHp;
-    public int antHp;
-    public int maxHp;
-}
 
-public struct MsgChangeMP : IMessageBase
-{
-    public GameObject gameObject;
-    public PetBase target;
-    public int currentMp;
-    public int antMp;
-    public int maxMp;
-}
 
 public struct MsgChangeST : IMessageBase
 {

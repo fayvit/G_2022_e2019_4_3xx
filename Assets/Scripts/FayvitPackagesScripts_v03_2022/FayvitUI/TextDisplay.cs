@@ -57,6 +57,10 @@ namespace FayvitUI
             if (ReadMessage() == MessagePhase.boxExited)
             {
                 messageArrayIndex++;
+                MessageAgregator<MsgAddTextDisplayIndex>.Publish(new MsgAddTextDisplayIndex()
+                {
+                    message = messageArray.Length>messageArrayIndex? messageArray[messageArrayIndex]:""
+                });
             }
 
 

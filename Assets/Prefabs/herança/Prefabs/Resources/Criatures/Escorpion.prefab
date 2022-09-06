@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 2264373775111242199}
   - component: {fileID: 6827982956219549164}
   - component: {fileID: 8668105856422760222}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Escorpion
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -1376,6 +1376,7 @@ MonoBehaviour:
     varHeightCamera: 0.25
     alturaCameraLuta: 0.25
     distanciaCameraLuta: 4.5
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -1396,7 +1397,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5

@@ -9,8 +9,8 @@ namespace Criatures2021Hud
     {
         [SerializeField] private Text quantidadeJogador;
 
-        new void Start() { }
-        new void OnDestroy() { }
+        //new void Start() { }
+        //new void OnDestroy() { }
 
         public void FillDates(NameIdItem nomeId,int quantidadeDoMercador,int quantidadeDoJogador)
         {

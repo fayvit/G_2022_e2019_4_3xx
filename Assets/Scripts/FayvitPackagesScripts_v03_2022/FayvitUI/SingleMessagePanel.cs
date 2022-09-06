@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using FayvitMessageAgregator;
+using FayvitBasicTools;
 
 namespace FayvitUI
 {
@@ -13,18 +14,32 @@ namespace FayvitUI
         [SerializeField] private Text messageButton = default;
         [SerializeField] private Text infoButtonLabel;
 
+        private bool hideCloseSound;
+
         // Use this for initialization
         public void StartMessagePanel(
-            System.Action closeAction, 
-            string messageText, 
+            System.Action closeAction,
+            string messageText,
             string messageButton = "Ok",
-            string infoButtonText = "")
+            string infoButtonText = "",
+            bool hideOpenSound = false,
+            bool hideCloseSound = false
+            )
         {
+            this.hideCloseSound = hideCloseSound;
             gameObject.SetActive(true);
             this.messageText.text = messageText;
             this.messageButton.text = messageButton;
             onClose = closeAction;
             infoButtonLabel.text = infoButtonText;
+
+            if (!hideOpenSound)
+            {
+                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                {
+                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo
+                });
+            }
         }
 
         public void StartMessagePanel(System.Action closeAction)
@@ -65,6 +80,11 @@ namespace FayvitUI
         {
             if (input)
             {
+                if (!hideCloseSound)
+                    MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                    {
+                        sfxId = FayvitSounds.SoundEffectID.Book1
+                    });
                 MessageAgregator<MsgCloseMessagePanel>.Publish();
                 //EventAgregator.Publish(EventKey.closeMessagePanel);
                 BtnCallback();

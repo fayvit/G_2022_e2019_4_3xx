@@ -1,0 +1,19 @@
+{
+    "name": "CriaturesBase",
+    "references": [
+        "GUID:7619b49cb0105244a8b03bf1200c432c",
+        "GUID:1cba85c4aaf1b394cb6b39ce0f047b82",
+        "GUID:b25e82f6cd560fb468db0712b4ffeec1",
+        "GUID:c1d00e21ef233aa449e6145d7e163fdd",
+        "GUID:070c168cc28ea3a4c975d6e77542fd58"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

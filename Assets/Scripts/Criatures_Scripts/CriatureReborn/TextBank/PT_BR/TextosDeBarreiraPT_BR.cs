@@ -25,7 +25,8 @@ namespace TextBankSpace
             /*ID=12*/
             "Pedras empilhadas, talvez um impacto forte possa move-las",
             "A graxa das engrenagens secou! Para funcionar é preciso adicionar alguma viscosidade",
-            "Até você se tornar consciente o inconsiente irá dirigir sua vida"
+            "Até você se tornar consciente o inconsiente irá dirigir sua vida",
+            "Será que o balão de gás está relacionado comas grades?"
         } },
             { 
             TextKey.infosDebarreiraasParaGolpes,new List<string>()

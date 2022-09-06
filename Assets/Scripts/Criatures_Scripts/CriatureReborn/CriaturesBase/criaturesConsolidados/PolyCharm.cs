@@ -16,7 +16,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca"),
                 Nome = AttackNameId.olharEnfraquecedor,
                 TaxaDeUso = 1,
-                DistanciaEmissora = 0.5f
+                DistanciaEmissora = 0.125f
             },
         new PetAttackDb()
             {
@@ -25,7 +25,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca"),
                 Nome = AttackNameId.olharMal,
                 TaxaDeUso = 1,
-                DistanciaEmissora = 0.5f
+                DistanciaEmissora = 0.125f
             },
         #endregion comPergaminhos
 

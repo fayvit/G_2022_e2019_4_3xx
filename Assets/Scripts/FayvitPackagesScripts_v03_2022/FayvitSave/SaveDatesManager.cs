@@ -57,22 +57,22 @@ namespace FayvitSave
             }
         }
 
-        public static void RemoverSavesNulosDaLista()
-        {
-            List<int> remover = new List<int>();
-            for (int i = 0; i < s.SaveProps.Count; i++)
-            {
-                Debug.Log("problema no indice? " + (s.SavedGames.Count <= s.SaveProps[i].indiceDoSave)+" indice do save: "+ s.SaveProps[i].indiceDoSave);
-                if(s.SavedGames.Count > s.SaveProps[i].indiceDoSave)
-                    Debug.Log( " problema de nulidade? " + (s.SavedGames[s.SaveProps[i].indiceDoSave]==null));
+        //public static void RemoverSavesNulosDaLista()
+        //{
+        //    List<int> remover = new List<int>();
+        //    for (int i = 0; i < s.SaveProps.Count; i++)
+        //    {
+        //        Debug.Log("problema no indice? " + (s.SavedGames.Count <= s.SaveProps[i].indiceDoSave) + " indice do save: " + s.SaveProps[i].indiceDoSave);
+        //        if (s.SavedGames.Count > s.SaveProps[i].indiceDoSave)
+        //            Debug.Log(" problema de nulidade? " + (s.SavedGames[s.SaveProps[i].indiceDoSave] == null));
 
-                if (s.SavedGames.Count<=s.SaveProps[i].indiceDoSave|| s.SavedGames[s.SaveProps[i].indiceDoSave] == null)
-                    remover.Add(i);
-            }
+        //        if (s.SavedGames.Count <= s.SaveProps[i].indiceDoSave || s.SavedGames[s.SaveProps[i].indiceDoSave] == null)
+        //            remover.Add(i);
+        //    }
 
-            for (int i = remover.Count - 1; i >= 0; i--)
-                s.RemoveSaveDates(remover[i]);
-        }
+        //    for (int i = remover.Count - 1; i >= 0; i--)
+        //        s.RemoveSaveDates(remover[i]);
+        //}
 
         public static void SalvarAtualizandoDados(SaveDates S)
         {

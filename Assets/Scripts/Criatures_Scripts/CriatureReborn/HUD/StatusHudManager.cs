@@ -78,7 +78,7 @@ namespace Criatures2021Hud
         private void OnUpdateStatus(MsgSendUpdateStatus obj)
         {
             Debug.Log("On update Status: " + obj.receiver+" : "+dono);
-            UpdateHudStatus(obj.receiver, obj.S.Dados.Tipo);
+            UpdateHudStatus(obj.receiver.GetComponent<PetManager>(), obj.S.Dados.Tipo);
         }
 
         void UpdateHudStatus(PetManager receiver,StatusType tipo)

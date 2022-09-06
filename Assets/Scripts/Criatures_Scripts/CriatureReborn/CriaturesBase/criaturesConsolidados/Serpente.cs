@@ -15,7 +15,7 @@ namespace Criatures2021
                 Colisor = new Colisor("esqueleto/centroReverso/r1/r2/r3/rabo"),
                 Nome = AttackNameId.olharMal,
                 AcimaDoChao = 0.45f,
-                TaxaDeUso = 1,
+                TaxaDeUso = .125f,
                 DistanciaEmissora = 0.75f
             },
         #endregion comPErgaminhos

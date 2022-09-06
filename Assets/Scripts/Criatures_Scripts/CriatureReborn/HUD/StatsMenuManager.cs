@@ -45,9 +45,12 @@ namespace Criatures2021Hud
 
         private void Update()
         {
-            if (cmd.hChange!=0)
+            
+            int hChange = cmd.hChange + (cmd.rightChangeButton ? 1 : (cmd.leftChangeButton ? -1 : 0));
+
+            if (hChange!=0)
             {
-                indiceAtualDoSelecionado = ContadorCiclico.Contar(cmd.hChange, indiceAtualDoSelecionado, osPets.Count);
+                indiceAtualDoSelecionado = ContadorCiclico.Contar(hChange, indiceAtualDoSelecionado, osPets.Count);
                 MessageAgregator<MsgRequestChangeTab>.Publish(new MsgRequestChangeTab()
                 {
                     indexOfSelection = indiceAtualDoSelecionado

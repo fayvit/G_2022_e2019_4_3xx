@@ -14,8 +14,8 @@ public class BlocsGenerate : MonoBehaviour {
     [SerializeField] private int zCont = 10;
     [SerializeField] private int alturaMin = 0;
     [SerializeField] private int alturaMax = 5;
-    [SerializeField] private int taxaDePixels = 1;
-    [SerializeField] private Vector2 origem = Vector2.zero;
+    //[SerializeField] private int taxaDePixels = 1;
+    //[SerializeField] private Vector2 origem = Vector2.zero;
     [SerializeField] private Transform pai;
 
     private Vector3 tamInstanciavel = Vector3.zero;

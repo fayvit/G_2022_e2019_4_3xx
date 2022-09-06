@@ -14,8 +14,10 @@ namespace Criatures2021
         public static PetManager Initialize(PetName petName,int nivel,Vector3 pos)
         {
             PetBase P = new PetBase(petName, nivel);
+            pos = MelhoraInstancia3D.ProcuraPosNoMapa(pos) + Vector3.up ;
             GameObject G = InstantiatePet(P,pos);
-            G.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(G.transform.position);
+            BasicLodInsert.Insert(G, 0.04f);
+
             return ConfigureCriatureBase(G, P);
             
         }
@@ -26,10 +28,10 @@ namespace Criatures2021
             CA = MonoBehaviour.Instantiate(CA, position, Quaternion.identity)
                 as GameObject;
 
-            Scene S = SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString());
+            //Scene S = SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString());
 
-            if(S.isLoaded)
-            SceneManager.MoveGameObjectToScene(CA,S);
+            //if(S.isLoaded)
+            //SceneManager.MoveGameObjectToScene(CA,S);
             return CA;
         }
 
@@ -41,7 +43,7 @@ namespace Criatures2021
             MonoBehaviour.Destroy(Cc);
             PetManagerEnemy C = G.AddComponent<PetManagerEnemy>();
             C.MeuCriatureBase = cBase;
-
+            G.AddComponent<MyOtimization>();
             return C;
 
             //RecolocadorDeStatus.VerificaInsereParticulaDeStatus(C);

@@ -51,14 +51,16 @@ namespace FayvitCam
 
             timeCount += Time.deltaTime;
 
-            transform.position = Vector3.Lerp(startPosition, camPoint+Vector3.up*prop.characterHeight, lerp);
-            Vector3 forward = Vector3.Lerp(startRotation,targetPoint-camPoint,lerp);
+            transform.position = Vector3.Lerp(startPosition, camPoint + Vector3.up * prop.characterHeight, lerp);
+            Vector3 forward = Vector3.Lerp(startRotation, targetPoint - camPoint, lerp);
             transform.rotation = Quaternion.LookRotation(forward);
-            //transform.LookAt(targetPoint + prop.deslCamFocus);
+            ////transform.LookAt(targetPoint + prop.deslCamFocus);
 
             if (prop.dodgeCam)
-                FayvitCameraSupport.DodgeWall(transform, target.position, 1, true);
+                FayvitCameraSupport.DodgeWall(transform, target.position, 1, true,false);
 
+            //if (lerp >= 1)
+            //    return true;
             if (!prop.withTime && timeCount > distance / prop.velOrTimeFocus)
             {
                 return true;
@@ -71,7 +73,7 @@ namespace FayvitCam
 
         public bool ShowFixed(float horizontalDistance = 6, float height = 1)
         {
-
+            
             Vector3 posAlvo = target.position + target.forward * horizontalDistance + Vector3.up * height;
 
             return TwoPoint(posAlvo, target.position);

@@ -7,6 +7,7 @@ using Criatures2021;
 using FayvitCam;
 using FayvitSounds;
 using FayvitMove;
+using FayvitSupportSingleton;
 
 namespace TalkSpace
 {
@@ -21,6 +22,7 @@ namespace TalkSpace
         [SerializeField] private ScheduledTalkManager npcDepoisDaLutaGanha;
         [SerializeField] private TextKey textPerguntaComecar;
         [SerializeField] private ChestItem[] recompensasFimDeLuta;
+        [SerializeField] private TipoDeAfastamento tipoDeAfast = TipoDeAfastamento.posNoMapa;
         [SerializeField]
         private NameMusicaComVolumeConfig temaDoTreinador = new NameMusicaComVolumeConfig()
         {
@@ -47,7 +49,7 @@ namespace TalkSpace
         private Vector3 managerOriginalPosition;
         private ThisState state = ThisState.emEspera;
         private AnimateArm animaB;
-        private GameObject myActivePet;
+        private PetManager myActivePet;
 
         protected MsgSendExternalPanelCommand Commands { get; private set; } = new MsgSendExternalPanelCommand();
 
@@ -91,11 +93,31 @@ namespace TalkSpace
             SempreEstaNoTrigger();
 
             MessageAgregator<MsgRequestExternalFightStart>.AddListener(OnRequestFightByExternal);
+            MessageAgregator<MsgStartRerturnToArmagedom>.AddListener(OnReturnToArmagedom);
         }
 
         private void OnDestroy()
         {
             MessageAgregator<MsgRequestExternalFightStart>.RemoveListener(OnRequestFightByExternal);
+            MessageAgregator<MsgStartRerturnToArmagedom>.RemoveListener(OnReturnToArmagedom);
+        }
+
+        private void OnReturnToArmagedom(MsgStartRerturnToArmagedom obj)
+        {
+            if (!AbstractGameController.Instance.MyKeys.VerificaAutoShift(chaveDaLuta) && Manager != null && obj.dono == Manager)
+            {
+                MeuTransform.GetComponent<CharacterController>().enabled = false;
+                MeuTransform.position = npcOriginalPosition;
+                MeuTransform.GetComponent<CharacterController>().enabled = true;
+                Destroy(GameObject.Find("cilindroEncontro"));
+                Destroy(myActivePet.gameObject);
+                foreach (var v in criaturesDoTreinador)
+                {
+                    v.Pet.EstadoPerfeito();
+                }
+                MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
+
+            }
         }
 
         private void OnRequestFightByExternal(MsgRequestExternalFightStart obj)
@@ -211,22 +233,24 @@ namespace TalkSpace
                     #region animando braco
                     if (!animaB.AnimaEnvia(criaturesDoTreinador[indiceDoEnviado].Pet, "criatureDeTreinador"))
                     {
-                        PetManager enemy = GameObject.Find("criatureDeTreinador").GetComponent<PetManager>();
+                        myActivePet = GameObject.Find("criatureDeTreinador").GetComponent<PetManager>();
                         //GameController.g.EncontroAgoraCom(
-                        criaturesDoTreinador[indiceDoEnviado].PrepararInicioDoCriature(enemy,Manager.ActivePet.gameObject);
+                        myActivePet = criaturesDoTreinador[indiceDoEnviado].PrepararInicioDoCriature(myActivePet,Manager.ActivePet.gameObject);
                         //, true, nomeDoTreinador);
-                        myActivePet = enemy.gameObject;
+                        
 
                         MessageAgregator<MsgCriatureDefeated>.AddListener(OnCriatureDefeated);
+                        //MessageAgregator<MsgChangeToPet>.AddListener(OnPlayerChangeToPet);
                         MessageAgregator<MsgRequestChangeToPetByReplace>.Publish(new MsgRequestChangeToPetByReplace()
                         {
                             dono = Manager.gameObject,
-                            fluxo = FluxoDeRetorno.criature
+                            fluxo = FluxoDeRetorno.criature,
+                            lockTarget = myActivePet.transform
                         });
 
-                        ((PetManagerCharacter)Manager.ActivePet).ControlableVsTrainer(enemy.transform);
+                        ((PetManagerCharacter)Manager.ActivePet).ControlableVsTrainer(myActivePet.transform);
 
-                        
+
                         state = ThisState.leituraDeLuta;
                     }
                     #endregion
@@ -240,7 +264,7 @@ namespace TalkSpace
                 case ThisState.novoJogoDeCamera:
                     if (CameraApplicator.cam.FocusInPoint(height: 3))
                     {
-                        Destroy(myActivePet);
+                        Destroy(myActivePet.gameObject);
                         state = ThisState.frasePreInicio; 
                     }
                 break;
@@ -287,7 +311,7 @@ namespace TalkSpace
                 case ThisState.finalizacao:
                     
                     AbstractGameController.Instance.MyKeys.MudaAutoShift(chaveDaLuta, true);
-                    FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.SaveDates());
+                    FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
                     VoltarAoModoPasseio();
                 break;
                 case ThisState.conversaDeLutaGanha:
@@ -298,6 +322,29 @@ namespace TalkSpace
                 break;
             }
         }
+
+        //private void OnPlayerChangeToPet(MsgChangeToPet obj)
+        //{
+        //    Debug.Log("manager: " + Manager+" MyGlobalmainpla: "+MyGlobalController.MainPlayer+" activepet: "+MyGlobalController.MainPlayer.ActivePet);
+        //    if (myActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente <= 0)
+        //    {
+        //        SupportSingleton.Instance.InvokeOnCountFrame(() =>
+        //        {
+        //            MessageAgregator<MsgCriatureDefeated>.Publish(new MsgCriatureDefeated()
+        //            {
+        //                atacker = Manager.ActivePet.gameObject,
+        //                defeated = myActivePet.gameObject,
+        //                doDerrotado = myActivePet.MeuCriatureBase
+        //            });
+        //        },3);
+        //        //OnCriatureDefeated(new MsgCriatureDefeated()
+        //        //{
+        //        //    atacker = Manager.ActivePet.gameObject,
+        //        //    defeated = myActivePet.gameObject,
+        //        //    doDerrotado = myActivePet.MeuCriatureBase
+        //        //});
+        //    }
+        //}
 
         protected virtual void OnDefeatedTrainer() { }
 
@@ -333,7 +380,11 @@ namespace TalkSpace
 
         private void OnCriatureDefeated(MsgCriatureDefeated obj)
         {
-            if (obj.defeated ==myActivePet)
+            //Debug.Log("No trainer" + (obj.defeated == myActivePet.gameObject)
+            //    + " : " + (obj.atacker.GetComponent<PetManager>().MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0));
+
+            if (obj.defeated == myActivePet.gameObject 
+                && obj.atacker.GetComponent<PetManager>().MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente>0)
             {
                 conversa = new string[1] { string.Format(
                         TextBank.RetornaFraseDoIdioma(TextKey.apresentaFim),
@@ -352,6 +403,11 @@ namespace TalkSpace
                 MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
                 {
                     nmcvc = temaDoTreinadorNoCalorDaBatalha
+                });
+
+                SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                {
+                    MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
                 });
 
             }
@@ -374,6 +430,8 @@ namespace TalkSpace
                     velOrTimeFocus = .5f
                 });
 
+                Debug.Log("Verificando continuidade da batalha");
+
                 state = ThisState.novoJogoDeCamera;
             }
             else
@@ -381,7 +439,7 @@ namespace TalkSpace
                 state = ThisState.leituraDeLuta;
                 AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() => {
                     Destroy(GameObject.Find("cilindroEncontro"));
-                    Destroy(myActivePet);
+                    Destroy(myActivePet.gameObject);
                     MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
                     {
                         myHero = Manager.gameObject
@@ -393,7 +451,11 @@ namespace TalkSpace
                     MeuTransform.GetComponent<CharacterController>().enabled = false;
                     MeuTransform.position = npcOriginalPosition;
                     MeuTransform.GetComponent<CharacterController>().enabled = true;
-
+                    //CameraApplicator.cam.ValoresDeCamera(0, 0, true, false);
+                    GameObject G = new GameObject();
+                    G.transform.position = 0.5f*(npcOriginalPosition+managerOriginalPosition);
+                    G.transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.forward, Vector3.up));
+                    CameraApplicator.cam.NewFocusForBasicCam(G.transform, 3, 5,true,true);
                     AbstractGlobalController.Instance.FadeV.StartFadeInWithAction(() =>
                     {
 
@@ -427,7 +489,7 @@ namespace TalkSpace
 
         protected virtual void ElementosDoEncontro()
         {
-            InsereElementosDoEncontro.EncontroDeTreinador(Manager, MeuTransform);
+            InsereElementosDoEncontro.EncontroDeTreinador(Manager, MeuTransform,tipoDeAfastamento: tipoDeAfast);
         }
 
         private void IniciarLutaContraTreinador()
@@ -523,7 +585,11 @@ namespace TalkSpace
             ((PetManagerEnemy)cm).StartAgressiveIa(atacante);
 
             if (golpeDeInspector)
-                cm.MeuCriatureBase.GerenteDeGolpes.meusGolpes = Pet.GerenteDeGolpes.meusGolpes;
+            {
+                cm.MeuCriatureBase.GerenteDeGolpes.meusGolpes = new System.Collections.Generic.List<PetAttackBase>();
+                foreach (var v in Pet.GerenteDeGolpes.meusGolpes)
+                    cm.MeuCriatureBase.GerenteDeGolpes.meusGolpes.Add(AttackFactory.GetAttack(v.Nome));
+            }
 
             if (pvDeInspector)
             {

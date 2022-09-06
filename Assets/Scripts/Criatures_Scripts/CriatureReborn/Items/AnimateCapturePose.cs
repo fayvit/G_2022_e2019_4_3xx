@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 using TextBankSpace;
 using FayvitMessageAgregator;
 using FayvitCam;
 using Criatures2021Hud;
 using FayvitCommandReader;
 using FayvitBasicTools;
+using FayvitSave;
 
 namespace Criatures2021
 {
@@ -36,12 +36,18 @@ namespace Criatures2021
             this.dono = dono;
             this.oCapturado = oCapturado;
 
-            DadosDeJogador dados = dono.GetComponent<CharacterManager>().Dados;
+            CharacterManager manager = dono.GetComponent<CharacterManager>();
+            DadosDeJogador dados = manager.Dados;
 
             if (dados.CriaturesAtivos.Count < dados.MaxCarregaveis)
             {
                 dados.CriaturesAtivos.Add(oCapturado);
                 foiParaArmagedom = false;
+                if (dados.CriaturesAtivos.Count == 2)
+                {
+                    manager.RequisitarHudElements();
+                }
+                
             }
             else
             {
@@ -64,7 +70,7 @@ namespace Criatures2021
 
 
             MessageAgregator<MsgAnimaCaptura>.Publish(new MsgAnimaCaptura() { dono = dono });
-            
+            SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
 
         }
 
@@ -79,6 +85,10 @@ namespace Criatures2021
                     if (tempoDecorrido > 1)
                     {
                         InsereBrilho();
+                        MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                        {
+                            sfxId = FayvitSounds.SoundEffectID.tuin_1ponto3
+                        });
                         tempoDecorrido = 0;
                         fase = FaseDoAnimaPose.brilho2;
                     }
@@ -87,6 +97,10 @@ namespace Criatures2021
                     if (tempoDecorrido > 1.1f)
                     {
                         InsereBrilho();
+                        MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                        {
+                            sfxId = FayvitSounds.SoundEffectID.tuimParaNivel
+                        });
                         tempoDecorrido = 0;
                         fase = FaseDoAnimaPose.insereInfos;
                     }
@@ -98,6 +112,11 @@ namespace Criatures2021
                         {
                             message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.tentaCapturar)[5],
                                 "<color=yellow>"+oCapturado.GetNomeEmLinguas+"</color>")
+                        });
+
+                        MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                        {
+                            sfxId = FayvitSounds.SoundEffectID.ItemImportante
                         });
 
                         MessageAgregator<MsgInsertCaptureInfos>.Publish(new MsgInsertCaptureInfos()
@@ -117,7 +136,7 @@ namespace Criatures2021
 
                         if (foiParaArmagedom)
                         {
-                            Debug.LogError("Foi para Armagedom, coisas estranhas sobre modificar ação");
+                            Debug.Log("Foi para Armagedom, coisas estranhas sobre modificar ação");
                             //ActionManager.ModificarAcao(GameController.g.transform, () => { ativarAcao = true; });
                             fase = FaseDoAnimaPose.mensDoArmagedom;
                         }

@@ -34,6 +34,16 @@ namespace Criatures2021
             IniciaUsoComCriature(dono, lista);
         }
 
+        public override bool AtualizaUsoComCriature()
+        {
+            return false;
+        }
+
+        public override bool AtualizaUsoDeHeroi()
+        {
+            return false;
+        }
+
 
     }
 }

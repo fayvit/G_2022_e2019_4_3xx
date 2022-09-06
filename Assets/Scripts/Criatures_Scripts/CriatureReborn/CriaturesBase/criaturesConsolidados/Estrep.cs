@@ -14,7 +14,7 @@ namespace Criatures2021
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = -1,
                 Colisor = new Colisor("Armação/Bone/Bone_end"),
-                TaxaDeUso = .25f,
+                TaxaDeUso = .125f,
                 AcimaDoChao = -0.5f
             },
             new PetAttackDb()
@@ -23,7 +23,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Armação/Bone/Bone_end"),
                 Nome = AttackNameId.olharEnfraquecedor,
-                TaxaDeUso = .25f,
+                TaxaDeUso = .125f,
                 AcimaDoChao = -0.5f
             },
         #endregion GolpesAprendidosComPergaminhos

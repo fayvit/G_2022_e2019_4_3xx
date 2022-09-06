@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TextBankSpace;
+using UnityEngine;
 
 namespace Criatures2021
 {
@@ -25,6 +26,11 @@ namespace Criatures2021
             {
             AttackNameId.tempestadeEletrica
             };
+        }
+
+        public override void IniciaUsoComCriature(GameObject dono, List<ItemBase> lista)
+        {
+            base.IniciaUsoComCriature(dono, lista);
         }
     }
 

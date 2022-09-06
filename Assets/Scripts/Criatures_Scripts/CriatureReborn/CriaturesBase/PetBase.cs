@@ -22,6 +22,10 @@ namespace Criatures2021
         public float varHeightCamera = .25f;
         public float alturaCameraLuta = 1f;
         public float distanciaCameraLuta = 6f;
+        /// <summary>
+        /// O valor deve ser maior que 0 e menor que 1 e corresponde a uma multiplicação sobre a taxa de captura da arta luva
+        /// </summary>
+        [Range(0.01F,1)]public float captureDificult = 1;
         //public float varHeightFightcamera = 
 
         public PetBase() { }

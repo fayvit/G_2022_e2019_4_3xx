@@ -5,6 +5,7 @@ using GameJolt.UI;
 using GameJolt.UI.Controllers;
 using UnityEngine.SceneManagement;
 using Criatures2021;
+using CustomizationSpace;
 //using System.IO;
 //using Unity.Mathematics;
 //using System.Runtime.Serialization.Formatters.Binary;
@@ -164,7 +165,7 @@ namespace MyJoltSpace
             SceneManager.sceneLoaded -= OnCenaTesteLoaded;
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("cenaTeste_indoAoJolt"));
 
-            MyGameController.LoadSavedCharacters();
+            CustomizationSavedChars.LoadSavedCharacters();
 
         }
 

@@ -4,16 +4,16 @@ using FayvitMessageAgregator;
 using FayvitBasicTools;
 using FayvitLoadScene;
 using FayvitSave;
-using System;
 using FayvitSupportSingleton;
 using FayvitCam;
+using CustomizationSpace;
 
 namespace Criatures2021
 {
     public class WaitCustomizationForStartCutscene : MonoBehaviour
     {
         private Transform character;
-        private CustomizationContainerDates ccd;
+        private CustomizationSpace.CustomizationContainerDates ccd;
         private string guid;
         private bool fadeOutComplete=false;
         private bool combinationComplete=false;
@@ -49,7 +49,7 @@ namespace Criatures2021
 
             IGlobalController glob = AbstractGlobalController.Instance;
 
-            SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.SaveDates(false));
+            SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates(false));
             
             DontDestroyOnLoad(gameObject);
 
@@ -94,6 +94,12 @@ namespace Criatures2021
                 Destroy(CameraApplicator.cam.transform.GetChild(0).GetChild(0).gameObject);
                 CameraApplicator.cam.GetComponentInChildren<Camera>().rect = new Rect(0, 0, 1, 1);
                 SceneManager.MoveGameObjectToScene(CameraApplicator.cam.gameObject, comuns);
+                GameObject G = GameObject.Find("AlvoVisual_canvas");
+                if (G)
+                    SceneManager.MoveGameObjectToScene(G, comuns);
+                else
+                    Debug.Log("AlvoVisual não encontrado para mudar de cena");
+
 
 
                 SupportSingleton.Instance.InvokeOnEndFrame(() =>

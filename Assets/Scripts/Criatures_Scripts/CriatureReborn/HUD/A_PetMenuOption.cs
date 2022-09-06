@@ -68,7 +68,6 @@ namespace Criatures2021Hud
                 antHp = obj.antHp;
                 newHp = obj.currentHp;
                 maxHp = obj.maxHp;
-                newMp = antMp;
             }
         }
 
@@ -81,7 +80,6 @@ namespace Criatures2021Hud
                 antMp = obj.antMp;
                 newMp = obj.currentMp;
                 maxMp = obj.maxMp;
-                newHp = antHp;
             }
         }
 
@@ -137,6 +135,8 @@ namespace Criatures2021Hud
             maxHp = A.PV.Maximo;
             antHp = A.PV.Corrente;
             antMp = A.PE.Corrente;
+            newHp = antHp;
+            newMp = antMp;
         }
     }
 }

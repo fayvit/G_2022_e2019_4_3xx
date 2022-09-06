@@ -54,10 +54,17 @@ namespace TextBankSpace
             } },
             { TextKey.marjan5,new List<string>()
             {
-                "Alguns devotos dos deuses travam batalhas em homenagem ao seu deus de adoração.",
-                "Para os que os vencem em batalha eles entregam um pequeno brasão de seu deus",
-                "Rezam as lendas de Orion que entregar os brasões em estatuas em homenagem aos deuses lhe dará a benção do deus",
-                "Eu queria a benção de um deus, mas não sou bom em vencer batalhas contra os devotos."
+                "Ao sul, no alto da montanha, você pode ver a <color=yellow>Fortaleza Slammer</color>",
+                "Ela foi construída nos tempos antigos para proteger nosso continente das invasões estrangeiras",
+                "Dentro da fortaleza são guardados diversos armamentos e explosivos, estes, suficientes para derrubar grandes barreiras",
+                "A frente da fortaleza está o <color=orange>general Potus Ramos</color>.",
+                "Ele só aceita a entrada na fortaleza de oficiais que tem no mínimo duas condecorações dadas por militares de alta patente",
+                "Ouvi boatos que Potus Ramos e o capitão <color=orange> João Cândido</color> do cruzador de guerra estão se reunindo com a sacerddotiza " +
+                "<color=orange>Amanda Leticia</color> da arena divida de <color=cyan>Ananda</color>"
+                //"Alguns devotos dos deuses travam batalhas em homenagem ao seu deus de adoração.",
+                //"Para os que os vencem em batalha eles entregam um pequeno brasão de seu deus",
+                //"Rezam as lendas de Orion que entregar os brasões em estatuas em homenagem aos deuses lhe dará a benção do deus",
+                //"Eu queria a benção de um deus, mas não sou bom em vencer batalhas contra os devotos."
             } },
              { TextKey.marjan6,new List<string>()
             {

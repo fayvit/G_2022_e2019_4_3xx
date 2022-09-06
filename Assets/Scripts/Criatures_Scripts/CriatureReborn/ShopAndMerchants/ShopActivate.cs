@@ -153,16 +153,13 @@ namespace Criatures2021
 
                 state = LocalState.oneMessageOpened;
 
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.Book1
-                });
+                //MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                //{
+                //    sfxId = FayvitSounds.SoundEffectID.Book1
+                //});
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                 {
-                    MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                    {
-                        sfxId = FayvitSounds.SoundEffectID.Book1
-                    });
+                  
 
                     state = LocalState.menuDeVenda;
                 },frasesDeShoping[11]);
@@ -295,19 +292,12 @@ namespace Criatures2021
 
         void AbrirMensagemSimples(string frase)
         {
-            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-            {
-                sfxId = FayvitSounds.SoundEffectID.painelAbrindo
-            });
+            
 
             ShopHudManager.instance.ChangeInteractiveButtons(false);
             state = LocalState.oneMessageOpened;
             AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
             {
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.Book1
-                });
 
                 ShopHudManager.instance.ChangeInteractiveButtons(true);
                 state = LocalState.menuDeCompra;
@@ -401,11 +391,6 @@ namespace Criatures2021
                         IniciarComprarVender(LocalState.fraseDeVenda, frasesDeShoping[1]);
                     else
                     {
-                        MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                        {
-                            sfxId = FayvitSounds.SoundEffectID.painelAbrindo
-                        });
-
                         state = LocalState.oneMessageOpened;
                         AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                         {

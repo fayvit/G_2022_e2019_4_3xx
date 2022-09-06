@@ -8,7 +8,6 @@ using FayvitSupportSingleton;
 using Criatures2021Hud;
 using TextBankSpace;
 using FayvitMove;
-using System;
 
 namespace Criatures2021
 {
@@ -28,6 +27,8 @@ namespace Criatures2021
 
         protected override void Start()
         {
+
+
             base.Start();
             MessageAgregator<MsgChangeToHero>.AddListener(OnChangeToHero);
             MessageAgregator<MsgChangeToPet>.AddListener(OnChangeToPet);
@@ -57,7 +58,7 @@ namespace Criatures2021
         {
             if (obj.slipped == gameObject)
             {
-                PetAttackBase petAttack =  SlopeSlipManager.Slip(gameObject,obj.hit);
+                PetAttackBase petAttack = SlopeSlipManager.Slip(gameObject, obj.hit);
 
                 MessageAgregator<MsgEnterInDamageState>.Publish(new MsgEnterInDamageState()
                 {
@@ -101,7 +102,8 @@ namespace Criatures2021
 
         private void OnEnterInAttackLearn(MsgPetEnterInAttackLearn obj)
         {
-            if (obj.dono.transform == tDono)
+            Debug.Log("Enternin attacklearn"+tDono + " : " + obj.dono.transform);
+            if (obj.dono.transform == tDono.transform)
             {
                 State = LocalState.NonBlockPanelOpened;
             }
@@ -119,6 +121,7 @@ namespace Criatures2021
         {
             if (obj.usuario == tDono.gameObject)
             {
+                gameObject.tag = "Untagged";
                 State = LocalState.stopped;
             }
         }
@@ -180,17 +183,17 @@ namespace Criatures2021
         {
             base.OnCriatureDefeated(obj);
 
-            if (obj.atacker == gameObject && obj.defeated.layer!=10)
+            if (obj.atacker == gameObject && obj.defeated.layer != 10)
             {
                 GerenciadorDeExperiencia gXp = MeuCriatureBase.PetFeat.mNivel;
-                gXp.XP += (tDono.ContraTreinador ? 2 : 1)*(int)((float)obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo / 2);
+                gXp.XP += (tDono.ContraTreinador ? 2 : 1) * (int)((float)obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo / 2);
 
                 VerificaLevelUp();
 
                 if (!tDono.ContraTreinador)
                     IamTarget.StaticStart(this, () => { MessageAgregator<MsgReturnRememberedMusic>.Publish(); });
-                
-                if(!tDono.ContraTreinador)
+
+                if (!tDono.ContraTreinador)
                     MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
                     {
                         message = string.Format(
@@ -200,19 +203,21 @@ namespace Criatures2021
                         obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo,
                         obj.doDerrotado.GetNomeEmLinguas
                         ),
-                        useBestSize=true
+                        useBestSize = true
                     });
             }
 
-            if (Controll.Mov.LockTarget!=null  && obj.defeated == Controll.Mov.LockTarget.gameObject)
+            if (Controll.Mov.LockTarget != null && obj.defeated == Controll.Mov.LockTarget.gameObject)
             {
                 SupportSingleton.Instance.InvokeInSeconds(() =>
                 {
                     VerificaFocarInimigo();
-                },1);
+                }, 1);
             }
 
-            if (obj.defeated == gameObject)
+            if (obj.defeated == gameObject && (!tDono.GetComponent<CharacterManager>().ContraTreinador||(obj.atacker!=null&&
+                obj.atacker.GetComponent<PetManager>().MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente>0)
+                ))
             {
                 CameraApplicator.cam.RemoveMira();
                 //Controll.Mov.LockTarget = null;
@@ -237,12 +242,15 @@ namespace Criatures2021
                 st.OnZeroedStamina = null;
 
                 st.OnChangeStaminaPoints += () => {
-                    MessageAgregator<MsgChangeST>.Publish(new MsgChangeST()
+                    if (this != null)
                     {
-                        currentSt = st.StaminaPoints,
-                        maxSt = st.MaxStaminaPoints,
-                        gameObject = gameObject
-                    });
+                        MessageAgregator<MsgChangeST>.Publish(new MsgChangeST()
+                        {
+                            currentSt = st.StaminaPoints,
+                            maxSt = st.MaxStaminaPoints,
+                            gameObject = gameObject ? gameObject : null
+                        });
+                    }
                 };
 
                 st.OnRegenZeroedStamina += () => {
@@ -388,6 +396,7 @@ namespace Criatures2021
 
                     }
 
+                    
                     MeuCriatureBase.StManager.StaminaRegen(false);
                 break;
                 case LocalState.onFree:
@@ -607,7 +616,7 @@ namespace Criatures2021
 
         public void ControlableVsTrainer(Transform lockTarget)
         {
-            State = LocalState.onFree;
+            //State = LocalState.onFree;
             Controll.Mov.LockTarget = lockTarget;
 
             SupportSingleton.Instance.InvokeOnEndFrame(() =>
@@ -618,60 +627,10 @@ namespace Criatures2021
 
     }
 
-    public struct MsgCriatureUpdateButtonPress : IMessageBase {
-        public GameObject dono;
-    }
-    public struct MsgChangeLevel : IMessageBase {
-        public GameObject gameObject;
-        public int newLevel;
-        public int pvCorrente;
-        public int pvMax;
-        public int peCorrente;
-        public int peMaximo;
-        public PetAttackDb petAtkDb;
-    }
-    public struct MsgChangeToHero : IMessageBase {
-        public GameObject myHero;
-        public bool blockReturnCam;
-    }
-
-    public struct MsgRequestChangeSelectedPetWithPet : IMessageBase {
-        public GameObject pet;
-    }
-    public struct MsgTargetEnemy : IMessageBase {
-        public Transform targetEnemy;
-    }
-
-    public struct MsgUnTargetEnemy : IMessageBase{ }
-
-    public struct MsgRequestReplacePet : IMessageBase {
-        public GameObject dono;
-        public Transform lockTarget;
-        public bool replaceIndex;
-        public int newIndex;
-    }
-    public struct MsgRequestChangeSelectedItemWithPet : IMessageBase
-    {
-        public int change;
-        public GameObject pet;
-    }
-    public struct MsgRequestUseItem : IMessageBase
-    {
-        public GameObject dono;
-    }
+    
     public struct MsgPlayerPetDefeated : IMessageBase {
         public GameObject dono;
         public PetManagerCharacter pet;
     }
-    public struct MsgAnEnemyTargetMe : IMessageBase { }
-    public struct MsgSendEnemyTargets :IMessageBase{
-        public PetManager target;
-        public PetManager sender;
-    }
-
-    public struct MsgRequestNonReturnableDamage : IMessageBase
-    {
-        public GameObject gameObject;
-        public PetAttackBase petAttack;
-    }
+    
 }

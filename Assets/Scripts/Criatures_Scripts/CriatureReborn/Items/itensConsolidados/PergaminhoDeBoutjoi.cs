@@ -13,12 +13,13 @@ namespace Criatures2021
         {
             Estoque = estoque;
             TextoDaMensagemInicial = TextBank.RetornaListaDeTextoDoIdioma(TextKey.usarPergaminhoDeBoutjoi).ToArray();
+            Particula = GeneralParticles.particulaDaDefesaPergaminhoFora;
         }
 
         protected override void AplicaEfeito(int indice)            
         {
             PetBase C = MyGlobalController.MainPlayer.Dados.CriaturesAtivos[indice];
-            IntrinsicAttribute A = C.PetFeat.meusAtributos.Ataque;
+            IntrinsicAttribute A = C.PetFeat.meusAtributos.Defesa;
 
             A = ContaDeSubida(A);
 

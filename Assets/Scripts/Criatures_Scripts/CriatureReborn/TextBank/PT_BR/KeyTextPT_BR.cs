@@ -307,7 +307,7 @@ namespace TextBankSpace
                     "Tinteiro Sagrado de Log","Perg. de Laurense","Perg. de Boutjoi","Perg. de Ananda",/*ID = 45*/
                     "Caneta Sagrada de Log","Perg. de Sinara","Perg. de Alana","Perg. de Tempestade Eletrica","Brasão de Laurense","Brasão de Ananda",
                     "Brasão de Boutjoi","Perg. do Turbo de Agua","Perg. da Hidro Bomba","Perg. da Lâmina de Folhas","Perg. da Tempestade de Folhas",/*ID=54*/
-                    "Perg. da Bola de Fogo","Perg. da Rajada de Fogo","Perg. do Toste Ataque"
+                    "Perg. da Bola de Fogo","Perg. da Rajada de Fogo","Perg. do Toste Ataque",
 
                 }},
 
@@ -397,6 +397,20 @@ namespace TextBankSpace
                     "Segundo Armagedom"
                 }
                 },
+                {
+            TextKey.usarPergaminhoDeSinara,new List<string>()
+            {
+                "O pergaminho de Sinara pode aumentar em 4 pontos o PV max de um criature. Em quem gostaria de usar?",
+                "O criature {0} nivel {1} aumentou 4 pontos em seu PV max"
+            }
+        },
+                {
+            TextKey.usarPergaminhoDeAlana,new List<string>()
+            {
+                "O pergaminho de Alana pode aumentar em 4 pontos o PE max de um criature. Em quem gostaria de usar?",
+                "O criature {0} nivel {1} aumentou 4 pontos em seu PE max"
+            }
+        },
         {
             TextKey.usarPergaminhoDeLaurense,new List<string>()
             {
@@ -404,6 +418,7 @@ namespace TextBankSpace
                 "O criature {0} nivel {1} aumentou 1 ponto em seu ataque"
             }
         },
+
         {
             TextKey.usarPergaminhoDeBoutjoi,new List<string>()
             {

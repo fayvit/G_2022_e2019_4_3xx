@@ -1,4 +1,5 @@
 ﻿using Criatures2021;
+using CustomizationSpace;
 using FayvitBasicTools;
 using FayvitLoadScene;
 using FayvitMessageAgregator;
@@ -12,28 +13,32 @@ public class PersonagemParaTeste : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CharacterManager c = FindObjectOfType<CharacterManager>();
-
-        if (c == null)
+        if (StaticInstanceExistence<IGameController>.SchelduleExistence(Start, this, () =>
         {
-            if (StaticInstanceExistence<IGameController>.SchelduleExistence(Start, this, () =>
+            return AbstractGameController.Instance;
+        }))
+        {
+
+            SupportSingleton.Instance.InvokeOnCountFrame(() =>
             {
-                return AbstractGameController.Instance;
-            }))
-            {
-                var v = MyGameController.listaDePersonagens;
-                int x = Random.Range(0, v.Count);
-                FazPersonagem(v[x], true,transform);
-            }
-        }
+                CharacterManager c = FindObjectOfType<CharacterManager>();
+                if (c == null)
+                {
+                    var v = CustomizationSavedChars.listaDePersonagens;
+                    int x = Random.Range(0, v.Count);
+                    FazPersonagem(v[x], true, transform);
+                }
+        }, 3);
+
+    }
     }
 
-    public static GameObject FazPersonagem(CustomizationContainerDates ccd,bool inTeste,Transform transform)
+    public static GameObject FazPersonagem(CustomizationSpace.CustomizationContainerDates ccd,bool inTeste,Transform transform)
     {
         GameObject Ggg = CombinerSingleton.Instance.GetCombination(ccd);
         CharacterManager c = Ggg.AddComponent<CharacterManager>();
         c.InTeste = inTeste;
-        c.transform.position = transform.position;
+        c.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position);
         c.Ccd = ccd;
         c.enabled = false;
 
@@ -51,7 +56,7 @@ public class PersonagemParaTeste : MonoBehaviour
             {
                 c.Dados = new DadosDeJogador();//((Criatures2021.SaveDates)S).EssesDados;
                 c.InicializarPet();
-                MyGameController.LoadSavedCharacters();
+                CustomizationSavedChars.LoadSavedCharacters();
             }
 
             if (!GameObject.FindWithTag("MainCamera"))

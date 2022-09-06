@@ -123,10 +123,7 @@ namespace Criatures2021
                     P.GetNomeEmLinguas, NomeBasico
                     );
 
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo
-                });
+                
                 Estado = ItemUseState.oneMessageOpened;
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() => {
                     MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()

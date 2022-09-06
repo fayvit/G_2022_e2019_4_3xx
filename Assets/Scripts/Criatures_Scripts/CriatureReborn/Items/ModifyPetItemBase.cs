@@ -1,10 +1,10 @@
 ﻿using FayvitMessageAgregator;
 using System.Collections.Generic;
 using UnityEngine;
-using Criatures2021Hud;
 using TextBankSpace;
 using FayvitBasicTools;
 using FayvitSupportSingleton;
+using FayvitCam;
 
 namespace Criatures2021
 {
@@ -50,6 +50,7 @@ namespace Criatures2021
 
         public void InicioComum()
         {
+            CameraApplicator.cam.RemoveMira();
             MessageAgregator<MsgStartUseItem>.Publish(new MsgStartUseItem
             {
                 usuario = Dono
@@ -189,6 +190,8 @@ namespace Criatures2021
                 {
                     message = TextBank.RetornaFraseDoIdioma(TextKey.mensLuta)
                 });
+
+                Estado = ItemUseState.finalizaUsaItem;
             }
             else
             {
@@ -275,10 +278,7 @@ namespace Criatures2021
 
         protected void Finaliza()
         {
-            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-            {
-                sfxId = FayvitSounds.SoundEffectID.Book1
-            });
+            
             MessageAgregator<MsgSendExternalPanelCommand>.RemoveListener(OnReceiveCommands);
             Estado = ItemUseState.finalizaUsaItem;
             
@@ -292,10 +292,7 @@ namespace Criatures2021
             SupportSingleton.Instance.InvokeInSeconds(() =>
             {
                 MessageAgregator<MsgStartExternalInteraction>.Publish();
-                MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
-                {
-                    sfxId = FayvitSounds.SoundEffectID.painelAbrindo
-                });
+                
                 Estado = ItemUseState.oneMessageOpened;
                 MyGlobalController.Instance.OneMessage.StartMessagePanel(Finaliza, string.Format(
                 textoDaMensInicial[1],

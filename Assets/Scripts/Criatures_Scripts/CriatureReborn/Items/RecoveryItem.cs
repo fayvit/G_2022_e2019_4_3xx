@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using FayvitMessageAgregator;
 
@@ -19,19 +18,15 @@ namespace Criatures2021
             IniciaUsoDesseItem(dono, QuantitativeItem.CanUseRecoveryItem(P));
         }
 
+        public override void IniciaUsoDeHeroi(GameObject dono, List<ItemBase> lista)
+        {
+            IniciaUsoComCriature(dono, lista);
+        }
+
         public override bool AtualizaUsoComCriature()
         {
             return AtualizaUsoDesseItem(GeneralParticles.acaoDeCura1, FayvitSounds.SoundEffectID.XP_Heal01);
-        }
-
-        public override void IniciaUsoDeHeroi(GameObject dono, List<ItemBase> lista)
-        {
-            
-            Lista = lista;
-            PetAtributes P = dono.GetComponent<CharacterManager>().ActivePet.MeuCriatureBase.PetFeat.meusAtributos;
-            IniciaUsoDesseItem(dono, QuantitativeItem.CanUseRecoveryItem(P));
-            eMenu = false;
-        }
+        }        
 
         public override bool AtualizaUsoDeHeroi()
         {

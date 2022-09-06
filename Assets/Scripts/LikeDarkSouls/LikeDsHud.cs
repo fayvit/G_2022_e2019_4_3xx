@@ -26,7 +26,7 @@ namespace FayvitLikeDarkSouls
             //MessageAgregator<MsgStartHud>.AddListener(OnStartCriatureHud);
 
             MessageAgregator<MsgStartDsHud>.AddListener(OnStartDsHud);
-            MessageAgregator<MsgChangeHP>.AddListener(OnChangeHp);
+            //MessageAgregator<MsgChangeHP>.AddListener(OnChangeHp);
             MessageAgregator<MsgChangeST>.AddListener(OnChangeSt);
             MessageAgregator<MsgZeroedStamina>.AddListener(OnZeroedStamina);
             MessageAgregator<MsgRegenZeroedStamina>.AddListener(OnRegenZeroedStamina);
@@ -37,7 +37,7 @@ namespace FayvitLikeDarkSouls
         {
 
             MessageAgregator<MsgStartDsHud>.RemoveListener(OnStartDsHud);
-            MessageAgregator<MsgChangeHP>.RemoveListener(OnChangeHp);
+            //MessageAgregator<MsgChangeHP>.RemoveListener(OnChangeHp);
             MessageAgregator<MsgChangeST>.RemoveListener(OnChangeSt);
             MessageAgregator<MsgZeroedStamina>.RemoveListener(OnZeroedStamina);
             MessageAgregator<MsgRegenZeroedStamina>.RemoveListener(OnRegenZeroedStamina);
@@ -67,14 +67,14 @@ namespace FayvitLikeDarkSouls
             }
         }
 
-        private void OnChangeHp(MsgChangeHP obj)
-        {
-            if (obj.gameObject == dono)
-            {
-                hpBar.fillAmount = (float)obj.currentHp / obj.maxHp;
-                //hpNumber.text = obj.currentHp + " / " + obj.maxHp;
-            }
-        }
+        //private void OnChangeHp(MsgChangeHP obj)
+        //{
+        //    if (obj.gameObject == dono)
+        //    {
+        //        hpBar.fillAmount = (float)obj.currentHp / obj.maxHp;
+        //        //hpNumber.text = obj.currentHp + " / " + obj.maxHp;
+        //    }
+        //}
 
         private void OnChangeSt(MsgChangeST obj)
         {

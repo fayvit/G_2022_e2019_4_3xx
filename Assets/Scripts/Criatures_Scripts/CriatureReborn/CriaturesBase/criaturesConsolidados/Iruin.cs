@@ -47,7 +47,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Esqueleto/gomo1/cabeca"),
                 Nome = AttackNameId.olharEnfraquecedor,
                 TaxaDeUso = 1,
-                DistanciaEmissora = 0.5f
+                DistanciaEmissora = 0.125f
             },
         };
 

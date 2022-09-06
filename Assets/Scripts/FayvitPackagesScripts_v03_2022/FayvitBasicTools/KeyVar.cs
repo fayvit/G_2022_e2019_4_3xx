@@ -18,6 +18,16 @@ namespace FayvitBasicTools
 
         public List<NomesCenas> CenasAtivas { get; set; } = new List<NomesCenas>();
 
+        public void TenhoEssaKey(string key)
+        {
+            if (autoShift.ContainsKey(key))
+            {
+                Debug.Log("Eu tenho a key: " + key + " e o valor dela é: " + autoShift[key]);
+            }
+            else
+                Debug.Log("Não tenho a key: " + key);
+        }
+
         public void SetarCenasAtivas(NomesCenas[] cenasAtivas)
         {
             this.CenasAtivas = new List<NomesCenas>();

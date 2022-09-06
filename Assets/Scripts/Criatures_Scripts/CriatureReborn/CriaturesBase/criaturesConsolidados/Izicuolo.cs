@@ -58,7 +58,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Armação.001/Corpo/",
                                    new Vector3(0.18f,0,0),
                                    new Vector3(-0.867f,-0.585f,-0.26f)),
-                TaxaDeUso = 1f,
+                TaxaDeUso = .125f,
                 AcimaDoChao = 0.1f
             },
         };

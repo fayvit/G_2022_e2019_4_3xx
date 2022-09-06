@@ -54,7 +54,7 @@ namespace Criatures2021
                 Colisor = new Colisor("metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R"),
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
-                TaxaDeUso = 0.25f
+                TaxaDeUso = 0.125f
             }
         };
 

@@ -27,15 +27,15 @@ namespace Criatures2021
                                    new Vector3(-0.867f,-0.585f,-0.26f)),
                 TaxaDeUso = 1f
             },
-            new PetAttackDb()
-            {
-                Nome = AttackNameId.sobreSalto,
-                NivelDoGolpe = 2,
-                Colisor = new Colisor("Armação/corpo3/",
-                                         new Vector3(0,-0.46f,1.4f),
-                                         new Vector3(-0.365f,0.113f,-0.325f)),
-                TaxaDeUso = 1.25f
-            },
+            //new PetAttackDb()
+            //{
+            //    Nome = AttackNameId.sobreSalto,
+            //    NivelDoGolpe = 2,
+            //    Colisor = new Colisor("esqueleto/corpo",
+            //                             new Vector3(0,-0.46f,1.4f),
+            //                             new Vector3(-0.365f,0.113f,-0.325f)),
+            //    TaxaDeUso = 1.25f
+            //},
             new PetAttackDb()
             {
                 NivelDoGolpe = 1,
@@ -72,7 +72,7 @@ namespace Criatures2021
                 Colisor = new Colisor("esqueleto/corpo"),
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
-                TaxaDeUso = 1.25f
+                TaxaDeUso = .125f
             }
         };
 

@@ -5256,7 +5256,7 @@ MonoBehaviour:
   ativaveis: 
   todoDoTipo: 1
   tipoParaAtivar: 11
-  indiceDaMensagem: 0
+  indiceDaMensagem: 15
   tempoDeEfetivaAcao: 2.5
   somDaFinalizacao: 4
   vinhetaDaFinalizacao: 13

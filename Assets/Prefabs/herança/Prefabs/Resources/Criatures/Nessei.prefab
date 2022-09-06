@@ -130,8 +130,10 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
+    varHeightCamera: 0.25
     alturaCameraLuta: 1
     distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -152,7 +154,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5
@@ -170,6 +172,10 @@ PrefabInstance:
     - target: {fileID: 100036, guid: eb769fdcb2947464c809b519359a1f47, type: 3}
       propertyPath: m_Name
       value: Nessei
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: eb769fdcb2947464c809b519359a1f47, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 100036, guid: eb769fdcb2947464c809b519359a1f47, type: 3}
       propertyPath: m_TagString

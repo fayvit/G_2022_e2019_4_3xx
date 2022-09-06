@@ -22,7 +22,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Armação/Bone/Bone.003/Bone.004/Bone.005/Bone.006/rabo"),
                 Nome = AttackNameId.olharEnfraquecedor,
-                TaxaDeUso = 1,
+                TaxaDeUso = .125f,
                 AcimaDoChao = -0.75f
             },
         #endregion GolpesAprendidosComPergaminhos
@@ -65,7 +65,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Armação/Bone/Bone.003/Bone.004/Bone.005/Bone.006/rabo"),
                 Nome = AttackNameId.olharMal,
-                TaxaDeUso = .25f,
+                TaxaDeUso = .125f,
                 AcimaDoChao = -0.75f
             }
         };

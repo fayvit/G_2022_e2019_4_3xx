@@ -50,7 +50,7 @@ namespace Criatures2021
                         break;
                     case FluxoDeRetorno.heroi:
                         retorno = !esseItem.AtualizaUsoDeHeroi();
-                        break;
+                    break;
                     //case FluxoDeRetorno.menuHeroi:
                     //case FluxoDeRetorno.menuCriature:
                     //    retorno = !esseItem.AtualizaUsoDeMenu();// parece desnecessario
@@ -59,11 +59,11 @@ namespace Criatures2021
 
                 if (retorno)
                 {
-
+                    FindByOwner.GetHeroActivePet(dono).gameObject.tag = "Criature";
                     switch (fluxo)
                     {
                         case FluxoDeRetorno.criature:
-                            Debug.Log(esseItem.ID);
+                            
                             MessageAgregator<MsgRequestChangeToPetByReplace>.Publish(new MsgRequestChangeToPetByReplace()
                             {
                                 dono = dono,
@@ -79,7 +79,7 @@ namespace Criatures2021
                         case FluxoDeRetorno.menuHeroi:
                         case FluxoDeRetorno.menuCriature:
                             //GameController.g.HudM.PauseM.FinalizaUsoDeItemComMenu();
-                            break;
+                        break;
                     }
 
                     EstouUsandoItem = false;

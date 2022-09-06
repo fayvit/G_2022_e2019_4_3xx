@@ -155,15 +155,19 @@ namespace FayvitBasicTools
         private void OnRequestStartMusic(MsgStartMusic obj)
         {
             float vol = 1;
+            float vel = -1;
             if (obj.changeVolume)
                 vol = obj.volumeVal;
 
+            if (obj.changeVel)
+                vel = obj.newVel;
+
             if (obj.nmcvc != null)
-                music.StartMusic(obj.nmcvc);
+                music.StartMusic(obj.nmcvc,vel);
             else if(obj.clip!=null)
-                music.StartMusic(obj.clip, vol);
+                music.StartMusic(obj.clip, vol,vel);
             else if (obj.nameMusic != NameMusic.empty)
-                music.StartMusic(obj.nameMusic, vol);
+                music.StartMusic(obj.nameMusic, vol,vel);
 
         }
 
@@ -216,7 +220,9 @@ namespace FayvitBasicTools
     }
     public struct MsgStartMusic:IMessageBase
     {
+        public bool changeVel;
         public bool changeVolume;
+        public float newVel;
         public float volumeVal;
         public NameMusic nameMusic;
         public AudioClip clip;

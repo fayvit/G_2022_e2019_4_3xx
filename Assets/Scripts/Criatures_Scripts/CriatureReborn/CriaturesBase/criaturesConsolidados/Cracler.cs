@@ -16,7 +16,8 @@ namespace Criatures2021
                 Nome = AttackNameId.olharEnfraquecedor,
                 Colisor = new Colisor("Armação/Bone/Bone_R/Bone_R.001"),
                 DistanciaEmissora = 1.5f,
-                AcimaDoChao = 0.25f
+                AcimaDoChao = 0.25f,
+                TaxaDeUso=.125f
             },
         new PetAttackDb()
             {

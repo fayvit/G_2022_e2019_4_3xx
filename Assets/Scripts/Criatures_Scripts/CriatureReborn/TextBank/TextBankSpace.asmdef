@@ -1,0 +1,16 @@
+{
+    "name": "TextBankSpace",
+    "references": [
+        "GUID:b25e82f6cd560fb468db0712b4ffeec1",
+        "GUID:7619b49cb0105244a8b03bf1200c432c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

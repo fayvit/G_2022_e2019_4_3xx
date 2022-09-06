@@ -27,14 +27,15 @@ namespace FayvitBasicTools
 
             if ((ID == "0" || ID == "" || foi) && m.gameObject.scene.name != null && !ePrefabStage)
             {
-                Debug.Log("quem foi? meu ID: " + ID + "foi?: " + foi + " : " + m.gameObject.scene.name + " e prefab stage: " + ePrefabStage);
+                //Debug.Log("quem foi? meu ID: " + ID + "foi?: " + foi + " : " + m.gameObject.scene.name + " e prefab stage: " + ePrefabStage);
 
-                ID = m.GetInstanceID() + "_" + m.gameObject.scene.name;
+                //ID = m.GetInstanceID() + "_" + m.gameObject.scene.name;
+                ID = GetUniqueID(m.gameObject,"") + "_" + m.gameObject.scene.name;
                 SetUniqueIdProperty(m, ID, labelID);
             }
             else if ((ePrefabStage || m.gameObject.scene.name == null) && (ID != "0" || ID != string.Empty))
             {
-                Debug.Log("limpando label do buscador de ID: " + m.gameObject.name + ", PrefabStage: " + ePrefabStage + ", Cena nula: " + (m.gameObject.scene.name == null));
+                //Debug.Log("limpando label do buscador de ID: " + m.gameObject.name + ", PrefabStage: " + ePrefabStage + ", Cena nula: " + (m.gameObject.scene.name == null));
                 ID = string.Empty;
                 SetUniqueIdProperty(m, ID, labelID);
             }
@@ -75,7 +76,7 @@ namespace FayvitBasicTools
             SerializedProperty localIdProp =
                 serializedObject.FindProperty(nomeProperty);
 
-            Debug.Log(localIdProp.stringValue + " : " + ((MonoBehaviour)o).name);
+            //Debug.Log(localIdProp.stringValue + " : " + ((MonoBehaviour)o).name);
             localIdProp.stringValue = id;
 #endif
         }

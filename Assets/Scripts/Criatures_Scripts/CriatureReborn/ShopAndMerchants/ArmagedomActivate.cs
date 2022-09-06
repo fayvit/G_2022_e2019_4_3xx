@@ -10,7 +10,7 @@ namespace Criatures2021
 {
     public class ArmagedomActivate :MerchantBase
     {
-        [SerializeField] private IndiceDeArmagedoms indiceDesseArmagedom = IndiceDeArmagedoms.daCavernaInicial;
+        [SerializeField] private IndiceDeArmagedoms indiceDesseArmagedom = IndiceDeArmagedoms.deKatids;
         
         private fasesDoArmagedom fase = fasesDoArmagedom.emEspera;
         private PetReplaceManager replace;
@@ -292,7 +292,7 @@ namespace Criatures2021
                    manager.Dados.CriaturesArmagedados[obj.entra].PetFeat.mNivel.Nivel
                    );
 
-                AbstractGlobalController.Instance.OneMessage.StartMessagePanel(VoltarDoEntraArmagedado, tempString);
+                AbstractGlobalController.Instance.OneMessage.StartMessagePanel(VoltarDoEntraArmagedado, tempString,hideCloseSound:true);
 
                 fase = fasesDoArmagedom.oneMessageAberto;
             }
@@ -388,7 +388,7 @@ namespace Criatures2021
             {
                 VoltarDoEntraArmagedado();
                 fase = fasesDoArmagedom.escolhaInicial;
-            }, tempString);
+            }, tempString,hideCloseSound:true);
             CameraApplicator.cam.StartShowPointCamera(transform, new SinglePointCameraProperties()
             {
                 velOrTimeFocus = 0f,
@@ -467,15 +467,21 @@ namespace Criatures2021
         public void BotaoArmagedom()
         {
             BaseStartMerchant();
-            
-            IndiceDeArmagedoms k = (IndiceDeArmagedoms)AbstractGameController.Instance.MyKeys.VerificaCont(KeyCont.armagedoms);
-            k |= indiceDesseArmagedom;
-            AbstractGameController.Instance.MyKeys.MudaCont(KeyCont.armagedoms, (int)k);
 
+            //IndiceDeArmagedoms k = (IndiceDeArmagedoms)AbstractGameController.Instance.MyKeys.VerificaCont(KeyCont.armagedoms);
+            //k |= indiceDesseArmagedom;
+            //AbstractGameController.Instance.MyKeys.MudaCont(KeyCont.armagedoms, (int)k);
+            MessageAgregator<MsgChangeShiftKey>.Publish(new MsgChangeShiftKey()
+            {
+                sKey = "visitou: " + indiceDesseArmagedom.ToString(),
+                change = true
+            });
             
             manager.Dados.UltimoArmagedom = indiceDesseArmagedom;
 
             fase = fasesDoArmagedom.mensInicial;
+
+            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             
         }
 

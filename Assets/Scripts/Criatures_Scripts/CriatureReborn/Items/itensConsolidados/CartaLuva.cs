@@ -3,14 +3,35 @@ using System.Collections.Generic;
 using FayvitMessageAgregator;
 using Criatures2021Hud;
 using TextBankSpace;
+using FayvitCam;
 
 namespace Criatures2021
 {
     [System.Serializable]
-    public class CartaLuva: ItemBase
+    public class CartaLuva : ItemBase
     {
         [System.NonSerialized] private CaptureManager animaCap;
         private bool captura;
+        private CaptureTax taxOfcapture = new CaptureTax()
+        {
+            interpolateIndex = 1,
+            maxHp = .5f,
+            maxTax = .8f,
+            taxOnMaxHp = 0
+        };
+
+        [System.Serializable]
+        private struct CaptureTax
+        {
+            public float maxTax;
+            public float maxHp;
+            public float taxOnMaxHp;
+            /// <summary>
+            /// usado para saber se a interpolação será quadratica , cubica, linear, raiz e etc...
+            /// </summary>
+            public float interpolateIndex;
+        }
+
         public CartaLuva(int estoque = 1) : base(new ItemFeatures(NameIdItem.cartaLuva)
         {
             valor = 12
@@ -69,7 +90,7 @@ namespace Criatures2021
             //(AbstractGlobalController.Instance.Players[0].Manager as CharacterManager).ActivePet.Mov.LockTarget
             //if (GameController.g.estaEmLuta && !GameController.g.ContraTreinador)
 
-            if(FindByOwner.GetEnemy(Dono))
+            if(FindByOwner.GetEnemy(Dono)&&!Dono.GetComponent<CharacterManager>().ContraTreinador)
                 return true;
 
             return false;
@@ -79,6 +100,7 @@ namespace Criatures2021
         {
             if (PodeUsar())
             {
+                
                 //Manager = GameController.g.Manager;
                 Estado = ItemUseState.animandoBraco;
                 RetirarUmItem(Lista, this, 1);
@@ -86,6 +108,7 @@ namespace Criatures2021
 
                 if (P)
                 {
+                    CameraApplicator.cam.RemoveMira();
                     InicializacaoComum(Dono, P.transform /*GameController.g.InimigoAtivo.transform*/);
                     P.StopWithRememberedState();
                 }
@@ -102,7 +125,7 @@ namespace Criatures2021
                     message = TextBank.RetornaFraseDoIdioma(TextKey.mensLuta)
                 });
 
-                Debug.LogError("Uma mensagem de não pode usar");
+                //Debug.LogError("Uma mensagem de não pode usar");
 
                 if (!FindByOwner.GetManagerEnemy(Dono))
                     MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
@@ -120,33 +143,60 @@ namespace Criatures2021
 
         bool ContinhaDeCaptura()
         {
-            return true;
-            int vida = FindByOwner.GetManagerEnemy(Dono).MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente;
-
-            bool retorno = false;
-
-
-            if (vida == 2)
+            PetBase P = FindByOwner.GetManagerEnemy(Dono).MeuCriatureBase;
+            ConsumableAttribute vida = P.PetFeat.meusAtributos.PV;
+            float taxaDeVida = ((float)vida.Corrente) / vida.Maximo;
+            if (taxaDeVida < taxOfcapture.maxHp)
             {
-                float x = Random.value;
-                if (x > 0.75f)
-                    retorno = true;
+                taxaDeVida = Mathf.Pow(1-taxaDeVida/taxOfcapture.maxHp, taxOfcapture.interpolateIndex);
+                Debug.Log("depois do pow: " + taxaDeVida);
+                taxaDeVida = ((1 - taxaDeVida) * taxOfcapture.taxOnMaxHp + taxaDeVida * taxOfcapture.maxTax)/P.captureDificult;
+                Debug.Log("depois do interpolate: " + taxaDeVida);
+                float sorteio = Random.value;
+
+                Debug.Log("O valor sorteado é: " + sorteio + " e a taxa minima é : " + taxaDeVida);
+                if (sorteio < taxaDeVida)
+                    return true;
                 else
-                    retorno = false;
-
-                Debug.Log("dois pontos de vida: " + x);
+                    return false;
             }
-
-            if (vida == 1)
+            else
             {
-                float y = Random.value;
-                if (y > 0.25f)
-                    retorno = true;
-                else
-                    retorno = false;
+                return false;
             }
+            
 
-            return retorno;
+
+
+            //return true;
+            #region antigo
+            //int vida = FindByOwner.GetManagerEnemy(Dono).MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente;
+
+            //bool retorno = false;
+
+
+            //if (vida == 2)
+            //{
+            //    float x = Random.value;
+            //    if (x > 0.75f)
+            //        retorno = true;
+            //    else
+            //        retorno = false;
+
+            //    Debug.Log("dois pontos de vida: " + x);
+            //}
+
+            //if (vida == 1)
+            //{
+            //    float y = Random.value;
+            //    if (y > 0.25f)
+            //        retorno = true;
+            //    else
+            //        retorno = false;
+            //}
+
+            //return retorno; 
+            #endregion
         }
 
         private bool AtualizaUsoDaCarta()
@@ -167,13 +217,7 @@ namespace Criatures2021
                     {
                         if (captura)
                         {
-                            //MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
-                            //{
-                            //    myHero = Dono
-                            //});
-                            //Debug.LogError("Retorna para o fluxo de heroi");
-                            //GameController.g.RetornarParaFluxoDoHeroi();
-                            //Estado = ItemUseState.nulo;
+
                             Estado = ItemUseState.finalizaUsaItem;
                         }
                         else
@@ -183,7 +227,9 @@ namespace Criatures2021
                                 oAnimado = Dono
                             });
 
-                            (FindByOwner.GetManagerEnemy(Dono) as PetManagerEnemy).ReturnRememberedState();
+                            
+                            (FindByOwner.GetManagerEnemy(Dono) as PetManagerEnemy)
+                                .StartAgressiveIa(Dono.GetComponent<CharacterManager>().ActivePet.gameObject);
                             Estado = ItemUseState.finalizaUsaItem;
                         }
                     }
@@ -192,7 +238,7 @@ namespace Criatures2021
                     return false;
                 //break;
                 case ItemUseState.nulo:
-                    Debug.Log("alcançou estado nulo para " + ID.ToString());
+                    Debug.Log("O itemManager alcançou estado nulo para " + ID.ToString());
                     break;
             }
             return true;

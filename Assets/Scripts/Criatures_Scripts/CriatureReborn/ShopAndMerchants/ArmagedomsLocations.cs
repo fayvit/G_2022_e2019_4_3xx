@@ -2,40 +2,39 @@
 using System.Collections.Generic;
 using FayvitLoadScene;
 using TextBankSpace;
+using Spawns;
 
 [System.Serializable]
 public class ArmagedomsLocations
 {
-    private static Dictionary<IndiceDeArmagedoms, VisitasParaArmagedom> l = new Dictionary<IndiceDeArmagedoms, VisitasParaArmagedom>();
+    private static Dictionary<IndiceDeArmagedoms, VisistsToArmagedoms> l = new Dictionary<IndiceDeArmagedoms, VisistsToArmagedoms>()
+    {
+        { IndiceDeArmagedoms.acampamentoDaResistencia, new VisistsToArmagedoms(){
+            nomeDasCenas=new NomesCenas[1]{NomesCenas.acampamentoDaResistencia },
+            spawnId = SpawnID.numero2
+        } },
+        { IndiceDeArmagedoms.deKatids,new VisistsToArmagedoms()
+        {
+        nomeDasCenas=new NomesCenas[1]{NomesCenas.planicieDeKatids },
+        spawnId = SpawnID.numero2
+        } },
+        { IndiceDeArmagedoms.deMarjan,new VisistsToArmagedoms()
+        {
+        nomeDasCenas=new NomesCenas[1]{NomesCenas.planicieDeKatids },
+        spawnId = SpawnID.numero3
+    } }
+    };
 
-    public static Dictionary<IndiceDeArmagedoms, VisitasParaArmagedom> L
+    public static Dictionary<IndiceDeArmagedoms, VisistsToArmagedoms> L
     {
         get { return l; }
     }
 }
 
-public class VisitasParaArmagedom
+public class VisistsToArmagedoms
 {
-    private float endX = 0;
-    private float endY = 0;
-    private float endZ = 0;
-    public NomesCenas[] nomeDasCenas;
-
-    public Vector3 Endereco
-    {
-        get
-        {
-            return new Vector3(endX, endY, endZ);
-        }
-
-        set
-        {
-            Vector3 V = value;
-            endX = V.x;
-            endY = V.y;
-            endZ = V.z;
-        }
-    }
+    public SpawnID spawnId;
+    public NomesCenas[] nomeDasCenas;    
 
     public static string NomeEmLinguas(IndiceDeArmagedoms i)
     {
@@ -43,11 +42,11 @@ public class VisitasParaArmagedom
     }
 }
 
-[System.Flags]
 public enum IndiceDeArmagedoms
 {
     // Registrar no nome em linguas
     None=0,
-    acampamentoDaResistencia = 1<<1,
-    segundoArmagedom = 1<<2
+    acampamentoDaResistencia=1,
+    deKatids = 2,
+    deMarjan = 3
 }

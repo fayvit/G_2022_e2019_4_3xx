@@ -48,7 +48,7 @@ namespace Criatures2021
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 8,
                 Colisor = new Colisor("Armação/base/corpo"),
-                TaxaDeUso = 1.25f
+                TaxaDeUso = .125f
 
             },
         };

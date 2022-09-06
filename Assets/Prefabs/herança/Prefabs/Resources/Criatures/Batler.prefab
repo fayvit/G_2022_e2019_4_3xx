@@ -448,9 +448,9 @@ GameObject:
   - component: {fileID: 293624352069858780}
   - component: {fileID: 293624352062167612}
   - component: {fileID: 1635869648269326599}
-  - component: {fileID: 6602404939997261970}
   - component: {fileID: -5383761010703142782}
-  m_Layer: 0
+  - component: {fileID: -7931859706142123323}
+  m_Layer: 13
   m_Name: Batler
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.6, z: 0}
---- !u!114 &6602404939997261970
+--- !u!114 &-5383761010703142782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -519,7 +519,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 293624352069429756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a38a348b39ade846a22ac794915fea1, type: 3}
+  m_Script: {fileID: 11500000, guid: 46aa399f29e4c51478fd7d610c557e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velAnimatorString: velocidade
+  jumpNameBool: pulo
+  groundedNameBool: noChao
+  jumpAnimationStateName: pulando
+  atkBool: atacando
+  damageStateName: dano1
+  emDanoBool: dano1
+  emDano_2Bool: dano2
+  defeatedBool: cair
+  rollStateName: Roll
+  A: {fileID: 0}
+--- !u!114 &-7931859706142123323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293624352069429756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233d010bd126a7e4d971c12c145e305c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
@@ -564,6 +587,8 @@ MonoBehaviour:
           taxa: 0.2
       mNivel:
         _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
       distanciaFundamentadora: 0.2
     atkManager:
       golpeEscolhido: 0
@@ -597,8 +622,10 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
-    alturaCameraLuta: 0.25
-    distanciaCameraLuta: 4.5
+    varHeightCamera: 0.25
+    alturaCameraLuta: 1
+    distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -619,7 +646,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5
@@ -627,33 +654,6 @@ MonoBehaviour:
     returnTime: 0.15
     imunoTax: 0.75
   targetUpdateTax: 1
-  enemyIa:
-    detectDistance: 5
-    distanceMove: 20
-    state: 0
-    coolDown: 0
---- !u!114 &-5383761010703142782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293624352069429756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aa399f29e4c51478fd7d610c557e3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velAnimatorString: velocidade
-  jumpNameBool: pulo
-  groundedNameBool: noChao
-  jumpAnimationStateName: pulando
-  atkBool: atacando
-  emDanoBool: dano1
-  emDano_2Bool: dano2
-  defeatedBool: cair
-  rollStateName: Roll
-  A: {fileID: 0}
 --- !u!1 &811791602723860539
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +820,6 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

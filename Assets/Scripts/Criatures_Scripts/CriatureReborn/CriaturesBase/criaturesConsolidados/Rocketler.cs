@@ -54,7 +54,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Esqueleto/hips/spine/chest/upper_arm.R/forearm.R/hand.R"),
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
-                TaxaDeUso = 1.25f
+                TaxaDeUso = .125f
             },
             new PetAttackDb()
             {
@@ -63,7 +63,7 @@ namespace Criatures2021
                 Colisor = new Colisor("Esqueleto/hips/spine/chest/upper_arm.R/forearm.R/hand.R"),
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
-                TaxaDeUso = 1.25f
+                TaxaDeUso = .125f
             }
         };
 

@@ -5,6 +5,12 @@ namespace Criatures2021
 {
     public class QuantitativeItem
     {
+        public static bool NeedUsePerfection(PetBase meuCriature)
+        {
+            PetAtributes A = meuCriature.PetFeat.meusAtributos;
+            return CanUseRecoveryItem(A) || CanUseEnergyItem(A) || meuCriature.StatusTemporarios.Count > 0;
+        }
+
         public static bool CanUseRecoveryItem(PetAtributes A)
         {
             if (A.PV.Corrente < A.PV.Maximo && A.PV.Corrente > 0)

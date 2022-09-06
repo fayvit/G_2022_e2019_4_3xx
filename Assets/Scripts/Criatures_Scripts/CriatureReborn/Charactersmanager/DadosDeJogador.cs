@@ -18,7 +18,7 @@ namespace Criatures2021
         public int MaxCarregaveis { get; set; } = 5;
 
         public List<ItemBase> Itens { get => itens; set => itens = value; }
-        public IndiceDeArmagedoms UltimoArmagedom { get; set; } = IndiceDeArmagedoms.cavernaIntro;
+        public IndiceDeArmagedoms UltimoArmagedom { get; set; } = IndiceDeArmagedoms.acampamentoDaResistencia;
         public float TempoDoUltimoUsoDeItem { get; set; } = 0;
         public int CriatureSai { get; set; } = 0;
 
@@ -92,37 +92,37 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Wisks,7),
-                new PetBase(PetName.Galfo,11),
-                new PetBase(PetName.Wisks,7),
-                new PetBase(PetName.Vampire,13),
-                new PetBase(PetName.Rabitler,9),
-                new PetBase(PetName.Arpia,9),
-                new PetBase(PetName.Marak,11),
-                new PetBase(PetName.Estrep,11),
-                new PetBase(PetName.Onarac,7),
-                new PetBase(PetName.Oderc,7),
-                new PetBase(PetName.Nedak,7),
-                new PetBase(PetName.Izicuolo,7),
-                new PetBase(PetName.FelixCat,7),
-                new PetBase(PetName.Nessei,7),
-                new PetBase(PetName.Steal,8),
-                new PetBase(PetName.Urkan,8),
-                new PetBase(PetName.Iruin,7),
-                new PetBase(PetName.Cabecu,10),
-                new PetBase(PetName.Florest,10),
-                new PetBase(PetName.Xuash,10),
-                new PetBase(PetName.PolyCharm,10),
-                new PetBase(PetName.Flam,9),
-                new PetBase(PetName.Cracler,8),
-                new PetBase(PetName.Baratarab,10),
-                new PetBase(PetName.Babaucu,10),
-                new PetBase(PetName.Aladegg,9),
-                new PetBase(PetName.Abutre,8),
-                new PetBase(PetName.Fajin,7),
-                new PetBase(PetName.Rocketler,7),
-                new PetBase(PetName.Croc,8),
-                new PetBase(PetName.Escorpion,8),
+                new PetBase(PetName.Arpia,7),
+                //new PetBase(PetName.Galfo,11),
+                //new PetBase(PetName.Wisks,7),
+                //new PetBase(PetName.Vampire,13),
+                //new PetBase(PetName.Rabitler,9),
+                //new PetBase(PetName.Arpia,9),
+                //new PetBase(PetName.Marak,11),
+                //new PetBase(PetName.Estrep,11),
+                //new PetBase(PetName.Onarac,7),
+                //new PetBase(PetName.Oderc,7),
+                //new PetBase(PetName.Nedak,7),
+                //new PetBase(PetName.Izicuolo,7),
+                //new PetBase(PetName.FelixCat,7),
+                //new PetBase(PetName.Nessei,7),
+                //new PetBase(PetName.Steal,8),
+                //new PetBase(PetName.Urkan,8),
+                //new PetBase(PetName.Iruin,7),
+                //new PetBase(PetName.Cabecu,10),
+                //new PetBase(PetName.Florest,10),
+                //new PetBase(PetName.Xuash,10),
+                //new PetBase(PetName.PolyCharm,10),
+                //new PetBase(PetName.Flam,9),
+                //new PetBase(PetName.Cracler,8),
+                //new PetBase(PetName.Baratarab,10),
+                //new PetBase(PetName.Babaucu,10),
+                //new PetBase(PetName.Aladegg,9),
+                //new PetBase(PetName.Abutre,8),
+                //new PetBase(PetName.Fajin,7),
+                //new PetBase(PetName.Rocketler,7),
+                //new PetBase(PetName.Croc,8),
+                //new PetBase(PetName.Escorpion,8),
             };
 
             foreach (var v in criaturesAtivos)
@@ -131,27 +131,27 @@ namespace Criatures2021
                 Livro.AdicionaCapturado(v.NomeID);
             }
 
-            
-            CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
-            CriaturesAtivos[2].PetFeat.meusAtributos.PV.Corrente = 1;
-            CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;
-            //CriaturesAtivos[4].StatusTemporarios.Add(new DatesForTemporaryStatus() { Tipo = StatusType.envenenado });
-            VerifyApplyPoisonStatus.InsereStatus(null, criaturesAtivos[4], new DatesForTemporaryStatus() { Tipo = StatusType.envenenado }, true);
-            AddSimpleStatus.InserindoNovoStatus(null, criaturesAtivos[4],
-                new Amedrontado()
-                {
-                    CDoAfetado = null,
-                    Dados = new DatesForTemporaryStatus() { Tipo = StatusType.amedrontado },
-                    OAfetado = criaturesAtivos[4]
-                }, true);
 
-            AddSimpleStatus.InserindoNovoStatus(null, criaturesAtivos[4],
-                new Fraco()
-                {
-                    CDoAfetado = null,
-                    Dados = new DatesForTemporaryStatus() { Tipo = StatusType.fraco },
-                    OAfetado = criaturesAtivos[4]
-                }, true);
+            //CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
+            //CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
+            //CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;
+            //CriaturesAtivos[4].StatusTemporarios.Add(new DatesForTemporaryStatus() { Tipo = StatusType.envenenado });
+            VerifyApplyPoisonStatus.InsereStatus(null, criaturesAtivos[0], new DatesForTemporaryStatus() { Tipo = StatusType.envenenado }, true);
+            //AddSimpleStatus.InserindoNovoStatus(null, criaturesAtivos[4],
+            //    new Amedrontado()
+            //    {
+            //        CDoAfetado = null,
+            //        Dados = new DatesForTemporaryStatus() { Tipo = StatusType.amedrontado },
+            //        OAfetado = criaturesAtivos[4]
+            //    }, true);
+
+            //AddSimpleStatus.InserindoNovoStatus(null, criaturesAtivos[0],
+            //    new Fraco()
+            //    {
+            //        CDoAfetado = null,
+            //        Dados = new DatesForTemporaryStatus() { Tipo = StatusType.fraco },
+            //        OAfetado = criaturesAtivos[0]
+            //    }, true);
 
             //criaturesAtivos[0].GolpesPorAprender.Add(new PetAttackDb() { Nome = AttackNameId.sobreVoo });
             //criaturesAtivos[0].PetFeat.mNivel.ParaProxNivel = criaturesAtivos[0].PetFeat.mNivel.XP + 1;
@@ -164,9 +164,9 @@ namespace Criatures2021
             //};
             Itens = new List<ItemBase>()
         {
-            //ItemFactory.Get(NameIdItem.pergaminhoDePerfeicao,14),
+            ItemFactory.Get(NameIdItem.pergaminhoDePerfeicao,14),
             ItemFactory.Get(NameIdItem.maca,1),
-            ItemFactory.Get(NameIdItem.cartaLuva,1),
+            ItemFactory.Get(NameIdItem.cartaLuva,11),
             ItemFactory.Get(NameIdItem.pergTempestadeEletrica,1),
             ItemFactory.Get(NameIdItem.tonico,10),
             ItemFactory.Get(NameIdItem.amuletoDaCoragem,10),
@@ -181,9 +181,11 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.pilha,10),
             ItemFactory.Get(NameIdItem.estrela,10),
             ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
-            ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
-            ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
-            ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeAnanda,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeBoutjoi,10),
+            //ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
+            //ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
+            //ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
             //ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
             //ItemFactory.Get(NameIdItem.pergFuracaoDeFolhas,5),
             //ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),

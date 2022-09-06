@@ -5,7 +5,6 @@ using FayvitBasicTools;
 using Criatures2021Hud;
 using FayvitMessageAgregator;
 using FayvitSupportSingleton;
-using FayvitSounds;
 
 namespace Criatures2021
 { 
@@ -239,7 +238,7 @@ namespace Criatures2021
 
 
             Debug.Log("Uma chamada de save[em observação]");
-            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.SaveDates());
+            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
             //GameController.g.Salvador.SalvarAgora();
         }
 

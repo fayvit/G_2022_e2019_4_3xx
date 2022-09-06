@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MelhoraInstancia3D
 {
-    public static Vector3 PosParaDeslocamento(Vector3 pontoAlvo, Vector3 posAtual)
+    public static Vector3 NoMapaDepoisEmparedado(Vector3 pontoAlvo, Vector3 posAtual)
     {
         pontoAlvo = ProcuraPosNoMapa(pontoAlvo);
         pontoAlvo = PosEmparedado(pontoAlvo, posAtual);
@@ -33,27 +33,59 @@ public class MelhoraInstancia3D
         return retorno;
     }
 
-    public static Vector3 ProcuraPosNoMapa(Vector3 pontoAlvo,float customVarDir=.1f)
+    public static Vector3 ProcuraPosPorTipo(Vector3 pontoAlvo, Vector3 pontoAtual, TipoDeAfastamento tipo)
     {
-        Vector3 retorno = pontoAlvo;
-        RaycastHit hit = new RaycastHit();
-        if (Physics.Raycast(pontoAlvo, Vector3.up, out hit))
-        //if (hit.transform.name == terra)
+        Vector3 retorno = default;
+        switch (tipo)
         {
-            Debug.Log("down catch");
-            retorno = hit.point;
-
-
-        }
-
-        if (Physics.Raycast(pontoAlvo + customVarDir * Vector3.up, Vector3.down, out hit))
-        // if (hit.transform.name == terra)
-        {
-            Debug.Log("up catch");
-            retorno = hit.point;
+            case TipoDeAfastamento.posNoMapa:
+                retorno = ProcuraPosNoMapa(pontoAlvo);
+            break;
+            case TipoDeAfastamento.posEmparedado:
+                retorno = PosEmparedado(pontoAlvo, pontoAtual);
+                break;
+            case TipoDeAfastamento.noMapaDepoisEmparedado:
+                retorno = NoMapaDepoisEmparedado(pontoAlvo, pontoAtual);
+            break;
         }
 
         return retorno;
     }
+
+    public static Vector3 ProcuraPosNoMapa(Vector3 pontoAlvo,float customVarDir=.1f)
+    {
+        Vector3 retorno = pontoAlvo;
+        RaycastHit hit = new RaycastHit();
+        Physics.queriesHitBackfaces = true;
+
+        if (Physics.Raycast(pontoAlvo + customVarDir * Vector3.up, Vector3.down, out hit))
+        // if (hit.transform.name == terra)
+        {
+            Debug.Log("up catch: " + hit.collider.name);
+            retorno = hit.point;
+            //GameObject G = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            //G.transform.position = retorno;
+        }
+
+        if (retorno == pontoAlvo && Physics.Raycast(pontoAlvo, Vector3.up, out hit))
+        //if (hit.transform.name == terra)
+        {
+            Debug.Log("down catch: "+hit.collider.name);
+            retorno = hit.point;
+            //GameObject G = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            //G.transform.position = retorno;
+        }
+
+        
+
+        return retorno;
+    }
+}
+
+public enum TipoDeAfastamento
+{ 
+    posNoMapa,
+    posEmparedado,
+    noMapaDepoisEmparedado
 }
 

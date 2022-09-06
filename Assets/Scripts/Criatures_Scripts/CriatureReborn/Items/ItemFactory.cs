@@ -58,9 +58,9 @@ namespace Criatures2021
                 //case nomeIDitem.pergArmagedom:
                 //    retorno = new MbPergaminhoDeArmagedom(estoque);
                 //    break;
-                //case nomeIDitem.pergaminhoDePerfeicao:
-                //    retorno = new MbPergaminhoDePerfeicao(estoque);
-                //    break;
+                case NameIdItem.pergaminhoDePerfeicao:
+                    retorno = new PergPerfeicao(estoque);
+                break;
                 //case nomeIDitem.pergaminhoDeFuga:
                 //    retorno = new MbPergaminhoDeFuga(estoque);
                 //    break;
@@ -76,15 +76,18 @@ namespace Criatures2021
                 case NameIdItem.pergaminhoDeBoutjoi:
                     retorno = new PergaminhoDeBoutjoi(estoque);
                 break;
-                //case nomeIDitem.canetaSagradaDeLog:
-                //    retorno = new CanetaSagradaDeLog(estoque);
-                //    break;
-                //case nomeIDitem.pergSinara:
-                //    retorno = new PergaminhoDeSinara(estoque);
-                //    break;
-                //case nomeIDitem.pergAlana:
-                //    retorno = new PergaminhoDeAlana(estoque);
-                //    break;
+                case NameIdItem.canetaSagradaDeLog:
+                    retorno = new CanetaSagradaDeLog(estoque);
+                break;
+                case NameIdItem.pergSaida:
+                    retorno = new PergSaida(estoque);
+                break;
+                case NameIdItem.pergSinara:
+                    retorno = new PergaminhoDeSinara(estoque);
+                    break;
+                case NameIdItem.pergAlana:
+                    retorno = new PergAlana(estoque);
+                break;
                 //case nomeIDitem.pergSabre:
                 //    retorno = new PergDeSabre(estoque);
                 //    break;

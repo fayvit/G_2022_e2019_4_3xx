@@ -77,7 +77,7 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Armação/Bone.001/Bone/Bone.002"),
                 Nome = AttackNameId.olharMal,
-                TaxaDeUso = 1.25f,
+                TaxaDeUso = .125f,
                 DistanciaEmissora = 0.5f
             },
             new PetAttackDb()

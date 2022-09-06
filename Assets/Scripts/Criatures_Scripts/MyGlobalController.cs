@@ -2,8 +2,9 @@
 using FayvitBasicTools;
 using FayvitMessageAgregator;
 using FayvitUI;
-using Criatures2021Hud;
 using FayvitSounds;
+using Criatures2021Hud;
+using TextBankSpace;
 
 
 namespace Criatures2021
@@ -40,18 +41,32 @@ namespace Criatures2021
             MessageAgregator<MsgEnterInAggressiveResponse>.RemoveListener(OnTriggerAggressiveResponse);
 
             base.OnDestroy();
+
+            Confirmation.ChangeBtnYesText(TextBank.RetornaFraseDoIdioma(TextKey.simOuNao));
+            Confirmation.ChangeBtnNoText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao)[1]);
         }
 
         public static CharacterManager MainPlayer {
             get {
                 if (mainManager == null)
-                    mainManager = MainCharTransform.GetComponent<CharacterManager>();
+                    if(MainCharTransform!=null)
+                        mainManager = MainCharTransform.GetComponent<CharacterManager>();
 
                 return mainManager;
             }
         }
 
-        public static Transform MainCharTransform => Instance.Players[0].Manager.transform;
+        public static Transform MainCharTransform { 
+            get {
+                if (mainManager != null)
+                    return mainManager.transform;
+                else
+                if (Instance != null && Instance.Players != null && Instance.Players.Count > 0)
+                    return Instance.Players[0].Manager.transform;
+                else
+                    return null;
+            } 
+        }
 
         private void OnTriggerAggressiveResponse(MsgEnterInAggressiveResponse obj)
         {

@@ -1,10 +1,12 @@
 ﻿using FayvitBasicTools;
 using FayvitCam;
 using FayvitCommandReader;
+using FayvitLoadScene;
 using FayvitMessageAgregator;
 using FayvitMove;
 using FayvitSupportSingleton;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Criatures2021
 {
@@ -17,7 +19,7 @@ namespace Criatures2021
         private LocalState state = LocalState.onFree;
         private bool podeVoltarProTtreinador;
 
-        private const float TEMPO_PODE_MUDAR = .25f;
+        private const float TEMPO_PODE_MUDAR = 1.25f;
 
         private enum LocalState
         { 
@@ -29,6 +31,12 @@ namespace Criatures2021
         {
             GameObject G = ResourcesFolders.GetPet(PetName.KeyDjey);
             G = Instantiate(G,MelhoraInstancia3D.ProcuraPosNoMapa(usuario.position),usuario.rotation);
+            G.layer = 0;
+            SceneManager.MoveGameObjectToScene(G, 
+             SceneManager.GetSceneByName(   
+                NomesCenasEspeciais.ComunsDeFase.ToString())
+             );
+
             ParticulasComSom(usuario);
             //Destroy(G.GetComponent<PetManager>());
             KeyDjeyTransportManager k = G.AddComponent<KeyDjeyTransportManager>();
@@ -134,21 +142,7 @@ namespace Criatures2021
 
                     if (GetCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeVoltarProTtreinador)
                     {
-                        ParticulasComSom(usuario);
-                        MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
-                        {
-                            usuario = usuario.gameObject,
-                            returnState = CharacterState.onFree
-                        });
-
-                        MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
-                        {
-                            pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
-                        });
-
-                        usuario.parent = null;
-                        usuario.rotation =  DirectionOnThePlane.Rotation(usuario.forward);
-                        Destroy(gameObject);
+                        SairDoKeyDjey();
                     }
                     break;
                 case LocalState.inDamage:
@@ -172,6 +166,29 @@ namespace Criatures2021
             bool focar = GetCommander.GetButtonDown(CommandConverterInt.camFocus);
             CameraApplicator.cam.ValoresDeCamera(V.x, V.y, focar, move.Controller.velocity.sqrMagnitude > .1f);
 
+        }
+
+        public void SairDoKeyDjey()
+        {
+            ParticulasComSom(usuario);
+
+            usuario.parent = null;
+            usuario.rotation = DirectionOnThePlane.Rotation(usuario.forward);
+            usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
+
+            MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
+            {
+                usuario = usuario.gameObject,
+                returnState = CharacterState.onFree
+            });
+
+            MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+            {
+                pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
+            });
+
+            
+            Destroy(gameObject);
         }
     }
 

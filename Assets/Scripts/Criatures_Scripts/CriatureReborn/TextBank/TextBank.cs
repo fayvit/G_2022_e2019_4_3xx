@@ -244,7 +244,7 @@ namespace TextBankSpace
         DevotoRalfAntesDaLuta,
         DevotoRalfAoGanharLuta,
         DevotoRalfDepoisDaLuta,
-        DevotaAnaniasAntesDaLuta,
+        ____________________________umaChavePerdida,
         DevotoAnaniasAntesDaLuta,
         DevotoAnaniasAoGanharLuta,
         DevotoAnaniasDepoisDaLuta,
@@ -298,6 +298,8 @@ namespace TextBankSpace
         DevotaNeuzaAntesDaLuta,
         DevotaNeuzaAoGanharLuta,
         DevotaNeuzaDepoisDaLuta,
-        DevotaRosanaDepoisDaLuta
+        DevotaRosanaDepoisDaLuta,
+        usarPergaminhoDeSinara,
+        usarPergaminhoDeAlana
     }
 }

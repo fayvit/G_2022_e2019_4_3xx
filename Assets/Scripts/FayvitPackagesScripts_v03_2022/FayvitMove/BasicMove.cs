@@ -43,7 +43,7 @@ namespace FayvitMove
         public float WalkSpeed => movFeatures.walkSpeed;
 
         public BasicMove() { }
-        public BasicMove(MoveFeatures movFeatures,float standardFallSpeed=1,float overlapTaxRadius = .9f) 
+        public BasicMove(MoveFeatures movFeatures,float standardFallSpeed = 12,float overlapTaxRadius = .9f) 
         {
             this.movFeatures = movFeatures;
             this.standardFallSpeed = standardFallSpeed;

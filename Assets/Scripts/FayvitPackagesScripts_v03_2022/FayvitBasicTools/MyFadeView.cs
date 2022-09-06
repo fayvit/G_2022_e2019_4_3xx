@@ -13,7 +13,7 @@ namespace FayvitBasicTools
         [SerializeField] private Image escurecedorUpper;
         [SerializeField] private Image escurecedorLower;
 #pragma warning restore 0649
-        private Color corDoFade = Color.black;
+        private Color corDoFade = new Color(0,0,0,0);
         private FaseDaqui fase = FaseDaqui.emEspera;
         private float tempoDeAtividade = 1;
         private float tempoDecorrido = 0;
@@ -99,14 +99,17 @@ namespace FayvitBasicTools
 
         void ComunsDeFadeOut(Color corDoFade)
         {
+            Debug.Log("Fade out Start");
+
             MessageAgregator<FadeOutStart>.Publish();
             //EventAgregator.Publish(EventKey.fadeOutStart, null);
             escurecedorLower.gameObject.SetActive(true);
             escurecedorUpper.gameObject.SetActive(true);
+            float alpha = this.corDoFade.a;
             this.corDoFade = corDoFade;
-            this.corDoFade.a = 0;
+            //this.corDoFade.a = 0;
             fase = FaseDaqui.escurecendo;
-            tempoDecorrido = 0;
+            tempoDecorrido = alpha*tempoDeAtividade;
         }
 
 
@@ -132,10 +135,12 @@ namespace FayvitBasicTools
 
         void ComunsDoFadeIn(Color corDoFade)
         {
+            Debug.Log("Fade in Start");
+            float alpha = this.corDoFade.a;
             this.corDoFade = corDoFade;
-            this.corDoFade.a = 1;
+            //this.corDoFade.a = 1;
             fase = FaseDaqui.clareando;
-            tempoDecorrido = 0;
+            tempoDecorrido = (1- alpha) *tempoDeAtividade;
         }
 
 
@@ -145,6 +150,7 @@ namespace FayvitBasicTools
                 tempoDeAtividade = tempoBaseDoEscurecimento;
             else
                 tempoDeAtividade = darkenTime;
+
             ComunsDeFadeOut(fadeColor);
         }
 

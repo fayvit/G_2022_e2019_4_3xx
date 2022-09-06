@@ -14,7 +14,7 @@ namespace Criatures2021
                 ModPersonagem = 0.1f,
                 Colisor = new Colisor("esqueleto/centro/c1/c2/c3/cabeca/bocaB"),
                 Nome = AttackNameId.olharMal,
-                TaxaDeUso = 1,
+                TaxaDeUso = .125f,
                 DistanciaEmissora = 0.5f,
                 TempoDeInstancia = 0.25f
             },

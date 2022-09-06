@@ -7,6 +7,8 @@ using FayvitCommandReader;
 using FayvitBasicTools;
 using FayvitLoadScene;
 using Criatures2021;
+using FayvitSave;
+using CustomizationSpace;
 
 public class SelectStartPet : MonoBehaviour
 {
@@ -100,12 +102,13 @@ public class SelectStartPet : MonoBehaviour
     private void OnStartSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         CharacterManager C = GameObject.FindWithTag("Player").GetComponent<CharacterManager>();
-        C.transform.position = new Vector3(450, 1, 515);
-        
+        C.GetComponent<CharacterController>().Move(new Vector3(450, 1, 515) - C.transform.position);
+        //C.transform.position = new Vector3(450, 1, 515);
+        C.GetComponent<CharacterController>().enabled = true;
 
         PetBase P = new PetBase(names[chooseIndex],1);
 
-        MyGameController.LoadSavedCharacters();
+        CustomizationSavedChars.LoadSavedCharacters();
         SceneManager.UnloadSceneAsync(NomesCenasEspeciais.SelectCriature.ToString());
         SceneManager.sceneLoaded -= OnStartSceneLoaded;
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(NomesCenas.acampamentoDaResistencia.ToString()));
@@ -118,6 +121,11 @@ public class SelectStartPet : MonoBehaviour
             {
                 C.Dados.CriaturesAtivos.Add(P);
                 C.InicializarPet();
+
+                SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+
+                C.Dados.Livro.AdicionaVisto(P.NomeID);
+                C.Dados.Livro.AdicionaCapturado(P.NomeID);
             });
         });
     }
@@ -128,5 +136,10 @@ public class SelectStartPet : MonoBehaviour
         nameTxt.text = P.GetNomeEmLinguas;
         type.text = TypeNameInLanguages.Get(P.PetFeat.meusTipos[0]);
         description.text = TextBankSpace.TextBank.GetPetDescription(P.NomeID);
+
+        FayvitUI.ChangeToBestFitOnExtrapolate.Verify(nameTxt);
+        FayvitUI.ChangeToBestFitOnExtrapolate.Verify(type);
+        FayvitUI.ChangeToBestFitOnExtrapolate.Verify(description);
+
     }
 }

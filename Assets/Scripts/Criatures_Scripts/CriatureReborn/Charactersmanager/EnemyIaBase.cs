@@ -60,12 +60,24 @@ namespace Criatures2021
         public Dictionary<DetectHeroResponse, float> DetectResponse => detectResponse;
 
         public PetManager HeroPet { get => heroPet; }
+        public GameObject PetOwner { get => petOwner; }
 
+        public void RequestClearTarget(GameObject owner)
+        {
+            if (owner == petOwner)
+            {
+                MessageAgregator<MsgChangeToPet>.RemoveListener(OnChangeToPet);
+                state = IaState.stand;
+            }
+
+        }
+
+        /* talvez possa ser retirado pois foi colocado stopped no petmanagerenemy*/
         public void WaitPetChange(GameObject petOwner)
         {
-            
+
             WaitPetChange(petOwner.GetComponent<CharacterManager>().ActivePet as PetManagerCharacter);
-            
+
         }
 
         public void WaitPetChange(PetManagerCharacter pet)
@@ -75,6 +87,10 @@ namespace Criatures2021
                 petOwner = pet.T_Dono.gameObject;
                 state = IaState.stopped;
                 MessageAgregator<MsgChangeToPet>.AddListener(OnChangeToPet);
+                MessageAgregator<MsgStartWaitToPetChange>.Publish(new MsgStartWaitToPetChange()
+                {
+                    waiter = transform.gameObject
+                });
             }
         }
 
@@ -82,7 +98,25 @@ namespace Criatures2021
         {
             if (obj.dono == petOwner.transform)
             {
-                state = IaState.rivalElectedWithAgressive;
+                if (myPet.PetFeat.meusAtributos.PV.Corrente > 0)
+                    state = IaState.rivalElectedWithAgressive;
+                else
+                {
+                    state = IaState.stopped;
+                    SupportSingleton.Instance.InvokeOnCountFrame(() => {
+                        MessageAgregator<MsgCriatureDefeated>.Publish(new MsgCriatureDefeated()
+                        {
+                            atacker = MyGlobalController.MainPlayer.ActivePet.gameObject,
+                            defeated = controll.Mov.Controller.gameObject,
+                            doDerrotado = myPet
+                        });
+                    }, 2);
+
+                    MessageAgregator<MsgEndWaitToPetChange>.Publish(new MsgEndWaitToPetChange()
+                    {
+                        waiter = transform.gameObject
+                    });
+                }
 
                 SupportSingleton.Instance.InvokeOnEndFrame(()=> {
                     MessageAgregator<MsgChangeToPet>.RemoveListener(OnChangeToPet);
@@ -111,6 +145,7 @@ namespace Criatures2021
                 if (P is PetManagerCharacter)
                 {
                     heroPet = P;
+                    petOwner = ((PetManagerCharacter)P).T_Dono.gameObject;
                     AproximeEnquantoEspera();
                 }
                 else
@@ -150,8 +185,11 @@ namespace Criatures2021
                     Debug.Log("ActivePet: " + P);
 
                     if (P)
-                        if(P.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente>0)
+                        if (P.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0)
+                        {
                             heroPet = P;
+                            petOwner = cm.gameObject;
+                        }
                 }
             }
 
@@ -174,7 +212,9 @@ namespace Criatures2021
         {
             if (heroPet == null)
             {
-                heroPet = MonoBehaviour.FindObjectOfType<CharacterManager>().ActivePet;
+                CharacterManager cm = MonoBehaviour.FindObjectOfType<CharacterManager>();
+                petOwner = cm.gameObject;
+                heroPet = cm.ActivePet;
             }
 
             if (Vector3.SqrMagnitude(heroPet.transform.position - transform.position) < detectDistance * detectDistance)
@@ -512,5 +552,14 @@ namespace Criatures2021
 
     public struct MsgEnterInAggressiveResponse : IMessageBase {
         public PetBase enemyPet;
+    }
+
+    public struct MsgStartWaitToPetChange : IMessageBase {
+        public GameObject waiter;
+    }
+
+    public struct MsgEndWaitToPetChange : IMessageBase
+    {
+        public GameObject waiter;
     }
 }

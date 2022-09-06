@@ -173,7 +173,7 @@ namespace TextBankSpace
                 "Eu estudo para ser um sacerdote de <color=cyan>Log</color>, o deus da sabedoria e conhecimento.",
                 "Você deve ter encontrado por entre as montanhas aquele sujeitinho repugnante e mediocre que me roubou",
                 "Ele me tomou a caneta sagrada que eu usava para escrever pergaminhos!",
-                "Se você puder me ajudar, recuperando minha caneta, poderei te recompensar escrevendo pergaminhos para você"
+                "Me ajude, recuperando minha caneta, então poderei te recompensar escrevendo pergaminhos para você"
             }
         },
         {

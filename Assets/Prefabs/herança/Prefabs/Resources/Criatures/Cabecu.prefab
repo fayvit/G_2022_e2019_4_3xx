@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 2252947383602085325}
   - component: {fileID: 6814572539619528841}
   - component: {fileID: 2252123635246096819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cabecu
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -747,6 +747,8 @@ MonoBehaviour:
           taxa: 0.2
       mNivel:
         _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
       distanciaFundamentadora: 0.2
     atkManager:
       golpeEscolhido: 0
@@ -780,8 +782,10 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
+    varHeightCamera: 0.25
     alturaCameraLuta: 1
     distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -802,7 +806,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5

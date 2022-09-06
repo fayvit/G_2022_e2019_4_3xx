@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Criatures2021;
+using CustomizationSpace;
 
 public class TestApperanceSet : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class TestApperanceSet : MonoBehaviour
 
         if (C)
         {
-            if (C.Ccd.PersBase == PersonagemBase.masculino)
+            if (C.Ccd.PersBase == CustomizationSpace.PersonagemBase.masculino)
             {
                 secManagerH.SetCustomDates(C.Ccd);
                 secManagerM.gameObject.SetActive(false);
@@ -38,8 +39,8 @@ public class TestApperanceSet : MonoBehaviour
 
     private void OnApperanceReceived(MsgApperanceTransport obj)
     {
-        CustomizationContainerDates ccd = obj.lccd[Random.Range(0, obj.lccd.Count)];
-        if (ccd.PersBase == PersonagemBase.masculino)
+        CustomizationSpace.CustomizationContainerDates ccd = obj.lccd[Random.Range(0, obj.lccd.Count)];
+        if (ccd.PersBase == CustomizationSpace.PersonagemBase.masculino)
         {
             secManagerH.SetCustomDates(ccd);
             secManagerM.gameObject.SetActive(false);

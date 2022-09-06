@@ -59,7 +59,7 @@ namespace Criatures2021
                 NivelDoGolpe = 10,
                 Colisor = new Colisor("esqueleto"),
                 Nome = AttackNameId.olharEnfraquecedor,
-                TaxaDeUso = 0.5f,
+                TaxaDeUso = 0.125f,
                 DistanciaEmissora = 0.5f
             }
         };

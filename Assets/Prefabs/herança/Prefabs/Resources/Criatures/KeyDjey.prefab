@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 3753034271824973541}
   - component: {fileID: 8549770358292836646}
   - component: {fileID: 1661895883615985114}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: KeyDjey
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -350,6 +350,7 @@ MonoBehaviour:
     varHeightCamera: 0.25
     alturaCameraLuta: 1
     distanciaCameraLuta: 6
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -370,7 +371,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5

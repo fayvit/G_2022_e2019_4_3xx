@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7863744436036189938}
   - component: {fileID: 2076253807695935833}
   - component: {fileID: 2076253807089702772}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Arpia
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   groundedNameBool: noChao
   jumpAnimationStateName: pulando
   atkBool: atacando
+  damageStateName: dano1
   emDanoBool: dano1
   emDano_2Bool: dano2
   defeatedBool: cair
@@ -160,6 +161,8 @@ MonoBehaviour:
           taxa: 0.2
       mNivel:
         _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
       distanciaFundamentadora: 0.2
     atkManager:
       golpeEscolhido: 0
@@ -193,8 +196,10 @@ MonoBehaviour:
       zeroedStamina: 0
     alturaCamera: 0.25
     distanciaCamera: 5.5
+    varHeightCamera: 0.25
     alturaCameraLuta: 0.25
     distanciaCameraLuta: 4.5
+    captureDificult: 1
   controll:
     mov:
       lockTarget: {fileID: 0}
@@ -215,7 +220,7 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 0
+      standardFallSpeed: 12
       overlapTaxRadius: 0.8
   roll:
     totalTimeInRoll: 0.5
@@ -350,7 +355,6 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 3
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

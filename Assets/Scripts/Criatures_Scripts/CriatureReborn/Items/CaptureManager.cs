@@ -4,6 +4,7 @@ using FayvitMessageAgregator;
 using FayvitCam;
 using Criatures2021Hud;
 using TextBankSpace;
+using FayvitBasicTools;
 
 namespace Criatures2021
 {
@@ -62,6 +63,11 @@ namespace Criatures2021
                     if (arredondado != disparado && arredondado < LOOPS)
                     {
                         ParticleOfSubstitution.ParticulaSaiDaLuva(CriatureAlvoDoItem.transform.position);
+
+                        MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+                        {
+                            sfxId = FayvitSounds.SoundEffectID.Darkness8
+                        });
 
                         MessageAgregator<MsgRequestDamageAnimateWithFade>.Publish(
                             new MsgRequestDamageAnimateWithFade()
@@ -124,11 +130,15 @@ namespace Criatures2021
                         animaPose = new AnimateCapturePose(P.MeuCriatureBase,dono);
                         MonoBehaviour.Destroy(P.gameObject);
                         fase = FaseDoAnimaCaptura.finalizaCapturando;
+
                     }
                     break;
                 case FaseDoAnimaCaptura.finalizaCapturando:
                     if (!animaPose.Update())
                     {
+                        IamTarget.StaticStart(dono.GetComponent<CharacterManager>().ActivePet,
+                            () => { MessageAgregator<MsgReturnRememberedMusic>.Publish(); });
+
                         return false;
                     }
                 break;
@@ -155,11 +165,21 @@ namespace Criatures2021
 
             MonoBehaviour.Destroy(
             ParticleOfSubstitution.InsereParticulaDoRaio(CriatureAlvoDoItem.transform.position, maoDoHeroi), 2.5f);
+
+            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.Collapse1
+            });
+
             fase = FaseDoAnimaCaptura.cameraDoHeroi;
         }
 
         void PreparaFinalSemCaptura()
         {
+            MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
+            {
+                sfxId = FayvitSounds.SoundEffectID.XP_Ice03
+            });
             ParticleOfSubstitution.ParticulaSaiDaLuva(CriatureAlvoDoItem.transform.position, GeneralParticles.captureEscape);
             CriatureAlvoDoItem.transform.localScale = new Vector3(1, 1, 1);
             //animator.SetBool("dano1", false);
@@ -169,7 +189,7 @@ namespace Criatures2021
                 gameObject = CriatureAlvoDoItem
             });
 
-            Debug.LogError("ota HUd");
+            //Debug.LogError("ota HUd");
 
             MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
             {
