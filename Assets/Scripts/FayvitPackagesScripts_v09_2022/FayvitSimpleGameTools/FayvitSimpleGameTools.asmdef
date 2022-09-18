@@ -1,0 +1,17 @@
+{
+    "name": "FayvitSimpleGameTools",
+    "references": [
+        "GUID:b237fa24ada51e64a92c59424705e7af",
+        "GUID:035d19e5a99de4a44934fff90abd1d94",
+        "GUID:ed0ac067c21139e42916354d711bcad0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

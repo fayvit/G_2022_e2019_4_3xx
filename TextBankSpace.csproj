@@ -654,9 +654,13 @@
       <Project>{C83D8325-0C56-0661-4D89-91C0A00A40D3}</Project>
       <Name>BasicCriatures</Name>
     </ProjectReference>
-    <ProjectReference Include="Fayvit.csproj">
-      <Project>{CB9A3DDE-61F3-EE0D-2F35-0584AB13719E}</Project>
-      <Name>Fayvit</Name>
+    <ProjectReference Include="FayvitGameTools.csproj">
+      <Project>{1BABE418-6114-B37B-053E-AD6CF93A723E}</Project>
+      <Name>FayvitGameTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitBasicTools.csproj">
+      <Project>{5E60CA05-7413-10AE-345D-75F3F65142D1}</Project>
+      <Name>FayvitBasicTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

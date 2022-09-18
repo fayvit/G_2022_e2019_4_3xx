@@ -5,7 +5,7 @@ using FayvitUI;
 using FayvitSounds;
 using Criatures2021Hud;
 using TextBankSpace;
-
+using System;
 
 namespace Criatures2021
 {
@@ -24,6 +24,9 @@ namespace Criatures2021
             MessageAgregator<MsgRequestNewAttackHud>.AddListener(OnRequestNewAttackHud);
             MessageAgregator<MsgCloseNewAttackHudNonFinally>.AddListener(OnNewAttackNonFinnaly);
             MessageAgregator<MsgEnterInAggressiveResponse>.AddListener(OnTriggerAggressiveResponse);
+            MessageAgregator<MsgOpenOneMessage>.AddListener(OnOpenOneMessage);
+            MessageAgregator<MsgCloseMessagePanel>.AddListener(OnCloseOneMessage);
+            MessageAgregator<MsgConfirmationPanelChangeOption>.AddListener(OnConfirmationOptionChange);
 
             base.Start();
         }
@@ -39,11 +42,33 @@ namespace Criatures2021
             MessageAgregator<MsgRequestNewAttackHud>.RemoveListener(OnRequestNewAttackHud);
             MessageAgregator<MsgCloseNewAttackHudNonFinally>.RemoveListener(OnNewAttackNonFinnaly);
             MessageAgregator<MsgEnterInAggressiveResponse>.RemoveListener(OnTriggerAggressiveResponse);
+            MessageAgregator<MsgOpenOneMessage>.RemoveListener(OnOpenOneMessage);
+            MessageAgregator<MsgCloseMessagePanel>.RemoveListener(OnCloseOneMessage);
+            MessageAgregator<MsgConfirmationPanelChangeOption>.RemoveListener(OnConfirmationOptionChange);
+
 
             base.OnDestroy();
 
             Confirmation.ChangeBtnYesText(TextBank.RetornaFraseDoIdioma(TextKey.simOuNao));
             Confirmation.ChangeBtnNoText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao)[1]);
+        }
+
+        private void OnConfirmationOptionChange(MsgConfirmationPanelChangeOption obj)
+        {
+            if (!obj.hideSound)
+                Sfx.PlaySfx(SoundEffectID.Cursor1);
+        }
+
+        private void OnCloseOneMessage(MsgCloseMessagePanel obj)
+        {
+            if (!obj.hideSound)
+                Sfx.PlaySfx(SoundEffectID.Book1);
+        }
+
+        private void OnOpenOneMessage(MsgOpenOneMessage obj)
+        {
+            if (!obj.hideSound)
+                Sfx.PlaySfx(SoundEffectID.painelAbrindo);
         }
 
         public static CharacterManager MainPlayer {

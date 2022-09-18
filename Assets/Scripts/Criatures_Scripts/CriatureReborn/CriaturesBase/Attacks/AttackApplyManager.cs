@@ -68,37 +68,31 @@ namespace Criatures2021
             return false;
         }
 
-        public static bool CanStartAttack(PetBase meuCriatureBase)
+        public static bool CanStartAttack(PetBase meuCriatureBase,System.Action onEmptyStamina=null,System.Action onNotHavingPE=null)
         {
             PetAtributes A = meuCriatureBase.PetFeat.meusAtributos;
             PetAttackManager ggg = meuCriatureBase.GerenteDeGolpes;
             PetAttackBase gg = ggg.meusGolpes[ggg.golpeEscolhido];
 
             if (
-                //gg.UltimoUso + gg.TempoDeReuso < Time.time 
                 meuCriatureBase.StManager.VerifyStaminaAction()
                 && A.PE.Corrente >= gg.CustoPE)
             {
                 A.PE.Corrente -= gg.CustoPE;
-                //gg.UltimoUso = Time.time;
+
                 meuCriatureBase.StManager.ConsumeStamina((uint)gg.CustoDeStamina);
-
-                //AplicadorDeGolpe aplG = gameObject.AddComponent<AplicadorDeGolpe>();
-
-                //aplG.esseGolpe = gg;
-
-                //GameController.g.HudM.AtualizaDadosDaHudVida(false);
-
-                //if (GameController.g.estaEmLuta)
-                //    GameController.g.HudM.AtualizaDadosDaHudVida(true);
-
-                // if(!GameController.g.estaEmLuta)
-                //   //GameController.g.HudM.AtualizaHudHeroi(meuCriatureBase);
 
                 return true;
             }
             else
+            {
+                if (!meuCriatureBase.StManager.VerifyStaminaAction())
+                    onEmptyStamina?.Invoke();
+                else if (A.PE.Corrente < gg.CustoPE)
+                    onNotHavingPE?.Invoke();
+
                 return false;
+            }
         }
     }
 

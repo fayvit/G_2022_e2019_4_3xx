@@ -10,6 +10,7 @@ using TextBankSpace;
 using FayvitSupportSingleton;
 using FayvitSave;
 using CustomizationSpace;
+using System;
 
 namespace Criatures2021
 {
@@ -94,6 +95,8 @@ namespace Criatures2021
             MessageAgregator<MsgChangeGameScene>.AddListener(OnChangeGameScene);
             MessageAgregator<MsgSlopeSlip>.AddListener(OnSlopeSlip);
             MessageAgregator<MsgExitKeyDjey>.AddListener(OnExitKeyDjey);
+            MessageAgregator<MsgAnimaCaptura>.AddListener(OnAnimateCapture);
+            MessageAgregator<MsgFinishChestInteraction>.AddListener(OnFinishChestInteraction);
 
         }
 
@@ -123,6 +126,23 @@ namespace Criatures2021
             MessageAgregator<MsgChangeGameScene>.RemoveListener(OnChangeGameScene);
             MessageAgregator<MsgSlopeSlip>.RemoveListener(OnSlopeSlip);
             MessageAgregator<MsgExitKeyDjey>.RemoveListener(OnExitKeyDjey);
+            MessageAgregator<MsgAnimaCaptura>.RemoveListener(OnAnimateCapture);
+            MessageAgregator<MsgFinishChestInteraction>.RemoveListener(OnFinishChestInteraction);
+        }
+
+        private void OnFinishChestInteraction(MsgFinishChestInteraction obj)
+        {
+            OnFinishTalk(new MsgFinishExternalInteraction());
+            if (!InTeste)
+                SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+        }
+
+        private void OnAnimateCapture(MsgAnimaCaptura obj)
+        {
+            if (obj.dono == gameObject&& !InTeste)
+            {
+                SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+            }
         }
 
         private void OnExitKeyDjey(MsgExitKeyDjey obj)
@@ -249,8 +269,8 @@ namespace Criatures2021
 
                 dados.Livro.AdicionaDerrotado(obj.doDerrotado.NomeID);
 
-                if (ActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0)
-                    SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+                if (ActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0&&!InTeste)
+                    SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             }
         }
 
@@ -349,7 +369,7 @@ namespace Criatures2021
         private void OnChangeGameSceneToArmagedom(MsgChangeGameScene obj)
         {
             if(!InTeste)
-                SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+                SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
 
             SupportSingleton.Instance.InvokeOnEndFrame(() =>
             {

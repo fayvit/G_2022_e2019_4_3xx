@@ -8,7 +8,12 @@ namespace Criatures2021
         public static bool NeedUsePerfection(PetBase meuCriature)
         {
             PetAtributes A = meuCriature.PetFeat.meusAtributos;
-            return CanUseRecoveryItem(A) || CanUseEnergyItem(A) || meuCriature.StatusTemporarios.Count > 0;
+            return A.PV.Corrente > 0 && (
+                A.PV.Corrente < A.PV.Maximo ||
+                A.PE.Corrente < A.PE.Maximo ||
+                meuCriature.StatusTemporarios.Count > 0
+                );
+            //return CanUseRecoveryItem(A) || CanUseEnergyItem(A) || (meuCriature.StatusTemporarios.Count > 0 && A.PV.Corrente>0);
         }
 
         public static bool CanUseRecoveryItem(PetAtributes A)

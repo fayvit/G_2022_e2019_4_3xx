@@ -188,6 +188,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Flam.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Florest.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Galfo.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Grewstick.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Iruin.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Izicuolo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Marak.cs" />
@@ -776,10 +777,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Fayvit.csproj">
-      <Project>{CB9A3DDE-61F3-EE0D-2F35-0584AB13719E}</Project>
-      <Name>Fayvit</Name>
-    </ProjectReference>
     <ProjectReference Include="TextBankSpace.csproj">
       <Project>{33859320-1D0D-F736-81A2-E0A159ED45EF}</Project>
       <Name>TextBankSpace</Name>
@@ -795,6 +792,30 @@
     <ProjectReference Include="BasicEvents.csproj">
       <Project>{3C304215-9CD8-6DC4-E007-A70D86BD298C}</Project>
       <Name>BasicEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitBase.csproj">
+      <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
+      <Name>FayvitBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitSounds.csproj">
+      <Project>{91A02F3C-3725-CDC9-514E-B8BF0DA9CF0C}</Project>
+      <Name>FayvitSounds</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitBasicTools.csproj">
+      <Project>{5E60CA05-7413-10AE-345D-75F3F65142D1}</Project>
+      <Name>FayvitBasicTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitMove.csproj">
+      <Project>{651E2E8D-8F72-E486-6ADF-9FA30262747E}</Project>
+      <Name>FayvitMove</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitSimpleGameTools.csproj">
+      <Project>{AA2CCE28-0BC7-8F30-8EAB-605AD8E988C2}</Project>
+      <Name>FayvitSimpleGameTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitGameTools.csproj">
+      <Project>{1BABE418-6114-B37B-053E-AD6CF93A723E}</Project>
+      <Name>FayvitGameTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

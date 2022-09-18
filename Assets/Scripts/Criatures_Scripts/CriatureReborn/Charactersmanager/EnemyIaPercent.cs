@@ -53,6 +53,13 @@ namespace Criatures2021
             base.Start(T, P, controll);
         }
 
+        void OnDestroy()
+        {
+            MessageAgregator<MsgInvokeStartAtk>.RemoveListener(OnAnyStartAtk);
+            MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
+            MessageAgregator<MsgEnterInDamageState>.RemoveListener(OnEnterInDamageState);
+        }
+
         private void OnEnterInDamageState(MsgEnterInDamageState obj)
         {
             if (obj.oAtacado == MeuTransform.gameObject)

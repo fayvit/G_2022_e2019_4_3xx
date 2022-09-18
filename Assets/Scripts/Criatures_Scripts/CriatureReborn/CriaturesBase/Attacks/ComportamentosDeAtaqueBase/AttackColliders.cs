@@ -39,7 +39,10 @@ namespace Criatures2021
             view2.transform.localRotation = view.transform.rotation;
             view2.GetComponent<BoxCollider>().center = C.deslColisor;
             view2.name = "colisor" + golpeAtivo.Nome.ToString();
-            view2.transform.localScale *= (golpeAtivo.ColisorScale * C.ColisorScale);
+            view2.transform.localScale = new Vector3(
+                view2.transform.localScale.x * C.ColisorScale.x,
+                view2.transform.localScale.y * C.ColisorScale.y,
+                view2.transform.localScale.z * C.ColisorScale.z) * golpeAtivo.ColisorScale;
 
 
             /*

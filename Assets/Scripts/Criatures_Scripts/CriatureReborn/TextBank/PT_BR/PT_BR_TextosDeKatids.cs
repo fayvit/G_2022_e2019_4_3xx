@@ -254,6 +254,16 @@ namespace TextBankSpace
                 "Gostaria que eu escrevesse mais um pergaminho?",
             }
         },
+           {
+            TextKey.NPCdaRepresa,new List<string>()
+            {
+                "Ola viajante, aqui é a grande represa de Katids, ela é responsável pelo abastecimento de agua de várias cidades de Orion",
+                "O lago da represa liga algumas planícies que dão acesso a cidades",
+                "Sei que você deve estar interssado em entrar na represa para alcançar essas planícies, mas...",
+                "A <color=orange>Garra Governamental</color> proibiu a abertura da represa para visitantes ou viajantes",
+                "Para entrar na represa você precisa de uma autorização da Garra Governamental"
+            }
+        },
         };
     }
 }

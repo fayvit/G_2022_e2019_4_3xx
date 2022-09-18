@@ -1,0 +1,15 @@
+{
+    "name": "FayvitCommandReaderSpace",
+    "references": [
+        "GUID:035d19e5a99de4a44934fff90abd1d94"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

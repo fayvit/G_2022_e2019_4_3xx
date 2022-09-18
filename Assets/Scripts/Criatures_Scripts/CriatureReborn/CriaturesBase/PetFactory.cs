@@ -24,6 +24,9 @@ namespace Criatures2021
                 case PetName.Marak:
                     retorno = Marak.Criature;
                 break;
+                case PetName.Grewstick:
+                    retorno = Grewstick.Criature;
+                break;
                 case PetName.Iruin:
                     retorno = Iruin.Criature;
                 break;

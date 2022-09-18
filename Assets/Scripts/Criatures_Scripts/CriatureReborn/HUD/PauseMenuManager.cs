@@ -24,6 +24,7 @@ namespace Criatures2021Hud
         
 
         private int antSelected = 0;
+        private bool positiveChange;
         private LocalState state = LocalState.emEspera;
         private CharacterManager dono;
         private List<PetBase> petList;
@@ -433,7 +434,7 @@ namespace Criatures2021Hud
 
                 if ((antSelected % columns == columns - 1 && itemMenu.SelectedOption % columns == 0)
                     ||
-                    antSelected==listaDeItens.Count-1 && itemMenu.SelectedOption%listaDeItens.Count==0)
+                    (antSelected==listaDeItens.Count-1 && itemMenu.SelectedOption%listaDeItens.Count==0&&positiveChange))
                 {
                     itemMenu.ChangeSelectionTo(antSelected);
                     itemMenu.RemoveHighlights();
@@ -546,6 +547,7 @@ namespace Criatures2021Hud
                     case LocalState.mudandoItens:
                         #region mudandoItens
                         antSelected = itemMenu.SelectedOption;
+                        positiveChange = cmd.hChange > 0 ? true : false;
                         itemMenu.ChangeOption(cmd.vChange, cmd.hChange);
 
                         if (cmd.confirmButton)

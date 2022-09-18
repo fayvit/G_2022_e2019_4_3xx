@@ -1,4 +1,4 @@
-Shader "Universal Render Pipeline/Nature/SpeedTreeFayvit Billboard"
+Shader "Universal Render Pipeline/Nature/SpeedTreeFayvitBillboard"
 {
     Properties
     {
@@ -32,11 +32,11 @@ Shader "Universal Render Pipeline/Nature/SpeedTreeFayvit Billboard"
             #pragma vertex SpeedTree7Vert
             #pragma fragment SpeedTree7Frag
 
-            //#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
-            //#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
             #pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
-            //#pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
-            //#pragma multi_compile _ _SHADOWS_SOFT
+            #pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile _ _SHADOWS_SOFT
             #pragma multi_compile __ BILLBOARD_FACE_CAMERA_POS
             #pragma multi_compile __ LOD_FADE_CROSSFADE
             #pragma multi_compile_fog
@@ -52,7 +52,7 @@ Shader "Universal Render Pipeline/Nature/SpeedTreeFayvit Billboard"
             ENDHLSL
         }
 
-        /*Pass
+        Pass
         {
             Name "ShadowCaster"
             Tags{"LightMode" = "ShadowCaster"}
@@ -73,7 +73,7 @@ Shader "Universal Render Pipeline/Nature/SpeedTreeFayvit Billboard"
             #include "SpeedTree7BillboardPasses.hlsl"
 
             ENDHLSL
-        }*/
+        }
 
         Pass
         {

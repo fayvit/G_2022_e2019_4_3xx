@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: palha
-  m_Shader: {fileID: -6465566751694194690, guid: 2288383819c25714db67cf75afaa5e71,
+  m_Shader: {fileID: -6465566751694194690, guid: 8766daa385f3daa4cbd0d8940e3e7a48,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,6 +33,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - EmiterMask:
+        m_Texture: {fileID: 2800000, guid: eb2047570108672418ae25152d81d2c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - NormalMap:
+        m_Texture: {fileID: 2800000, guid: a8aeea536268acf4e82fbc44250e377a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7EF83A14:
+        m_Texture: {fileID: 2800000, guid: 0a8db0d902f9ed6409e52d75827eb071, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 33d2f0cc77a079d498d891cf11e0522c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -70,6 +82,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - NormalFactor: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -96,12 +109,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - EmiterColor: {r: 4, g: 0.6073298, b: 0, a: 0}
     - _BaseColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
     - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0.6}
-    - _MyBaseColor: {r: 1, g: 1, b: 1, a: 0}
-    - _ShadingBlacks: {r: 0.08235294, g: 0.08235294, b: 0.08235294, a: 0}
+    - _MyBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadingBlacks: {r: 1, g: 1, b: 1, a: 1}
     - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

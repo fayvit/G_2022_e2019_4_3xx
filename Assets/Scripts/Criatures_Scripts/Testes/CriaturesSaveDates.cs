@@ -41,6 +41,9 @@ namespace Criatures2021
             pos = new float3( X.x, X.y, X.z );
             forward = new float3( R.x, R.y, R.z );
 
+            if (manager.InTeste)
+                FayvitSave.SaveDatesManager.s.IndiceDoJogoAtualSelecionado = -1;
+
             //Debug.Log(X +" : "+ posicao[0]+" : "+posicao[1]+" : "+posicao[2]);
         }
     }

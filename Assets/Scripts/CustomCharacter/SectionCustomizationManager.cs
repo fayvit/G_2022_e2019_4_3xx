@@ -373,6 +373,7 @@ namespace CustomizationSpace
 
         void MudarMesh(ref GameObject atualG, GameObject objetosV)
         {
+            //LogType.
             Debug.unityLogger.logEnabled = false;// Desabilitei o Log pq o unity reclamava de ossos e tecidos nessa parte
             Transform atual = atualG.transform;
             Transform novo = Instantiate(objetosV, atual.parent).transform;

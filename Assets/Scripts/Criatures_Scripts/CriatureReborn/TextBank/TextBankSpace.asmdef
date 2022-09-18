@@ -2,7 +2,8 @@
     "name": "TextBankSpace",
     "references": [
         "GUID:b25e82f6cd560fb468db0712b4ffeec1",
-        "GUID:7619b49cb0105244a8b03bf1200c432c"
+        "GUID:0135762d9baa8e94e87db4323f4458b2",
+        "GUID:ed0ac067c21139e42916354d711bcad0"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

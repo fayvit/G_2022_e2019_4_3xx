@@ -59,8 +59,8 @@ namespace CustomizationSpace
 
                 InEditorSupportSingleton.Instance.InvokeOnEndFrame(() =>
                 {
-                //Debug.Log("second");
-                Transform T = CombinerReallyStart();
+                    //Debug.Log("second");
+                    Transform T = CombinerReallyStart();
 
 
                     MessageAgregator<MsgCombinationComplete>.Publish(new MsgCombinationComplete()

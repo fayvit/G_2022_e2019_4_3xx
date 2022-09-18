@@ -92,13 +92,13 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Arpia,7),
-                //new PetBase(PetName.Galfo,11),
-                //new PetBase(PetName.Wisks,7),
-                //new PetBase(PetName.Vampire,13),
-                //new PetBase(PetName.Rabitler,9),
-                //new PetBase(PetName.Arpia,9),
-                //new PetBase(PetName.Marak,11),
+                new PetBase(PetName.Florest,7),
+                new PetBase(PetName.Xuash,11),
+                new PetBase(PetName.PolyCharm,7),
+                new PetBase(PetName.Vampire,13),
+                new PetBase(PetName.Rabitler,9),
+                new PetBase(PetName.Arpia,9),
+                new PetBase(PetName.Marak,11),
                 //new PetBase(PetName.Estrep,11),
                 //new PetBase(PetName.Onarac,7),
                 //new PetBase(PetName.Oderc,7),
@@ -132,11 +132,11 @@ namespace Criatures2021
             }
 
 
-            //CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
+            //CriaturesAtivos[0].PetFeat.meusAtributos.PE.Corrente = 1;
             //CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
             //CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;
             //CriaturesAtivos[4].StatusTemporarios.Add(new DatesForTemporaryStatus() { Tipo = StatusType.envenenado });
-            VerifyApplyPoisonStatus.InsereStatus(null, criaturesAtivos[0], new DatesForTemporaryStatus() { Tipo = StatusType.envenenado }, true);
+            //VerifyApplyPoisonStatus.InsereStatus(null, criaturesAtivos[0], new DatesForTemporaryStatus() { Tipo = StatusType.envenenado }, true);
             //AddSimpleStatus.InserindoNovoStatus(null, criaturesAtivos[4],
             //    new Amedrontado()
             //    {
@@ -170,19 +170,19 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.pergTempestadeEletrica,1),
             ItemFactory.Get(NameIdItem.tonico,10),
             ItemFactory.Get(NameIdItem.amuletoDaCoragem,10),
-            ItemFactory.Get(NameIdItem.antidoto,10),
-            ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
-            ItemFactory.Get(NameIdItem.ventilador,10),
-            ItemFactory.Get(NameIdItem.gasolina,10),
-            ItemFactory.Get(NameIdItem.regador,10),
-            ItemFactory.Get(NameIdItem.aguaTonica,10),
-            ItemFactory.Get(NameIdItem.inseticida,10),
-            ItemFactory.Get(NameIdItem.seiva,10),
-            ItemFactory.Get(NameIdItem.pilha,10),
-            ItemFactory.Get(NameIdItem.estrela,10),
-            ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
-            ItemFactory.Get(NameIdItem.pergaminhoDeAnanda,10),
-            ItemFactory.Get(NameIdItem.pergaminhoDeBoutjoi,10),
+            //ItemFactory.Get(NameIdItem.antidoto,10),
+            //ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
+            //ItemFactory.Get(NameIdItem.ventilador,10),
+            //ItemFactory.Get(NameIdItem.gasolina,10),
+            //ItemFactory.Get(NameIdItem.regador,10),
+            //ItemFactory.Get(NameIdItem.aguaTonica,10),
+            //ItemFactory.Get(NameIdItem.inseticida,10),
+            //ItemFactory.Get(NameIdItem.seiva,10),
+            //ItemFactory.Get(NameIdItem.pilha,10),
+            //ItemFactory.Get(NameIdItem.estrela,10),
+            //ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
+            //ItemFactory.Get(NameIdItem.pergaminhoDeAnanda,10),
+            //ItemFactory.Get(NameIdItem.pergaminhoDeBoutjoi,10),
             //ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
             //ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
             //ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),

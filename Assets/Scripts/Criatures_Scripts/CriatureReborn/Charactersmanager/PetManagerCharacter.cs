@@ -183,15 +183,15 @@ namespace Criatures2021
         {
             base.OnCriatureDefeated(obj);
 
+            if (!tDono.ContraTreinador)
+                IamTarget.StaticStart(this, () => { MessageAgregator<MsgReturnRememberedMusic>.Publish(); });
+
             if (obj.atacker == gameObject && obj.defeated.layer != 10)
             {
                 GerenciadorDeExperiencia gXp = MeuCriatureBase.PetFeat.mNivel;
                 gXp.XP += (tDono.ContraTreinador ? 2 : 1) * (int)((float)obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo / 2);
 
                 VerificaLevelUp();
-
-                if (!tDono.ContraTreinador)
-                    IamTarget.StaticStart(this, () => { MessageAgregator<MsgReturnRememberedMusic>.Publish(); });
 
                 if (!tDono.ContraTreinador)
                     MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
@@ -203,7 +203,6 @@ namespace Criatures2021
                         obj.doDerrotado.PetFeat.meusAtributos.PV.Maximo,
                         obj.doDerrotado.GetNomeEmLinguas
                         ),
-                        useBestSize = true
                     });
             }
 
@@ -336,7 +335,7 @@ namespace Criatures2021
             }
         }
 
-        void MoreStatusCommands()
+        void SelectPetAndItensCommands()
         {
             int selectAttackInput = CurrentCommander.GetIntTriggerDown(CommandConverterString.selectAttack_selectCriature);
 
@@ -374,6 +373,22 @@ namespace Criatures2021
             MeuCriatureBase.StManager.StaminaRegen(run);
 
             return V;
+        }
+
+        protected override void OnNotHavingPE()
+        {
+            MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+            {
+                message = TextBank.RetornaListaDeTextoDoIdioma(TextKey.textosDeNaoPodeUsar)[1]
+            });
+        }
+
+        protected override void OnEmptyStaminaInAttack()
+        {
+            MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+            {
+                message = TextBank.RetornaFraseDoIdioma(TextKey.textosDeNaoPodeUsar)
+            });
         }
 
         void BaseAction()
@@ -447,9 +462,16 @@ namespace Criatures2021
                         }
                         else if (CurrentCommander.GetButtonDown(CommandConverterInt.dodge))
                         {
-                            if (MeuCriatureBase.StManager.VerifyStaminaAction() && Roll.Start(V, gameObject))
+                            bool temStamina = MeuCriatureBase.StManager.VerifyStaminaAction();
+                            if (temStamina && Roll.Start(V, gameObject))
                             {
                                 StartDodge();
+                            } else if (!temStamina)
+                            {
+                                MessageAgregator<MsgRequestRapidInfo>.Publish(new MsgRequestRapidInfo()
+                                {
+                                    message =TextBank.RetornaFraseDoIdioma(TextKey.textosDeNaoPodeUsar)
+                                });
                             }
                         }
                         else if (CurrentCommander.GetButtonDown(CommandConverterInt.criatureChange))
@@ -477,7 +499,7 @@ namespace Criatures2021
 
                     }
 
-                    MoreStatusCommands();
+                    SelectPetAndItensCommands();
                 break;
                 case LocalState.atk:
                     if (AtkApply.UpdateAttack())
@@ -485,7 +507,7 @@ namespace Criatures2021
                         State = inControll? LocalState.onFree:LocalState.following;
                     }
 
-                    MoreStatusCommands();
+                    SelectPetAndItensCommands();
                 break;
                 case LocalState.inDamage:
                     if (DamageState.Update())

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using TextBankSpace;
 using FayvitBasicTools;
 using Criatures2021Hud;
@@ -233,13 +232,10 @@ namespace Criatures2021
         {
             fase = FasesDoBau.emEspera;
 
-            //GameController.g.Manager.AoHeroi();
-            MessageAgregator<MsgFinishExternalInteraction>.Publish();
+            MessageAgregator<MsgFinishChestInteraction>.Publish();
 
-
-            Debug.Log("Uma chamada de save[em observação]");
-            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
-            //GameController.g.Salvador.SalvarAgora();
+            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+            
         }
 
         public override void FuncaoDoBotao()
@@ -306,4 +302,6 @@ namespace Criatures2021
         public int quantidade;
         public string message;
     }
+
+    public struct MsgFinishChestInteraction : IMessageBase { }
 }

@@ -70,7 +70,6 @@ namespace Criatures2021
 
 
             MessageAgregator<MsgAnimaCaptura>.Publish(new MsgAnimaCaptura() { dono = dono });
-            SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
 
         }
 

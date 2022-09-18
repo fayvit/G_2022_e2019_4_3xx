@@ -27,6 +27,8 @@ namespace Criatures2021
             inDamage
         }
 
+        public ICommandReader GetCommander => CommandReader.GetCR(AbstractGlobalController.Instance.Control);
+
         public static void StartKeyDjeyTransport(Transform usuario,bool masculino)
         {
             GameObject G = ResourcesFolders.GetPet(PetName.KeyDjey);
@@ -38,7 +40,7 @@ namespace Criatures2021
              );
 
             ParticulasComSom(usuario);
-            //Destroy(G.GetComponent<PetManager>());
+            
             KeyDjeyTransportManager k = G.AddComponent<KeyDjeyTransportManager>();
             k.usuario = usuario;
             usuario.SetParent(G.transform.Find("Armature/Bone"));
@@ -120,8 +122,6 @@ namespace Criatures2021
             }
         }
 
-        public ICommandReader GetCommander => CommandReader.GetCR(Controlador.teclado);
-
         // Update is called once per frame
         void Update()
         {
@@ -144,7 +144,8 @@ namespace Criatures2021
                     {
                         SairDoKeyDjey();
                     }
-                    break;
+
+                break;
                 case LocalState.inDamage:
                     if (damageState.Update())
                     {
@@ -170,11 +171,17 @@ namespace Criatures2021
 
         public void SairDoKeyDjey()
         {
+            move.MoveApplicator(Vector3.zero);
+            CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);
+
+            
+
             ParticulasComSom(usuario);
 
             usuario.parent = null;
             usuario.rotation = DirectionOnThePlane.Rotation(usuario.forward);
             usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
+
 
             MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
             {
@@ -187,8 +194,9 @@ namespace Criatures2021
                 pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
             });
 
-            
+
             Destroy(gameObject);
+            
         }
     }
 

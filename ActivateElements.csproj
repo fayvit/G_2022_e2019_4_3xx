@@ -629,13 +629,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Fayvit.csproj">
-      <Project>{CB9A3DDE-61F3-EE0D-2F35-0584AB13719E}</Project>
-      <Name>Fayvit</Name>
-    </ProjectReference>
     <ProjectReference Include="BasicEvents.csproj">
       <Project>{3C304215-9CD8-6DC4-E007-A70D86BD298C}</Project>
       <Name>BasicEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitBase.csproj">
+      <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
+      <Name>FayvitBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitGameTools.csproj">
+      <Project>{1BABE418-6114-B37B-053E-AD6CF93A723E}</Project>
+      <Name>FayvitGameTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitSounds.csproj">
+      <Project>{91A02F3C-3725-CDC9-514E-B8BF0DA9CF0C}</Project>
+      <Name>FayvitSounds</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

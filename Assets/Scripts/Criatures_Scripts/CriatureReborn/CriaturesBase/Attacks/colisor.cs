@@ -18,7 +18,9 @@ public struct Colisor
     private float dTy;
     private float dTz;
 
-    private float colisorScale;
+    private float colisorScaleX;
+    private float colisorScaleY;
+    private float colisorScaleZ;
 
 
     public Colisor(string _osso, float colisorScale)
@@ -37,17 +39,25 @@ public struct Colisor
         dTy = _deslTrail.y;
         dTz = _deslTrail.z;
 
-        this.colisorScale = colisorScale;
+        colisorScaleX = colisorScale;
+        colisorScaleY = colisorScale;
+        colisorScaleZ = colisorScale;
     }
 
-    public float ColisorScale
+    public Vector3 ColisorScale
     {
+        set {
+            Vector3 v = value;
+            colisorScaleX = v.x;
+            colisorScaleY = v.y;
+            colisorScaleZ = v.z;
+        }
         get
         {
-            if (colisorScale == 0)
-                colisorScale = 1;
+            if (colisorScaleX == 0 || colisorScaleY == 0 || colisorScaleZ == 0)
+                ColisorScale = Vector3.one;
 
-            return colisorScale;
+            return new Vector3(colisorScaleX,colisorScaleY,colisorScaleZ);
         }
     }
 

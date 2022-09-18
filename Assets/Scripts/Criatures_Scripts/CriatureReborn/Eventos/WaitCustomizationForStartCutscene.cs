@@ -49,7 +49,7 @@ namespace Criatures2021
 
             IGlobalController glob = AbstractGlobalController.Instance;
 
-            SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates(false));
+            SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates(false));
             
             DontDestroyOnLoad(gameObject);
 

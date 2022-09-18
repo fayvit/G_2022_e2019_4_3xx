@@ -174,6 +174,7 @@ namespace Criatures2021
                 {
                     meusMeninos[i].transform.position = observados[i].G.transform.position + Vector3.up;
                     meusMeninos[i].enabled = false;
+                    meusMeninos[i].InsertCheckColor();
                 }
 
                 bau.SetActive(true);

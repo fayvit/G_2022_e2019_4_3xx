@@ -255,10 +255,15 @@ namespace Criatures2021
                         checkable = hit.collider.gameObject
                     });
 
-                    myLight.color = colorCheck;
-                    GetComponentInChildren<MeshRenderer>().material.SetColor("EmiterColor", colorCheck);
+                    InsertCheckColor();
                 }
             }
+        }
+
+        public void InsertCheckColor()
+        {
+            myLight.color = colorCheck;
+            GetComponentInChildren<MeshRenderer>().material.SetColor("EmiterColor", colorCheck);
         }
     }
 

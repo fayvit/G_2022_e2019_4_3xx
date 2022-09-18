@@ -55,10 +55,16 @@ namespace Criatures2021
             {
                 if (!iniciouLoad)
                 {
-                    MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+                    KeyDjeyTransportManager kTransport = other.GetComponent<KeyDjeyTransportManager>();
+                    if (kTransport)
                     {
-                        pet = other.gameObject
-                    });
+                        kTransport.SairDoKeyDjey();
+                    }
+                    //else
+                    //    MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+                    //    {
+                    //        pet = other.gameObject
+                    //    });
                 }
             }
         }

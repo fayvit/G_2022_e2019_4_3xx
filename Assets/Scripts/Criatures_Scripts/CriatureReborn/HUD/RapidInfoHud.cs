@@ -57,19 +57,14 @@ namespace Criatures2021Hud
             messagePanel.gameObject.SetActive(true);
             messagePanel.anchoredPosition = new Vector2(Screen.width, originalAnchoredPosition.y);
             MsgRequestRapidInfo M = filaDeMensagens.Dequeue();
-            infoText.text = M.message;
-            if (M.useBestSize)
-                infoText.resizeTextForBestFit = true;
-            else
-            {
-                infoText.resizeTextForBestFit = false;
-                if (M.chosenSize > 0)
-                    infoText.fontSize = M.chosenSize;
-                else
-                    infoText.fontSize = baseFontSize;
-            }
-
             
+            if (M.chosenSize > 0)
+                infoText.fontSize = M.chosenSize;
+            else
+                infoText.fontSize = baseFontSize;
+
+            infoText.SetText(M.message);
+
             contadorDeTempo = 0;
             phase = TextDisplay.MessagePhase.boxOut;
         }

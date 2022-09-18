@@ -490,7 +490,8 @@ namespace TextBankSpace
                 "Nesta luta eu utilizarei {0} criatures",
                 "Para inicar eu escolho...",
                 "Parece que você teve uma vitória parcial, mas isso ainda não terminou",
-                "Meu proximo criature será..."
+                "Meu proximo criature será...",
+                "O treinador <color=orange>{0}</color> enviou um <color=yellow>{4}</color> Nivel {1} \n\r PV: {2} \t\t\t PE: {3}",
             }
         },
      //   {
@@ -577,6 +578,13 @@ namespace TextBankSpace
                 "do poder",
                 "da resistência",
                 "Você não tem {0} {1}!"
+            }
+        },
+            {
+            TextKey.textosDeNaoPodeUsar,new List<string>()
+            {
+                "Sem <color=#00ff00>estâmina</color> para realizar a ação",
+                "Não há <color=cyan>pontos de energia</color> para realizar a ação"
             }
         },
 

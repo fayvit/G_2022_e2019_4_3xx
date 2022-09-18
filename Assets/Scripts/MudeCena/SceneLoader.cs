@@ -74,6 +74,19 @@ namespace Criatures2021
                     {
                         c.Dados = (DadosDeJogador)S.Dados;//((Criatures2021.SaveDates)S).EssesDados;
                         c.InicializarPet();
+
+
+                        //Debug.Log("Esse é o número de criatures ativos: " + c.Dados.CriaturesAtivos.Count);
+                        //Recoloca status nos criatures da reserva
+                        SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                        {
+                            for (int i = 0; i < c.Dados.CriaturesAtivos.Count; i++)
+                            {
+                                StatusReplacer.ColocarStatus(c.Dados.CriaturesAtivos[i], c.ActivePet);
+                            }
+                        });
+
+
                         CustomizationSavedChars.LoadSavedCharacters();
                     });
 

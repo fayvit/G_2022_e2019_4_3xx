@@ -1,0 +1,16 @@
+{
+    "name": "FayvitUI",
+    "references": [
+        "GUID:035d19e5a99de4a44934fff90abd1d94",
+        "GUID:ed0ac067c21139e42916354d711bcad0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

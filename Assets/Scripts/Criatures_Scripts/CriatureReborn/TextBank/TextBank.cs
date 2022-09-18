@@ -300,6 +300,8 @@ namespace TextBankSpace
         DevotaNeuzaDepoisDaLuta,
         DevotaRosanaDepoisDaLuta,
         usarPergaminhoDeSinara,
-        usarPergaminhoDeAlana
+        usarPergaminhoDeAlana,
+        textosDeNaoPodeUsar,
+        NPCdaRepresa
     }
 }

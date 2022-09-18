@@ -71,7 +71,6 @@ namespace Criatures2021
                     CameraApplicator.cam.FocusInPoint(8, 2);
                     if (NPCfalasIniciais.Update(commands.confirmButton, commands.returnButton))
                     {
-
                         EntraFrasePossoAjudar();
                         LigarMenu();
                     }
@@ -159,8 +158,8 @@ namespace Criatures2021
                 //});
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                 {
-                  
 
+                    ShopHudManager.instance.ChangeInteractiveButtons(true);
                     state = LocalState.menuDeVenda;
                 },frasesDeShoping[11]);
             }

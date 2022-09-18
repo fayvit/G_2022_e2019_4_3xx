@@ -75,13 +75,13 @@ void InitializeInputData(SpeedTreeVertexOutput input, half3 normalTS, out InputD
         inputData.viewDirectionWS = SafeNormalize(inputData.viewDirectionWS);
     #endif
 
-    /*#if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
+    #if defined(REQUIRES_VERTEX_SHADOW_COORD_INTERPOLATOR)
         inputData.shadowCoord = input.shadowCoord;
     #elif defined(MAIN_LIGHT_CALCULATE_SHADOWS)
         inputData.shadowCoord = TransformWorldToShadowCoord(inputData.positionWS);
     #else
         inputData.shadowCoord = float4(0, 0, 0, 0);
-    #endif*/
+    #endif
 
         inputData.shadowCoord = float4(1, 0, 0, 1);
 
@@ -147,7 +147,7 @@ half4 SpeedTree7Frag(SpeedTreeVertexOutput input) : SV_Target
 
     half4 color = UniversalFragmentBlinnPhong(inputData, diffuseColor.rgb, half4(0, 0, 0, 0), 0, 0, diffuse.a);
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
-    //color = half4(max(.15, color.r), max(.15, color.r), max(.15, color.r), max(.15, color.r));
+    color = half4(max(.15, color.r), max(.15, color.r), max(.15, color.r), max(.15, color.r));
     return diffuse;
 }
 

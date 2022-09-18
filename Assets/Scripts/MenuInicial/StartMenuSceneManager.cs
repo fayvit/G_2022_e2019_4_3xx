@@ -6,9 +6,9 @@ using FayvitMessageAgregator;
 using FayvitSounds;
 using FayvitUI;
 using FayvitLoadScene;
-using TextBankSpace;
 using FayvitSave;
 using FayvitCommandReader;
+using TextBankSpace;
 using Criatures2021;
 
 public class StartMenuSceneManager : MonoBehaviour
@@ -39,7 +39,7 @@ public class StartMenuSceneManager : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         GlobalControllerDependecies();
         MenuPrincipal();
-        Criatures2021.ProvisionalEnemyInstantiate c = gameObject.AddComponent<Criatures2021.ProvisionalEnemyInstantiate>();
+        ProvisionalEnemyInstantiate c = gameObject.AddComponent<ProvisionalEnemyInstantiate>();
         c.xVertePosition = new Vector2(465,497);
         c.zVertePosition = new Vector2(411, 443);
         c.maxCriatures = 12;
@@ -172,30 +172,27 @@ public class StartMenuSceneManager : MonoBehaviour
     private void IniciarJogo()
     {
 
-        PropriedadesDeSave prop = new PropriedadesDeSave() { nome = "Jogo Criado: " + System.DateTime.Now, ultimaJogada = System.DateTime.Now };
+        PropriedadesDeSave prop = new PropriedadesDeSave() { 
+            nome = "Jogo Criado: " + System.DateTime.Now, 
+            ultimaJogada = System.DateTime.Now 
+        };
 
         List<PropriedadesDeSave> lista = SaveDatesManager.s.SaveProps;
 
         if (lista != null)
         {
-            //int maior = -1;
-            //for (int i = 0; i < lista.Count; i++)
-            //{
-            //    if (lista[i].indiceDoSave > maior)
-            //        maior = lista[i].indiceDoSave;
-            //}
-
             prop.indiceDoSave = PropriedadesDeSave.PrimeiroIndiceLivre(lista.ToArray());
             lista.Add(prop);
+            SaveDatesManager.s.SaveProps.Sort();
         }
         else
             lista = new List<PropriedadesDeSave>() { prop };
 
         if (SaveDatesManager.s.SavedGames.Count > prop.indiceDoSave)
-            SaveDatesManager.s.SavedGames[prop.indiceDoSave] = new Criatures2021.CriaturesSaveDates(false);
+            SaveDatesManager.s.SavedGames[prop.indiceDoSave] = new CriaturesSaveDates(false);
         else
         {
-            Criatures2021.CriaturesSaveDates cs = new Criatures2021.CriaturesSaveDates(false);
+            CriaturesSaveDates cs = new CriaturesSaveDates(false);
             SaveDatesManager.s.SavedGames.Add(cs);
             Debug.Log("O indice pedido para criar foi: "
                 + prop.indiceDoSave + " e a criação me deu o indice" + SaveDatesManager.s.SavedGames.IndexOf(cs));

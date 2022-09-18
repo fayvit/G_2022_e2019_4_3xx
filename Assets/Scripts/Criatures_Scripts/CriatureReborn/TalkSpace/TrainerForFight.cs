@@ -8,6 +8,7 @@ using FayvitCam;
 using FayvitSounds;
 using FayvitMove;
 using FayvitSupportSingleton;
+using Npc2021;
 
 namespace TalkSpace
 {
@@ -70,7 +71,8 @@ namespace TalkSpace
             finalizacao,
             verificandoMaisItens,
             conversaDeLutaGanha,
-            atividadeExterna
+            atividadeExterna,
+            showTrainerPet
         }
 
         public Transform MeuTransform { get => transform.parent; }
@@ -161,7 +163,7 @@ namespace TalkSpace
                         }
                     }
                     #endregion
-                break;
+                    break;
                 case ThisState.perguntaComecarBatalha:
                     #region pergunta para iniciar batalha
                     if (!DisplayTextManager.instance.DisplayText.LendoMensagemAteOCheia(Commands.confirmButton))
@@ -171,13 +173,13 @@ namespace TalkSpace
                         state = ThisState.menuAberto;
                     }
                     #endregion
-                break;
+                    break;
                 case ThisState.menuAberto:
                     YesOrNoMenu.instance.Menu.ChangeOption(Commands.vChange);
 
                     if (Commands.confirmButton)
                         YesOrNoResponse(YesOrNoMenu.instance.Menu.SelectedOption);
-                break;
+                    break;
                 case ThisState.animacaoDeEncontro:
                     #region animacao de encontro
                     tempoDecorrido += Time.deltaTime;
@@ -192,12 +194,12 @@ namespace TalkSpace
                         state = ThisState.cameraNoTreinador;
                     }
                     #endregion
-                break;
+                    break;
                 case ThisState.cameraNoTreinador:
                     #region camera no treinador
                     if (CameraApplicator.cam.FocusInPoint(height: 3))
                     {
-                        
+
                         DisplayTextManager.instance.DisplayText.StartTextDisplay();
                         conversa = TextBank.RetornaListaDeTextoDoIdioma(TextKey.frasesDaLutaContraTreinador).ToArray();
                         conversa = new string[2] {
@@ -205,10 +207,10 @@ namespace TalkSpace
                         state = ThisState.frasePreInicio;
                     }
                     #endregion
-                break;
+                    break;
                 case ThisState.frasePreInicio:
                     #region frasePreInicio
-                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(Commands.confirmButton,false,conversa))
+                    if (DisplayTextManager.instance.DisplayText.UpdateTexts(Commands.confirmButton, false, conversa))
                     {
                         MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
                         {
@@ -230,30 +232,55 @@ namespace TalkSpace
                         velocity = Vector3.zero,
                         gameObject = gameObject
                     });
+
                     #region animando braco
                     if (!animaB.AnimaEnvia(criaturesDoTreinador[indiceDoEnviado].Pet, "criatureDeTreinador"))
                     {
                         myActivePet = GameObject.Find("criatureDeTreinador").GetComponent<PetManager>();
-                        //GameController.g.EncontroAgoraCom(
-                        myActivePet = criaturesDoTreinador[indiceDoEnviado].PrepararInicioDoCriature(myActivePet,Manager.ActivePet.gameObject);
-                        //, true, nomeDoTreinador);
+                        
+                        myActivePet = criaturesDoTreinador[indiceDoEnviado].PrepararInicioDoCriature(myActivePet);
+                        
                         
 
+                        PetFeatures P = myActivePet.MeuCriatureBase.PetFeat;
+                        MessageAgregator<MsgRequestUpperLargeMessage>.Publish(new MsgRequestUpperLargeMessage()
+                        {
+                            message = string.Format(TextBank.RetornaListaDeTextoDoIdioma(TextKey.frasesDaLutaContraTreinador)[4],
+                            GetComponent<NpcAppearanceConfiguration>().Sid,
+                            P.mNivel.Nivel,
+                            P.meusAtributos.PV.Corrente,
+                            P.meusAtributos.PE.Corrente,
+                            myActivePet.MeuCriatureBase.GetNomeEmLinguas
+                            )
+                        });
+                        CameraApplicator.cam.StartExibitionCam(myActivePet.GetComponent<CharacterController>(),true);
+                        tempoDecorrido = 0;
+                        state = ThisState.showTrainerPet;
+                    }
+                    #endregion
+                break;
+
+                case ThisState.showTrainerPet:
+                    tempoDecorrido += Time.deltaTime;
+                    if (Commands.confirmButton || tempoDecorrido > 10)
+                    {
+                        ((PetManagerEnemy)myActivePet).StartAgressiveIa(Manager.ActivePet.gameObject);
+
+                        MessageAgregator<MsgRequestHideUpperLargeMessage>.Publish();
+
                         MessageAgregator<MsgCriatureDefeated>.AddListener(OnCriatureDefeated);
-                        //MessageAgregator<MsgChangeToPet>.AddListener(OnPlayerChangeToPet);
+                        
                         MessageAgregator<MsgRequestChangeToPetByReplace>.Publish(new MsgRequestChangeToPetByReplace()
                         {
                             dono = Manager.gameObject,
                             fluxo = FluxoDeRetorno.criature,
                             lockTarget = myActivePet.transform
+
                         });
-
                         ((PetManagerCharacter)Manager.ActivePet).ControlableVsTrainer(myActivePet.transform);
-
 
                         state = ThisState.leituraDeLuta;
                     }
-                    #endregion
                 break;
                 case ThisState.fraseDeVitoria:
                     if (DisplayTextManager.instance.DisplayText.UpdateTexts(Commands.confirmButton, Commands.returnButton, conversa))
@@ -573,7 +600,7 @@ namespace TalkSpace
             get { return pet; }
         }
 
-        public PetManager PrepararInicioDoCriature(PetManager cm,GameObject atacante)
+        public PetManager PrepararInicioDoCriature(PetManager cm)
         {
             GameObject G = cm.gameObject;
             PetBase P = cm.MeuCriatureBase;
@@ -581,8 +608,9 @@ namespace TalkSpace
             
             cm = G.AddComponent<PetManagerTrainer>();
             cm.MeuCriatureBase = P;
+            
 
-            ((PetManagerEnemy)cm).StartAgressiveIa(atacante);
+            //((PetManagerEnemy)cm).StartAgressiveIa(atacante);
 
             if (golpeDeInspector)
             {
@@ -597,8 +625,10 @@ namespace TalkSpace
                 cm.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente = Pet.PetFeat.meusAtributos.PV.Corrente;
             }
 
-            
-
+            SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            {
+                cm.PararCriatureNoLocal();
+            });
             ///*O groundCheck tinha problemas por ser inserido no personagem com escala variando durante o animateArm*/
             //cm.Mov.RecalculeGroundCheck();
 

@@ -33,7 +33,7 @@ public class PersonagemParaTeste : MonoBehaviour
     }
     }
 
-    public static GameObject FazPersonagem(CustomizationSpace.CustomizationContainerDates ccd,bool inTeste,Transform transform)
+    public static GameObject FazPersonagem(CustomizationContainerDates ccd,bool inTeste,Transform transform)
     {
         GameObject Ggg = CombinerSingleton.Instance.GetCombination(ccd);
         CharacterManager c = Ggg.AddComponent<CharacterManager>();

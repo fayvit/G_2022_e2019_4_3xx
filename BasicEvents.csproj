@@ -631,9 +631,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Fayvit.csproj">
-      <Project>{CB9A3DDE-61F3-EE0D-2F35-0584AB13719E}</Project>
-      <Name>Fayvit</Name>
+    <ProjectReference Include="FayvitBase.csproj">
+      <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
+      <Name>FayvitBase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

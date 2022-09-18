@@ -628,10 +628,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Fayvit.csproj">
-      <Project>{CB9A3DDE-61F3-EE0D-2F35-0584AB13719E}</Project>
-      <Name>Fayvit</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

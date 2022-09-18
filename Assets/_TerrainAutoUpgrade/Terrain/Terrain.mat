@@ -227,7 +227,7 @@ Material:
     - _NormalScale1: 0
     - _NormalScale2: 0
     - _NormalScale3: 0
-    - _NumLayersCount: 5
+    - _NumLayersCount: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ShadowAttenFactor: 0

@@ -224,13 +224,16 @@ namespace Criatures2021
 
             if (Controll.Mov.IsGrounded || gg.PodeNoAr)
             {
-                if (AttackApplyManager.CanStartAttack(MeuCriatureBase))
+                if (AttackApplyManager.CanStartAttack(MeuCriatureBase,OnEmptyStaminaInAttack,OnNotHavingPE))
                 {
                     EfetiveApplyAttack(gg,focado);
                 }
             }
         }
-        
+
+        protected virtual void OnNotHavingPE() { }
+
+        protected virtual void OnEmptyStaminaInAttack() { }
 
         // Update is called once per frame
         protected virtual void Update() {
