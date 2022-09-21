@@ -21,7 +21,6 @@ namespace Criatures2021
         {
             if (other.CompareTag("Player") && !AbstractGameController.Instance.MyKeys.VerificaAutoShift(chekable.GetKey))
             {
-                
                 float targetHeight = Mathf.Abs(camPoint.position.y- other.transform.position.y);
                 float targetDistance = DirectionOnThePlane.InTheUp(camPoint.position, other.transform.position).magnitude;
                 CameraApplicator.cam.NewFocusForBasicCam(other.transform, targetHeight, targetDistance);

@@ -130,7 +130,8 @@ namespace Criatures2021
         fogoAoChao,
         poeiraAoVento,
         miniOndaVenenosa,
-        gasAoChao
+        gasAoChao,
+        somDoKeyDjey
     }
 
     public enum GeneralParticles

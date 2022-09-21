@@ -239,7 +239,11 @@ namespace FayvitCam
         public void NewFocusForBasicCam(Transform target, float height, float distance, bool dodgeWall = false, bool dirOfObj = false)
         {
             Style = EstiloDeCamera.basic;
-            Cdir.State = StateCam.@static;
+
+            // tirei esse static no bug do push puzzle 
+            // aparentemente não tinha função ao levar em conta a mudança de estilo na linha de cima
+            //Cdir.State = StateCam.@static;
+
             basic.Start(transform);
             Basic.NewFocus(target, height, distance, dodgeWall, dirOfObj);
         }

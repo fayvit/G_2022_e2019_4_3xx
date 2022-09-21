@@ -12,8 +12,8 @@ namespace Criatures2021
     public class PushBlockPuzzle : ButtonActivate
     {
         [SerializeField] private Light myLight;
-        [SerializeField, ColorUsageAttribute(true, true)] private Color colorBase = new Color(.23f,.71f,.75f);
-        [SerializeField,ColorUsageAttribute(true, true)] private Color colorCheck = new Color(.75f, .14f, 0);
+        [SerializeField, ColorUsage(true, true)] private Color colorBase = new Color(.23f,.71f,.75f);
+        [SerializeField, ColorUsage(true, true)] private Color colorCheck = new Color(.75f, .14f, 0);
         [SerializeField] private float tempoTotalparaMovimentoInicial=.25f;
         [SerializeField] private float tempoTotalEmpurrando = .75f;
         [SerializeField] private float varDir = 1;
@@ -167,6 +167,17 @@ namespace Criatures2021
                     player.transform.position 
                         = Vector3.Lerp(startPlayerPosition,MelhoraInstancia3D.ProcuraPosNoMapa(transform.position - varDir * dir), 
                         tempoDecorrido / tempoTotalparaMovimentoInicial);
+
+                    // o personagem se elevava ao empurrar alguns blocos
+                    // então coloquei essa gambiarra que inicialmente está funcionando
+                    player.transform.position = new Vector3(
+                        player.transform.position.x,
+                        startBlockPosition.y,
+                        player.transform.position.z
+                        );
+                    /**********************************************/
+
+
                     player.transform.rotation = Quaternion.Lerp(
                         Quaternion.LookRotation(startPlayerForward),
                         Quaternion.LookRotation(dir),

@@ -44,7 +44,7 @@ namespace Criatures2021
             KeyDjeyTransportManager k = G.AddComponent<KeyDjeyTransportManager>();
             k.usuario = usuario;
             usuario.SetParent(G.transform.Find("Armature/Bone"));
-
+            CameraApplicator.cam.FocusForDirectionalCam(usuario, .4f, 5, 1f);
             SupportSingleton.Instance.InvokeOnEndFrame(() =>
             {
                 if (masculino)

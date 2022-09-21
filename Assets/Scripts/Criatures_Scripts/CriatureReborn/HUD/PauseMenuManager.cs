@@ -313,7 +313,8 @@ namespace Criatures2021Hud
         {
             int selecionado = itemMenu.SelectedOption;
             itemMenu.FinishHud();
-            if (listaDeItens.Count >= selecionado)
+
+            if (listaDeItens.Count > selecionado)
                 itemMenu.StartHud(ItemMenuAction, listaDeItens.ToArray(), selecionado);
             else
                 itemMenu.StartHud(ItemMenuAction, listaDeItens.ToArray());

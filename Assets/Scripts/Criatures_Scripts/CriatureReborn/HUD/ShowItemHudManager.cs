@@ -9,12 +9,13 @@ namespace Criatures2021Hud
 {
     public class ShowItemHudManager : MonoBehaviour
     {
-        [SerializeField] private Text labelIntroduction;
+        
         [SerializeField] private Text txtNameItem;
         [SerializeField] private Text txtDescriptionItem;
         [SerializeField] private Image imgItem;
 
         [SerializeField] protected Text numItens;
+        [SerializeField] protected Text labelIntroduction;
 
         // Use this for initialization
         void Start()
@@ -45,10 +46,10 @@ namespace Criatures2021Hud
         protected virtual void FillDates(MsgShowItem obj,string customlabel)
         {
             imgItem.sprite = ResourcesFolders.GetMiniItem(obj.idItem);
-            numItens.text = obj.quantidade.ToString();
-            txtNameItem.text = ItemBase.NomeEmLinguas(obj.idItem);
-            txtDescriptionItem.text = TextBank.RetornaListaDeTextoDoIdioma(TextKey.shopInfoItem)[(int)obj.idItem];
-            labelIntroduction.text = customlabel;
+            numItens.SetText(obj.quantidade.ToString());
+            txtNameItem.SetText(ItemBase.NomeEmLinguas(obj.idItem));
+            txtDescriptionItem.SetText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.shopInfoItem)[(int)obj.idItem]);
+            labelIntroduction.SetText(customlabel);
         }
 
         private void OnRequestShowItem(MsgShowItem obj)

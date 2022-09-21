@@ -23,7 +23,7 @@ namespace Criatures2021Hud
             
             numItens.gameObject.SetActive(quantidadeDoMercador>=0);
             this.quantidadeJogador.text = quantidadeDoJogador.ToString();
-            
+            labelIntroduction.transform.parent.gameObject.SetActive(true);
         }
     }
 }

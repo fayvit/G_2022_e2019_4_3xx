@@ -169,7 +169,7 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.cartaLuva,11),
             ItemFactory.Get(NameIdItem.pergTempestadeEletrica,1),
             ItemFactory.Get(NameIdItem.tonico,10),
-            ItemFactory.Get(NameIdItem.amuletoDaCoragem,10),
+            ItemFactory.Get(NameIdItem.pergAlana,1),
             //ItemFactory.Get(NameIdItem.antidoto,10),
             //ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
             //ItemFactory.Get(NameIdItem.ventilador,10),

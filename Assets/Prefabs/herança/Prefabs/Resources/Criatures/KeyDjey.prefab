@@ -101,6 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6934785779259726620}
+  - component: {fileID: 2409661714736125422}
   m_Layer: 0
   m_Name: Bone.001_L.002_end
   m_TagString: Untagged
@@ -122,6 +123,21 @@ Transform:
   m_Father: {fileID: 8825382008247605588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2409661714736125422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855556118804717907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b74b63d73ce1e4198d81b89b4f087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoChao: 14
+  destruir: 1
+  repetir: 0.25
 --- !u!1 &3228366358420825814
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +214,7 @@ GameObject:
   - component: {fileID: 3753034271824973541}
   - component: {fileID: 8549770358292836646}
   - component: {fileID: 1661895883615985114}
+  - component: {fileID: 4246261206710946193}
   m_Layer: 13
   m_Name: KeyDjey
   m_TagString: Criature
@@ -379,6 +396,21 @@ MonoBehaviour:
     returnTime: 0.15
     imunoTax: 0.75
   targetUpdateTax: 1
+--- !u!114 &4246261206710946193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094929952753615837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b74b63d73ce1e4198d81b89b4f087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoChao: 17
+  destruir: 1
+  repetir: 0.25
 --- !u!1 &4107935115524438152
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5166654726202147285}
+  - component: {fileID: 4807479569367120824}
   m_Layer: 0
   m_Name: Bone_L.002_end
   m_TagString: Untagged
@@ -809,6 +842,21 @@ Transform:
   m_Father: {fileID: 8020014285879792084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4807479569367120824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443943277530968221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b74b63d73ce1e4198d81b89b4f087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoChao: 14
+  destruir: 1
+  repetir: 0.25
 --- !u!1 &6804753861170923626
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953326220421732191}
+  - component: {fileID: 8981011973805404237}
   m_Layer: 0
   m_Name: Bone_R.002_end
   m_TagString: Untagged
@@ -839,6 +888,21 @@ Transform:
   m_Father: {fileID: 6484815592328645931}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8981011973805404237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804753861170923626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b74b63d73ce1e4198d81b89b4f087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoChao: 14
+  destruir: 1
+  repetir: 0.25
 --- !u!1 &7739594642417973292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7495170157780304328}
+  - component: {fileID: 6218427150394961334}
   m_Layer: 0
   m_Name: Bone.001_R.002_end
   m_TagString: Untagged
@@ -1147,6 +1212,21 @@ Transform:
   m_Father: {fileID: 1457290327665452490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6218427150394961334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825831146721096844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b74b63d73ce1e4198d81b89b4f087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aoChao: 14
+  destruir: 1
+  repetir: 0.25
 --- !u!1 &9220824659710453543
 GameObject:
   m_ObjectHideFlags: 0

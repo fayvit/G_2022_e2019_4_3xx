@@ -1109,6 +1109,10 @@
       <Project>{651E2E8D-8F72-E486-6ADF-9FA30262747E}</Project>
       <Name>FayvitMove</Name>
     </ProjectReference>
+    <ProjectReference Include="TerrainMyToolsTest.csproj">
+      <Project>{6EFD51BF-32A9-C4AA-EEFB-28A73EF62C24}</Project>
+      <Name>TerrainMyToolsTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\HierarchyTools.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\MelhoraInstancia3D.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\PiscaBarra.cs" />
+    <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\RetaNoPlano.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\StaticInstanceExistence.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\StringForEnum.cs" />
   </ItemGroup>
