@@ -55,25 +55,25 @@ public class MelhoraInstancia3D
     public static Vector3 ProcuraPosNoMapa(Vector3 pontoAlvo,float customVarDir=.1f)
     {
         Vector3 retorno = pontoAlvo;
-        RaycastHit hit = new RaycastHit();
+        
         Physics.queriesHitBackfaces = true;
 
-        if (Physics.Raycast(pontoAlvo + customVarDir * Vector3.up, Vector3.down, out hit))
+        if (Physics.Raycast(pontoAlvo + customVarDir * Vector3.up, Vector3.down, out RaycastHit hit))
         // if (hit.transform.name == terra)
         {
             //Debug.Log("up catch: " + hit.collider.name);
-            retorno = hit.point;
-            //GameObject G = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //G.transform.position = retorno;
+            if(!hit.collider.gameObject.CompareTag("Criature"))
+                retorno = hit.point;
+            
         }
 
         if (retorno == pontoAlvo && Physics.Raycast(pontoAlvo, Vector3.up, out hit))
         //if (hit.transform.name == terra)
         {
-            //Debug.Log("down catch: "+hit.collider.name);
-            retorno = hit.point;
-            //GameObject G = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            //G.transform.position = retorno;
+            //Debug.Log("down catch: " + hit.collider.name);
+            if (!hit.collider.gameObject.CompareTag("Criature"))
+                retorno = hit.point;
+            
         }
 
         

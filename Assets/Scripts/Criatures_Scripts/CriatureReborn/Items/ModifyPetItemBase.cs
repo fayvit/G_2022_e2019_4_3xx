@@ -5,6 +5,7 @@ using TextBankSpace;
 using FayvitBasicTools;
 using FayvitSupportSingleton;
 using FayvitCam;
+using Criatures2021Hud;
 
 namespace Criatures2021
 {
@@ -66,8 +67,8 @@ namespace Criatures2021
                 sfxId = FayvitSounds.SoundEffectID.painelAbrindo
             });
             commands = new MsgSendExternalPanelCommand();
-            ContainerBasicMenu.instance.SetPercentSizeInTheParent(.6f,.4f,.95f,.95f);
-            ContainerBasicMenu.instance.Menu.StartHud(OpcaoEscolhida, NomesDosCriaturesAtivos());
+            PetMenuManager.instance.SetPercentSizeInTheParent(.6f,.25f,.95f,.85f);
+            PetMenuManager.instance.Menu.StartHud(OpcaoEscolhida, Dono.GetComponent<CharacterManager>().Dados.CriaturesAtivos);//(OpcaoEscolhida, NomesDosCriaturesAtivos());
             //GameController.g.HudM.Painel.AtivarNovaMens(textoDaMensInicial[0], 25);
             //GameController.g.HudM.Menu_Basico.IniciarHud(OpcaoEscolhida, NomesDosCriaturesAtivos());
             Estado = ItemUseState.selecaoDeItem;
@@ -111,14 +112,14 @@ namespace Criatures2021
             switch (Estado)
             {
                 case ItemUseState.selecaoDeItem:
-                    ContainerBasicMenu.instance.Menu.ChangeOption(-commands.vChange);
+                    PetMenuManager.instance.Menu.ChangeOption(-commands.vChange);
                     if (commands.confirmButton)
                     {
                         OpcaoEscolhida(ContainerBasicMenu.instance.Menu.SelectedOption);
                     }
                     else if (commands.returnButton)
                     {
-                        ContainerBasicMenu.instance.Menu.FinishHud();
+                        PetMenuManager.instance.Menu.FinishHud();
                         MessageAgregator<MsgRequestHideUpperLargeMessage>.Publish();
                         Finaliza();
                     }
@@ -267,7 +268,7 @@ namespace Criatures2021
             }
 
             MessageAgregator<MsgRequestHideUpperLargeMessage>.Publish();
-            ContainerBasicMenu.instance.Menu.FinishHud();
+            PetMenuManager.instance.Menu.FinishHud();
             MessageAgregator<MsgRequestSfx>.Publish(new MsgRequestSfx()
             {
                 sfxId = FayvitSounds.SoundEffectID.Book1

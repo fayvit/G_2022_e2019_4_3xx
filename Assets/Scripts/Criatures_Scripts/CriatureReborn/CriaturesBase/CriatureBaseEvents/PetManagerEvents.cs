@@ -63,6 +63,7 @@ namespace Criatures2021
     {
         public GameObject dono;
         public Transform lockTarget;
+        public FluxoDeRetorno fluxo;
         public bool replaceIndex;
         public int newIndex;
     }

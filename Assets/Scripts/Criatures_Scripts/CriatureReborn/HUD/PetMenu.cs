@@ -7,12 +7,12 @@ using FayvitSupportSingleton;
 namespace Criatures2021Hud
 {
     [System.Serializable]
-    public class PausePetMenu : InteractiveUiBase
+    public class PetMenu : InteractiveUiBase
     {
         private System.Action<int> localAction;
         private List<PetBase> pets;
 
-        public void StatHud(System.Action<int> thisAction, List<PetBase> pets,int selectedOption = 0)
+        public void StartHud(System.Action<int> thisAction, List<PetBase> pets,int selectedOption = 0)
         {
             localAction += ActionToDelayButton(thisAction);
 

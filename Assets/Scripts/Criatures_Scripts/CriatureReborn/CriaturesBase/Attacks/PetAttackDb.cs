@@ -10,7 +10,7 @@ namespace Criatures2021
         [SerializeField] private Colisor _colisor = new Colisor();
 
         [SerializeField] private int nivelDoGolpe = 1;
-        [SerializeField] private float modPersonagem = 0;
+        [SerializeField] private int modPersonagem = 0;
         [SerializeField] private float acimaDoChao = 0;
         [SerializeField] private float distanciaEmissora = 0;
         [SerializeField] private float tempoDeInstancia = 0;
@@ -115,7 +115,7 @@ namespace Criatures2021
             }
         }
 
-        public float ModPersonagem
+        public int ModPersonagem
         {
             get
             {

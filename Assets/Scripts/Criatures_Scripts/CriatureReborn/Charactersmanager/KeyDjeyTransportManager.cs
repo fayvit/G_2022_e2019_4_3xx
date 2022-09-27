@@ -28,6 +28,7 @@ namespace Criatures2021
         }
 
         public ICommandReader GetCommander => CommandReader.GetCR(AbstractGlobalController.Instance.Control);
+        public Transform GetUser => usuario;
 
         public static void StartKeyDjeyTransport(Transform usuario,bool masculino)
         {
@@ -169,7 +170,7 @@ namespace Criatures2021
 
         }
 
-        public void SairDoKeyDjey()
+        public void SairDoKeyDjey(bool melhorarPosicao=true,bool melhorarPosicaoDoPet=true)
         {
             move.MoveApplicator(Vector3.zero);
             CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);
@@ -180,7 +181,8 @@ namespace Criatures2021
 
             usuario.parent = null;
             usuario.rotation = DirectionOnThePlane.Rotation(usuario.forward);
-            usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
+            if(melhorarPosicao)
+                usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
 
 
             MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
@@ -189,15 +191,17 @@ namespace Criatures2021
                 returnState = CharacterState.onFree
             });
 
-            MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
-            {
-                pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
-            });
+            if(melhorarPosicaoDoPet)
+                MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
+                {
+                    pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
+                });
 
 
             Destroy(gameObject);
             
         }
+       
     }
 
     public struct MsgExitKeyDjey : IMessageBase

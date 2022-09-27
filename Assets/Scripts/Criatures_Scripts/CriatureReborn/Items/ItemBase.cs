@@ -242,7 +242,10 @@ namespace Criatures2021
 
         public static string NomeEmLinguas(NameIdItem ID)
         {
-            return TextBank.RetornaListaDeTextoDoIdioma(TextKey.listaDeItens)[(int)ID];
+            if ((int)ID > -1)
+                return TextBank.RetornaListaDeTextoDoIdioma(TextKey.listaDeItens)[(int)ID];
+            else
+                return "";
         }
 
         public object Clone()

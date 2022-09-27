@@ -28,10 +28,10 @@ namespace Criatures2021Hud
         private float tempoDecorrido=0;
         private float TempoModificandoBar = .5f;
         private bool lerpBarAtivo;
-        private PetBase observer;
-
         private float tempoMudandoStatus = 0;
         private float tempoTotalParaMudarStatus = 1;
+
+        public PetBase Observer { get; private set; }
 
         public void Start()
         {
@@ -50,10 +50,10 @@ namespace Criatures2021Hud
         private void OnRemoveStatus(MsgRemoveStatus obj)
         {
             
-            if (obj.petBase == observer)
+            if (obj.petBase == Observer)
             {
-                if (observer.StatusTemporarios.Count > 0)
-                    statusImage.sprite = ResourcesFolders.GetMiniStatus(observer.StatusTemporarios[0].Tipo);
+                if (Observer.StatusTemporarios.Count > 0)
+                    statusImage.sprite = ResourcesFolders.GetMiniStatus(Observer.StatusTemporarios[0].Tipo);
                 else
                     statusContainer.gameObject.SetActive(false);
             }
@@ -61,7 +61,7 @@ namespace Criatures2021Hud
 
         private void OnChangeHp(MsgChangeHP obj)
         {
-            if (obj.target == observer)
+            if (obj.target == Observer)
             {
                 lerpBarAtivo = true;
                 tempoDecorrido = 0;
@@ -73,7 +73,7 @@ namespace Criatures2021Hud
 
         private void OnChangeMp(MsgChangeMP obj)
         {
-            if (obj.target == observer)
+            if (obj.target == Observer)
             {
                 lerpBarAtivo = true;
                 tempoDecorrido = 0;
@@ -95,16 +95,16 @@ namespace Criatures2021Hud
                 PEtext.text = (int)Mathf.Lerp(antMp, newMp, tempoDecorrido / TempoModificandoBar) + " / " + maxMp;
             }
 
-            if (observer.StatusTemporarios.Count > 1)
+            if (Observer.StatusTemporarios.Count > 1)
             {
                 
                 tempoMudandoStatus += Time.deltaTime;
-                int x = (int)(observer.StatusTemporarios.Count * tempoMudandoStatus / tempoTotalParaMudarStatus)
-                        %   observer.StatusTemporarios.Count;
+                int x = (int)(Observer.StatusTemporarios.Count * tempoMudandoStatus / tempoTotalParaMudarStatus)
+                        %   Observer.StatusTemporarios.Count;
 
                 //Debug.Log("numero x: " + x);
 
-                statusImage.sprite = ResourcesFolders.GetMiniStatus(observer.StatusTemporarios[x].Tipo);
+                statusImage.sprite = ResourcesFolders.GetMiniStatus(Observer.StatusTemporarios[x].Tipo);
 
                 if (tempoMudandoStatus > tempoTotalParaMudarStatus)
                     tempoMudandoStatus = 0;
@@ -114,29 +114,47 @@ namespace Criatures2021Hud
         public void SetarOpcoes(PetBase P,System.Action<int> action)
         {
             ThisAction += action;
-            observer = P;
-            petImage.sprite = ResourcesFolders.GetMiniPet(P.NomeID);
-            if (P.StatusTemporarios.Count > 0)
+            Observer = P;
+            if (P.NomeID != PetName.nulo)
             {
-                statusContainer.gameObject.SetActive(true);
-                statusImage.sprite = ResourcesFolders.GetMiniStatus(P.StatusTemporarios[0].Tipo);
+                ChangeViewDetails(true);
+                petImage.sprite = ResourcesFolders.GetMiniPet(P.NomeID);
+                if (P.StatusTemporarios.Count > 0)
+                {
+                    statusContainer.gameObject.SetActive(true);
+                    statusImage.sprite = ResourcesFolders.GetMiniStatus(P.StatusTemporarios[0].Tipo);
+                }
+                else
+                    statusContainer.gameObject.SetActive(false);
+
+                PetAtributes A = P.PetFeat.meusAtributos;
+                pvImage.fillAmount = (float)A.PV.Corrente / A.PV.Maximo;
+                peImage.fillAmount = (float)A.PE.Corrente / A.PE.Maximo;
+                petName.text = P.GetNomeEmLinguas;
+                nivel.text = InterfaceTextList.txt[InterfaceTextKey.NV] + ": " + P.G_XP.Nivel;
+                PVtext.text = InterfaceTextList.txt[InterfaceTextKey.PV] + ": " + A.PV.Corrente + " / " + A.PV.Maximo;
+                PEtext.text = InterfaceTextList.txt[InterfaceTextKey.PE] + ": " + A.PE.Corrente + " / " + A.PE.Maximo;
+                maxMp = A.PE.Maximo;
+                maxHp = A.PV.Maximo;
+                antHp = A.PV.Corrente;
+                antMp = A.PE.Corrente;
+                newHp = antHp;
+                newMp = antMp;
             }
             else
-                statusContainer.gameObject.SetActive(false);
+            {
+                ChangeViewDetails(false);
+            }
+        }
 
-            PetAtributes A = P.PetFeat.meusAtributos;
-            pvImage.fillAmount = (float)A.PV.Corrente / A.PV.Maximo;
-            peImage.fillAmount = (float)A.PE.Corrente / A.PE.Maximo;
-            petName.text = P.GetNomeEmLinguas;
-            nivel.text = InterfaceTextList.txt[InterfaceTextKey.NV] + ": " + P.G_XP.Nivel;
-            PVtext.text = InterfaceTextList.txt[InterfaceTextKey.PV] + ": " + A.PV.Corrente + " / " + A.PV.Maximo;
-            PEtext.text = InterfaceTextList.txt[InterfaceTextKey.PE] + ": " + A.PE.Corrente + " / " + A.PE.Maximo;
-            maxMp = A.PE.Maximo;
-            maxHp = A.PV.Maximo;
-            antHp = A.PV.Corrente;
-            antMp = A.PE.Corrente;
-            newHp = antHp;
-            newMp = antMp;
+        void ChangeViewDetails(bool view)
+        {
+            petName.enabled = view;
+            nivel.enabled = view;
+            PVtext.enabled = view;
+            PEtext.enabled = view;
+            petImage.enabled = view;
+            statusContainer.gameObject.SetActive(view);
         }
     }
 }

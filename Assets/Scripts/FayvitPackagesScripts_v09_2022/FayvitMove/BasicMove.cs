@@ -14,14 +14,14 @@ namespace FayvitMove
         [SerializeField] private MoveFeatures movFeatures;
         [SerializeField] private float standardFallSpeed = 0;
         [SerializeField] private float overlapTaxRadius = .8f;
+        [SerializeField] private bool updateLastGroundedPosition;
 
         //[SerializeField] private ElementosDeMovimentacao elementos;
-
 
         private Transform transform;
         private Vector3 directionalMove = Vector3.zero;
         
-
+        
         private float targetSpeed = 0;
         private bool retornoDonoChao;
         private bool isGrounded;
@@ -32,6 +32,7 @@ namespace FayvitMove
 
         public bool UseRollSpeed { get; set; } = false;
         public bool ApplicableGravity { get; set; } = true;
+        
 
         public CharacterController Controller { get; private set; }
 
@@ -41,6 +42,64 @@ namespace FayvitMove
 
         public float ModSpeed { get; set; } = 1;
         public float WalkSpeed => movFeatures.walkSpeed;
+
+        private Transform GroundCheck
+        {
+            get
+            {
+                if (groundCheck == null)
+                {
+                    if (Controller != null)
+                    {
+                        groundCheck = new GameObject().transform;
+                        RecalculeGroundCheck();
+                        groundCheck.name = "ground check";
+                    }
+                }
+
+                return groundCheck;
+            }
+        }
+
+
+        public bool IsGrounded
+        {
+            get
+            {
+                // bool noChao = false;
+                isGrounded = false;
+
+                Vector3 overCapsPos = GroundCheck.position + Controller.height * .25f * Vector3.up;
+                Collider[] colliders = Physics.OverlapCapsule(GroundCheck.position, overCapsPos, Controller.radius * overlapTaxRadius);
+                //Physics.OverlapSphere(GroundCheck.position, groundedRadius, 1);
+
+
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (Controller.transform.gameObject.name == "teste")
+                        Debug.Log(colliders[i].name);
+                    if (!FayvitBasicTools.HierarchyTools.EstaNaHierarquia(Controller.transform, colliders[i].transform)
+                        &&!colliders[i].isTrigger)
+                    //if (colliders[i].gameObject != Controller.transform.gameObject)
+                    {
+                        //noChao = true;
+                        retornoDonoChao = true;
+                        isGrounded = true;
+                        wasGrounded = true;
+                    }
+                }
+
+                if (!isGrounded && wasGrounded)
+                {
+                    wasGrounded = false;
+                    retornoDonoChao = true;
+                    SupportSingleton.Instance.StartCoroutine(GhostJumpSupport());
+
+
+                }
+                return retornoDonoChao;
+            }
+        }
 
         public BasicMove() { }
         public BasicMove(MoveFeatures movFeatures,float standardFallSpeed = 12,float overlapTaxRadius = .9f) 
@@ -56,6 +115,18 @@ namespace FayvitMove
             Controller = T.GetComponent<CharacterController>();
 
             _JumpM = new JumpManager(movFeatures.jumpFeat, transform, Controller);
+        }
+
+        public void ChangeWalkSpeed(float newSpeed)
+        {
+            movFeatures.walkSpeed = newSpeed;
+        }
+
+        IEnumerator GhostJumpSupport()
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (!isGrounded && !wasGrounded)
+                retornoDonoChao = false;
         }
 
         #region Suprimidos
@@ -115,78 +186,14 @@ namespace FayvitMove
         //}
         #endregion
 
-
-
-        public void RecalculeGroundCheck()
+        private void RecalculeGroundCheck()
         {
             groundCheck.position = Controller.transform.position
                             + Controller.center + .5f * Controller.height * Vector3.down;
             groundCheck.SetParent(Controller.transform);
         }
 
-        private Transform GroundCheck
-        {
-            get
-            {
-                if (groundCheck == null)
-                {
-                    if (Controller != null)
-                    {
-                        groundCheck = new GameObject().transform;
-                        RecalculeGroundCheck();
-                        groundCheck.name = "ground check";
-                    }
-                }
-
-                return groundCheck;
-            }
-        }
-
-        
-        public bool IsGrounded
-        {
-            get
-            {
-                // bool noChao = false;
-                isGrounded = false;
-                
-                Vector3 overCapsPos = GroundCheck.position + Controller.height * .25f * Vector3.up;
-                Collider[] colliders = Physics.OverlapCapsule(GroundCheck.position, overCapsPos, Controller.radius * overlapTaxRadius);
-                    //Physics.OverlapSphere(GroundCheck.position, groundedRadius, 1);
-                
-
-                for (int i = 0; i < colliders.Length; i++)
-                {
-                    if (Controller.transform.gameObject.name == "teste")
-                        Debug.Log(colliders[i].name);
-                    if(!FayvitBasicTools.HierarchyTools.EstaNaHierarquia(Controller.transform,colliders[i].transform))
-                    //if (colliders[i].gameObject != Controller.transform.gameObject)
-                    {
-                        //noChao = true;
-                        retornoDonoChao = true;
-                        isGrounded = true;
-                        wasGrounded = true;
-                    }
-                }
-
-                if (!isGrounded && wasGrounded)
-                {
-                    wasGrounded = false;
-                    retornoDonoChao = true;
-                    SupportSingleton.Instance.StartCoroutine(GhostJumpSupport());
-
-
-                }
-                return retornoDonoChao;
-            }
-        }
-
-        IEnumerator GhostJumpSupport()
-        {
-            yield return new WaitForSeconds(0.1f);
-            if (!isGrounded && !wasGrounded)
-                retornoDonoChao = false;
-        }
+       
 
         public void MoveApplicator(Vector3 dir, bool run = false, bool startJump = false , bool pressJump = false)
         {
@@ -287,15 +294,12 @@ namespace FayvitMove
 
         }
 
-        public void VerifyJumpInput()
-        {
-            _JumpM.StartApplyJump();
-        }
+        //public void VerifyJumpInput()
+        //{
+        //    _JumpM.StartApplyJump();
+        //}
 
-        public void ChangeWalkSpeed(float newSpeed)
-        {
-            movFeatures.walkSpeed = newSpeed;
-        }
+        
 
 
     }

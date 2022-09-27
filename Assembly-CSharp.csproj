@@ -128,10 +128,14 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Effects\ParticleOfSubstitution.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\ButtonsForTutoDodge.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\CamMovimentWithMessageIndex.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\DarkScreenDamageForLastGroundedPosition.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\DarkenScreenDamageBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\DarkenScreenDamageManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\IanChangeToMerchantManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SlopeSlipManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SpawnWildBase.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerChangeKeyDjey.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerChangeKeyDjeyEnterAndExit.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerSaidaDaCavernaLutaComCaesar.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\WaitCustomizationForStartCutscene.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\FieldEnemy\PetVigilanceListener.cs" />
@@ -161,9 +165,10 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\OptionPetForListHud.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PauseItemMenu.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PauseMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PausePetMenu.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PauseTabsManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PetBookHud.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PetMenu.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\PetMenuManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\RapidInfoHud.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ShowAttackOption.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ShowItemHudManager.cs" />
@@ -260,7 +265,6 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Tools\ShowConvertTime.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Tools\TuinManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TutoInfoManagers\TutoInfoListener.cs" />
-    <Compile Include="Assets\Scripts\Criatures_Scripts\FluxoDeRetorno.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\MusicDictionary.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\MyGameController.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\MyGlobalController.cs" />
@@ -272,6 +276,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\CriaturesSaveDates.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\PersonagemParaTeste.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\SpawnPetTest.cs" />
+    <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitAdressable\UnderstendAddressable.cs" />
     <Compile Include="Assets\Scripts\GameJolt\JoltLoginManager.cs" />
     <Compile Include="Assets\Scripts\GameJolt\SaveAndLoadInJolt.cs" />
     <Compile Include="Assets\Scripts\HumanAnimationListener.cs" />
@@ -1031,6 +1036,24 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="CriaturesBase.csproj">
@@ -1073,6 +1096,10 @@
       <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
       <Name>FayvitBase</Name>
     </ProjectReference>
+    <ProjectReference Include="TerrainMyToolsTest.csproj">
+      <Project>{6EFD51BF-32A9-C4AA-EEFB-28A73EF62C24}</Project>
+      <Name>TerrainMyToolsTest</Name>
+    </ProjectReference>
     <ProjectReference Include="BasicCriatures.csproj">
       <Project>{C83D8325-0C56-0661-4D89-91C0A00A40D3}</Project>
       <Name>BasicCriatures</Name>
@@ -1108,10 +1135,6 @@
     <ProjectReference Include="FayvitMove.csproj">
       <Project>{651E2E8D-8F72-E486-6ADF-9FA30262747E}</Project>
       <Name>FayvitMove</Name>
-    </ProjectReference>
-    <ProjectReference Include="TerrainMyToolsTest.csproj">
-      <Project>{6EFD51BF-32A9-C4AA-EEFB-28A73EF62C24}</Project>
-      <Name>TerrainMyToolsTest</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

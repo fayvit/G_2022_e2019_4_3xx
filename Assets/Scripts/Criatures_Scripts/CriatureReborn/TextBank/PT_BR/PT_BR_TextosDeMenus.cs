@@ -7,8 +7,8 @@ namespace TextBankSpace
     {
         public static Dictionary<TextKey, List<string>> txt = new Dictionary<TextKey, List<string>>()
             {
-                {TextKey.menuUsoDeItem, new List<string>()
-                    { "Usar","Item Rapido","Descartar","Voltar"}
+            {TextKey.menuUsoDeItem, new List<string>()
+                    { "Usar","Organizar","Item Rapido","Descartar","Voltar"}
             },
             { TextKey.MenuDescartavel,new List<string>(){ 
                 "Qual a quantidade de {0} que gostaria de descartar?",
@@ -23,7 +23,7 @@ namespace TextBankSpace
             { TextKey.menuPets,new List<string>()
             {
             "Voltar",
-            //"Dar um nome...?",
+            "Organizar",
             "Ver status"
             } }
         };

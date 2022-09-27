@@ -103,6 +103,7 @@ namespace Criatures2021
                 else
                 {
                     state = IaState.stopped;
+
                     SupportSingleton.Instance.InvokeOnCountFrame(() => {
                         MessageAgregator<MsgCriatureDefeated>.Publish(new MsgCriatureDefeated()
                         {
@@ -112,10 +113,11 @@ namespace Criatures2021
                         });
                     }, 2);
 
-                    MessageAgregator<MsgEndWaitToPetChange>.Publish(new MsgEndWaitToPetChange()
-                    {
-                        waiter = transform.gameObject
-                    });
+                    if(transform)
+                        MessageAgregator<MsgEndWaitToPetChange>.Publish(new MsgEndWaitToPetChange()
+                        {
+                            waiter = transform.gameObject
+                        });
                 }
 
                 SupportSingleton.Instance.InvokeOnEndFrame(()=> {

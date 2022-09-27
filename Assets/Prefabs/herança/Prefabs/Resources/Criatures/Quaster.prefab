@@ -1,0 +1,274 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!143 &5032335118222509447
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098526866468051749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.5
+  m_Radius: 0.35
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &7294386002439566393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098526866468051749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233d010bd126a7e4d971c12c145e305c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  meuCriatureBase:
+    petId: 0
+    petFeat:
+      meusTipos: 
+      contraTipos: []
+      meusAtributos:
+        pv:
+          basico: 3
+          corrente: 14
+          maximo: 14
+          modMaximo: 0
+          taxa: 0.2
+        pe:
+          basico: 7
+          corrente: 30
+          maximo: 30
+          modMaximo: 0
+          taxa: 0.2
+        ataque:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
+        defesa:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
+        poder:
+          corrente: 9
+          modCorrente: 0
+          maximo: 9
+          modMaximo: 0
+          minimo: 1
+          taxa: 0.2
+      mNivel:
+        _nivel: 1
+        _XP: 0
+        _paraProxNivel: 40
+      distanciaFundamentadora: 0.2
+    atkManager:
+      golpeEscolhido: 0
+      listaDeGolpes: []
+      meusGolpes: []
+    movFeat:
+      rollSpeed: 1
+      walkSpeed: 2
+      runSpeed: 6
+      rotAlways: 0
+      jumpFeat:
+        jumpHeight: 1
+        minTimeJump: 0.25
+        maxTimeJump: 0.35
+        risingSpeed: 5
+        fallSpeed: 4.8
+        inJumpSpeed: 3
+        verticalDamping: 2
+        horizontalDamping: 5
+        initialImpulse: 0.03
+        isJumping: 0
+        wasJumping: 0
+    statusTemporarios: []
+    stManager:
+      staminaPoints: 100
+      maxStaminaPoints: 100
+      velToTotalRegen: 13
+      zeroedVelToTotalRegen: 30
+      runConsumeTax: 0.25
+      blockingSlowness: 0.25
+      zeroedStamina: 0
+    alturaCamera: 0.25
+    distanciaCamera: 5.5
+    varHeightCamera: 0.25
+    alturaCameraLuta: 1
+    distanciaCameraLuta: 6
+    captureDificult: 1
+  controll:
+    mov:
+      lockTarget: {fileID: 0}
+      movFeatures:
+        rollSpeed: 1
+        walkSpeed: 2
+        runSpeed: 6
+        rotAlways: 0
+        jumpFeat:
+          jumpHeight: 1
+          minTimeJump: 0.25
+          maxTimeJump: 0.35
+          risingSpeed: 5
+          fallSpeed: 4.8
+          inJumpSpeed: 3
+          verticalDamping: 2
+          horizontalDamping: 5
+          initialImpulse: 0.03
+          isJumping: 0
+          wasJumping: 0
+      standardFallSpeed: 0
+      overlapTaxRadius: 0.8
+      updateLastGroundedPosition: 0
+  roll:
+    totalTimeInRoll: 0.5
+    intervalInTheRoll: 0.3
+    returnTime: 0.15
+    imunoTax: 0.75
+  targetUpdateTax: 1
+--- !u!114 &8632487155994394199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098526866468051749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46aa399f29e4c51478fd7d610c557e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velAnimatorString: velocidade
+  jumpNameBool: pulo
+  groundedNameBool: noChao
+  jumpAnimationStateName: pulando
+  atkBool: atacando
+  damageStateName: dano1
+  emDanoBool: dano1
+  emDano_2Bool: dano2
+  defeatedBool: cair
+  rollStateName: Roll
+  A: {fileID: 0}
+--- !u!95 &7946752328076027119
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098526866468051749}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0173e074d318e149894f132fb7dde7f, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &5332529131098744436
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 825.66583
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 93.4773
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 491.41882
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_Name
+      value: Quaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Criature
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417361359673230750, guid: 9880467b330e8d240ba0a1f83de59fa0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c78d5dc5b1835124fae729aaed379eaf, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9880467b330e8d240ba0a1f83de59fa0, type: 3}
+--- !u!1 &5098526866468051749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9880467b330e8d240ba0a1f83de59fa0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5332529131098744436}
+  m_PrefabAsset: {fileID: 0}

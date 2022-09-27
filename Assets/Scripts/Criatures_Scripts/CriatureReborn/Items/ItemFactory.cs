@@ -7,7 +7,7 @@ namespace Criatures2021
     {
         public static ItemBase Get(NameIdItem nomeItem, int estoque = 1)
         {
-            ItemBase retorno = new ItemBase(new ItemFeatures());
+            ItemBase retorno = new ItemBase(new ItemFeatures(NameIdItem.generico) { nosItensRapidos = false }) ;
             switch (nomeItem)
             {
                 case NameIdItem.maca:

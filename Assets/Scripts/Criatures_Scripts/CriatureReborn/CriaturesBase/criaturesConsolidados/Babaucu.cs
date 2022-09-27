@@ -21,7 +21,7 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 Nome = AttackNameId.dentada,
-                ModPersonagem = 1.5f,
+                ModPersonagem = 5,
                 NivelDoGolpe = 1,
                 Colisor = new Colisor("esqueleto/corpo/",
                                                 new Vector3(0,0,0.3f),
@@ -31,7 +31,7 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 NivelDoGolpe = 2,
-                ModPersonagem = 0.5f,
+                ModPersonagem = 3,
                 Colisor = new Colisor("esqueleto/corpo/",
                                               new Vector3(0,0,0f),
                                               new Vector3(0.181f,0f,0.075f)),

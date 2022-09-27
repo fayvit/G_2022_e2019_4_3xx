@@ -44,4 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/cenas/planicieDeKatids.unity
     guid: 3db079379808e374a9ffc8ae0f0e4814
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ace9391c534221540baae8cad5038d94,
+      type: 2}

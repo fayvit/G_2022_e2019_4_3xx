@@ -34,7 +34,7 @@ namespace Criatures2021Hud
         {
             AnItemOption uma = G.GetComponent<AnItemOption>();
 
-            Sprite S = ResourcesFolders.GetMiniItem(itensForMenu[indice].ID);
+            //Sprite S = ResourcesFolders.GetMiniItem(itensForMenu[indice].ID);
 
             uma.SetarOpcoes(itensForMenu[indice], ThisAction);
 

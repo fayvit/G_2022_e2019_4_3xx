@@ -27,6 +27,7 @@ public class PersonagemParaTeste : MonoBehaviour
                     var v = CustomizationSavedChars.listaDePersonagens;
                     int x = Random.Range(0, v.Count);
                     FazPersonagem(v[x], true, transform);
+                    AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.permitidoKeyDjey,true);
                 }
         }, 3);
 
@@ -41,6 +42,7 @@ public class PersonagemParaTeste : MonoBehaviour
         c.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position);
         c.Ccd = ccd;
         c.enabled = false;
+        
 
 
 

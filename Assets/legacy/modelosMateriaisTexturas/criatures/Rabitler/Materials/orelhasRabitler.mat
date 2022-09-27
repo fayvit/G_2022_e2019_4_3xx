@@ -127,12 +127,13 @@ Material:
     - Color_5bd0438a672a4a7ab06841d5036d39b7: {r: 1, g: 1, b: 1, a: 0}
     - Color_70d18b7a6420475a99316f2a4695c0a3: {r: 0, g: 0, b: 0, a: 0}
     - Color_80a1cf22a1c34aa487d2f908d55f63b8: {r: 0, g: 0, b: 0, a: 0}
+    - Vector4_1A3B1624: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.39311445, g: 0.39311445, b: 0.39311445, a: 1}
     - _Color: {r: 0.39311445, g: 0.39311445, b: 0.39311445, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
     - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0.6}
-    - _MyBaseColor: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
+    - _MyBaseColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     - _ShadingBlacks: {r: 0, g: 0, b: 0, a: 0}
     - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

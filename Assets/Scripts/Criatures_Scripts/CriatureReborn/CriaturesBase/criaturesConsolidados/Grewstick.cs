@@ -15,7 +15,8 @@ namespace Criatures2021
             Colisor = new Colisor("Armature/Bone/Bone.001/Bone.002/Bone.008",
                                           new Vector3(0,-.5f,0),
                                           new Vector3(0,.97f,1.82f)),
-            TaxaDeUso=1
+            TaxaDeUso=1,
+            ModPersonagem = 5
         },
             new PetAttackDb()
             {
@@ -25,7 +26,8 @@ namespace Criatures2021
                                          new Vector3(-0.102f,0.55f,-1.1f)){ ColisorScale = new Vector3(3,3,3)},
                 Nome = AttackNameId.garra,
                 TaxaDeUso = .5f,
-                DistanciaEmissora = 0.5f
+                DistanciaEmissora = 0.5f,
+                ModPersonagem = 1
             },
             new PetAttackDb()
             {
@@ -33,8 +35,9 @@ namespace Criatures2021
                 NivelDoGolpe = 2,
                 Colisor = new Colisor("Armature/Bone",
                                          new Vector3(0,.12f,.62f),
-                                         new Vector3(-0.37f,1.62f,-0.325f)),
-                TaxaDeUso = 1.25f
+                                         new Vector3(-0.37f,0,-0.325f)),
+                TaxaDeUso = 1.25f,
+                ModPersonagem = 2
             },
             new PetAttackDb()
             {
@@ -42,7 +45,8 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("Armature/Bone"),
                 DistanciaEmissora = .5f,
-                TaxaDeUso = .5f
+                TaxaDeUso = .5f,
+                ModPersonagem = 5
             },
             new PetAttackDb()
             {
@@ -50,7 +54,8 @@ namespace Criatures2021
                 NivelDoGolpe = 8,
                 Colisor = new Colisor("Armature/Bone/Bone.001/Bone.002/Bone.008"),
                 TaxaDeUso = .5f,
-                DistanciaEmissora=.125f
+                DistanciaEmissora=.125f,
+                ModPersonagem = 1
             }
         };
 

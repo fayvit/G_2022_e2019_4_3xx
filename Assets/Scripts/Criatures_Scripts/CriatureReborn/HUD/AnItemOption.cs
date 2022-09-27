@@ -14,10 +14,10 @@ namespace Criatures2021Hud
         [SerializeField] private Image optionImage;
         [SerializeField] private Text amountTxt;
         [SerializeField] private GameObject speedIcon;
-
-        private ItemBase thisItem;
+        
         protected GameObject AmountContainer => amountTxt.transform.parent.gameObject;
         public Image OptionImage { get { return optionImage; } set { optionImage = value; } }
+        public ItemBase ThisItem { get; private set; }
 
         private void Start()
         {
@@ -31,7 +31,7 @@ namespace Criatures2021Hud
 
         private void OnAmountChange(MsgItemAmountChange obj)
         {
-            if (obj.target == thisItem)
+            if (obj.target == ThisItem)
             {
                 amountTxt.text = obj.target.Estoque.ToString();
             }
@@ -39,10 +39,22 @@ namespace Criatures2021Hud
 
         public void SetarOpcoes(ItemBase thisItem,System.Action<int> A)
         {
-            this.thisItem = thisItem;
+            this.ThisItem = thisItem;
             ThisAction += A;
-            optionImage.sprite = ResourcesFolders.GetMiniItem(thisItem.ID);
-            amountTxt.text = thisItem.Estoque.ToString();
+            if (thisItem.ID == NameIdItem.generico)
+            {
+                optionImage.gameObject.SetActive(false);
+                amountTxt.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log(thisItem.ID);
+
+                optionImage.gameObject.SetActive(true);
+                amountTxt.transform.parent.gameObject.SetActive(true);
+                optionImage.sprite = ResourcesFolders.GetMiniItem(thisItem.ID);
+                amountTxt.text = thisItem.Estoque.ToString();
+            }
 
             speedIcon.SetActive(thisItem.NosItensRapidos);
         }

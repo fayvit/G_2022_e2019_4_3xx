@@ -26,6 +26,18 @@ namespace Criatures2021
         public List<PetBase> CriaturesArmagedados { get=>criaturesArmagedados; set=>criaturesArmagedados=value; }
         public LivroDosCriatures Livro { get; set; } = new LivroDosCriatures();
 
+        public List<ItemBase> ItensRapidos {
+            get {
+                List<ItemBase> l = new List<ItemBase>();
+                foreach (var v in itens)
+                {
+                    if (v.NosItensRapidos)
+                        l.Add(v);
+                }
+
+                return l;
+            } }
+
         /// <summary>
         /// Adiciona o valor amount ao total de cristais, amount deve ser positivo
         /// </summary>
@@ -92,13 +104,13 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Florest,7),
-                new PetBase(PetName.Xuash,11),
-                new PetBase(PetName.PolyCharm,7),
-                new PetBase(PetName.Vampire,13),
-                new PetBase(PetName.Rabitler,9),
-                new PetBase(PetName.Arpia,9),
+                new PetBase(PetName.Uiritibucu,7),
                 new PetBase(PetName.Marak,11),
+                new PetBase(PetName.Wisks,7),
+                new PetBase(PetName.Babaucu,13),
+                new PetBase(PetName.Estrep,9),
+                new PetBase(PetName.Onarac,9),
+                new PetBase(PetName.Oderc,11),
                 //new PetBase(PetName.Estrep,11),
                 //new PetBase(PetName.Onarac,7),
                 //new PetBase(PetName.Oderc,7),
@@ -132,7 +144,7 @@ namespace Criatures2021
             }
 
 
-            //CriaturesAtivos[0].PetFeat.meusAtributos.PE.Corrente = 1;
+            CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
             //CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
             //CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;
             //CriaturesAtivos[4].StatusTemporarios.Add(new DatesForTemporaryStatus() { Tipo = StatusType.envenenado });
@@ -170,30 +182,30 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.pergTempestadeEletrica,1),
             ItemFactory.Get(NameIdItem.tonico,10),
             ItemFactory.Get(NameIdItem.pergAlana,1),
-            //ItemFactory.Get(NameIdItem.antidoto,10),
-            //ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
-            //ItemFactory.Get(NameIdItem.ventilador,10),
-            //ItemFactory.Get(NameIdItem.gasolina,10),
-            //ItemFactory.Get(NameIdItem.regador,10),
-            //ItemFactory.Get(NameIdItem.aguaTonica,10),
-            //ItemFactory.Get(NameIdItem.inseticida,10),
-            //ItemFactory.Get(NameIdItem.seiva,10),
-            //ItemFactory.Get(NameIdItem.pilha,10),
-            //ItemFactory.Get(NameIdItem.estrela,10),
-            //ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
-            //ItemFactory.Get(NameIdItem.pergaminhoDeAnanda,10),
-            //ItemFactory.Get(NameIdItem.pergaminhoDeBoutjoi,10),
-            //ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
-            //ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
-            //ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
-            //ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
-            //ItemFactory.Get(NameIdItem.pergFuracaoDeFolhas,5),
-            //ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),
-            //ItemFactory.Get(NameIdItem.regador,10),
-            //ItemFactory.Get(NameIdItem.inseticida,2),
-            //ItemFactory.Get(NameIdItem.ventilador,2),
-            //ItemFactory.Get(NameIdItem.pergSinara,2),
-            //ItemFactory.Get(NameIdItem.pergAlana,1)
+            ItemFactory.Get(NameIdItem.antidoto,10),
+            ItemFactory.Get(NameIdItem.tinteiroSagradoDeLog,10),
+            ItemFactory.Get(NameIdItem.ventilador,10),
+            ItemFactory.Get(NameIdItem.gasolina,10),
+            ItemFactory.Get(NameIdItem.regador,10),
+            ItemFactory.Get(NameIdItem.aguaTonica,10),
+            ItemFactory.Get(NameIdItem.inseticida,10),
+            ItemFactory.Get(NameIdItem.seiva,10),
+            ItemFactory.Get(NameIdItem.pilha,10),
+            ItemFactory.Get(NameIdItem.estrela,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeLaurense,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeAnanda,10),
+            ItemFactory.Get(NameIdItem.pergaminhoDeBoutjoi,10),
+            ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
+            ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
+            ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
+            ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
+            ItemFactory.Get(NameIdItem.pergFuracaoDeFolhas,5),
+            ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),
+            ItemFactory.Get(NameIdItem.regador,10),
+            ItemFactory.Get(NameIdItem.inseticida,2),
+            ItemFactory.Get(NameIdItem.ventilador,2),
+            ItemFactory.Get(NameIdItem.pergSinara,2),
+            ItemFactory.Get(NameIdItem.pergAlana,1)
         };
 
         }

@@ -62,7 +62,7 @@ namespace Criatures2021
             if (StaticInstanceExistence<IGameController>.SchelduleExistence(Start, this, () => { return AbstractGameController.Instance; }))
             {
                 if (AbstractGameController.Instance.MyKeys.VerificaAutoShift(Chave))
-                    gameObject.SetActive(false);
+                    DisableBarrierWithKeyTrue();
 
                 JaIniciaou = true;
 
@@ -72,6 +72,11 @@ namespace Criatures2021
 
             SempreEstaNoTrigger();
             
+        }
+
+        protected virtual void DisableBarrierWithKeyTrue()
+        {
+            gameObject.SetActive(false);
         }
 
         protected void OnDestroy()

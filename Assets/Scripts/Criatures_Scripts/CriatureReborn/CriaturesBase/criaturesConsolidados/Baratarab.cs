@@ -28,7 +28,7 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 NivelDoGolpe = -1,
-                ModPersonagem = 0.5f,
+                ModPersonagem = 3,
                 Colisor = new Colisor("Armação/Bone.001"),
                 Nome = AttackNameId.sobreSalto,
                 TaxaDeUso = 0.5f

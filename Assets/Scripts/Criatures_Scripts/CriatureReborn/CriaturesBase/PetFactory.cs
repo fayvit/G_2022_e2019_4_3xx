@@ -36,6 +36,9 @@ namespace Criatures2021
                 case PetName.Babaucu:
                     retorno = Babaucu.Criature;
                 break;
+                case PetName.Uiritibucu:
+                    retorno = Uiritibucu.Criature;
+                break;
                 case PetName.Serpente:
                     retorno = Serpente.Criature;
                 break;
@@ -77,6 +80,9 @@ namespace Criatures2021
                 break;
                 case PetName.Wisks:
                     retorno = Wisks.Criature;
+                break;
+                case PetName.Quaster:
+                    retorno = Quaster.Criature;
                 break;
                 case PetName.Izicuolo:
                     retorno = Izicuolo.Criature;

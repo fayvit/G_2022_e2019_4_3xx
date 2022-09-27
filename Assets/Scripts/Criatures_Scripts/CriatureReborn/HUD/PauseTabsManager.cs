@@ -38,6 +38,11 @@ namespace Criatures2021Hud
             });
         }
 
+        public void ChangeInteractiveButtons(bool b)
+        {
+            tabMenu.ChangeInteractiveButtons(b);
+        }
+
 
         private void OnRequestChangeTab(MsgRequestChangeTab obj)
         {

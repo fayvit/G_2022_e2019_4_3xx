@@ -479,7 +479,8 @@ namespace Criatures2021
                             MessageAgregator<MsgRequestReplacePet>.Publish(new MsgRequestReplacePet()
                             {
                                 dono = tDono.gameObject,
-                                lockTarget = Mov.LockTarget
+                                lockTarget = Mov.LockTarget,
+                                fluxo = FluxoDeRetorno.criature
                             });
                         }
                         else if (CurrentCommander.GetButtonDown(CommandConverterInt.itemUse))

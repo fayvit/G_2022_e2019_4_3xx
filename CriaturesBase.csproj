@@ -159,6 +159,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\CriatureBaseEvents\MsgVerifyEventMessage.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\CriatureBaseEvents\PetManagerEvents.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\CriatureBaseEvents\VerifyPoisonDamageMessage.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\FluxoDeRetorno.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\InternalResourcesFolders.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\LevelUp\GerenciadorDeExperiencia.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\LevelUp\IGerenciadorDeExperiencia.cs" />
@@ -197,11 +198,13 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Oderc.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Onarac.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\PolyCharm.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Quaster.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Rabitler.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Rocketler.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Serpente.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Steal.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Trude.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Uiritibucu.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Urkan.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Vampire.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Wisks.cs" />

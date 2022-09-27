@@ -11,7 +11,7 @@ namespace Criatures2021
         new PetAttackDb()
             {
                 NivelDoGolpe = -1,
-                ModPersonagem = 0.1f,
+                ModPersonagem = 1,
                 Colisor = new Colisor("esqueleto/centro/c1/c2/c3/cabeca/bocaB"),
                 Nome = AttackNameId.olharMal,
                 TaxaDeUso = .125f,
@@ -21,7 +21,7 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 NivelDoGolpe = 1,
-                ModPersonagem = 0.1f,
+                ModPersonagem = 5,
                 Colisor = new Colisor("esqueleto/centro/c1/c2/c3/cabeca/bocaB"),
                 Nome = AttackNameId.rajadaDeAgua,
                 TaxaDeUso = 1,
@@ -32,7 +32,7 @@ namespace Criatures2021
             {
                 Nome = AttackNameId.chicoteDeCalda,
                 NivelDoGolpe = 1,
-                ModPersonagem = 0.2f,
+                ModPersonagem = 2,
                 Colisor = new Colisor("esqueleto/centroReverso/r1/r2/r3/rabo",
                                                   new Vector3(0,0f,0),
                                                   new Vector3(-0.093f,0.135f,-0.37f)),
@@ -40,7 +40,7 @@ namespace Criatures2021
             },new PetAttackDb()
             {
                 NivelDoGolpe = 2,
-                ModPersonagem = 0.3f,
+                ModPersonagem = 5,
                 Colisor = new Colisor("esqueleto/centro/c1/c2/c3/cabeca/bocaB"),
                 Nome = AttackNameId.turboDeAgua,
                 TaxaDeUso = 1.25f,
@@ -49,7 +49,7 @@ namespace Criatures2021
             },new PetAttackDb()
             {
                 NivelDoGolpe = 7,
-                ModPersonagem = 0.3f,
+                ModPersonagem = 6,
                 Colisor = new Colisor("esqueleto/centroReverso",
                                                             new Vector3(0,-.24f,0),
                                                             new Vector3(0,0,0),1.5f),

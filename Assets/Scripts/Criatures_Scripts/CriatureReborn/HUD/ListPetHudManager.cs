@@ -306,7 +306,8 @@ namespace Criatures2021Hud
                 dono = mDoDono.gameObject,
                 replaceIndex = true,
                 newIndex = qual - 1,
-                lockTarget = mDoDono.ActivePet.Mov.LockTarget
+                lockTarget = mDoDono.ActivePet.Mov.LockTarget,
+                fluxo = FluxoDeRetorno.criature
             });
 
             thisState = LocalState.emEspera;

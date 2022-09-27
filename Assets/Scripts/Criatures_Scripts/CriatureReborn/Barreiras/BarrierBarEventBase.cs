@@ -36,6 +36,11 @@ namespace Criatures2021
             base.Start();
         }
 
+        protected override void DisableBarrierWithKeyTrue()
+        {
+            barras.gameObject.SetActive(false);
+        }
+
         new void Update()
         {
 

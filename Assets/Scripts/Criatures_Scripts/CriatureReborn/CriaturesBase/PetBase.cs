@@ -28,7 +28,7 @@ namespace Criatures2021
         [Range(0.01F,1)]public float captureDificult = 1;
         //public float varHeightFightcamera = 
 
-        public PetBase() { }
+        public PetBase() { petId = PetName.nulo; }
         public PetBase(PetName X, int nivel = 1)
         {
             PetBase Y = PetFactory.GetPet(X);

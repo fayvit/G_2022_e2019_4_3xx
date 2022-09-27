@@ -10,7 +10,6 @@ using TextBankSpace;
 using FayvitSupportSingleton;
 using FayvitSave;
 using CustomizationSpace;
-using System;
 
 namespace Criatures2021
 {
@@ -20,14 +19,16 @@ namespace Criatures2021
         [SerializeField] private DadosDeJogador dados;
         [SerializeField] private DamageState damageState;
 
-        private bool podeIrAoKeyDjey = true;
+        private bool deuTempoParaKeyDjey = true;
+        private Vector3 lastGroundedPosition;
+
         private const float INTERVALO_KEY_DJEY = .75F;
 
         public bool ContraTreinador { get; set; }
         public bool InTeste { get; set; }
         public CharacterState ThisState { get; private set; } = CharacterState.notStarted;
         public PetManager ActivePet { get; private set; }
-        public CustomizationSpace.CustomizationContainerDates Ccd { get; set; }
+        public CustomizationContainerDates Ccd { get; set; }
 
         [SerializeField] private CharacterState returnState;
 
@@ -38,12 +39,17 @@ namespace Criatures2021
 
         public DadosDeJogador Dados { get => dados; set => dados = value; }
 
+
+
         // Start is called before the first frame update
         void Start()
         {
+            
             damageState = new DamageState(transform);
             mov = new BasicMove(new MoveFeatures() { jumpFeat = new JumpFeatures() });
             mov.StartFields(transform);
+            lastGroundedPosition = transform.position;
+            UpdateLastGroundedPosition();
 
             if (ThisState == CharacterState.notStarted)
             {
@@ -97,6 +103,8 @@ namespace Criatures2021
             MessageAgregator<MsgExitKeyDjey>.AddListener(OnExitKeyDjey);
             MessageAgregator<MsgAnimaCaptura>.AddListener(OnAnimateCapture);
             MessageAgregator<MsgFinishChestInteraction>.AddListener(OnFinishChestInteraction);
+            MessageAgregator<MsgRequestLastGroundedPosition>.AddListener(OnRequestLastGroundedPosition);
+            MessageAgregator<MsgChangeKeyDjeyPermission>.AddListener(OnRequestChangeKeyDjeyPermission);
 
         }
 
@@ -128,6 +136,36 @@ namespace Criatures2021
             MessageAgregator<MsgExitKeyDjey>.RemoveListener(OnExitKeyDjey);
             MessageAgregator<MsgAnimaCaptura>.RemoveListener(OnAnimateCapture);
             MessageAgregator<MsgFinishChestInteraction>.RemoveListener(OnFinishChestInteraction);
+            MessageAgregator<MsgRequestLastGroundedPosition>.RemoveListener(OnRequestLastGroundedPosition);
+            MessageAgregator<MsgChangeKeyDjeyPermission>.AddListener(OnRequestChangeKeyDjeyPermission);
+        }
+
+        private void OnRequestChangeKeyDjeyPermission(MsgChangeKeyDjeyPermission obj)
+        {
+            if (obj.gameObject == gameObject)
+            {
+                MessageAgregator<MsgChangeShiftKey>.Publish(new MsgChangeShiftKey()
+                {
+                    change = obj.change,
+                    key = KeyShift.permitidoKeyDjey
+                });
+            }
+        }
+
+        private void OnRequestLastGroundedPosition(MsgRequestLastGroundedPosition obj)
+        {
+            if (obj.who == transform)
+            {
+                transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(lastGroundedPosition);
+
+                if (obj.petChangePosition)
+                {
+                    SetHeroCamera.Set(transform);
+                    Destroy(ActivePet.gameObject);
+                    InicializarPet();
+                }
+
+            }
         }
 
         private void OnFinishChestInteraction(MsgFinishChestInteraction obj)
@@ -149,9 +187,9 @@ namespace Criatures2021
         {
             if (obj.usuario == gameObject)
             {
-                podeIrAoKeyDjey = false;
+                deuTempoParaKeyDjey = false;
                 SupportSingleton.Instance.InvokeInSeconds(() => {
-                    podeIrAoKeyDjey = true;
+                    deuTempoParaKeyDjey = true;
                 },INTERVALO_KEY_DJEY);
 
                 ThisState = obj.returnState;
@@ -399,17 +437,17 @@ namespace Criatures2021
 
         private void VerifySelectedItem()
         {
-            if (dados.Itens.Count > 0)
+            if (dados.ItensRapidos.Count > 0)
             {
-                if (dados.ItemSai > dados.Itens.Count - 1)
+                if (dados.ItemSai > dados.ItensRapidos.Count - 1)
                     dados.ItemSai = 0;
             }
 
 
             MessageAgregator<MsgChangeSelectedItem>.Publish(new MsgChangeSelectedItem()
             {
-                nameItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].ID : NameIdItem.generico,
-                quantidade = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].Estoque : 0
+                nameItem = dados.ItensRapidos.Count > 0 ? dados.ItensRapidos[dados.ItemSai].ID : NameIdItem.generico,
+                quantidade = dados.ItensRapidos.Count > 0 ? dados.ItensRapidos[dados.ItemSai].Estoque : 0
             });
         }
 
@@ -454,7 +492,7 @@ namespace Criatures2021
                 if (obj.replaceIndex)
                     dados.CriatureSai = obj.newIndex;
 
-                StartReplacePet(FluxoDeRetorno.criature, obj.lockTarget);
+                StartReplacePet(obj.fluxo, obj.fluxo==FluxoDeRetorno.criature? obj.lockTarget:null);
             }
         }
 
@@ -513,9 +551,9 @@ namespace Criatures2021
         {
             if (obj.myHero == gameObject && ThisState != CharacterState.onFree)
             {
-                podeIrAoKeyDjey = false;
+                deuTempoParaKeyDjey = false;
                 SupportSingleton.Instance.InvokeInSeconds(() => {
-                    podeIrAoKeyDjey = true;
+                    deuTempoParaKeyDjey = true;
                 }, INTERVALO_KEY_DJEY);
 
                 ThisState = CharacterState.onFree;
@@ -524,15 +562,31 @@ namespace Criatures2021
             }
         }
 
+        private void UpdateLastGroundedPosition()
+        {
+            SupportSingleton.Instance.InvokeInSeconds(gameObject, () =>
+            {
+                if ((ThisState==CharacterState.withKeyDjey|| ThisState == CharacterState.onFree) && mov.IsGrounded && !mov._JumpM.isJumping &&
+                Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit)
+                )
+                {
+                    float angle = Vector3.Angle(hit.normal, Vector3.up);
+                    if (angle < 65 )
+                        lastGroundedPosition = transform.position;
+                }
+                UpdateLastGroundedPosition();
+            }, 3);
+        }
+
         void ChangeSelectedItem(int change)
         {
-            if (dados.Itens.Count > 0)
+            if (dados.ItensRapidos.Count > 0)
             {
-                dados.ItemSai = ContadorCiclico.Contar(change, dados.ItemSai, dados.Itens.Count);
+                dados.ItemSai = ContadorCiclico.Contar(change, dados.ItemSai, dados.ItensRapidos.Count);
                 MessageAgregator<MsgChangeSelectedItem>.Publish(new MsgChangeSelectedItem()
                 {
-                    nameItem = dados.Itens[dados.ItemSai].ID,
-                    quantidade = dados.Itens[dados.ItemSai].Estoque
+                    nameItem = dados.ItensRapidos[dados.ItemSai].ID,
+                    quantidade = dados.ItensRapidos[dados.ItemSai].Estoque
                 });
             }
         }
@@ -555,13 +609,13 @@ namespace Criatures2021
             MessageAgregator<MsgStartGameElementsHud>.Publish(new MsgStartGameElementsHud()
             {
                 petname = dados.CriaturesAtivos.Count > 1 ? dados.CriaturesAtivos[dados.CriatureSai + 1].NomeID : PetName.nulo,
-                nameItem = dados.Itens.Count > 0 
+                nameItem = dados.ItensRapidos.Count > 0 
                     ? (
-                        dados.Itens.Count>dados.ItemSai?
-                        dados.Itens[dados.ItemSai].ID:dados.Itens[0].ID 
+                        dados.ItensRapidos.Count>dados.ItemSai?
+                        dados.ItensRapidos[dados.ItemSai].ID:dados.ItensRapidos[0].ID 
                     )
                     : NameIdItem.generico,
-                countItem = dados.Itens.Count > 0 ? dados.Itens[dados.ItemSai].Estoque : 0,
+                countItem = dados.ItensRapidos.Count > 0 ? dados.ItensRapidos[dados.ItemSai].Estoque : 0,
                 temGolpePorAprender = dados.TemGolpesPorAprender(),
                 countCristals = dados.Cristais
             });
@@ -783,13 +837,17 @@ namespace Criatures2021
                     StartUseItem(FluxoDeRetorno.heroi);
                     //ThisState = CharacterState.stopedWithStoppedCam;
                 }
-                else if (CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeIrAoKeyDjey)
+                else if (
+                    CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)
+                    && deuTempoParaKeyDjey
+                    && AbstractGameController.Instance.MyKeys.VerificaAutoShift(KeyShift.permitidoKeyDjey)
+                    )
                 {
                     ThisState = CharacterState.withKeyDjey;
                     mov.MoveApplicator(transform.forward * Time.deltaTime);
                     mov.MoveApplicator(Vector3.zero);
                     mov.Controller.enabled = false;
-                    KeyDjeyTransportManager.StartKeyDjeyTransport(transform,Ccd.PersBase== CustomizationSpace.PersonagemBase.masculino);
+                    KeyDjeyTransportManager.StartKeyDjeyTransport(transform,Ccd.PersBase== PersonagemBase.masculino);
                     MessageAgregator<MsgRequestMountedAnimation>.Publish(new MsgRequestMountedAnimation()
                     {
                         gameObject = gameObject
@@ -800,10 +858,10 @@ namespace Criatures2021
 
         void StartUseItem(FluxoDeRetorno fluxo)
         {
-            if (dados.Itens.Count > 0)
+            if (dados.ItensRapidos.Count > 0)
             {
                 UseItemManager useItem = gameObject.AddComponent<UseItemManager>();
-                useItem.StartFields(gameObject, dados.Itens, dados.ItemSai, fluxo);
+                useItem.StartFields(gameObject, dados.Itens, dados.Itens.IndexOf(dados.ItensRapidos[dados.ItemSai]), fluxo);
             }
         }
 
@@ -891,5 +949,11 @@ namespace Criatures2021
     public struct MsgStartRerturnToArmagedom : IMessageBase
     {
         public CharacterManager dono;
+    }
+
+    public struct MsgChangeKeyDjeyPermission : IMessageBase
+    {
+        public GameObject gameObject;
+        public bool change;
     }
 }

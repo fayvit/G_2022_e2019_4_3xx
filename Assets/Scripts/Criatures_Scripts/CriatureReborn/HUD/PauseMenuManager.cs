@@ -14,14 +14,15 @@ namespace Criatures2021Hud
     {
         [SerializeField] private BasicMenu menuzinho;
         [SerializeField] private PauseItemMenu itemMenu;
-        [SerializeField] private PausePetMenu petMenu;
+        [SerializeField] private PetMenu petMenu;
         [SerializeField] private Text infoText;
         [SerializeField] private AnItemOption itemRef;
+        [SerializeField] private A_PetMenuOption petRef;
         [SerializeField] private GameObject container;
         [SerializeField] private PauseTabsManager tabsManager;
         [SerializeField] private PetBookHud petBookHud;
         [SerializeField] private TutoInfoMenuManager infoManager;
-        
+
 
         private int antSelected = 0;
         private bool positiveChange;
@@ -83,7 +84,7 @@ namespace Criatures2021Hud
         #endregion
 
         private enum LocalState
-        { 
+        {
             emEspera,
             mudandoItens,
             mudandoPets,
@@ -92,7 +93,9 @@ namespace Criatures2021Hud
             oneMessageOpened,
             menuzinhoPets,
             mudandoLivro,
-            mudandoInfos
+            mudandoInfos,
+            organizeItens,
+            organizePets
         }
 
         // Start is called before the first frame update
@@ -129,7 +132,7 @@ namespace Criatures2021Hud
             switch (obj.index)
             {
                 case 0:
-                    
+
                     itemMenu.GetTransformContainer.parent.gameObject.SetActive(true);
                     //RetornaParaMudandoItens();
                     itemMenu.FinishHud();
@@ -142,17 +145,17 @@ namespace Criatures2021Hud
                     {
                         dono = dono
                     });
-                    
-                break;
+
+                    break;
                 case 1:
-                    
+
                     state = LocalState.mudandoLivro;
                     petBookHud.StartHud(dono.Dados.Livro);
-                break;
+                    break;
                 case 2:
                     state = LocalState.mudandoInfos;
                     infoManager.StartHud();
-                break;
+                    break;
             }
         }
         #endregion
@@ -165,14 +168,14 @@ namespace Criatures2021Hud
             {
                 listaDeItens[itemMenu.SelectedOption].IniciaUsoDeMenu(dono.gameObject, listaDeItens);
                 state = LocalState.escolhendoEmQuemUsar;
-            },obj.notMessage);
+            }, obj.notMessage);
 
             state = LocalState.oneMessageOpened;
         }
 
         void UsouQuantitativeItem(bool temMaisPraUsar)
         {
-            
+
             state = LocalState.emEspera;
 
             SupportSingleton.Instance.InvokeInSeconds(() =>
@@ -199,24 +202,22 @@ namespace Criatures2021Hud
                 AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                 {
                     UsouQuantitativeItem(obj.temMaisParausar);
-                },obj.mensagemDeRetorno);
+                }, obj.mensagemDeRetorno);
             }
             else
             {
                 UsouQuantitativeItem(obj.temMaisParausar);
             }
-            
         }
 
-        void PosicionarItemRef(int indice)
+        void PosicionarRectRef(InteractiveUiBase uiBase, PositionLerp p, float horizontalAlign = 0.63f, float verticalAlign = 0)
         {
-            A_PetMenuOption opts = petMenu.GetTransformContainer.GetComponentsInChildren<A_PetMenuOption>()[indice];
+            AnOption opts = uiBase.GetTransformContainer.GetComponentsInChildren<AnOption>()[uiBase.SelectedOption];
             RectTransform rt = opts.GetComponent<RectTransform>();
             Vector3[] corners = new Vector3[4];
             rt.GetWorldCorners(corners);
 
-
-            itemRef.GetComponent<PositionLerp>().StartRePos(opts.transform, -0.63f * (corners[2] - corners[1]), .5f);
+            p.StartRePos(opts.transform, horizontalAlign * (corners[1] - corners[2]) + verticalAlign * (corners[2] - corners[3]), .5f);
         }
 
         private void ItemMenuAction(int x)
@@ -242,10 +243,10 @@ namespace Criatures2021Hud
                     itemRef.SetarOpcoes(iRef, null);
                     state = LocalState.escolhendoEmQuemUsar;
                     petMenu.FinishHud();
-                    petMenu.StatHud(EscolhiEmQuemUsarItem, petList, petMenu.SelectedOption);
+                    petMenu.StartHud(EscolhiEmQuemUsarItem, petList, petMenu.SelectedOption);
                     SupportSingleton.Instance.InvokeOnEndFrame(() =>
                     {
-                        PosicionarItemRef(petMenu.SelectedOption);
+                        PosicionarRectRef(petMenu, itemRef.GetComponent<PositionLerp>());
                     });
                     break;
                 case MsgMenuStartUseItem.StartUseResponse.naoPodeUsar:
@@ -281,18 +282,52 @@ namespace Criatures2021Hud
                     });
                     break;
                 case 1:
+                    #region Organizar
+                    tabsManager.ChangeInteractiveButtons(false);
+                    itemRef.gameObject.SetActive(true);
+                    ItemBase iRef = listaDeItens[itemMenu.SelectedOption];
+                    itemRef.SetarOpcoes(iRef, null);
+
+                    antSelected = itemMenu.SelectedOption;
+
+                    listaDeItens.RemoveAt(itemMenu.SelectedOption);
+                    listaDeItens.Add(ItemFactory.Get(NameIdItem.generico));
+
+                    itemMenu.FinishHud();
+                    itemMenu.StartHud(ItemOrganizationAction, listaDeItens.ToArray(), antSelected);
+                    SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                    {
+                        PosicionarRectRef(itemMenu, itemRef.GetComponent<PositionLerp>());
+                    });
+
+                    petMenu.ChangeInteractiveButtons(false);
+
+                    state = LocalState.organizeItens;
+                    #endregion
+                    break;
+                case 2:
+                    #region itensRapidos
                     listaDeItens[itemMenu.SelectedOption].NosItensRapidos = !listaDeItens[itemMenu.SelectedOption].NosItensRapidos;
                     string message = listaDeItens[itemMenu.SelectedOption].NosItensRapidos ?
                         TextBank.RetornaFraseDoIdioma(TextKey.mudouItemRapido) :
                         TextBank.RetornaListaDeTextoDoIdioma(TextKey.mudouItemRapido)[1];
                     message = string.Format(message, ItemBase.NomeEmLinguas(listaDeItens[itemMenu.SelectedOption].ID));
-                    AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() => {
+                    AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
+                    {
                         RetornaParaMudandoItens();
                         ReinicieMenusConsiderandoSelecionado();
+
+                        MessageAgregator<MsgChangeSelectedItem>.Publish(new MsgChangeSelectedItem()
+                        {
+                            nameItem = dono.Dados.ItensRapidos.Count > 0 ? dono.Dados.ItensRapidos[dono.Dados.ItemSai].ID : NameIdItem.generico,
+                            quantidade = dono.Dados.ItensRapidos.Count > 0 ? dono.Dados.ItensRapidos[dono.Dados.ItemSai].Estoque : 0
+                        });
+
                     }, message);
                     state = LocalState.oneMessageOpened;
+                    #endregion
                     break;
-                case 2:
+                case 3:
                     MessageAgregator<MsgRequestOpenDiscartHud>.Publish(new MsgRequestOpenDiscartHud()
                     {
                         descartavel = listaDeItens[itemMenu.SelectedOption]
@@ -301,12 +336,35 @@ namespace Criatures2021Hud
 
                     state = LocalState.emEspera;
                     break;
-                case 3:
+                case 4:
                     RetornaParaMudandoItens();
                     break;
             }
 
             menuzinho.FinishHud();
+        }
+
+        void ItemOrganizationAction(int x)
+        {
+            AfasteApos(x, listaDeItens);
+
+            listaDeItens[x] = itemRef.ThisItem;
+
+            ReinicieMenusConsiderandoSelecionado();
+
+            state = LocalState.mudandoItens;
+
+            itemRef.gameObject.SetActive(false);
+            petMenu.ChangeInteractiveButtons(true);
+            tabsManager.ChangeInteractiveButtons(true);
+        }
+
+        void AfasteApos<T>(int x, List<T> lista)
+        {
+            for (int i = lista.Count - 1; i > x; i--)
+            {
+                lista[i] = lista[i - 1];
+            }
         }
 
         void ReinicieMenusConsiderandoSelecionado()
@@ -387,8 +445,15 @@ namespace Criatures2021Hud
             petMenu.FinishHud();
             itemMenu.FinishHud();
             menuzinho.FinishHud();
+            tabsManager.ChangeInteractiveButtons(true);
             itemRef.gameObject.SetActive(false);
+            petRef.gameObject.SetActive(false);
             state = LocalState.emEspera;
+
+            if (state == LocalState.organizeItens)
+                ItemOrganizationAction(antSelected);
+            else if (state == LocalState.organizePets)
+                PetOrganizeAction(antSelected);
         }
 
         private void OnReceiveExternalCommand(MsgSendExternalPanelCommand obj)
@@ -401,7 +466,7 @@ namespace Criatures2021Hud
             tabsManager.ChangeToDefaulState();
             FinalizarAbas();
             itemMenu.GetTransformContainer.parent.gameObject.SetActive(true);
-            
+
             container.SetActive(true);
             dono = obj.dono;
             listaDeItens = dono.Dados.Itens;
@@ -410,7 +475,7 @@ namespace Criatures2021Hud
             MessageAgregator<MsgChangeOptionUI>.AddListener(OnChangeUI);
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveExternalCommand);
 
-            petMenu.StatHud(PetsMenuAction, petList);
+            petMenu.StartHud(PetsMenuAction, petList);
             itemMenu.StartHud(ItemMenuAction, listaDeItens.ToArray());
             if (listaDeItens.Count > 0)
             {
@@ -430,31 +495,40 @@ namespace Criatures2021Hud
         {
             if (obj.parentOfScrollRect == itemMenu.GetTransformContainer.gameObject)
             {
-                int columns = itemMenu.ColCellCount();
-                //Debug.Log(antSelected + " : " + itemMenu.SelectedOption + " : " + columns);
-
-                if ((antSelected % columns == columns - 1 && itemMenu.SelectedOption % columns == 0)
-                    ||
-                    (antSelected==listaDeItens.Count-1 && itemMenu.SelectedOption%listaDeItens.Count==0&&positiveChange))
+                if (state == LocalState.organizeItens)
                 {
-                    itemMenu.ChangeSelectionTo(antSelected);
-                    itemMenu.RemoveHighlights();
-                    petMenu.ChangeSelectionTo(petMenu.SelectedOption);
-                    state = LocalState.mudandoPets;
-                    infoText.text = "";
+                    PosicionarRectRef(itemMenu, itemRef.GetComponent<PositionLerp>());
                 }
                 else
                 {
-                    infoText.text = "<color=yellow>" + ItemBase.NomeEmLinguas(listaDeItens[obj.selectedOption].ID) + "</color>\r\n" +
-                    TextBank.RetornaListaDeTextoDoIdioma(TextKey.shopInfoItem)[(int)listaDeItens[obj.selectedOption].ID];
+
+                    int columns = itemMenu.ColCellCount();
+                    //Debug.Log(antSelected + " : " + itemMenu.SelectedOption + " : " + columns);
+
+                    if ((antSelected % columns == columns - 1 && itemMenu.SelectedOption % columns == 0)
+                        ||
+                        (antSelected == listaDeItens.Count - 1 && itemMenu.SelectedOption % listaDeItens.Count == 0 && positiveChange))
+                    {
+                        itemMenu.ChangeSelectionTo(antSelected);
+                        itemMenu.RemoveHighlights();
+                        petMenu.ChangeSelectionTo(petMenu.SelectedOption);
+                        state = LocalState.mudandoPets;
+                        infoText.text = "";
+                    }
+                    else
+                    {
+                        infoText.text = "<color=yellow>" + ItemBase.NomeEmLinguas(listaDeItens[obj.selectedOption].ID) + "</color>\r\n" +
+                        TextBank.RetornaListaDeTextoDoIdioma(TextKey.shopInfoItem)[(int)listaDeItens[obj.selectedOption].ID];
+                    }
                 }
             }
             else if (obj.parentOfScrollRect == petMenu.GetTransformContainer.gameObject)
             {
                 if (state == LocalState.escolhendoEmQuemUsar)
                 {
-                    PosicionarItemRef(petMenu.SelectedOption);
-                }
+                    PosicionarRectRef(petMenu, itemRef.GetComponent<PositionLerp>());
+                } else if (state == LocalState.organizePets)
+                    PosicionarRectRef(petMenu, petRef.GetComponent<PositionLerp>(), verticalAlign: .5f);
             }
         }
         #endregion
@@ -478,7 +552,7 @@ namespace Criatures2021Hud
             switch (obj)
             {
                 case 0:
-                    tabsManager.ReestartTabsManager(GetPetsSprites(),SelectPetTabAction,petMenu.SelectedOption);
+                    tabsManager.ReestartTabsManager(GetPetsSprites(), SelectPetTabAction, petMenu.SelectedOption);
                     state = LocalState.emEspera;
                     MessageAgregator<MsgRequestStatsMenu>.Publish(new MsgRequestStatsMenu()
                     {
@@ -487,13 +561,74 @@ namespace Criatures2021Hud
                     });
                     MessageAgregator<MsgSendExternalPanelCommand>.RemoveListener(OnReceiveExternalCommand);
                     MessageAgregator<MsgFinishStatsMenu>.AddListener(OnFinishStatsMenu);
-                break;
-                case 1://voltar
+                    break;
+                case 1:
+                    #region Organizar
+
+                    antSelected = petMenu.SelectedOption;
+                    itemMenu.ChangeInteractiveButtons(false);
+                    tabsManager.ChangeInteractiveButtons(false);
+                    petMenu.FinishHud();
+                    petRef.gameObject.SetActive(true);
+                    petRef.SetarOpcoes(petList[petMenu.SelectedOption], null);
+                    petList.RemoveAt(petMenu.SelectedOption);
+                    PetBase P = PetFactory.GetPet(PetName.nulo);
+
+                    petList.Add(P);
+                    petMenu.StartHud(PetOrganizeAction, petList, petMenu.SelectedOption);
+
+                    SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                    {
+                        PosicionarRectRef(petMenu, petRef.GetComponent<PositionLerp>(), verticalAlign: .5f);
+                    });
+
+                    state = LocalState.organizePets;
+                    #endregion
+                    break;
+                case 2://voltar
                     RetornaParaMudandoPets();
-                break;
+                    break;
             }
 
             menuzinho.FinishHud();
+        }
+
+        void PetOrganizeAction(int opt)
+        {
+            if (opt == 0 ^ antSelected == 0)
+            {
+                AfasteApos(antSelected, petList);
+                petList[antSelected] = petRef.Observer;
+                state = LocalState.emEspera;
+                FinishMenu();
+
+                MessageAgregator<MsgRequestReplacePet>.Publish(new MsgRequestReplacePet()
+                {
+                    dono = dono.gameObject,
+                    lockTarget = dono.ActivePet.Mov.LockTarget,
+                    newIndex = antSelected == 0 ? (opt < petList.Count - 1 ? opt : 0) : (antSelected - 1),
+                    replaceIndex = true,
+                    fluxo = FluxoDeRetorno.heroi
+                });
+
+
+            }
+            else
+            {
+                AfasteApos(opt, petList);
+                petList[opt] = petRef.Observer;
+
+                Debug.Log("indices da pet list: " + petList.Count + " : " + petMenu.SelectedOption + " : " + opt);
+
+                petList[opt] = petRef.Observer;
+
+                petMenu.FinishHud();
+
+                tabsManager.ChangeInteractiveButtons(true);
+                petRef.gameObject.SetActive(false);
+                petMenu.StartHud(EscolhiEmQuemUsarItem, petList, petMenu.SelectedOption);
+                RetornaParaMudandoPets();
+            }
         }
 
         private void OnFinishStatsMenu(MsgFinishStatsMenu obj)
@@ -631,7 +766,7 @@ namespace Criatures2021Hud
                             RetornarDoEscolhaEmQuemUsar();
                         }
                         #endregion
-                        break;
+                    break;
                     case LocalState.mudandoLivro:
                         petBookHud.Update(-cmd.vChange, false, false);
                         tabsManager.VerifyChangeTab(cmd.rightChangeButton, cmd.leftChangeButton);
@@ -645,6 +780,26 @@ namespace Criatures2021Hud
                         if (cmd.confirmButton || cmd.returnButton)
                             AbstractGlobalController.Instance.OneMessage.ThisUpdate(true);
 
+                    break;
+                    case LocalState.organizeItens:
+                        itemMenu.ChangeOption(cmd.vChange, cmd.hChange);
+                        if (cmd.confirmButton)
+                            ItemOrganizationAction(itemMenu.SelectedOption);
+                        else if (cmd.returnButton)
+                        {
+                            ItemOrganizationAction(antSelected);
+                            petMenu.ChangeInteractiveButtons(true);
+                        }
+                    break;
+                    case LocalState.organizePets:
+                        petMenu.ChangeOption(-cmd.vChange);
+                        if (cmd.confirmButton)
+                            PetOrganizeAction(petMenu.SelectedOption);
+                        else if (cmd.returnButton)
+                        {
+                            PetOrganizeAction(antSelected);
+                            itemMenu.ChangeInteractiveButtons(true);
+                        }
                     break;
                 }
         }
