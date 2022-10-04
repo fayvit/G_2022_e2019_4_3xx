@@ -39,7 +39,7 @@ namespace TextBankSpace
             "É o seguinte... \r\n Os militares já desconfiam da sanidade do imperador",
             "Sim... da sanidade!! Tanto o exercito quanto a <color=orange>Garra Governamental</color> tem recebido ordens estranhas",
             "A obcessão do imperador por <color=cyan>Gemas Laranjes</color> preocupa muito as entidades imperialistas",
-            "Então... O capitão foi tentar encontrar a Sacerdotiza de Ananda para que todos tenham uma luz nos caminhos de Orion",
+            "Então... O capitão foi tentar encontrar a Sacerdotiza de Alana para que todos tenham uma luz nos caminhos de Orion",
             "Aparentemente, os militares vão tentar tomar o poder caso sejam convencidos da insanidade do imperador",
             "Isso me assusta!! Não asusta você?"
             } },
@@ -60,7 +60,7 @@ namespace TextBankSpace
                 "A frente da fortaleza está o <color=orange>general Potus Ramos</color>.",
                 "Ele só aceita a entrada na fortaleza de oficiais que tem no mínimo duas condecorações dadas por militares de alta patente",
                 "Ouvi boatos que Potus Ramos e o capitão <color=orange> João Cândido</color> do cruzador de guerra estão se reunindo com a sacerddotiza " +
-                "<color=orange>Amanda Leticia</color> da arena divida de <color=cyan>Ananda</color>"
+                "<color=orange>Amanda Leticia</color> da arena divida de <color=cyan>Alana</color>"
                 //"Alguns devotos dos deuses travam batalhas em homenagem ao seu deus de adoração.",
                 //"Para os que os vencem em batalha eles entregam um pequeno brasão de seu deus",
                 //"Rezam as lendas de Orion que entregar os brasões em estatuas em homenagem aos deuses lhe dará a benção do deus",
@@ -117,7 +117,7 @@ namespace TextBankSpace
             } },
               { TextKey.npcShopVermelhoMarjan,new List<string>()
             {
-                "Eu adoro ter a minha loja proximo da arena divina de <color=cyan>Ananda</color>",
+                "Eu adoro ter a minha loja proximo da arena divina de <color=cyan>Alana</color>",
                 "Por algumas vezes eu tive contado direto com a sacerdotiza regente da arena",
                 "Ela se chama <color=orange>Amanda Leticia</color> e adora treinar criatures do tipo normal",
                 "O que acaba deixando a batalha na arena um pouco fácil para os que treinan criatures do tipo pedra"

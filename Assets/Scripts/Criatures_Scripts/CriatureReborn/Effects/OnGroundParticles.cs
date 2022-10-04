@@ -17,7 +17,7 @@ namespace Criatures2021
 
 		void ImpactoAoChao()
 		{
-			GameObject G = Resources.Load<GameObject>("particles/"+aoChao.ToString());//GameController.g.El.retorna(aoChao);
+			GameObject G = Resources.Load<GameObject>("particles/" + aoChao.ToString());//GameController.g.El.retorna(aoChao);
 			Vector3 pos = Vector3.zero;
 			RaycastHit ray = new RaycastHit();
 			if (Physics.Raycast(transform.position, Vector3.down, out ray))
@@ -28,9 +28,15 @@ namespace Criatures2021
 			{
 				pos = ray.point;
 			}
-			G = Instantiate(G, pos, Quaternion.identity) as GameObject;
-			if (destruir)
-				Destroy(G, 1.75f);
+
+			if (gameObject.transform.root.gameObject.activeSelf)
+			{
+				G = Instantiate(G, pos, Quaternion.identity) as GameObject;
+
+				if (destruir)
+					Destroy(G, 1.75f);
+			}
+
 			Invoke("ImpactoAoChao", repetir);
 		}
 

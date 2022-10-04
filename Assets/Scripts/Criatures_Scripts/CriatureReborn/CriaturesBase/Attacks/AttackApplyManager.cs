@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using FayvitMessageAgregator;
 
 namespace Criatures2021
@@ -93,6 +92,11 @@ namespace Criatures2021
 
                 return false;
             }
+        }
+
+        public void InterruptAtk()
+        {
+            esseGolpe.InterromperGolpe(gameObject);
         }
     }
 

@@ -29,7 +29,7 @@ namespace Criatures2021Hud
             instance = this;
         }
 
-        internal void StartHudVenda(System.Action<int> onChoiseSale, int cristais, List<ItemBase> itens)
+        internal void StartHudVenda(System.Action<int> onChoiseSale, int cristais, List<ItemBase> itens,int selecionado = 0)
         {
             this.itensDoJogador = itens;
             osItensParaVenda = new ItensParaVenda[itens.Count];
@@ -45,9 +45,9 @@ namespace Criatures2021Hud
 
             container.SetActive(true);
             cristaisCount.text = cristais.ToString();
-            shopMenu.StartHud("venda", onChoiseSale, osItensParaVenda);
+            shopMenu.StartHud("venda", onChoiseSale, osItensParaVenda,selecionado:selecionado);
             venda = true;
-            ColocaInformacoesDeItens(0);
+            ColocaInformacoesDeItens(indice:selecionado);
 
 
         }
@@ -67,7 +67,7 @@ namespace Criatures2021Hud
             container.SetActive(true);
             cristaisCount.text = cristalCount.ToString();
             shopMenu.StartHud(ID,acao, osItensParaVenda,selecionado:selecionado);
-            ColocaInformacoesDeItens(0);
+            ColocaInformacoesDeItens(indice: selecionado);
 
         }
 

@@ -37,6 +37,12 @@ namespace TextBankSpace
                 "Atacando com Criature",
                 "Use os poderes dos criatures em batalhas ou contra obstaculos que podem estar no caminho",
                 "Controlando o criature pressione <color=yellow>P</color> no teclado ou <color=magenta>RT</color> no controle do Xbox"
+            }},
+            { TextKey.keyDjeyInfoInfo,new List<string>()
+            {
+                "Usando KeyDjey",
+                "Você pode usar o Criature <color=orange>KeyDjey</color> para se deslocar mais rapidamente pelo mapa",
+                "Pressione <color=yellow>O</color> no teclado ou <color=orange>Y</color> no controle do Xbox para montar ou desmontar no KeyDjey"
             }}
         };
     }

@@ -264,6 +264,22 @@ namespace TextBankSpace
                 "Para entrar na represa você precisa de uma autorização da Garra Governamental"
             }
         },
+           {
+            TextKey.hooliganEntregaKeyDjey,new List<string>()
+            {
+                "Olá novato, essa montaria que eu estou usando é um criature chamado <color=cyan>KeyDjey</color>.",
+                "Meu irmão é amigo de um grande fazendeiro que tem uma criação de keyDjey's",
+                "Recentemente meu irmão adquiriu uma participação no rebanho do amigo dele e me permitiu pegar alguns criatures para os meus negocios",
+                "É muito bom ter um KeyDjey para se deslocar pelas planicies de Orion, ele é rápido e pratico para deslocamentos",
+                "Para te ajudar a ajudar a nós, os membros da resistencia, vou lhe emprestar um dos KeyDjey's que consegui com meu irmão"
+            }
+        }, {
+            TextKey.hooliganSaiDaEntregaKeyDjey,new List<string>()
+            {
+                "Vou continuar meu caminho para <color=yellow>Afarenga</color>, preciso reencontrar meu irmão",
+                "Faça bom uso do KeyDjey na sua jornada para obter os medalhões dos deuses."
+            }
+        },
         };
     }
 }

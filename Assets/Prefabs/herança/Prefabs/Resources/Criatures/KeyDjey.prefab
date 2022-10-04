@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6934785779259726620}
   - component: {fileID: 2409661714736125422}
+  - component: {fileID: 8776331792762740346}
   m_Layer: 0
   m_Name: Bone.001_L.002_end
   m_TagString: Untagged
@@ -139,6 +140,20 @@ MonoBehaviour:
   aoChao: 14
   destruir: 1
   repetir: 0.25
+--- !u!114 &8776331792762740346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855556118804717907}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b038ab60a087247ae6dc92fe377b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeRepeticao: 0.25
+  particula: poeiraAoVento
 --- !u!1 &3228366358420825814
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +406,7 @@ MonoBehaviour:
           wasJumping: 0
       standardFallSpeed: 12
       overlapTaxRadius: 0.8
+      updateLastGroundedPosition: 0
   roll:
     totalTimeInRoll: 0.5
     intervalInTheRoll: 0.3
@@ -822,6 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5166654726202147285}
   - component: {fileID: 4807479569367120824}
+  - component: {fileID: 3577877707340717238}
   m_Layer: 0
   m_Name: Bone_L.002_end
   m_TagString: Untagged
@@ -860,6 +877,20 @@ MonoBehaviour:
   aoChao: 14
   destruir: 1
   repetir: 0.25
+--- !u!114 &3577877707340717238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443943277530968221}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b038ab60a087247ae6dc92fe377b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeRepeticao: 0.25
+  particula: poeiraAoVento
 --- !u!1 &6804753861170923626
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953326220421732191}
   - component: {fileID: 8981011973805404237}
+  - component: {fileID: 4132431640412378812}
   m_Layer: 0
   m_Name: Bone_R.002_end
   m_TagString: Untagged
@@ -908,6 +940,20 @@ MonoBehaviour:
   aoChao: 14
   destruir: 1
   repetir: 0.25
+--- !u!114 &4132431640412378812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804753861170923626}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b038ab60a087247ae6dc92fe377b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeRepeticao: 0.25
+  particula: poeiraAoVento
 --- !u!1 &7739594642417973292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7495170157780304328}
   - component: {fileID: 6218427150394961334}
+  - component: {fileID: 595247214474697867}
   m_Layer: 0
   m_Name: Bone.001_R.002_end
   m_TagString: Untagged
@@ -1233,6 +1280,20 @@ MonoBehaviour:
   aoChao: 14
   destruir: 1
   repetir: 0.25
+--- !u!114 &595247214474697867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825831146721096844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b038ab60a087247ae6dc92fe377b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoDeRepeticao: 0.25
+  particula: poeiraAoVento
 --- !u!1 &9220824659710453543
 GameObject:
   m_ObjectHideFlags: 0

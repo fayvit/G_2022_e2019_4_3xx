@@ -15,12 +15,15 @@ namespace Criatures2021Hud
             
 
             this.preco.text = I.precoCustomizado>0?I.precoCustomizado.ToString():Ib.Valor.ToString();
-            AmountContainer.SetActive(I.limitado >= 0);
+            Debug.Log(I.nomeDoItem + " : " + I.limitado + " : " + I.precoCustomizado);
+            
 
             Ib.Estoque = I.limitado > 0 ? (keyCOnt=="venda"?I.limitado: MyGameController.Instance.MyKeys.VerificaAutoCont(keyCOnt)) : 1;
             Ib.NosItensRapidos = false;
             
             base.SetarOpcoes(Ib, A);
+
+            AmountContainer.SetActive(I.limitado >= 0);
         }
     }
 }

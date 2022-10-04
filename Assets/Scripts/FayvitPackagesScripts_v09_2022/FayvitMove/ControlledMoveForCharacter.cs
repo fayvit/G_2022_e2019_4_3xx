@@ -23,7 +23,7 @@ namespace FayvitMove
         public ControlledMoveForCharacter(Transform T)
         {
             
-            mov = new BasicMove(new MoveFeatures());// (T);
+            mov = new BasicMove(new MoveFeatures() { jumpFeat = new JumpFeatures()});// (T);
             StartFields(T);
         }
 

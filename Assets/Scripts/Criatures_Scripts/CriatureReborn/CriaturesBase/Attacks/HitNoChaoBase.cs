@@ -45,6 +45,10 @@ namespace Criatures2021
             ApareceComHitNoChao(G,focado);
         }
 
+        public override void InterromperGolpe(GameObject executor)
+        {
+            ApareceDesaparece(true, executor);
+        }
 
         void ApareceDesaparece(bool aparecer, GameObject G)
         {

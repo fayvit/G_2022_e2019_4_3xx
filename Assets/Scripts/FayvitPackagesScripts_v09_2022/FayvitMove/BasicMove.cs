@@ -203,7 +203,12 @@ namespace FayvitMove
             dir = (dir != Vector3.zero) ? dir.normalized *Mathf.Max(dir.magnitude,1) : Vector3.zero;
 
             dir *= ModSpeed;
-            
+
+            //Debug.Log(grounded);
+            //Debug.Log(ApplicableGravity);
+            //Debug.Log(startJump);
+            //Debug.Log("jump: "+_JumpM.isJumping);
+
             if ((grounded || !ApplicableGravity) && !startJump && !_JumpM.isJumping)
             {
                 UpdateMove(dir, run);

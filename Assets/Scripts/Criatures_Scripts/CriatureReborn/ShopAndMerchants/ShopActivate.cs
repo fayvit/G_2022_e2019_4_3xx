@@ -220,9 +220,9 @@ namespace Criatures2021
                 state = LocalState.menuDeVenda;
                 
                 ShopHudManager.instance.ChangeInteractiveButtons(true);
-                int x = dados.Itens.Count> ShopHudManager.instance.SelectedOption? ShopHudManager.instance.SelectedOption:0;
+                int x = dados.Itens.Count > ShopHudManager.instance.SelectedOption ? ShopHudManager.instance.SelectedOption : 0;
                 ShopHudManager.instance.FinishHud();
-                ShopHudManager.instance.StartHudVenda(OnChoiseSale, dados.Cristais, dados.Itens);
+                ShopHudManager.instance.StartHudVenda(OnChoiseSale, dados.Cristais, dados.Itens,selecionado:x);
             }
             else
             {

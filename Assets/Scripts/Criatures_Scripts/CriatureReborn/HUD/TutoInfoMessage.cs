@@ -82,7 +82,8 @@ namespace Criatures2021Hud
         targetLock,
         alternancia,
         mudaGolpe,
-        atacar
+        atacar,
+        keyDjeyInfo
     }
 
     public struct MsgRequestOpenInfoMessage : IMessageBase

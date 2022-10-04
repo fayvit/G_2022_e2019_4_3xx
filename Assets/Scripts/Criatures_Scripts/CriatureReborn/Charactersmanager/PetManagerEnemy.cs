@@ -105,9 +105,7 @@ namespace Criatures2021
                     name = MeuCriatureBase.NomeID
                 });
             }
-        }
-
-        
+        }        
 
         private void OnStartReplacePet(MsgStartReplacePet obj)
         {
@@ -128,7 +126,6 @@ namespace Criatures2021
                 PararCriatureNoLocal();
                 MessageAgregator<MsgChangeToPet>.AddListener(OnChangeToPet);
             }
-            
         }
 
         private void OnChangeToPet(MsgChangeToPet obj)

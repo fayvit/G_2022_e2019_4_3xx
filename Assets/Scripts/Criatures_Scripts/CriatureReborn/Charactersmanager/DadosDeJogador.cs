@@ -104,7 +104,7 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Uiritibucu,7),
+                new PetBase(PetName.Flam,7),
                 new PetBase(PetName.Marak,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Babaucu,13),
@@ -144,7 +144,7 @@ namespace Criatures2021
             }
 
 
-            CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
+            //CriaturesAtivos[0].PetFeat.meusAtributos.PV.Corrente = 1;
             //CriaturesAtivos[1].PetFeat.meusAtributos.PV.Corrente = 1;
             //CriaturesAtivos[2].PetFeat.meusAtributos.PE.Corrente = 5;
             //CriaturesAtivos[4].StatusTemporarios.Add(new DatesForTemporaryStatus() { Tipo = StatusType.envenenado });

@@ -191,8 +191,17 @@ namespace Criatures2021
 
         protected virtual void ReiniciarModulos()
         {
+            EndAtkUpdate();
             EndDamageState();
             MessageAgregator<MsgFreedonAfterAttack>.Publish(new MsgFreedonAfterAttack() { gameObject = gameObject });
+        }
+
+        void EndAtkUpdate()
+        {
+            if (state == LocalState.atk)
+            {
+                AtkApply.InterruptAtk();
+            }
         }
 
         void SetaMov()

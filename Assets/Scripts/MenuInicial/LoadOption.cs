@@ -2,8 +2,9 @@
 using UnityEngine.UI;
 using FayvitUI;
 using FayvitSave;
-using TextBankSpace;
 using FayvitMessageAgregator;
+using FayvitBasicTools;
+using TextBankSpace;
 
 public class LoadOption : AnOption
 {
@@ -41,6 +42,7 @@ public class LoadOption : AnOption
     public void BotaoExcluir()
     {
         MessageAgregator<MsgDeleteSaveClicked>.Publish();
+        acaoDelete(transform.GetSiblingIndex() - 1);
         //BtnsManager.DesligarBotoes(transform.parent.parent.parent.gameObject);
         //InitialSceneManager.i.Confirmacao.AtivarPainelDeConfirmacao(ExcluirSim, VoltarAoSave,
         //    string.Format(TextBank.RetornaFraseDoIdioma(TextKey.certezaExcluir), nomeDoSave.text));

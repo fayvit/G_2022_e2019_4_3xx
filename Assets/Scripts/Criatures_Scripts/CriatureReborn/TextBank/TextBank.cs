@@ -302,6 +302,9 @@ namespace TextBankSpace
         usarPergaminhoDeSinara,
         usarPergaminhoDeAlana,
         textosDeNaoPodeUsar,
-        NPCdaRepresa
+        NPCdaRepresa,
+        keyDjeyInfoInfo,
+        hooliganEntregaKeyDjey,
+        hooliganSaiDaEntregaKeyDjey
     }
 }

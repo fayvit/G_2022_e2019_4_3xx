@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Name: ID1Sobrancelha
+  m_EditorClassIdentifier: 
+  subsection: 
+  coresEditaveis:
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 5
+    registro: 5
+  baseTex: {fileID: 2800000, guid: f125262a1e9fd78429fe03c8b2c8ebd2, type: 3}
+  maskTex: {fileID: 2800000, guid: 9cd60fc1af0c1ab4e9b699d5637d5721, type: 3}
+  meshParent: 0

@@ -28,7 +28,7 @@ namespace Criatures2021
                 NivelDoGolpe = 1,
                 Colisor = new Colisor("metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.01.R",
                                                   new Vector3(0,0,-.45f),
-                                                  new Vector3(-0.296f,0.401f,0.508f)),
+                                                  new Vector3(0.051f,0.082f,0.17f)),
                 TaxaDeUso = 1f
             },
             new PetAttackDb()

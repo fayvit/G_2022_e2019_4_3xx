@@ -20,6 +20,7 @@ namespace TalkSpace
                 KeyVar myKeys= AbstractGameController.Instance.MyKeys;
                 if (!myKeys.VerificaAutoShift(ID))
                 {
+                    myKeys.MudaAutoShift(ID);
                     myKeys.MudaAutoShift(sKeyChange, true);
                     myKeys.MudaShift(shiftKeyChange, true);
                 }

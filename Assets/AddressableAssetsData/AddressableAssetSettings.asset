@@ -38,6 +38,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 59528b12dbb597d449301f13fa9bfd53, type: 2}
   - {fileID: 11400000, guid: 6b6f2fc3ba94e5444a2ee29952dc4349, type: 2}
+  - {fileID: 11400000, guid: 151e1a51bba91fd459da5810a6a7946a, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - xboxBtnInfo
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 53126846fbd57224980f13c9a767f3d6, type: 2}

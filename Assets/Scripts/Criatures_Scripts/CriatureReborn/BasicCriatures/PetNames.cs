@@ -71,7 +71,7 @@
     Izicuolo,
     Izanamed,
     Nedak,
-    Lanadhark,
+    Lanadharka,
     Oderc,
     Otnejon,
     Levirroh,

@@ -31,8 +31,6 @@ namespace Criatures2021Hud
             
 
             SetLineRowLength();
-
-
         }
 
         public override void SetContainerItem(GameObject G, int indice)

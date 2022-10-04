@@ -170,12 +170,13 @@ namespace Criatures2021
 
         }
 
-        public void SairDoKeyDjey(bool melhorarPosicao=true,bool melhorarPosicaoDoPet=true)
+        public void SairDoKeyDjey(
+            bool melhorarPosicao=true,
+            bool melhorarPosicaoDoPet=true,
+            CharacterState returnState = CharacterState.onFree)
         {
             move.MoveApplicator(Vector3.zero);
-            CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);
-
-            
+            CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);            
 
             ParticulasComSom(usuario);
 
@@ -184,18 +185,17 @@ namespace Criatures2021
             if(melhorarPosicao)
                 usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
 
-
-            MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
-            {
-                usuario = usuario.gameObject,
-                returnState = CharacterState.onFree
-            });
-
-            if(melhorarPosicaoDoPet)
+            if (melhorarPosicaoDoPet)
                 MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
                 {
                     pet = usuario.GetComponent<CharacterManager>().ActivePet.gameObject
                 });
+
+            MessageAgregator<MsgExitKeyDjey>.Publish(new MsgExitKeyDjey()
+            {
+                usuario = usuario.gameObject,
+                returnState = returnState
+            });
 
 
             Destroy(gameObject);

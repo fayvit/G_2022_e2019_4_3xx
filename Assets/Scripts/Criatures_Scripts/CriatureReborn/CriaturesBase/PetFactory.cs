@@ -60,6 +60,9 @@ namespace Criatures2021
                 case PetName.Onarac:
                     retorno = Onarac.Criature;
                 break;
+                case PetName.On_Racani:
+                    retorno = On_Racani.Criature;
+                break;
                 case PetName.Steal:
                     retorno = Steal.Criature;
                 break;

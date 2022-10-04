@@ -18,12 +18,14 @@ namespace Criatures2021
         [SerializeField] private BasicMove mov;
         [SerializeField] private DadosDeJogador dados;
         [SerializeField] private DamageState damageState;
+        [SerializeField] private bool ignorarRestricoesDeKeyDjey;
 
         private bool deuTempoParaKeyDjey = true;
         private Vector3 lastGroundedPosition;
 
         private const float INTERVALO_KEY_DJEY = .75F;
 
+        public bool IgnorarRestricoesDeKeyDjey { get => ignorarRestricoesDeKeyDjey; set => ignorarRestricoesDeKeyDjey = value; }
         public bool ContraTreinador { get; set; }
         public bool InTeste { get; set; }
         public CharacterState ThisState { get; private set; } = CharacterState.notStarted;
@@ -46,7 +48,7 @@ namespace Criatures2021
         {
             
             damageState = new DamageState(transform);
-            mov = new BasicMove(new MoveFeatures() { jumpFeat = new JumpFeatures() });
+            mov = new BasicMove(new MoveFeatures() { runSpeed=8, jumpFeat = new JumpFeatures() });
             mov.StartFields(transform);
             lastGroundedPosition = transform.position;
             UpdateLastGroundedPosition();
@@ -193,9 +195,7 @@ namespace Criatures2021
                 },INTERVALO_KEY_DJEY);
 
                 ThisState = obj.returnState;
-                Debug.Log(transform.position);
-                mov.Controller.enabled = true;
-                
+                mov.Controller.enabled = true;               
 
             }
         }
@@ -838,9 +838,10 @@ namespace Criatures2021
                     //ThisState = CharacterState.stopedWithStoppedCam;
                 }
                 else if (
-                    CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)
+                     (AbstractGameController.Instance.MyKeys.VerificaAutoShift(KeyShift.permitidoKeyDjey)||IgnorarRestricoesDeKeyDjey)
+                    && CurrentCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)
                     && deuTempoParaKeyDjey
-                    && AbstractGameController.Instance.MyKeys.VerificaAutoShift(KeyShift.permitidoKeyDjey)
+                    && AbstractGameController.Instance.MyKeys.VerificaAutoShift(KeyShift.hooliganKeyDjey)
                     )
                 {
                     ThisState = CharacterState.withKeyDjey;

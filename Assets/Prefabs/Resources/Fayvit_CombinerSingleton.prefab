@@ -274,6 +274,7 @@ MonoBehaviour:
         wasJumping: 0
     standardFallSpeed: 0
     overlapTaxRadius: 0.8
+    updateLastGroundedPosition: 0
   inputIndex: 0
   atk:
     maxStep: 100
@@ -355,6 +356,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: df60b458939a6734289293453b36ae52, type: 2}
     - {fileID: 11400000, guid: dd5dad11466d4954080a04b21a5af4c6, type: 2}
     - {fileID: 11400000, guid: 0f8694a44cd36c041b5d5c552f6ced7e, type: 2}
+    - {fileID: 11400000, guid: 3e06b3194c8cf964e81c59fb3bf0cef8, type: 2}
   - id: 15
     dataBase:
     - {fileID: 11400000, guid: 5507b76a045b3c54296ccdb1c941ee89, type: 2}
@@ -756,6 +758,12 @@ MonoBehaviour:
       myHBase: {fileID: 7540560302583076237}
       deltaVertex: 0
     guid: 9ce2bbcc-7aed-4d9b-a5a2-e68fb2f2ec52
+  - tCombiner:
+      myBase: {fileID: 7540560302583076237}
+      myMBase: {fileID: 0}
+      myHBase: {fileID: 7540560302583076237}
+      deltaVertex: 0
+    guid: 4398b8a7-34a8-4ab8-84b7-4b36bcb7ea89
 --- !u!1 &7502216965656892827
 GameObject:
   m_ObjectHideFlags: 0

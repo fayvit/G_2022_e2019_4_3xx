@@ -191,6 +191,7 @@ namespace FayvitBasicTools
         venceuDerekPrimeiraVez = 3,
         entregouCanetaDeIan = 4,
         permitidoKeyDjey = 5,
+        hooliganKeyDjey = 6,
     }
 
     public enum KeyCont

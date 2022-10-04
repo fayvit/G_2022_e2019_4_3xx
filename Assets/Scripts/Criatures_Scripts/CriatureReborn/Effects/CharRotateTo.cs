@@ -16,7 +16,6 @@ public class CharRotateTo : MonoBehaviour
         CharRotateTo c = target.AddComponent<CharRotateTo>();
         c.dir = Quaternion.LookRotation(Vector3.ProjectOnPlane(dir,Vector3.up));
         c.time = Random.Range(.35f, .65f);
-        
     }
 
     // Start is called before the first frame update

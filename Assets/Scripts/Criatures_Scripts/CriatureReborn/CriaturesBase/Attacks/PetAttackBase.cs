@@ -228,7 +228,10 @@ namespace Criatures2021
             protected set { container.somDoImpacto = value; }
         }
 
+        public virtual void InterromperGolpe(GameObject executor)
+        {
 
+        }
 
         public virtual void FinalizaEspecificoDoGolpe()
         {

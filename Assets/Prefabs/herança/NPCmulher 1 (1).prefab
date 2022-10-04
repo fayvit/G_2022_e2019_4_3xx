@@ -1046,6 +1046,10 @@ MonoBehaviour:
   sendBool: envia
   lockBool: travar
   captureAnimationName: capturou
+  damageAnimationName: DanoPrincipal
+  pushAnimate: Empurrando
+  mounted: montado
+  newRotationFactor: 0.001
 --- !u!114 &480838650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,6 +1096,9 @@ MonoBehaviour:
   - id: 7
     dataBase:
     - {fileID: 11400000, guid: 6106252ee648d55489c3ce79f7598cdc, type: 2}
+    - {fileID: 11400000, guid: 580f633cc07375140b28a027467989f8, type: 2}
+    - {fileID: 11400000, guid: 100eeefd395764043874aa5922620154, type: 2}
+    - {fileID: 11400000, guid: 9e09550a7d2c5c847b757e49a8bee206, type: 2}
   mBases:
   - id: 0
     dataBase:
@@ -1129,6 +1136,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8a1e13c3d4b9b7d4dbd09faff5c237d0, type: 2}
     - {fileID: 11400000, guid: 397a741a40eb5c94a935fa92cbefec5d, type: 2}
     - {fileID: 11400000, guid: 636a8437fa3e9f145b283985972d496e, type: 2}
+    - {fileID: 11400000, guid: e050b364c66ae604198dcee7e187fb37, type: 2}
+    - {fileID: 11400000, guid: 5b37c2775c7591d419f5770fa6cc1c86, type: 2}
+    - {fileID: 11400000, guid: b19022eb675dd7e4c92c630d6a73d2ea, type: 2}
+    - {fileID: 11400000, guid: 67ee7e9681e40f44aabd5918b51c114b, type: 2}
+    - {fileID: 11400000, guid: 2d7e263130abaaa4f878bd555967a048, type: 2}
   cBases:
   - id: 13
     dataBase:
@@ -1152,6 +1164,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a31935c8430f76d46b99c5e5288290d2, type: 2}
     - {fileID: 11400000, guid: 696267f058179a341b9912bc0eb68878, type: 2}
     - {fileID: 11400000, guid: 619fca29b757fc84cafc90b24157f8b5, type: 2}
+    - {fileID: 11400000, guid: 64cdc95f3b9e6634082b73288b81759c, type: 2}
+    - {fileID: 11400000, guid: 0d8b32414afff9140adeefa8ca35b1c7, type: 2}
+    - {fileID: 11400000, guid: 98221fd2080f1e14e8716f624ccc3178, type: 2}
+    - {fileID: 11400000, guid: ee42b0eb888f5194f86c95763639d851, type: 2}
+    - {fileID: 11400000, guid: c78fefca48c6ea44185c506f534837c5, type: 2}
+    - {fileID: 11400000, guid: 7a2e0ad96b2f63a4393f239ad2fe4bdc, type: 2}
   - id: 10
     dataBase:
     - {fileID: 11400000, guid: 2135a35920baa0c4288eeb63b0191569, type: 2}

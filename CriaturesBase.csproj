@@ -196,6 +196,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Nedak.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Nessei.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Oderc.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\On_Racani.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Onarac.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\PolyCharm.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Quaster.cs" />

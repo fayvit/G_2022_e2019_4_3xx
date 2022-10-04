@@ -180,13 +180,13 @@ public class DarkenScreenDamageBase : MonoBehaviour
                 case DarkenEndEvent.explicandoDodgeTuto:
                     Debug.Log("publicou o evento dodge info");
                     MessageAgregator<MsgRequestDodgeInfoEvent>.Publish(new MsgRequestDodgeInfoEvent() { heroGameObject = heroGameObject });
-                    break;
+                break;
                 case DarkenEndEvent.voltaAoFree:
                     MessageAgregator<MsgChangeToHero>.Publish(new MsgChangeToHero()
                     {
                         myHero = heroGameObject
                     });
-                    break;
+                break;
             }
         }
     }

@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 
 public class PersonagemParaTeste : MonoBehaviour
 {
+    [SerializeField] private bool comecarSemKeyDjey;
+    [SerializeField] private bool ignorarRestricoesDeKeyDjey;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +20,20 @@ public class PersonagemParaTeste : MonoBehaviour
             return AbstractGameController.Instance;
         }))
         {
+           
 
             SupportSingleton.Instance.InvokeOnCountFrame(() =>
             {
                 CharacterManager c = FindObjectOfType<CharacterManager>();
                 if (c == null)
                 {
+                    
                     var v = CustomizationSavedChars.listaDePersonagens;
                     int x = Random.Range(0, v.Count);
-                    FazPersonagem(v[x], true, transform);
+                    FazPersonagem(v[x], true, transform).GetComponent<CharacterManager>().IgnorarRestricoesDeKeyDjey=ignorarRestricoesDeKeyDjey;
+
+                    if(!comecarSemKeyDjey)
+                        AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.hooliganKeyDjey, true);
                     AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.permitidoKeyDjey,true);
                 }
         }, 3);

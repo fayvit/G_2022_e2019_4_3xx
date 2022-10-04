@@ -52,6 +52,8 @@ namespace TalkSpace
         private AnimateArm animaB;
         private PetManager myActivePet;
 
+        public string ChaveDaLuta => chaveDaLuta;
+
         protected MsgSendExternalPanelCommand Commands { get; private set; } = new MsgSendExternalPanelCommand();
 
         private enum ThisState
@@ -409,9 +411,9 @@ namespace TalkSpace
         {
             //Debug.Log("No trainer" + (obj.defeated == myActivePet.gameObject)
             //    + " : " + (obj.atacker.GetComponent<PetManager>().MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente > 0));
-
+            
             if (obj.defeated == myActivePet.gameObject 
-                && obj.atacker.GetComponent<PetManager>().MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente>0)
+                && Manager.ActivePet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente>0)
             {
                 conversa = new string[1] { string.Format(
                         TextBank.RetornaFraseDoIdioma(TextKey.apresentaFim),

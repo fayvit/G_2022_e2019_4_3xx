@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using FayvitMessageAgregator;
-using System;
 using Criatures2021Hud;
 
 namespace Criatures2021
 {
-    
+
     public class TutoInfoListener:MonoBehaviour
     {
         private GameObject heroGameObject;
@@ -21,7 +20,6 @@ namespace Criatures2021
 
         private void OnRequestDodgeInfoEvent(MsgRequestDodgeInfoEvent obj)
         {
-            Debug.Log("request dodge info");
             heroGameObject = obj.heroGameObject;
             MessageAgregator<MsgRequestOpenInfoMessage>.Publish(new MsgRequestOpenInfoMessage()
             {
