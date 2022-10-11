@@ -35,8 +35,8 @@ namespace FayvitCommandReader
                 Dictionary<CommandConverterString, List<string>> baseDic
                         = new Dictionary<CommandConverterString, List<string>>(dicCommandConverterString);
                 baseDic[CommandConverterString.camZ] = new List<string> {"triggers"};
-                baseDic[CommandConverterString.menuChangeH] = new List<string> { "horizontal", "HDpad" };
-                baseDic[CommandConverterString.menuChangeV] = new List<string> { "vertical", "VDpad" };
+                baseDic[CommandConverterString.menuChangeH] = new List<string> {  "HDpad", "horizontal" };
+                baseDic[CommandConverterString.menuChangeV] = new List<string> { "VDpad", "vertical"};
                 baseDic[CommandConverterString.changeLockTargetX] = new List<string> { "Xcam" };
                 baseDic[CommandConverterString.changeLockTargetY] = new List<string> { "Ycam" };
 

@@ -12,11 +12,17 @@ namespace Criatures2021
                 case PetName.Xuash:
                     retorno = Xuash.Criature;
                 break;
+                case PetName.Xosh:
+                    retorno = Xosh.Criature;
+                break;
                 case PetName.Florest:
                     retorno = Florest.Criature;
                 break;
                 case PetName.PolyCharm:
                     retorno = PolyCharm.Criature;
+                break;
+                case PetName.HolyCharm:
+                    retorno = HolyCharm.Criature;
                 break;
                 case PetName.Arpia:
                     retorno = Arpia.Criature;

@@ -19,7 +19,7 @@ namespace FayvitCommandReader
     public enum CommandConverterInt
     { 
         jump,
-        attack,
+        attackTranferidoParaEixos,
         itemUse,
         criatureChange,
         run,

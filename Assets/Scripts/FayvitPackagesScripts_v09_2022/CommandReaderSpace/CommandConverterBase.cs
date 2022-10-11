@@ -15,7 +15,7 @@ namespace FayvitCommandReader
             { CommandConverterInt.heroToCriature,new List<int>{8} },
             { CommandConverterInt.camFocus,new List<int>{9} },
             { CommandConverterInt.confirmButton,new List<int>{1,8,7} },
-            { CommandConverterInt.returnButton,new List<int>{3,9,6} },
+            { CommandConverterInt.returnButton,new List<int>{9,6,3} },
             { CommandConverterInt.humanAction,new List<int>{1} },
             { CommandConverterInt.updateMenu,new List<int>{7} },
             { CommandConverterInt.starterMenuConfirm,new List<int>{7,13} },

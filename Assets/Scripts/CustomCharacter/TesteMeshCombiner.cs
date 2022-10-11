@@ -277,7 +277,19 @@ namespace CustomizationSpace
                 }
             }
 
+            
+            for (int i = 0; i < parentObj.transform.childCount; i++)
+                if (!parentObj.transform.GetChild(i).gameObject.activeSelf)
+                    MonoBehaviour.Destroy(parentObj.transform.GetChild(i).gameObject);
+            //Transform metarig = target.transform.Find("metarig");
+            //children = parentObj.GetComponentsInChildren<Transform>();
+            //foreach (var child in children)
+            //    if (child.name != "metarig" &&!FayvitBasicTools.HierarchyTools.EstaNaHierarquia(metarig,child)&&child!=parentObj.transform)
+            //        MonoBehaviour.Destroy(child.gameObject);
+
             gameObject.transform.SetParent(parentObj.transform);
+            MonoBehaviour.Destroy(parentObj.GetComponent<SectionDataBaseContainer>());
+            MonoBehaviour.Destroy(parentObj.GetComponent<SectionCustomizationManager>());
             parentObj.GetComponent<Animator>().enabled = true;
             parentObj.SetActive(false);
             InEditorSupportSingleton.Instance.InvokeOnEndFrame(() =>

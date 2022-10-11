@@ -37,6 +37,7 @@ namespace Npc2021
         {
 
             GameObject G = CombinerSingleton.Instance.GetCombination(ccd);
+            //Debug.Log("CombinerSingleton.Instance.name: "+  CombinerSingleton.Instance.name);
 
             G.name = "Npc_" + sId;
 

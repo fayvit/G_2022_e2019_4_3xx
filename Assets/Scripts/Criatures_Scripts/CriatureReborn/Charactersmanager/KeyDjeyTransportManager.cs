@@ -13,7 +13,7 @@ namespace Criatures2021
     public class KeyDjeyTransportManager : MonoBehaviour
     {
         [SerializeField] private BasicMove move;
-        
+
         private DamageState damageState;
         private Transform usuario;
         private LocalState state = LocalState.onFree;
@@ -22,7 +22,7 @@ namespace Criatures2021
         private const float TEMPO_PODE_MUDAR = 1.25f;
 
         private enum LocalState
-        { 
+        {
             onFree,
             inDamage
         }
@@ -30,18 +30,18 @@ namespace Criatures2021
         public ICommandReader GetCommander => CommandReader.GetCR(AbstractGlobalController.Instance.Control);
         public Transform GetUser => usuario;
 
-        public static void StartKeyDjeyTransport(Transform usuario,bool masculino)
+        public static void StartKeyDjeyTransport(Transform usuario, bool masculino)
         {
             GameObject G = ResourcesFolders.GetPet(PetName.KeyDjey);
-            G = Instantiate(G,MelhoraInstancia3D.ProcuraPosNoMapa(usuario.position),usuario.rotation);
+            G = Instantiate(G, MelhoraInstancia3D.ProcuraPosNoMapa(usuario.position), usuario.rotation);
             G.layer = 0;
-            SceneManager.MoveGameObjectToScene(G, 
-             SceneManager.GetSceneByName(   
+            SceneManager.MoveGameObjectToScene(G,
+             SceneManager.GetSceneByName(
                 NomesCenasEspeciais.ComunsDeFase.ToString())
              );
 
             ParticulasComSom(usuario);
-            
+
             KeyDjeyTransportManager k = G.AddComponent<KeyDjeyTransportManager>();
             k.usuario = usuario;
             usuario.SetParent(G.transform.Find("Armature/Bone"));
@@ -81,8 +81,8 @@ namespace Criatures2021
                 {
                     fallSpeed = 18,
                     inJumpSpeed = 9,
-                    risingSpeed=7,
-                    jumpHeight=3
+                    risingSpeed = 7,
+                    jumpHeight = 3
                 },
                 runSpeed = 18,
                 walkSpeed = 9
@@ -90,13 +90,13 @@ namespace Criatures2021
             move.StartFields(transform);
 
             MessageAgregator<MsgSlopeSlip>.AddListener(OnSlopeSlip);
-           
+
         }
 
         private void OnDestroy()
         {
             MessageAgregator<MsgSlopeSlip>.RemoveListener(OnSlopeSlip);
-            
+
         }
 
         private void OnEnterInDamageState(MsgEnterInDamageState obj)
@@ -141,20 +141,20 @@ namespace Criatures2021
                         GetCommander.GetButton(CommandConverterInt.jump)
                         );
 
-                    if (GetCommander.GetButtonDown(CommandConverterInt.keyDjeyAction)&&podeVoltarProTtreinador)
+                    if (GetCommander.GetButtonDown(CommandConverterInt.keyDjeyAction) && podeVoltarProTtreinador)
                     {
                         SairDoKeyDjey();
                     }
 
-                break;
+                    break;
                 case LocalState.inDamage:
                     if (damageState.Update())
                     {
                         state = LocalState.onFree;
                     }
-                break;
+                    break;
             }
-            
+
 
         }
 
@@ -171,19 +171,19 @@ namespace Criatures2021
         }
 
         public void SairDoKeyDjey(
-            bool melhorarPosicao=true,
-            bool melhorarPosicaoDoPet=true,
+            bool melhorarPosicao = true,
+            bool melhorarPosicaoDoPet = true,
             CharacterState returnState = CharacterState.onFree)
         {
             move.MoveApplicator(Vector3.zero);
-            CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);            
+            CameraApplicator.cam.ValoresDeCamera(0, 0, false, false);
 
             ParticulasComSom(usuario);
 
             usuario.parent = null;
             usuario.rotation = DirectionOnThePlane.Rotation(usuario.forward);
-            if(melhorarPosicao)
-                usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position)+Vector3.up;
+            if (melhorarPosicao)
+                usuario.position = MelhoraInstancia3D.ProcuraPosNoMapa(transform.position) + Vector3.up;
 
             if (melhorarPosicaoDoPet)
                 MessageAgregator<MsgBlockPetAdvanceInTrigger>.Publish(new MsgBlockPetAdvanceInTrigger()
@@ -199,9 +199,9 @@ namespace Criatures2021
 
 
             Destroy(gameObject);
-            
+
         }
-       
+
     }
 
     public struct MsgExitKeyDjey : IMessageBase

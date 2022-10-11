@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Florest.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Galfo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Grewstick.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\HolyCharm.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Iruin.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Izicuolo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Marak.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Urkan.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Vampire.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Wisks.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Xosh.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\criaturesConsolidados\Xuash.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -24,9 +24,11 @@ namespace Criatures2021
 
         public static GameObject InstantiatePet(PetBase criature,Vector3 position)
         {
-            GameObject CA = Resources.Load<GameObject>("Criatures/" + criature.NomeID.ToString());
-            CA = MonoBehaviour.Instantiate(CA, position, Quaternion.identity)
-                as GameObject;
+            GameObject CA = PetInitialize.Instantiate(position,criature.NomeID);
+                
+            //    ResourcesFolders.GetPet(criature.NomeID);//Resources.Load<GameObject>("Criatures/" + criature.NomeID.ToString());
+            //CA = MonoBehaviour.Instantiate(CA, position, Quaternion.identity)
+            //    as GameObject;
 
             //Scene S = SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString());
 

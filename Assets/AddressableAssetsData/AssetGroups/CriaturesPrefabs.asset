@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: CriaturesPrefabs
+  m_EditorClassIdentifier: 
+  m_GroupName: CriaturesPrefabs
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c04542e2a43ac0e4da0df699840f61c2
+  m_SerializeEntries:
+  - m_GUID: db2f2cdb3a9cefd4d8e53cb2e7662310
+    m_Address: Criatures/Xosh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f1505f58412e4fc4686d65d2bc881578
+    m_Address: Criatures/Abutre
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32fb56aa4a9344449bf638566346948f
+    m_Address: Criatures/PolyCharm
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 689f7a68244e811499840e854f339bdd
+    m_Address: Criatures/Xuash
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 81b1d5979d3cd5a49af6ee3e59e69154
+    m_Address: Criatures/Aladegg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7f7ec6aec5fbc5c468782c7092537f6d
+    m_Address: Criatures/Arpia
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e97f1a0e0f24c2458b226c031f51ba1
+    m_Address: Criatures/Babaucu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 23e702508c9d9a843813aa07cdf6c3d6
+    m_Address: Criatures/Baratarab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 75bcebca3bfcd5449a8f664642bacb4a
+    m_Address: Criatures/Batler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 62ca08a6c60e1334fb6614692a4f7a26
+    m_Address: Criatures/Cabecu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1a7a3e3da24e3d24aa9f86a5793f379f
+    m_Address: Criatures/Cracler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 10753336f9cdc8547ab350606595e005
+    m_Address: Criatures/Croc
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 62890b85fa9117941a32bbf85101b6dc
+    m_Address: Criatures/DogMour
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba9b038abdd6dce46ae35f6d6bc7cb98
+    m_Address: Criatures/Escorpion
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9552d318ceeedc84a96dcfc27dd97788
+    m_Address: Criatures/Estrep
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4e4cf6ba6487fbc44a999d038081d728
+    m_Address: Criatures/Fajin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0947abaead97a9244a5a08baee173809
+    m_Address: Criatures/FelixCat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 75da0630e710b26498a757d660415618
+    m_Address: Criatures/Flam
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 887fb7e2fe61e27499a233c52312a36a
+    m_Address: Criatures/Florest
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8c6674913e9cbc44968d397c0203fcf
+    m_Address: Criatures/Galfo
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d4ff92cb3530ef4ab529b8ba119385b
+    m_Address: Criatures/GrewStick
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a2474bcb1ab9ff4dbda2d897d22b57d
+    m_Address: Criatures/Iruin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da460f954a2ae4c498cf3dac5b915c03
+    m_Address: Criatures/Izicuolo
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc4e87f0eaefb5f4389955346e2d2e51
+    m_Address: Criatures/KeyDjey
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc5f491ccc4fc7749a32acec8528019e
+    m_Address: Criatures/Marak
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d09f9d4444d55b4394d5ec99206424e
+    m_Address: Criatures/Nedak
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 03e032d20183bee4ba27afc91418184f
+    m_Address: Criatures/Nessei
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc95509cb7252744ab9161cf6a8cf12b
+    m_Address: Criatures/Oderc
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b6db90339babb5648a08113a72e09e01
+    m_Address: Criatures/On_Racani
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 232a3e386dd65824795023c6345b4099
+    m_Address: Criatures/Onarac
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a8e01e5ca253b31499093ea46f22887f
+    m_Address: Criatures/Quaster
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8289b80836a9d1c4bbdf2782e0b78aae
+    m_Address: Criatures/Rabitler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 978433f561596cb4d95ceacea7ccbeda
+    m_Address: Criatures/Rocketler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b78cc9c30b28a949a3ddb8ce0429b76
+    m_Address: Criatures/Serpente
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c7272cf5e8240a47bc389473f898d3c
+    m_Address: Criatures/Steal
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e97b2ea52d296f3459a002d0c14cb86c
+    m_Address: Criatures/Trude
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 673e56a32f1d7dc46ad1559d478ff391
+    m_Address: Criatures/Uiritibucu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cde9eca7edbe31c4683ca0be5eccba7e
+    m_Address: Criatures/Urkan
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2a1bd0a67fba01e49a7fe61f7d2a5816
+    m_Address: Criatures/Wisks
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 62aceec2c9e712a4993610abf40b32a9
+    m_Address: Criatures/Vampire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e11953194b39978429e18811068f08a5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8dfa4abe63fcc1c4ab9ac484bd3c9fe2, type: 2}
+    - {fileID: 11400000, guid: dc345d1a1a2895447808a6f4fb923742, type: 2}

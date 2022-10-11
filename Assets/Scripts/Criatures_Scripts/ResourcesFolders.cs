@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Criatures2021;
 using FayvitSounds;
-using System;
+using Assets.ScriptsLadoB.FayvitAdressable;
 
 public class ResourcesFolders {
 
@@ -48,7 +47,14 @@ public class ResourcesFolders {
 
     public static GameObject GetPet(PetName NomeID)
     {
+        Resources.UnloadUnusedAssets();
+        //return AddressablesResourcesManager.InstantGet("Criatures/" + NomeID);
         return Resources.Load<GameObject>("Criatures/" + NomeID.ToString());
+    }
+
+    internal static void OtimizePet(PetName NomeID, GameObject cA)
+    {
+        AddressablesResourcesManager.OtimizePrefabs("Criatures/" + NomeID,cA);
     }
 }
 

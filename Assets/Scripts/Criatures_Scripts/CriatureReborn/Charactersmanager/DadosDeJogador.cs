@@ -104,8 +104,8 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.Flam,7),
-                new PetBase(PetName.Marak,11),
+                new PetBase(PetName.HolyCharm,7),
+                new PetBase(PetName.Xuash,11),
                 new PetBase(PetName.Wisks,7),
                 new PetBase(PetName.Babaucu,13),
                 new PetBase(PetName.Estrep,9),

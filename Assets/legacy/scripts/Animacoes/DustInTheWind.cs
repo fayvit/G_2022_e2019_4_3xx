@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Criatures2021;
 
 public class DustInTheWind : MonoBehaviour {
 	public float tempoDeRepeticao = 0.25f;

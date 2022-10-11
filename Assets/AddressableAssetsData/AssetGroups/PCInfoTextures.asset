@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PCInfoTextures
+  m_EditorClassIdentifier: 
+  m_GroupName: PCInfoTextures
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a5589e849450b354eb310353662c09b4
+  m_SerializeEntries:
+  - m_GUID: dc715213c7933b643a1cf47f5273eaab
+    m_Address: Enter
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a8fdd46c1465e7b49a746bc25c3674d8
+    m_Address: esc
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 70ec9ce872405844f9d82145479318a5
+    m_Address: WASD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2a7840fb2acb01b4888c55ef44bfd9b1
+    m_Address: yuihjk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 040c47285d81e744aa325e5218aa4a89
+    m_Address: delete
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9f548baa016b5c44798f143b96446ef5
+    m_Address: leftShift
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4b0951ec1e077104faa426554bea749a
+    m_Address: space
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0100ac86998868744b1497679888aafa
+    m_Address: tab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a2e506ac26a44244f89c70d2447f7a9b
+    m_Address: LT_RT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e11953194b39978429e18811068f08a5, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 75313d9cb47d72445b771bf24476d2dc, type: 2}
+    - {fileID: 11400000, guid: b0d6ed2e482c43b449c10596c693a0d4, type: 2}

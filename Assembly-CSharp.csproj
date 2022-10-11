@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\A_PetMenuOption.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ActionHudManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\AnItemOption.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ChangeCommandInfoInHud.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ChangeTextureWithController.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\CommandInfoManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\HUD\ContainerBasicMenu.cs" />
@@ -278,9 +279,6 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\CriaturesSaveDates.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\PersonagemParaTeste.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\Testes\SpawnPetTest.cs" />
-    <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitAdressable\UnderstendAddressable.cs" />
-    <Compile Include="Assets\Scripts\GameJolt\JoltLoginManager.cs" />
-    <Compile Include="Assets\Scripts\GameJolt\SaveAndLoadInJolt.cs" />
     <Compile Include="Assets\Scripts\HumanAnimationListener.cs" />
     <Compile Include="Assets\Scripts\LikeDarkSouls\AnimationListener.cs" />
     <Compile Include="Assets\Scripts\LikeDarkSouls\AtkManager.cs" />
@@ -312,19 +310,16 @@
     <Compile Include="Assets\Scripts\SkyPlanesPositioner.cs" />
     <Compile Include="Assets\Scripts\SpawnPointTeleport\SpawnPointMark.cs" />
     <Compile Include="Assets\Scripts\timeline\FirstTestTalk.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\AddressablesResourcesManager.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\CommandsDictionary.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\SuperiorCommanInfoConverter.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\TriggerCommandInfoConverter.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\TriggerCommandPositiveOrNegative.cs" />
+    <Compile Include="Assets\ScriptsLadoB\FayvitAdressable\UnderstendAddressable.cs" />
+    <Compile Include="Assets\ScriptsLadoB\GameJolt\JoltLoginManager.cs" />
+    <Compile Include="Assets\ScriptsLadoB\GameJolt\SaveAndLoadInJolt.cs" />
     <Compile Include="Assets\TestApperanceSet.cs" />
     <Compile Include="Assets\legacy\modelosMateriaisTexturas\Fantasy Skybox FREE\Scripts\FSPlayer.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\AnimaLuzPsiquica.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\AnimacaoDeSpriteParaUI.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\ControleDosOlhos.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\DanoAparecendo.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\DustInTheWind.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\GeneralRotation.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\GiraTurboDagua.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\escalaParaSabre.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\giraFuracaoDeFolhas.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\giraGira.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\reflexoCilindro.cs" />
     <Compile Include="Assets\legacy\scripts\extras\BlocsGenerate.cs" />
     <Compile Include="Assets\legacy\scripts\extras\MapaPorScript.cs" />
   </ItemGroup>
@@ -1113,6 +1108,10 @@
     <ProjectReference Include="FayvitBasicTools.csproj">
       <Project>{5E60CA05-7413-10AE-345D-75F3F65142D1}</Project>
       <Name>FayvitBasicTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="SupportAnimations.csproj">
+      <Project>{AA7415BA-9058-335B-04DC-C29051880F1E}</Project>
+      <Name>SupportAnimations</Name>
     </ProjectReference>
     <ProjectReference Include="FayvitCommandReaderSpace.csproj">
       <Project>{E79AA5A8-146B-8CFA-162D-BBEE6C74DF20}</Project>

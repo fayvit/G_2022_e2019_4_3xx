@@ -231,7 +231,8 @@ GameObject:
   - component: {fileID: 8549770358292836646}
   - component: {fileID: 1661895883615985114}
   - component: {fileID: 4246261206710946193}
-  m_Layer: 13
+  - component: {fileID: -8291467734256800517}
+  m_Layer: 0
   m_Name: KeyDjey
   m_TagString: Criature
   m_Icon: {fileID: 0}
@@ -428,6 +429,40 @@ MonoBehaviour:
   aoChao: 17
   destruir: 1
   repetir: 0.25
+--- !u!114 &-8291467734256800517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094929952753615837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9710a4346cfffbb4d87a6bb19dd1a71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move:
+    lockTarget: {fileID: 0}
+    movFeatures:
+      rollSpeed: 1
+      walkSpeed: 2
+      runSpeed: 6
+      rotAlways: 0
+      jumpFeat:
+        jumpHeight: 1
+        minTimeJump: 0.25
+        maxTimeJump: 0.35
+        risingSpeed: 5
+        fallSpeed: 4.8
+        inJumpSpeed: 3
+        verticalDamping: 2
+        horizontalDamping: 5
+        initialImpulse: 0.03
+        isJumping: 0
+        wasJumping: 0
+    standardFallSpeed: 0
+    overlapTaxRadius: 0.8
+    updateLastGroundedPosition: 0
 --- !u!1 &4107935115524438152
 GameObject:
   m_ObjectHideFlags: 0

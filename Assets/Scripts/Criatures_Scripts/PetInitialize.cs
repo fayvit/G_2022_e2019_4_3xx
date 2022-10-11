@@ -14,14 +14,26 @@ namespace Criatures2021
             return G;
         }
 
+        public static GameObject Instantiate(Vector3 position,PetName NomeID,float customVarDir=0.1f) {
+            GameObject CA = ResourcesFolders.GetPet(NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
+            CA = MonoBehaviour.Instantiate(CA,
+                MelhoraInstancia3D.ProcuraPosNoMapa(position,customVarDir)
+                , Quaternion.identity)
+                as GameObject;
+            ResourcesFolders.OtimizePet(NomeID,CA);
+            return CA;
+        }
+
         public static GameObject InstantiatePet(Transform dono, PetBase criature)
         {
 
-            GameObject CA = ResourcesFolders.GetPet(criature.NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
-            CA = MonoBehaviour.Instantiate(CA, 
-                MelhoraInstancia3D.ProcuraPosNoMapa(dono.position - 3 * dono.forward,5)
-                , Quaternion.identity)
-                as GameObject;
+            GameObject CA = Instantiate(dono.position - 3 * dono.forward, criature.NomeID, 5);
+                
+            //    ResourcesFolders.GetPet(criature.NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
+            //CA = MonoBehaviour.Instantiate(CA, 
+            //    MelhoraInstancia3D.ProcuraPosNoMapa(dono.position - 3 * dono.forward,5)
+            //    , Quaternion.identity)
+            //    as GameObject;
 
             
             SceneManager.MoveGameObjectToScene(CA,

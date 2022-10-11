@@ -18,107 +18,107 @@ MonoBehaviour:
   m_GUID: 9cf976c80c4337142909cd1f0493a7d2
   m_SerializeEntries:
   - m_GUID: cdd098e0e1f897a4f88085bd536b4ad8
-    m_Address: rb.png
+    m_Address: RB
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 4eed7d31f612be84191519bb89f6b982
-    m_Address: btnB.png
+    m_Address: btnB
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 22e9df610f2fa7849a64ce407b417b2e
-    m_Address: LS.png
+    m_Address: LS
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: d396ad71ddf9e4646918b755fa765ac7
-    m_Address: dpad_down.png
+    m_Address: dpad_down
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 14728af167b9541488e6dd6bdeb2c4cc
-    m_Address: dpad_up.png
+    m_Address: dpad_up
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: b2053ea3e81cc014585162c448bd596c
-    m_Address: btnA.png
+    m_Address: btnA
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: e9243fa308178b349965449348029357
-    m_Address: alavancaL.png
+    m_Address: alavancaL
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 53624dc35ef1e9c449c408a1d1769fa4
-    m_Address: btnSelect.png
+    m_Address: btnSelect
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 52e9452573d038c40b5f77d16a0d5c8d
-    m_Address: RS.png
+    m_Address: RS
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: fef45c7778d3b1743a7bec6690ec0cd8
-    m_Address: dpad_left.png
+    m_Address: dpad_left
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: afed4bb7b49c84f4fb81175c60924880
-    m_Address: LT.png
+    m_Address: LT
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 9f5d1df7f7474f044939442d09ffa778
-    m_Address: btnY.png
+    m_Address: btnY
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 2b97a2688a018d8479d593f5a5a8e988
-    m_Address: btnStart.png
+    m_Address: btnStart
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 4b407b0950b35254480f1ce8a75914d8
-    m_Address: dpad_leftRight.png
+    m_Address: dpad_leftRight
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 5e181fe912c218749b127a5c8fd6c005
-    m_Address: dpad_upDown.png
+    m_Address: dpad_upDown
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: c91ba62acf0b5e848a563206a7ef2f05
-    m_Address: LB.png
+    m_Address: LB
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 90ac11eb2f6a8814da71fc1c6ea36f76
-    m_Address: btnX.png
+    m_Address: btnX
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: f656991c5d37fb6419bf2a1f557275ba
-    m_Address: dpad_right.png
+    m_Address: dpad_right
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: 3b08cd3c336c009408bab24bb46fb3d3
-    m_Address: dpad_cleam.png
+    m_Address: dpad_cleam
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: cbeed18dba748d249a378d4358e33b99
-    m_Address: alavancaR.png
+    m_Address: alavancaR
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
   - m_GUID: b30ddd2fa133ae54dbe825a585596b14
-    m_Address: RT.png
+    m_Address: RT
     m_ReadOnly: 0
     m_SerializedLabels:
     - xboxBtnInfo
