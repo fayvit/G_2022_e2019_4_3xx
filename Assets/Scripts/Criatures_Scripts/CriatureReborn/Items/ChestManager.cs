@@ -234,7 +234,8 @@ namespace Criatures2021
 
             MessageAgregator<MsgFinishChestInteraction>.Publish();
 
-            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+            if(!MyGlobalController.MainPlayer.InTeste)
+                FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             
         }
 

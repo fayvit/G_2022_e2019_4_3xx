@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 376b59fed3327aa4abff42a4eea338e6
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cube
+    100002: Cube_001
+    100004: Cube_002
+    100006: //RootNode
+    100008: Cubo
+    100010: Cubo_001
+    100012: Cubo_002
+    100014: Cubo_003
+    100016: Cubo_004
+    100018: Cubo_005
+    100020: Cubo_006
+    100022: Cubo_007
+    100024: Cubo_008
+    100026: Cubo_009
+    100028: Cubo_010
+    100030: Cubo_011
+    100032: Cubo_012
+    100034: Cubo_013
+    100036: C_rculo
+    400000: Cube
+    400002: Cube_001
+    400004: Cube_002
+    400006: //RootNode
+    400008: Cubo
+    400010: Cubo_001
+    400012: Cubo_002
+    400014: Cubo_003
+    400016: Cubo_004
+    400018: Cubo_005
+    400020: Cubo_006
+    400022: Cubo_007
+    400024: Cubo_008
+    400026: Cubo_009
+    400028: Cubo_010
+    400030: Cubo_011
+    400032: Cubo_012
+    400034: Cubo_013
+    400036: C_rculo
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cubo
+    2300008: Cubo_001
+    2300010: Cubo_002
+    2300012: Cubo_003
+    2300014: Cubo_004
+    2300016: Cubo_005
+    2300018: Cubo_006
+    2300020: Cubo_007
+    2300022: Cubo_008
+    2300024: Cubo_009
+    2300026: Cubo_010
+    2300028: Cubo_011
+    2300030: Cubo_012
+    2300032: Cubo_013
+    2300034: C_rculo
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cubo
+    3300008: Cubo_001
+    3300010: Cubo_002
+    3300012: Cubo_003
+    3300014: Cubo_004
+    3300016: Cubo_005
+    3300018: Cubo_006
+    3300020: Cubo_007
+    3300022: Cubo_008
+    3300024: Cubo_009
+    3300026: Cubo_010
+    3300028: Cubo_011
+    3300030: Cubo_012
+    3300032: Cubo_013
+    3300034: C_rculo
+    4300000: Cube_002
+    4300002: Cube
+    4300004: Cube_001
+    4300006: Cubo
+    4300008: Cubo_010
+    4300010: Cubo_009
+    4300012: Cubo_008
+    4300014: Cubo_007
+    4300016: Cubo_006
+    4300018: Cubo_005
+    4300020: Cubo_004
+    4300022: Cubo_003
+    4300024: Cubo_002
+    4300026: Cubo_001
+    4300028: Cubo_011
+    4300030: Cubo_012
+    4300032: Cubo_013
+    4300034: C_rculo
+    7400000: Default Take
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__LinhaDotrem_png
+    second: {fileID: 2100000, guid: fae7df681377960429acff78e49df8aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__Sem_t_tulo
+    second: {fileID: 2100000, guid: 9afaf068c5304ae42bb5ac067a82dfad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__concreto_png
+    second: {fileID: 2100000, guid: 935a382f8fa80b14f964aa85e48b81c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__montanhaLaanja_png
+    second: {fileID: 2100000, guid: 68c8c59fd1b2ba04aa51f47936af06f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__pilares_png
+    second: {fileID: 2100000, guid: 13ff6866275d6a14093622e916ba7836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__telhaDaestacao_png
+    second: {fileID: 2100000, guid: 3ab48d2749ab93d4aa2c1c38e3af6738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None__wood-20_jpg
+    second: {fileID: 2100000, guid: 0a6dd586efbac784ea6aed92963e6020, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: muralhas__muroDeInfinityUVfeito_tga
+    second: {fileID: 2100000, guid: 0e8c561629d9a5042a063abc7cc70db8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruas
+    second: {fileID: 2100000, guid: 913aa7e6d42323641baeb39806d8d317, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ruas__muralhaPreto_e_branco_tga
+    second: {fileID: 2100000, guid: 3c1681b8808701642ac66590076cfea0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

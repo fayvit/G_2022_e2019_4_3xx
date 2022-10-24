@@ -32,17 +32,18 @@ namespace Criatures2021
         new PetAttackDb()
             {
                 NivelDoGolpe = 1,
-                ModPersonagem = 0,
+                ModPersonagem = 5,
                 Colisor = new Colisor("Armature/coluna1/coluna2/coluna3/pescoco/cabeca"),
                 Nome = AttackNameId.bolaDeFogo,
                 TaxaDeUso = 1,
                 DistanciaEmissora = 1f,
-                AcimaDoChao=-.75f                
+                AcimaDoChao=-.3f
             },
             new PetAttackDb()
             {
                 Nome = AttackNameId.garra,
                 NivelDoGolpe = 1,
+                ModPersonagem = 5,
                 Colisor = new Colisor("Armature",
                                    new Vector3(0.18f,0,0),
                                    new Vector3(-0.161F,.53F,0.767f)),
@@ -52,15 +53,17 @@ namespace Criatures2021
             {
                 Nome = AttackNameId.rajadaDeFogo,
                 NivelDoGolpe = 2,
+                ModPersonagem = 5,
                 Colisor = new Colisor("Armature/coluna1/coluna2/coluna3/pescoco/cabeca"),
                 DistanciaEmissora = 1f,
-                AcimaDoChao = 0.15f,
+                AcimaDoChao=-.3f,
                 TaxaDeUso = 1.25f
             },
             new PetAttackDb()
             {
                 Nome = AttackNameId.tosteAtaque,
                 NivelDoGolpe = 7,
+                ModPersonagem = 7,
                 Colisor = new Colisor("Armature/coluna1",
                                                    new Vector3(0f,0,0),
                                                    new Vector3(0,0,0)),
@@ -72,6 +75,7 @@ namespace Criatures2021
         {
             get
             {
+                 
                 return new PetBase()
                 {
                     NomeID = PetName.HolyCharm,

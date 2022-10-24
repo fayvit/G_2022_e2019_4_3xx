@@ -6,6 +6,6 @@ namespace Criatures2021
     public struct MsgVerifyEventMessage:IMessageBase
     {
         public GameObject atacado;
-        public AttackNameId atkname;
+        public PetAttackBase atk;
     }
 }

@@ -1,8 +1,6 @@
 {
     "name": "BasicCriatures",
-    "references": [
-        "GUID:7619b49cb0105244a8b03bf1200c432c"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

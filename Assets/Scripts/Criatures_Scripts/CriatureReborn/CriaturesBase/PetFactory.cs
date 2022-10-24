@@ -18,6 +18,9 @@ namespace Criatures2021
                 case PetName.Florest:
                     retorno = Florest.Criature;
                 break;
+                case PetName.Bosk:
+                    retorno = Bosk.Criature;
+                break;
                 case PetName.PolyCharm:
                     retorno = PolyCharm.Criature;
                 break;

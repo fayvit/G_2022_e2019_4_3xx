@@ -104,13 +104,13 @@ namespace Criatures2021
             };
 
             CriaturesAtivos = new List<PetBase>() {
-                new PetBase(PetName.HolyCharm,7),
-                new PetBase(PetName.Xuash,11),
-                new PetBase(PetName.Wisks,7),
-                new PetBase(PetName.Babaucu,13),
-                new PetBase(PetName.Estrep,9),
-                new PetBase(PetName.Onarac,9),
-                new PetBase(PetName.Oderc,11),
+                new PetBase(PetName.Iruin,11),
+                new PetBase(PetName.HolyCharm,11),
+                new PetBase(PetName.On_Racani,7),
+                new PetBase(PetName.Grewstick,13),
+                new PetBase(PetName.Bosk,9),
+                new PetBase(PetName.Uiritibucu,9),
+                new PetBase(PetName.Quaster,11),
                 //new PetBase(PetName.Estrep,11),
                 //new PetBase(PetName.Onarac,7),
                 //new PetBase(PetName.Oderc,7),
@@ -198,12 +198,12 @@ namespace Criatures2021
             ItemFactory.Get(NameIdItem.brasaoDeLaurense,10),
             ItemFactory.Get(NameIdItem.brasaoDeAnanda,10),
             ItemFactory.Get(NameIdItem.brasaoDeBoutjoi,10),
-            ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
+            //ItemFactory.Get(NameIdItem.pergVentosCortantes,2),
             ItemFactory.Get(NameIdItem.pergFuracaoDeFolhas,5),
-            ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),
-            ItemFactory.Get(NameIdItem.regador,10),
-            ItemFactory.Get(NameIdItem.inseticida,2),
-            ItemFactory.Get(NameIdItem.ventilador,2),
+            //ItemFactory.Get(NameIdItem.pergaminhoDeFuga,10),
+            //ItemFactory.Get(NameIdItem.regador,10),
+            //ItemFactory.Get(NameIdItem.inseticida,2),
+            //ItemFactory.Get(NameIdItem.ventilador,2),
             ItemFactory.Get(NameIdItem.pergSinara,2),
             ItemFactory.Get(NameIdItem.pergAlana,1)
         };

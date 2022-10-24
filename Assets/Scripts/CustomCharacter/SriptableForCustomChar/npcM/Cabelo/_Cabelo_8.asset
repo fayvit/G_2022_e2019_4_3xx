@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: _Cabelo_8
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,5 +18,5 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 5
-  mesh: {fileID: 8952718744163646182, guid: da9675f5abef3044fb94e78a647c3b54, type: 3}
+  mesh: {fileID: 8952718744163646182, guid: 214b6c0c43a8d7341af581daed8a9609, type: 3}
   textureSign: []

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Terrainstamp_Canyon05_Brush
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 2800000, guid: 3771b24b1afb4bd4d86e3ba795b65a32, type: 3}
+  m_Mask: {fileID: 2800000, guid: 0cfe19e17b72bc942aa6203901c57c71, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:

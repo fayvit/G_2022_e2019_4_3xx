@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5460751841529270327}
   - component: {fileID: 1165297621}
   - component: {fileID: 1165297623}
-  - component: {fileID: 2286360455932005406}
+  - component: {fileID: 5199665059857802064}
   m_Layer: 9
   m_Name: Cabelo_6_Hooligan|male1591.obj.002|Dupli|
   m_TagString: skCabelo
@@ -524,7 +524,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46e16b408d2bdc24cbc3da72341531da, type: 2}
+  - {fileID: 2100000, guid: 9d6b1cc8396a1f14fa99846bcae0aa8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -557,7 +557,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0012575313, y: -0.18213865, z: 0.014124244}
     m_Extent: {x: 0.12403301, y: 0.28345358, z: 0.17475998}
   m_DirtyAABB: 0
---- !u!114 &2286360455932005406
+--- !u!114 &5199665059857802064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 972522165187988710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd819105397b654eb91831fc1e51574, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ce15f1cff364da4b863fee89e3094a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pai: {fileID: 0}

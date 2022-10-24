@@ -35,6 +35,7 @@ namespace Criatures2021
             GameObject G = ResourcesFolders.GetPet(PetName.KeyDjey);
             G = Instantiate(G, MelhoraInstancia3D.ProcuraPosNoMapa(usuario.position), usuario.rotation);
             G.layer = 0;
+            if(SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()).isLoaded)
             SceneManager.MoveGameObjectToScene(G,
              SceneManager.GetSceneByName(
                 NomesCenasEspeciais.ComunsDeFase.ToString())

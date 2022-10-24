@@ -136,12 +136,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 644330152371635471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233d010bd126a7e4d971c12c145e305c, type: 3}
+  m_Script: {fileID: 11500000, guid: a2d1842a7b19b8740b5c7bf2c945a649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
   meuCriatureBase:
-    petId: 0
+    petId: -1
     petFeat:
       meusTipos: 
       contraTipos: []
@@ -217,8 +217,8 @@ MonoBehaviour:
     alturaCamera: 0.25
     distanciaCamera: 5.5
     varHeightCamera: 0.25
-    alturaCameraLuta: 0.25
-    distanciaCameraLuta: 4.5
+    alturaCameraLuta: 1
+    distanciaCameraLuta: 6
     captureDificult: 1
   controll:
     mov:
@@ -240,8 +240,9 @@ MonoBehaviour:
           initialImpulse: 0.03
           isJumping: 0
           wasJumping: 0
-      standardFallSpeed: 12
+      standardFallSpeed: 0
       overlapTaxRadius: 0.8
+      updateLastGroundedPosition: 0
   roll:
     totalTimeInRoll: 0.5
     intervalInTheRoll: 0.3

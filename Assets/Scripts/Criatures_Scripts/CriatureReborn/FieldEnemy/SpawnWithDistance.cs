@@ -15,7 +15,7 @@ namespace Criatures2021
         // Use this for initialization
         void Start()
         {
-            InvokeRepeating("VerificarSpawn", 0, 3);
+            InvokeRepeating("VerificarSpawn", 0, Random.Range(2.5f,3.5f));
         }
 
         void VerificarSpawn()

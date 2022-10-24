@@ -1,9 +1,9 @@
 {
     "name": "TextBankSpace",
     "references": [
-        "GUID:b25e82f6cd560fb468db0712b4ffeec1",
-        "GUID:0135762d9baa8e94e87db4323f4458b2",
-        "GUID:ed0ac067c21139e42916354d711bcad0"
+        "GUID:809a2221ffcbfec42b9169318c87d2aa",
+        "GUID:f46eb03ccb6f28f4791c9c9915e5c815",
+        "GUID:b9d185a61cd4b5048ac4d695b0f8414e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

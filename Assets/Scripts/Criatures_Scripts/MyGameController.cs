@@ -111,7 +111,7 @@ namespace Criatures2021
         void OnRequestVerifyEvent(MsgVerifyEventMessage e)
         {
             GameObject atacado = e.atacado;
-            AttackNameId Nome=e.atkname;
+            AttackNameId Nome=e.atk.Nome;
 
             if (atacado.tag == "eventoComGolpe" /*&& !GameController.g.estaEmLuta*/)
             {

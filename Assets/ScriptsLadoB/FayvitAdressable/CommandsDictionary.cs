@@ -56,6 +56,7 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
                 int n = ((JoystickCommandReader)CommandReader.GetCR(Controlador.joystick1)).CC.DicCommandConverterInt[cmd][0];
                 imgContainer.SetActive(true);
                 txtContainer.SetActive(false);
+                //img.sprite = Resources.Load<Sprite>(n.ToString());
                 AddressablesResourcesManager.SetSprite((InfoCommandTexture)n, imgContainer, (Sprite s) =>
                 {
                     img.sprite = s;
@@ -89,6 +90,7 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
                 imgContainer.SetActive(true);
                 txtContainer.SetActive(false);
                 n = positivo ? n + "Pos" : n + "Neg";
+                //img.sprite = Resources.Load<Sprite>(texStringJoyDict[n].ToString());
                 AddressablesResourcesManager.SetSprite(texStringJoyDict[n], imgContainer, (Sprite s) =>
                 {
                     img.sprite = s;
@@ -141,6 +143,7 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
 
                 if (txt2Container)
                     txt2Container.SetActive(false);
+                //img1.sprite = Resources.Load<Sprite>(texStringJoyDict[n].ToString());
                 AddressablesResourcesManager.SetSprite(texStringJoyDict[n], img1Container, (Sprite s) =>
                 {
                     img1.sprite = s;
@@ -168,6 +171,7 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
             {
                 imgContainer.SetActive(true);
                 txtContainer.SetActive(false);
+                //img.sprite = Resources.Load<Sprite>(texKeycodeDict[k].ToString());
                 AddressablesResourcesManager.SetSprite(texKeycodeDict[k], imgContainer, (Sprite s) =>
                 {
                     img.sprite = s;

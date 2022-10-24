@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Terrainstamp_Ridge01_Brush
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 2800000, guid: 2093015066086b94e9636a0e1f1344ea, type: 3}
+  m_Mask: {fileID: 2800000, guid: 86e65c7b1150ddb4bac2d1ae1ef7cfaa, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:

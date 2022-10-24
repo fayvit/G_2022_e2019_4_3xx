@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7680172999511156814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d4c482d72dbc0498de2316f9730c14, type: 3}
+  m_Script: {fileID: 11500000, guid: 30c70a3213ab58642aa91a23b5531310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sId: 
-  startRotation: {x: -1, y: 0, z: -1}
+  startRotation: {x: 0, y: 0, z: 1}
 --- !u!114 &7680172999511156815
 MonoBehaviour:
   m_ObjectHideFlags: 0

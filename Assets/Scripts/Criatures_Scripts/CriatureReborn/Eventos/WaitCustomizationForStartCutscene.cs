@@ -13,7 +13,7 @@ namespace Criatures2021
     public class WaitCustomizationForStartCutscene : MonoBehaviour
     {
         private Transform character;
-        private CustomizationSpace.CustomizationContainerDates ccd;
+        private CustomizationContainerDates ccd;
         private string guid;
         private bool fadeOutComplete=false;
         private bool combinationComplete=false;

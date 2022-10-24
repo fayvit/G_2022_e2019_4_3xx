@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7685147620359350292}
   - component: {fileID: 7685147620358253268}
   - component: {fileID: 7685147620349020104}
-  - component: {fileID: 4090181414083287884}
   - component: {fileID: -2578148646910301238}
   m_Layer: 0
   m_Name: arvore3_prefsb
@@ -102,20 +101,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &4090181414083287884
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24810176321905232}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 596261263577686523, guid: 94891f8c3087a284ca75517551ff85af, type: 3}
 --- !u!136 &-2578148646910301238
 CapsuleCollider:
   m_ObjectHideFlags: 0

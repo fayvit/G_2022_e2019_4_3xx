@@ -5,9 +5,6 @@ using FayvitCam;
 using FayvitMessageAgregator;
 using FayvitMove;
 using FayvitSupportSingleton;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TalkSpace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -186,6 +183,7 @@ public class TriggerKeyDjeyHooliganTalk : MonoBehaviour
 
     private void MontarHooliganNoKeyDjey()
     {
+        goKeyDjey.transform.rotation = goHooligan.transform.rotation;
         MessageAgregator<MsgRequestMountedAnimation>.Publish(new MsgRequestMountedAnimation()
         {
             gameObject = goHooligan

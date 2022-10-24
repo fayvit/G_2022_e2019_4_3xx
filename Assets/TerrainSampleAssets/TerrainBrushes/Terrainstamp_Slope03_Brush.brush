@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Terrainstamp_Slope03_Brush
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 2800000, guid: 282e12329d9099343890f875c1429e1a, type: 3}
+  m_Mask: {fileID: 2800000, guid: 7e8792761a2fbda44bc5f15c3a29ac71, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:

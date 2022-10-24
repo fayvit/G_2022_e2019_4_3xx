@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MyBaseTexture:
-        m_Texture: {fileID: 2800000, guid: 8dbd15ba420d26f4ea7c0a6eb32968ce, type: 3}
+        m_Texture: {fileID: 2800000, guid: 325651e65cbbd274d8f357fe6d3dde0d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -88,7 +88,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_Intensity: {r: 1, g: 1, b: 1, a: 0}
     - _Gloss_intensity: {r: 0.6, g: 0.6, b: 0.6, a: 0.6}
-    - _MyBaseColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
+    - _MyBaseColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 0}
     - _ShadingBlacks: {r: 0.08235294, g: 0.08235294, b: 0.08235294, a: 0}
     - _ShadingWhites: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

@@ -1,0 +1,1025 @@
+fileFormatVersion: 2
+guid: 709f63eb6716a5643b508c2fdcaf071c
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arma__o
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_002
+    100010: Bone_003
+    100012: Bone_004
+    100014: Bone_005
+    100016: Bone_L
+    100018: Bone_L_001
+    100020: Bone_L_002
+    100022: Bone_L_003
+    100024: Bone_L_004
+    100026: Bone_L_005
+    100028: Bone_L_006
+    100030: Bone_L_007
+    100032: Bone_L_010
+    100034: Bone_L_011
+    100036: Bone_L_012
+    100038: Bone_L_013
+    100040: Bone_L_014
+    100042: Bone_L_015
+    100044: Bone_R
+    100046: Bone_R_001
+    100048: Bone_R_002
+    100050: Bone_R_003
+    100052: Bone_R_004
+    100054: Bone_R_005
+    100056: Bone_R_006
+    100058: Bone_R_007
+    100060: Bone_R_010
+    100062: Bone_R_011
+    100064: Bone_R_012
+    100066: Bone_R_013
+    100068: Bone_R_014
+    100070: Bone_R_015
+    100072: Esfera
+    100074: Bone_006
+    100076: Bone_007
+    100078: bocaB
+    100080: bocaC
+    100082: bracoD
+    100084: bracoE
+    100086: Corpo
+    100088: costelinhaD
+    100090: costelinhaE
+    100092: ferrao
+    100094: garra1DD
+    100096: garra1DE
+    100098: garra1ED
+    100100: garra1EE
+    100102: garra2DD
+    100104: garra2DE
+    100106: garra2ED
+    100108: garra2EE
+    100110: garra3DD
+    100112: garra3DE
+    100114: garra3ED
+    100116: garra3EE
+    100118: olhoBD
+    100120: olhoBE
+    100122: olhoCD
+    100124: olhoCE
+    100126: pe1D
+    100128: pe1E
+    100130: pe2D
+    100132: pe2E
+    100134: pe3D
+    100136: pe3E
+    100138: punhoD
+    100140: punhoE
+    100142: rabo1
+    100144: rabo2
+    100146: rabo3
+    100148: rabo4
+    100150: Bone_001_L
+    100152: Bone_001_R
+    100154: Cube
+    100156: rabo
+    400000: //RootNode
+    400002: Arma__o
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_002
+    400010: Bone_003
+    400012: Bone_004
+    400014: Bone_005
+    400016: Bone_L
+    400018: Bone_L_001
+    400020: Bone_L_002
+    400022: Bone_L_003
+    400024: Bone_L_004
+    400026: Bone_L_005
+    400028: Bone_L_006
+    400030: Bone_L_007
+    400032: Bone_L_010
+    400034: Bone_L_011
+    400036: Bone_L_012
+    400038: Bone_L_013
+    400040: Bone_L_014
+    400042: Bone_L_015
+    400044: Bone_R
+    400046: Bone_R_001
+    400048: Bone_R_002
+    400050: Bone_R_003
+    400052: Bone_R_004
+    400054: Bone_R_005
+    400056: Bone_R_006
+    400058: Bone_R_007
+    400060: Bone_R_010
+    400062: Bone_R_011
+    400064: Bone_R_012
+    400066: Bone_R_013
+    400068: Bone_R_014
+    400070: Bone_R_015
+    400072: Esfera
+    400074: Bone_006
+    400076: Bone_007
+    400078: bocaB
+    400080: bocaC
+    400082: bracoD
+    400084: bracoE
+    400086: Corpo
+    400088: costelinhaD
+    400090: costelinhaE
+    400092: ferrao
+    400094: garra1DD
+    400096: garra1DE
+    400098: garra1ED
+    400100: garra1EE
+    400102: garra2DD
+    400104: garra2DE
+    400106: garra2ED
+    400108: garra2EE
+    400110: garra3DD
+    400112: garra3DE
+    400114: garra3ED
+    400116: garra3EE
+    400118: olhoBD
+    400120: olhoBE
+    400122: olhoCD
+    400124: olhoCE
+    400126: pe1D
+    400128: pe1E
+    400130: pe2D
+    400132: pe2E
+    400134: pe3D
+    400136: pe3E
+    400138: punhoD
+    400140: punhoE
+    400142: rabo1
+    400144: rabo2
+    400146: rabo3
+    400148: rabo4
+    400150: Bone_001_L
+    400152: Bone_001_R
+    400154: Cube
+    400156: rabo
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Esfera
+    4300002: Cube
+    7400000: padraoEscorpion
+    7400002: andandoEscorpion
+    7400004: pulandoEscorpion
+    7400006: dano1Escorpion
+    7400008: dano2Escorpion
+    7400010: caiEscorpion
+    7400012: emissorEscorpion
+    7400014: chicoteDeCaldaEscorpion
+    7400016: chuvaVenenosa
+    7400018: andaEscorpion
+    7400020: pulaEscorpion
+    7400022: cairEscorpion
+    7400024: ChuvaVenenosaEscorpion
+    9500000: //RootNode
+    13700000: Esfera
+    13700002: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: padraoEscorpion
+      takeName: padraoEscorpion
+      firstFrame: 0
+      lastFrame: 891
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: andaEscorpion
+      takeName: andaEscorpion
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pulaEscorpion
+      takeName: pulaEscorpion
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1Escorpion
+      takeName: dano1Escorpion
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano2Escorpion
+      takeName: dano2Escorpion
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: cairEscorpion
+      takeName: cairEscorpion
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: emissorEscorpion
+      takeName: emissorEscorpion
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: chicoteDeCaldaEscorpion
+      takeName: chicoteDeCaldaEscorpion
+      firstFrame: 0
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ChuvaVenenosaEscorpion
+      takeName: ChuvaVenenosaEscorpion
+      firstFrame: 1
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_003/Bone_004/Bone_005/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_L/Bone_L_001/Bone_L_002/Bone_L_003/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_L_007
+        weight: 1
+      - path: Arma__o/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone/Bone_R/Bone_R_001/Bone_R_002/Bone_R_003/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_006
+        weight: 1
+      - path: Arma__o/Bone/Bone_R_007
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.35
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

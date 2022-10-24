@@ -75,6 +75,8 @@ namespace CustomizationSpace
                     CurrentCommander.GetAxis(CommandConverterString.camZ)
                     );
 
+                
+
                 bool foi = (Input.GetAxis("Mouse X") != 0) || (Input.GetAxis("Mouse Y") != 0) || (Input.GetAxis("Mouse ScrollWheel") != 0);
                 foi &= bloqueiaMouseCam; ;
                 foi = !foi;

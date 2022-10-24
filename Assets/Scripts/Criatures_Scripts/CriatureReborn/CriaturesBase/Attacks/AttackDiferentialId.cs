@@ -9,8 +9,8 @@
         suporte,
         projetilPerseguidor,
         especialComParalisia,
-        hitNoChao
-
+        hitNoChao,
+        colisaoComAtraso
     }
 
     public enum DamageBaseAtribute

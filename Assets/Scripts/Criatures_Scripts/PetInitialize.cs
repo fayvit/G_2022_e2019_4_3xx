@@ -1,3 +1,4 @@
+using FayvitLoadScene;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,9 +36,9 @@ namespace Criatures2021
             //    , Quaternion.identity)
             //    as GameObject;
 
-            
+            if(SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()).isLoaded)
             SceneManager.MoveGameObjectToScene(CA,
-            SceneManager.GetSceneByName(SpecialSceneName.ComunsDeFase.ToString())
+            SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString())
             );
             return CA;
         }

@@ -28,4 +28,4 @@ BillboardAsset:
   - {x: 1, y: 0.5}
   - {x: 1, y: 1}
   indices: 040003000000010004000000050004000100020005000100
-  material: {fileID: 2100000, guid: 24c18df0f15813a46ad379543679b38c, type: 2}
+  material: {fileID: 2100000, guid: 7fa2e916e5fb9e14ebb246477d5dd2cb, type: 2}

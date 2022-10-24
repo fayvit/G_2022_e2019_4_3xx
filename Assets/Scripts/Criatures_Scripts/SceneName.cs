@@ -1,12 +1,12 @@
-﻿namespace Criatures2021
-{
-    public enum SceneName
-    {
-        quartelDaResistencia
-    }
+﻿//namespace Criatures2021
+//{
+//    public enum SceneName
+//    {
+//        quartelDaResistencia
+//    }
 
-    public enum SpecialSceneName
-    {
-        ComunsDeFase
-    }
-}
+//    public enum SpecialSceneName
+//    {
+//        ComunsDeFase
+//    }
+//}

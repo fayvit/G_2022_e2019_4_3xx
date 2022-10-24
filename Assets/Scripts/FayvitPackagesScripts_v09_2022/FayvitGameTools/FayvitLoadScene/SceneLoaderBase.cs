@@ -5,6 +5,7 @@ using FayvitBasicTools;
 using FayvitSave;
 using FayvitSupportSingleton;
 using FayvitMessageAgregator;
+using System;
 
 namespace FayvitLoadScene
 {
@@ -47,7 +48,7 @@ namespace FayvitLoadScene
 
         public static void IniciarCarregamento(int slote, System.Action acaoFinalizadora = null)
         {
-            Physics2D.gravity = Vector2.zero;
+            //Physics2D.gravity = Vector2.zero;
             GameObject G = new GameObject();
             SceneLoaderBase loadScene = G.AddComponent<SceneLoaderBase>();
 
@@ -330,10 +331,20 @@ namespace FayvitLoadScene
             }
         }
 
-        protected virtual void OnFadeOutComplete(FadeOutComplete obj)
+        void x(Scene s)
         {
             AbstractGlobalController.Instance.FadeV.StartFadeIn();
             MessageAgregator<FadeInComplete>.AddListener(OnFadeInComplete);
+            Time.timeScale = 1;
+            SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            {
+                SceneManager.sceneUnloaded -= x;
+            });
+        }
+
+        protected virtual void OnFadeOutComplete(FadeOutComplete obj)
+        {
+            
             //EventAgregator.AddListener(EventKey.fadeInComplete, );
 
             Debug.Log("cena inalcançavel: " + AbstractGameController.Instance.MyKeys.CenaAtiva.ToString());
@@ -344,11 +355,13 @@ namespace FayvitLoadScene
 
             fase = FasesDoLoad.eventInProgress;
 
+            
+            SceneManager.sceneUnloaded += x;
             SceneManager.UnloadSceneAsync(NomesCenasEspeciais.CenaDeCarregamento.ToString());
 
             //GameController.g.ModificacoesDaCena();
             Time.timeScale = 1;
-            Physics2D.gravity = new Vector2(0, -0.8f);           
+            //Physics2D.gravity = new Vector2(0, -0.8f);           
             
         }
 
@@ -374,7 +387,7 @@ namespace FayvitLoadScene
 
         private void OnFadeInComplete(FadeInComplete obj)
         {
-            Physics2D.gravity = new Vector2(0, -9.8f);
+            //Physics2D.gravity = new Vector2(0, -9.8f);
 
             Destroy(gameObject);
 

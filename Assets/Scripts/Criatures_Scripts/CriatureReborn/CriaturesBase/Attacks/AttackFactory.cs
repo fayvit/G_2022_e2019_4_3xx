@@ -17,6 +17,9 @@ namespace Criatures2021
                 case AttackNameId.turboDeAgua:
                     retorno = new TurboDeAgua();
                 break;
+                case AttackNameId.impulsoAquatico:
+                    retorno = new ImpulsoAquativo();
+                break;
                 case AttackNameId.tapa:
                     retorno = new Tapa();
                 break;

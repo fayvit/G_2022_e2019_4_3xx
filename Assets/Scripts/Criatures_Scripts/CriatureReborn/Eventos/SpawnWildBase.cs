@@ -5,7 +5,7 @@ namespace Criatures2021
 {
     public class SpawnWildBase : MonoBehaviour
     {
-        [SerializeField] private SpawnPercent[] spawnables;
+        [SerializeField,ArrayElementTitle("pet")] private SpawnPercent[] spawnables;
         [SerializeField] private int minSpawn = 3;
         [SerializeField] private int maxSpawn = 7;
         [SerializeField] private float spawnOrigimDistance = 5;
@@ -25,12 +25,15 @@ namespace Criatures2021
             List<PetManager> spawnados = new List<PetManager>();
             for (int i = 0; i < spawns; i++)
             {
-                float maxSort = SomarTaxas();
-                float sort = Random.Range(0, maxSort);
-                PetBase P = GetSpawn(sort);
-                Vector3 pos = Random.insideUnitCircle;
-                pos = new Vector3(pos.x, 0, pos.y) * Random.Range(0.1f * spawnOrigimDistance, spawnOrigimDistance) + transform.position;
-                spawnados.Add(WildPetInitialize.Initialize(P, pos));
+                //FayvitSupportSingleton.SupportSingleton.Instance.InvokeOnCountFrame(() =>
+                //{
+                    float maxSort = SomarTaxas();
+                    float sort = Random.Range(0, maxSort);
+                    PetBase P = GetSpawn(sort);
+                    Vector3 pos = Random.insideUnitCircle;
+                    pos = new Vector3(pos.x, 0, pos.y) * Random.Range(0.1f * spawnOrigimDistance, spawnOrigimDistance) + transform.position;
+                    spawnados.Add(WildPetInitialize.Initialize(P, pos));
+                //}, (uint)(90 * i));
             }
 
             return spawnados;

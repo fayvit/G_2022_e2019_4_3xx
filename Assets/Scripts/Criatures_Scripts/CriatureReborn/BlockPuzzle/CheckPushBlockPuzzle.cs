@@ -41,8 +41,12 @@ namespace Criatures2021
                 }
 
                 MessageAgregator<MsgSendBlockCheck>.AddListener(OnReceiveBlockCheck);
-                MessageAgregator<MsgChangeCheck>.AddListener(OnChangeCheck);
                 MessageAgregator<MsgResetPushPuzzle>.AddListener(OnRequestReset);
+
+                SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                {
+                    MessageAgregator<MsgChangeCheck>.AddListener(OnChangeCheck);
+                });
             }
 
             //MessageAgregator<MsgFinishEdition>.AddListener(XXX);

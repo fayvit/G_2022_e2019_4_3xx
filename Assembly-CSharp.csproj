@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,14 +47,11 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.40f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LayerTent.cs" />
     <Compile Include="Assets\ModelosMateriaisTexturas\boxxle\CollectorStatue.cs" />
@@ -325,7 +322,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\Tonemapper.shader" />
-    <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\VortexEffect.shader" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\NoiseAndGrain.shader" />
@@ -415,6 +411,7 @@
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
     <None Include="Assets\Shader\CustomLighting.hlsl" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
     <None Include="Assets\RPG Character Animation Pack_vantigo\Elements\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
     <None Include="Assets\DateColors\osCustomizados.txt" />
     <None Include="Assets\Shader\Nature\SpeedTree7.shader" />
@@ -1053,81 +1050,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="CriaturesBase.csproj">
-      <Project>{5195D01B-385D-F6E8-021C-583CDFE73F43}</Project>
-      <Name>CriaturesBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="CustomizationSpace.csproj">
-      <Project>{7CFE7042-4C7C-5F7B-AD88-5DC612880481}</Project>
-      <Name>CustomizationSpace</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameJoltEditor.csproj">
-      <Project>{2DF357FA-A291-E7CC-4651-FC3A6D264C5B}</Project>
-      <Name>GameJoltEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LightningBolt.csproj">
-      <Project>{7590473A-E146-0401-48E3-8EEA7DF85038}</Project>
-      <Name>LightningBolt</Name>
-    </ProjectReference>
-    <ProjectReference Include="FayvitSounds.csproj">
-      <Project>{91A02F3C-3725-CDC9-514E-B8BF0DA9CF0C}</Project>
-      <Name>FayvitSounds</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameJoltRuntime.csproj">
-      <Project>{AE4F52E3-46EC-A107-505B-413B026ABA16}</Project>
-      <Name>GameJoltRuntime</Name>
+    <ProjectReference Include="TextBankSpace.csproj">
+      <Project>{33859320-1D0D-F736-81A2-E0A159ED45EF}</Project>
+      <Name>TextBankSpace</Name>
     </ProjectReference>
     <ProjectReference Include="FayvitCam.csproj">
       <Project>{3AA227B6-5B38-FDD0-B7BC-91AA3DD113DE}</Project>
       <Name>FayvitCam</Name>
     </ProjectReference>
-    <ProjectReference Include="TextBankSpace.csproj">
-      <Project>{33859320-1D0D-F736-81A2-E0A159ED45EF}</Project>
-      <Name>TextBankSpace</Name>
-    </ProjectReference>
-    <ProjectReference Include="ActivateElements.csproj">
-      <Project>{0B163EAB-5033-998A-DD54-8E75E0F80100}</Project>
-      <Name>ActivateElements</Name>
-    </ProjectReference>
-    <ProjectReference Include="FayvitBase.csproj">
-      <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
-      <Name>FayvitBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="TerrainMyToolsTest.csproj">
-      <Project>{6EFD51BF-32A9-C4AA-EEFB-28A73EF62C24}</Project>
-      <Name>TerrainMyToolsTest</Name>
-    </ProjectReference>
-    <ProjectReference Include="BasicCriatures.csproj">
-      <Project>{C83D8325-0C56-0661-4D89-91C0A00A40D3}</Project>
-      <Name>BasicCriatures</Name>
-    </ProjectReference>
-    <ProjectReference Include="FayvitSimpleGameTools.csproj">
-      <Project>{AA2CCE28-0BC7-8F30-8EAB-605AD8E988C2}</Project>
-      <Name>FayvitSimpleGameTools</Name>
+    <ProjectReference Include="GameJoltEditor.csproj">
+      <Project>{2DF357FA-A291-E7CC-4651-FC3A6D264C5B}</Project>
+      <Name>GameJoltEditor</Name>
     </ProjectReference>
     <ProjectReference Include="FayvitBasicTools.csproj">
       <Project>{5E60CA05-7413-10AE-345D-75F3F65142D1}</Project>
       <Name>FayvitBasicTools</Name>
     </ProjectReference>
-    <ProjectReference Include="SupportAnimations.csproj">
-      <Project>{AA7415BA-9058-335B-04DC-C29051880F1E}</Project>
-      <Name>SupportAnimations</Name>
+    <ProjectReference Include="FayvitSounds.csproj">
+      <Project>{91A02F3C-3725-CDC9-514E-B8BF0DA9CF0C}</Project>
+      <Name>FayvitSounds</Name>
     </ProjectReference>
-    <ProjectReference Include="FayvitCommandReaderSpace.csproj">
-      <Project>{E79AA5A8-146B-8CFA-162D-BBEE6C74DF20}</Project>
-      <Name>FayvitCommandReaderSpace</Name>
+    <ProjectReference Include="LightningBolt.csproj">
+      <Project>{7590473A-E146-0401-48E3-8EEA7DF85038}</Project>
+      <Name>LightningBolt</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitBase.csproj">
+      <Project>{5E330F37-9138-193A-E022-0A1356721A0A}</Project>
+      <Name>FayvitBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="CriaturesBase.csproj">
+      <Project>{5195D01B-385D-F6E8-021C-583CDFE73F43}</Project>
+      <Name>CriaturesBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="ActivateElements.csproj">
+      <Project>{0B163EAB-5033-998A-DD54-8E75E0F80100}</Project>
+      <Name>ActivateElements</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameJoltRuntime.csproj">
+      <Project>{AE4F52E3-46EC-A107-505B-413B026ABA16}</Project>
+      <Name>GameJoltRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="FayvitUI.csproj">
       <Project>{B4A0D650-9344-2181-2486-F0085C689D5E}</Project>
       <Name>FayvitUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="GameJoltDemos.csproj">
-      <Project>{9113EDE1-E2B9-FAE0-A483-844FA3E6E8BE}</Project>
-      <Name>GameJoltDemos</Name>
-    </ProjectReference>
-    <ProjectReference Include="BasicEvents.csproj">
-      <Project>{3C304215-9CD8-6DC4-E007-A70D86BD298C}</Project>
-      <Name>BasicEvents</Name>
     </ProjectReference>
     <ProjectReference Include="FayvitGameTools.csproj">
       <Project>{1BABE418-6114-B37B-053E-AD6CF93A723E}</Project>
@@ -1136,6 +1101,38 @@
     <ProjectReference Include="FayvitMove.csproj">
       <Project>{651E2E8D-8F72-E486-6ADF-9FA30262747E}</Project>
       <Name>FayvitMove</Name>
+    </ProjectReference>
+    <ProjectReference Include="SupportAnimations.csproj">
+      <Project>{AA7415BA-9058-335B-04DC-C29051880F1E}</Project>
+      <Name>SupportAnimations</Name>
+    </ProjectReference>
+    <ProjectReference Include="CustomizationSpace.csproj">
+      <Project>{7CFE7042-4C7C-5F7B-AD88-5DC612880481}</Project>
+      <Name>CustomizationSpace</Name>
+    </ProjectReference>
+    <ProjectReference Include="TerrainMyToolsTest.csproj">
+      <Project>{6EFD51BF-32A9-C4AA-EEFB-28A73EF62C24}</Project>
+      <Name>TerrainMyToolsTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="GameJoltDemos.csproj">
+      <Project>{9113EDE1-E2B9-FAE0-A483-844FA3E6E8BE}</Project>
+      <Name>GameJoltDemos</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitCommandReaderSpace.csproj">
+      <Project>{E79AA5A8-146B-8CFA-162D-BBEE6C74DF20}</Project>
+      <Name>FayvitCommandReaderSpace</Name>
+    </ProjectReference>
+    <ProjectReference Include="BasicCriatures.csproj">
+      <Project>{C83D8325-0C56-0661-4D89-91C0A00A40D3}</Project>
+      <Name>BasicCriatures</Name>
+    </ProjectReference>
+    <ProjectReference Include="BasicEvents.csproj">
+      <Project>{3C304215-9CD8-6DC4-E007-A70D86BD298C}</Project>
+      <Name>BasicEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="FayvitSimpleGameTools.csproj">
+      <Project>{AA2CCE28-0BC7-8F30-8EAB-605AD8E988C2}</Project>
+      <Name>FayvitSimpleGameTools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,11 +15,131 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_Data:
     m_SerializedData: []
-  m_GUID: 0de1dfc4ce87ffe4a8a3fc6702cafec5
-  m_SerializeEntries: []
+  m_GUID: 041099cbc6b39104d9a2fbbfb2650412
+  m_SerializeEntries:
+  - m_GUID: ea45bf1826458584b90f4ebe401c21f6
+    m_Address: alavancaL
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5d24ac1c1a8ef3749ada5159392a0900
+    m_Address: alavancaR
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4d0c3c4769010a04792e18fb5e03435c
+    m_Address: btnA
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 214d671d456f851499738ffa4fe0adaa
+    m_Address: btnB
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d18615e5d7344f24e8c8b29ed819b3a5
+    m_Address: btnSelect
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: beef7c2b9a46f4b4097a4918936001ba
+    m_Address: btnStart
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d41de0a2bc1c679409d7f0f1783bdc53
+    m_Address: btnX
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb3d81a3f2f8d26458c21610d1ee6555
+    m_Address: btnY
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ca458a0a8832cf8438aab7f7ac77221a
+    m_Address: dpad_cleam
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f0e453e457448ba42af78308ced33149
+    m_Address: dpad_down
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 71d26750ca788d146885318147725a36
+    m_Address: dpad_left
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1739bdcd08a31b447bce7861655d1d63
+    m_Address: dpad_leftRight
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cfa40da4433861b4c9437c6ed1e674ae
+    m_Address: dpad_leftRight
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad7c55c6b91cdb04d96fc4d0089514f5
+    m_Address: dpad_up
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b7d526b1c1132e4db33ea84bf323358
+    m_Address: dpad_upDown
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84101ad22292b4442a381a4ce5e97e54
+    m_Address: LB
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 172d26f6cc6527f4d9290812a7ee19b0
+    m_Address: LS
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be1f7ac00fe059042adbbf14cbd4a8af
+    m_Address: LT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b316c86bc12f6a048ad386f6540de838
+    m_Address: LT_RT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c692e7fc3c102ec40b98caf6088c4857
+    m_Address: RB
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 41f96dbe36e3d4e49a2563d30a498d59
+    m_Address: RS
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 153814187fb75b8419350c8ca68c1505
+    m_Address: RT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 42e5168a8d13a0d419ea95dd53ce90b7
+    m_Address: delete
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ee4e31e52c887aa47876fd842e4687c7
+    m_Address: Enter
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be57d6e637dbb7342bac99008614034b
+    m_Address: esc
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad2c3672c11e8714b879ee4035df36a0
+    m_Address: leftShift
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 33e62fa14cf5a764898da51eb923a4ae
+    m_Address: space
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 662c4904e2e458944b2dc4f44a81005d
+    m_Address: tab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a1e76b0ecb1635b4c88ab3259aa0030d
+    m_Address: WASD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83543635631a0184da52a91fe5a71f78
+    m_Address: yuihjk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: e11953194b39978429e18811068f08a5, type: 2}
+  m_Settings: {fileID: 11400000, guid: d5270edf201ccd542be3f87ee3061d2e, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: bcf6e87bde94a624587842077206617a, type: 2}
-    - {fileID: 11400000, guid: d95f65ed638e8044e843b9c85b3f3053, type: 2}
+    - {fileID: 11400000, guid: 75c84d13b5f943140ab81f74120fea99, type: 2}
+    - {fileID: 11400000, guid: 8d06bd9e96ebb494aab79b4b522f3ceb, type: 2}

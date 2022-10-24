@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8992484883849616048}
   - component: {fileID: 3793468771271946170}
   - component: {fileID: 1410710556856187294}
-  - component: {fileID: 7650204044527128715}
+  - component: {fileID: 4321986526245962350}
   m_Layer: 0
   m_Name: cabelo_3 (1)
   m_TagString: skCabelo
@@ -1254,7 +1254,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.003901109, y: -0.010012001, z: -0.030521542}
     m_Extent: {x: 0.0930663, y: 0.15950769, z: 0.24599135}
   m_DirtyAABB: 0
---- !u!114 &7650204044527128715
+--- !u!114 &4321986526245962350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7125314164503552921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd819105397b654eb91831fc1e51574, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ce15f1cff364da4b863fee89e3094a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pai: {fileID: 0}

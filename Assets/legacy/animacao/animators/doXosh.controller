@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1101 &-6664233265145629301
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: atacando
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110200000}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.73913044
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-2737128700441624283
 AnimatorState:
   serializedVersion: 6
@@ -21,7 +46,35 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8800688892220381795, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: -8800688892220381795, guid: 54e70e529009b5b429f949b06eb8ba15,
+    type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-2191050512512667216
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: impulsoAquatico
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -6664233265145629301}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 3690326713754827633, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -592,7 +645,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3414772488778619058, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: 3414772488778619058, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -622,7 +675,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6968461063408201463, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: 6968461063408201463, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -650,7 +703,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7620299975463600317, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: -7620299975463600317, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -705,7 +758,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6780321794088713108, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: -6780321794088713108, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -785,7 +838,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6556703804983788707, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: 6556703804983788707, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -815,7 +868,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -406548353842341243, guid: c45c6068b6824cb46872431dcbbebb30,
+  m_Motion: {fileID: -406548353842341243, guid: 54e70e529009b5b429f949b06eb8ba15,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -910,7 +963,13 @@ AnimatorStateMachine:
     m_Position: {x: 620, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110249058}
-    m_Position: {x: 624, y: -264, z: 0}
+    m_Position: {x: 630, y: -260, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2191050512512667216}
+    m_Position: {x: 630, y: -190, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6434349327916361738}
+    m_Position: {x: 110, y: -410, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -921,6 +980,33 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 336, y: -60, z: 0}
   m_DefaultState: {fileID: 110273527}
+--- !u!1102 &6434349327916361738
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: preparaimpulsoAquatico
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 3195561558242895332, guid: 54e70e529009b5b429f949b06eb8ba15,
+    type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &7158405667700937264
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

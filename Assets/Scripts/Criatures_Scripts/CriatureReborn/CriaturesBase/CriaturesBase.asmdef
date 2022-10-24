@@ -1,16 +1,16 @@
 {
     "name": "CriaturesBase",
     "references": [
-        "GUID:1cba85c4aaf1b394cb6b39ce0f047b82",
-        "GUID:b25e82f6cd560fb468db0712b4ffeec1",
-        "GUID:c1d00e21ef233aa449e6145d7e163fdd",
-        "GUID:070c168cc28ea3a4c975d6e77542fd58",
-        "GUID:035d19e5a99de4a44934fff90abd1d94",
-        "GUID:47f75b5196ac15547947c013e993cc6a",
-        "GUID:ed0ac067c21139e42916354d711bcad0",
-        "GUID:ed49769d613532848b3b8b472e961cef",
-        "GUID:71fef447dbab952478e7c74ae7f0bd3d",
-        "GUID:0135762d9baa8e94e87db4323f4458b2"
+        "GUID:420446f1fb130a342af534847951d018",
+        "GUID:b9d185a61cd4b5048ac4d695b0f8414e",
+        "GUID:b218cd21360528f4fab48ffc99298fb3",
+        "GUID:c295e020f0f40b8499db91869e02855a",
+        "GUID:d20382c67b3bd9e4780ee3c77ebff437",
+        "GUID:809a2221ffcbfec42b9169318c87d2aa",
+        "GUID:f46eb03ccb6f28f4791c9c9915e5c815",
+        "GUID:c8e5cd1f3aba9f545896d7df3dcb75e9",
+        "GUID:23d07071b622b32439ede81e94d33df4",
+        "GUID:da5517cd0b9bab643817db72bfabbabe"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

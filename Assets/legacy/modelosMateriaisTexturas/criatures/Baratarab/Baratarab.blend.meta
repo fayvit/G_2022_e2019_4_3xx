@@ -1,0 +1,903 @@
+fileFormatVersion: 2
+guid: ba955e156bcfe8849a0c00c2ae336cf5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arma__o
+    100004: Bone
+    100006: Bone_001
+    100008: Bone_001_L
+    100010: Bone_001_L_001
+    100012: Bone_001_L_002
+    100014: Bone_001_R
+    100016: Bone_001_R_001
+    100018: Bone_001_R_002
+    100020: Bone_002
+    100022: Bone_002_L
+    100024: Bone_002_L_001
+    100026: Bone_002_L_002
+    100028: Bone_002_L_003
+    100030: Bone_002_R
+    100032: Bone_002_R_001
+    100034: Bone_002_R_002
+    100036: Bone_002_R_003
+    100038: Bone_L
+    100040: Bone_L_001
+    100042: Bone_L_002
+    100044: Bone_L_003
+    100046: Bone_L_004
+    100048: Bone_L_005
+    100050: Bone_R
+    100052: Bone_R_001
+    100054: Bone_R_002
+    100056: Bone_R_003
+    100058: Bone_R_004
+    100060: Bone_R_005
+    100062: Cube
+    100064: cabeca
+    100066: coluna
+    100068: corpo
+    400000: //RootNode
+    400002: Arma__o
+    400004: Bone
+    400006: Bone_001
+    400008: Bone_001_L
+    400010: Bone_001_L_001
+    400012: Bone_001_L_002
+    400014: Bone_001_R
+    400016: Bone_001_R_001
+    400018: Bone_001_R_002
+    400020: Bone_002
+    400022: Bone_002_L
+    400024: Bone_002_L_001
+    400026: Bone_002_L_002
+    400028: Bone_002_L_003
+    400030: Bone_002_R
+    400032: Bone_002_R_001
+    400034: Bone_002_R_002
+    400036: Bone_002_R_003
+    400038: Bone_L
+    400040: Bone_L_001
+    400042: Bone_L_002
+    400044: Bone_L_003
+    400046: Bone_L_004
+    400048: Bone_L_005
+    400050: Bone_R
+    400052: Bone_R_001
+    400054: Bone_R_002
+    400056: Bone_R_003
+    400058: Bone_R_004
+    400060: Bone_R_005
+    400062: Cube
+    400064: cabeca
+    400066: coluna
+    400068: corpo
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
+    7400000: Default Take
+    7400002: andandoBaratarab
+    7400004: padraBaratarab
+    7400006: pulaBaratarab
+    7400008: dano1Baratarab
+    7400010: dano2Baratarab
+    7400012: cairBaratarab
+    7400014: sobreVooBaratarab
+    7400016: cabecadaBaratarab
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: dano1Baratarab
+      takeName: dano1Baratarab
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .302631587
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andandoBaratarab
+      takeName: andandoBaratarab
+      firstFrame: 2
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: padraBaratarab
+      takeName: padraBaratarab
+      firstFrame: 0
+      lastFrame: 449
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .3125
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .796052635
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pulaBaratarab
+      takeName: pulaBaratarab
+      firstFrame: 2
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano2Baratarab
+      takeName: dano2Baratarab
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .421052635
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: cairBaratarab
+      takeName: cairBaratarab
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .493421048
+        functionName: olhoDeMorto
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: sobreVooBaratarab
+      takeName: sobreVooBaratarab
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: cabecadaBaratarab
+      takeName: cabecadaBaratarab
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_002/Bone_002_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_002/Bone_L_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_L_004/Bone_L_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_002/Bone_R_003
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004
+        weight: 1
+      - path: Arma__o/Bone_001/Bone/Bone_R_004/Bone_R_005
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_L/Bone_001_L_001/Bone_001_L_002
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001
+        weight: 1
+      - path: Arma__o/Bone_001/Bone_001_R/Bone_001_R_001/Bone_001_R_002
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .349999994
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

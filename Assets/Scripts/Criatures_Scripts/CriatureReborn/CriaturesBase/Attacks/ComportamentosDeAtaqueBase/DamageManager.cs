@@ -12,7 +12,7 @@ namespace Criatures2021
             MessageAgregator<MsgVerifyEventMessage>.Publish(new MsgVerifyEventMessage()
             {
                 atacado = atacado,
-                atkname = golpe.Nome
+                atk = golpe
             });
 
             PetManager GdC = atacado.GetComponent<PetManager>();

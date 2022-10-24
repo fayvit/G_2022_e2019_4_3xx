@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f3bd875bdcb897499d29c51637a1620, type: 3}
   m_Name: ID1Sobrancelha
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,6 +18,6 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 5
     registro: 5
-  baseTex: {fileID: 2800000, guid: f125262a1e9fd78429fe03c8b2c8ebd2, type: 3}
-  maskTex: {fileID: 2800000, guid: 9cd60fc1af0c1ab4e9b699d5637d5721, type: 3}
+  baseTex: {fileID: 2800000, guid: 5f96b9ee07d53fe45b1f46ee142e4f26, type: 3}
+  maskTex: {fileID: 2800000, guid: 5cb9e9d3ad5adfa4ba2fb31dd59912cf, type: 3}
   meshParent: 0

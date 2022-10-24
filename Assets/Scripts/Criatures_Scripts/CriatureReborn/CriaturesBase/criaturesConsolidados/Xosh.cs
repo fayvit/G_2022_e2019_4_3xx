@@ -45,6 +45,15 @@ namespace Criatures2021
                                                   new Vector3(-0.26f,-0,0)),
                 Nome = AttackNameId.hidroBomba,
                 TaxaDeUso = 1.25f
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                ModPersonagem = 7,
+                Colisor = new Colisor("metarig/spine",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.26f,-0,0)),
+                Nome = AttackNameId.impulsoAquatico,
+                TaxaDeUso = 1.25f
             }
         };
 

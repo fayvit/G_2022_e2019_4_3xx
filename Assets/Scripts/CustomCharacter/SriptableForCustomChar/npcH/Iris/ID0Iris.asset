@@ -9,16 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f3bd875bdcb897499d29c51637a1620, type: 3}
   m_Name: ID0Iris
   m_EditorClassIdentifier: 
-  subsection: 
+  subsection: 06000000
   coresEditaveis:
   - indiceDoMaterialAlvo: 0
     meshOrChildren: 0
-    meshForSend: 1
     materialColorTarget: 3
     registro: 1
-  baseTex: {fileID: 2800000, guid: f0969c92c16a05e4facaddbc3d52fb19, type: 3}
+  baseTex: {fileID: 2800000, guid: 90f116e39b983e548b8024c80d91041d, type: 3}
   maskTex: {fileID: 2800000, guid: 914b09d7d41227345a043d71709d72bf, type: 3}
   meshParent: 0

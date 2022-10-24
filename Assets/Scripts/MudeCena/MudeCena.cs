@@ -171,7 +171,8 @@ namespace ChangeScene
 
                 CustomizationSavedChars.LoadSavedCharacters();
 
-                SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+                if (!MyGlobalController.MainPlayer.InTeste)
+                    SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             }
         }
 

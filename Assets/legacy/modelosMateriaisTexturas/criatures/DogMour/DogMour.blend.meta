@@ -1,0 +1,701 @@
+fileFormatVersion: 2
+guid: b5ac9be0760fa684c9d1c7ca69beb747
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone_001
+    100004: Bone_002
+    100006: Bone_002_L
+    100008: Bone_002_L_001
+    100010: Bone_002_L_002
+    100012: Bone_002_R
+    100014: Bone_002_R_001
+    100016: Bone_002_R_002
+    100018: Bone_003
+    100020: Bone_004
+    100022: Bone_005
+    100024: Bone_006
+    100026: Bone_007
+    100028: Bone_008
+    100030: Bone_L
+    100032: Bone_L_001
+    100034: Bone_L_002
+    100036: Bone_R
+    100038: Bone_R_001
+    100040: Bone_R_002
+    100042: Cubo
+    100044: //RootNode
+    100046: Esqueleto
+    100048: Bone_004_L
+    100050: Bone_004_L_001
+    100052: Bone_004_L_002
+    100054: Bone_004_R
+    100056: Bone_004_R_001
+    100058: Bone_004_R_002
+    100060: Bone_009
+    100062: Bone_010
+    400000: Bone
+    400002: Bone_001
+    400004: Bone_002
+    400006: Bone_002_L
+    400008: Bone_002_L_001
+    400010: Bone_002_L_002
+    400012: Bone_002_R
+    400014: Bone_002_R_001
+    400016: Bone_002_R_002
+    400018: Bone_003
+    400020: Bone_004
+    400022: Bone_005
+    400024: Bone_006
+    400026: Bone_007
+    400028: Bone_008
+    400030: Bone_L
+    400032: Bone_L_001
+    400034: Bone_L_002
+    400036: Bone_R
+    400038: Bone_R_001
+    400040: Bone_R_002
+    400042: Cubo
+    400044: //RootNode
+    400046: Esqueleto
+    400048: Bone_004_L
+    400050: Bone_004_L_001
+    400052: Bone_004_L_002
+    400054: Bone_004_R
+    400056: Bone_004_R_001
+    400058: Bone_004_R_002
+    400060: Bone_009
+    400062: Bone_010
+    2300000: Cubo
+    3300000: Cubo
+    4300000: Cubo
+    7400000: Default Take
+    7400002: correFlam
+    7400004: andaDogMour
+    7400006: cairDogMour
+    7400008: emissorDogMOur
+    7400010: padraoFlam
+    7400012: tosteAtaqueFlam
+    7400014: padraoDogMour
+    7400016: pulaDogMour
+    9500000: //RootNode
+    13700000: Cubo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: pulaDogMour
+      takeName: pulaDogMour
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andaDogMour
+      takeName: andaDogMour
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: cairDogMour
+      takeName: cairDogMour
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .858552635
+        functionName: olhoDeMorto
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: emissorDogMOur
+      takeName: emissorDogMOur
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: padraoDogMour
+      takeName: padraoDogMour
+      firstFrame: 0
+      lastFrame: 439
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .292763144
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .828947365
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tosteAtaqueFlam
+      takeName: tosteAtaqueFlam
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Esqueleto
+        weight: 1
+      - path: Esqueleto/Bone
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_L/Bone_002_L_001/Bone_002_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_002_R/Bone_002_R_001/Bone_002_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L/Bone_004_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R/Bone_004_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_004_R_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_005/Bone_008
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_009
+        weight: 1
+      - path: Esqueleto/Bone/Bone_001/Bone_002/Bone_003/Bone_004/Bone_010
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006
+        weight: 1
+      - path: Esqueleto/Bone/Bone_006/Bone_007
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_L/Bone_L_001/Bone_L_002
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001
+        weight: 1
+      - path: Esqueleto/Bone/Bone_R/Bone_R_001/Bone_R_002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

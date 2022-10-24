@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72210dc1c359c2e49a6072707fc84765, type: 3}
+  m_Script: {fileID: 11500000, guid: 677ec01b67a5d9041b06684c4f3faf49, type: 3}
   m_Name: ID7TorsoJaquetaMedio
   m_EditorClassIdentifier: 
   subsection: 
@@ -38,7 +38,7 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 17
     registro: 1
-  mesh: {fileID: 49434442415677791, guid: 94388fa13790a674a9ba49eac2044745, type: 3}
+  mesh: {fileID: 49434442415677791, guid: 2c71ce4a093d1924a940f5790df07057, type: 3}
   combinedWithDb: 10
   setID: 1
   toCombineId: 0

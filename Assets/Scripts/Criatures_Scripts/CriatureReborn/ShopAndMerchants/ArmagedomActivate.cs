@@ -480,8 +480,8 @@ namespace Criatures2021
             manager.Dados.UltimoArmagedom = indiceDesseArmagedom;
 
             fase = fasesDoArmagedom.mensInicial;
-
-            FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+            if (!MyGlobalController.MainPlayer.InTeste)
+                FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             
         }
 

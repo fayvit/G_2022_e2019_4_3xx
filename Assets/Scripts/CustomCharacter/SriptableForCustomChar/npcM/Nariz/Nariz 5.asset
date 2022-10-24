@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: Nariz 5
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,5 +18,5 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 0
-  mesh: {fileID: 1982014776778131130, guid: 179cd7e6805fc9b4dbf314f94bbcbe0a, type: 3}
+  mesh: {fileID: 1982014776778131130, guid: 83b07eded149b9e4ca4eab4f4516ee60, type: 3}
   textureSign: []

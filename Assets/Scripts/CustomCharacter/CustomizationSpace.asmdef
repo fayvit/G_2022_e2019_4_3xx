@@ -2,15 +2,15 @@
     "name": "CustomizationSpace",
     "references": [
         "GUID:d8b63aba1907145bea998dd612889d6b",
-        "GUID:1cba85c4aaf1b394cb6b39ce0f047b82",
-        "GUID:070c168cc28ea3a4c975d6e77542fd58",
         "GUID:3ca3ebb3d49704547ae2605b1e860db6",
-        "GUID:035d19e5a99de4a44934fff90abd1d94",
-        "GUID:25d9a20a66d51174686138c5f8fd66e6",
-        "GUID:19b810c85b7422745baebd2b16d6829c",
-        "GUID:ed0ac067c21139e42916354d711bcad0",
-        "GUID:0135762d9baa8e94e87db4323f4458b2",
-        "GUID:b237fa24ada51e64a92c59424705e7af"
+        "GUID:420446f1fb130a342af534847951d018",
+        "GUID:9f38f6063eb3de84997b75a4b5e8d9b2",
+        "GUID:809a2221ffcbfec42b9169318c87d2aa",
+        "GUID:7e0101ebf75260a40bc53f0b5004f35d",
+        "GUID:c295e020f0f40b8499db91869e02855a",
+        "GUID:b9d185a61cd4b5048ac4d695b0f8414e",
+        "GUID:98986850b7781cf4f8b797ba955cdfc5",
+        "GUID:da5517cd0b9bab643817db72bfabbabe"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

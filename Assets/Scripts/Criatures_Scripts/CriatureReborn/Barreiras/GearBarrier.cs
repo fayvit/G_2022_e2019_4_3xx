@@ -13,7 +13,7 @@ namespace Criatures2021
 
         protected override void EfetivadorDaAcao()
         {
-            CameraApplicator.cam.NewFocusForBasicCam(parteQueGiraAntiHorario[0], 10, 10, true, UsarForwardDoObjeto);
+            CameraApplicator.cam.NewFocusForBasicCam(FocoDaCam, 10, 10, true, UsarForwardDoObjeto);
         }
 
         protected override void EffectiveRotate(float vel)

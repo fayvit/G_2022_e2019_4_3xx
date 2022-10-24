@@ -1,12 +1,12 @@
 {
     "name": "FayvitGameTools",
     "references": [
-        "GUID:035d19e5a99de4a44934fff90abd1d94",
-        "GUID:19b810c85b7422745baebd2b16d6829c",
-        "GUID:b237fa24ada51e64a92c59424705e7af",
-        "GUID:25d9a20a66d51174686138c5f8fd66e6",
-        "GUID:47f75b5196ac15547947c013e993cc6a",
-        "GUID:ed0ac067c21139e42916354d711bcad0"
+        "GUID:420446f1fb130a342af534847951d018",
+        "GUID:7e0101ebf75260a40bc53f0b5004f35d",
+        "GUID:b218cd21360528f4fab48ffc99298fb3",
+        "GUID:9f38f6063eb3de84997b75a4b5e8d9b2",
+        "GUID:f46eb03ccb6f28f4791c9c9915e5c815",
+        "GUID:809a2221ffcbfec42b9169318c87d2aa"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

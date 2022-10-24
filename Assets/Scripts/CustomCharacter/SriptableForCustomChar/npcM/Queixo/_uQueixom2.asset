@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: _uQueixom2
   m_EditorClassIdentifier: 
   subsection: 08000000
@@ -18,7 +18,7 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 0
-  mesh: {fileID: 4641313824111033030, guid: 2bd8767f25825f7469e302c3226e7f49, type: 3}
+  mesh: {fileID: 4641313824111033030, guid: 3d1ab489a43388f4aa018f9e52388a1d, type: 3}
   textureSign:
   - indiceDoMaterialAlvo: 0
     meshOrChildren: 0

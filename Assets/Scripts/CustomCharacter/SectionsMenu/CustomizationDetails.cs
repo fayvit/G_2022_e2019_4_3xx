@@ -61,6 +61,7 @@
         botas,
         particular,
         nariz,
-        empty
+        empty,
+        labio
     }
 }

@@ -277,10 +277,15 @@ namespace CustomizationSpace
                 }
             }
 
-            
+
             for (int i = 0; i < parentObj.transform.childCount; i++)
                 if (!parentObj.transform.GetChild(i).gameObject.activeSelf)
-                    MonoBehaviour.Destroy(parentObj.transform.GetChild(i).gameObject);
+                    if (!Application.isEditor)
+                    {
+                        MonoBehaviour.Destroy(parentObj.transform.GetChild(i).gameObject);
+                    }
+                    else
+                        MonoBehaviour.DestroyImmediate(parentObj.transform.GetChild(i).gameObject);
             //Transform metarig = target.transform.Find("metarig");
             //children = parentObj.GetComponentsInChildren<Transform>();
             //foreach (var child in children)
@@ -288,8 +293,16 @@ namespace CustomizationSpace
             //        MonoBehaviour.Destroy(child.gameObject);
 
             gameObject.transform.SetParent(parentObj.transform);
-            MonoBehaviour.Destroy(parentObj.GetComponent<SectionDataBaseContainer>());
-            MonoBehaviour.Destroy(parentObj.GetComponent<SectionCustomizationManager>());
+            if (!Application.isEditor)
+            {
+                MonoBehaviour.Destroy(parentObj.GetComponent<SectionDataBaseContainer>());
+                MonoBehaviour.Destroy(parentObj.GetComponent<SectionCustomizationManager>());
+            }
+            else
+            {
+                MonoBehaviour.DestroyImmediate(parentObj.GetComponent<SectionDataBaseContainer>());
+                MonoBehaviour.DestroyImmediate(parentObj.GetComponent<SectionCustomizationManager>());
+            }
             parentObj.GetComponent<Animator>().enabled = true;
             parentObj.SetActive(false);
             InEditorSupportSingleton.Instance.InvokeOnEndFrame(() =>

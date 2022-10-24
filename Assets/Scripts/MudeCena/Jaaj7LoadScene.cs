@@ -60,7 +60,7 @@ public class Jaaj7LoadScene : MonoBehaviour
     {
         if (obj.sender == gameObject && obj.extraInfo== "Jaaj_Saindo")
         {
-            SceneManager.UnloadSceneAsync(FayvitLoadScene.NomesCenasEspeciais.CenaDeCarregamento.ToString());
+            SceneManager.UnloadSceneAsync(NomesCenasEspeciais.CenaDeCarregamento.ToString());
         }
     }
 

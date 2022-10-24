@@ -1,0 +1,848 @@
+fileFormatVersion: 2
+guid: 488161bac68c81f48887fed10e5031d6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: C_rculo
+    100002: Esfera_001
+    100004: //RootNode
+    100006: Arma__o
+    100008: bocaB
+    100010: bocaC
+    100012: bracoD
+    100014: bracoE
+    100016: Corpo
+    100018: costelinhaD
+    100020: costelinhaE
+    100022: Esfera_000
+    100024: olhoBD
+    100026: olhoBE
+    100028: olhoCD
+    100030: olhoCE
+    100032: pe1D
+    100034: pe1E
+    100036: pe2D
+    100038: pe2E
+    100040: pe3D
+    100042: pe3E
+    100044: punhoD
+    100046: punhoD_001
+    100048: punhoD_002
+    100050: punhoD_003
+    100052: punhoD_004
+    100054: punhoE
+    100056: punhoE_001
+    100058: punhoE_002
+    100060: punhoE_003
+    100062: punhoE_004
+    400000: C_rculo
+    400002: Esfera_001
+    400004: //RootNode
+    400006: Arma__o
+    400008: bocaB
+    400010: bocaC
+    400012: bracoD
+    400014: bracoE
+    400016: Corpo
+    400018: costelinhaD
+    400020: costelinhaE
+    400022: Esfera_000
+    400024: olhoBD
+    400026: olhoBE
+    400028: olhoCD
+    400030: olhoCE
+    400032: pe1D
+    400034: pe1E
+    400036: pe2D
+    400038: pe2E
+    400040: pe3D
+    400042: pe3E
+    400044: punhoD
+    400046: punhoD_001
+    400048: punhoD_002
+    400050: punhoD_003
+    400052: punhoD_004
+    400054: punhoE
+    400056: punhoE_001
+    400058: punhoE_002
+    400060: punhoE_003
+    400062: punhoE_004
+    2300000: C_rculo
+    2300002: Esfera_001
+    3300000: C_rculo
+    3300002: Esfera_001
+    4300000: C_rculo
+    4300002: Esfera_001
+    4300004: Esfera_000
+    7400000: Default Take
+    7400002: andandoIzicuolo
+    7400004: chuvaVenenosa
+    7400006: padraoIzicuolo
+    7400008: cairIzicuolo
+    7400010: dano1Izicuolo
+    7400012: dano2Izicuolo
+    7400014: emissorIzicuolo_001
+    7400016: emissorIzicuolo
+    7400018: pulaIzicuolo
+    7400020: bastaoIzicuolo
+    9500000: //RootNode
+    13700000: Esfera_000
+    13700002: Esfera_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: cairIzicuolo
+      takeName: cairIzicuolo
+      firstFrame: 425
+      lastFrame: 448
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andandoIzicuolo
+      takeName: andandoIzicuolo
+      firstFrame: 339
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: padraoIzicuolo
+      takeName: padraoIzicuolo
+      firstFrame: 0
+      lastFrame: 332
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano1Izicuolo
+      takeName: dano1Izicuolo
+      firstFrame: 383
+      lastFrame: 406
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano2Izicuolo
+      takeName: dano2Izicuolo
+      firstFrame: 406
+      lastFrame: 425
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: emissorIzicuolo
+      takeName: emissorIzicuolo
+      firstFrame: 128
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pulaIzicuolo
+      takeName: pulaIzicuolo
+      firstFrame: 365
+      lastFrame: 379
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: bastaoIzicuolo
+      takeName: bastaoIzicuolo
+      firstFrame: 128
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Corpo
+        weight: 1
+      - path: Arma__o/Corpo/bocaB
+        weight: 1
+      - path: Arma__o/Corpo/bocaC
+        weight: 1
+      - path: Arma__o/Corpo/bracoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoD/punhoD/punhoD_001/punhoD_004
+        weight: 1
+      - path: Arma__o/Corpo/bracoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_002
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_003
+        weight: 1
+      - path: Arma__o/Corpo/bracoE/punhoE/punhoE_001/punhoE_004
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe1D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe2D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaD/pe3D
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe1E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe2E
+        weight: 1
+      - path: Arma__o/Corpo/costelinhaE/pe3E
+        weight: 1
+      - path: Arma__o/Corpo/olhoBD
+        weight: 1
+      - path: Arma__o/Corpo/olhoBE
+        weight: 1
+      - path: Arma__o/Corpo/olhoCD
+        weight: 1
+      - path: Arma__o/Corpo/olhoCE
+        weight: 1
+      - path: Esfera_000
+        weight: 1
+      - path: Esfera_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

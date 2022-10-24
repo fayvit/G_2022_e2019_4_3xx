@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f3bd875bdcb897499d29c51637a1620, type: 3}
   m_Name: ID1Barba
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,6 +18,6 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 19
     registro: 5
-  baseTex: {fileID: 2800000, guid: 2800a65d7234ae74bad82f8bff3a333a, type: 3}
-  maskTex: {fileID: 2800000, guid: 421bc6c2b694e2346bf1b81ff635becd, type: 3}
+  baseTex: {fileID: 2800000, guid: b1419def1df43cd4b85e3977d28bfd75, type: 3}
+  maskTex: {fileID: 2800000, guid: 5011080ae24690940bfe37daa760ccfd, type: 3}
   meshParent: 2

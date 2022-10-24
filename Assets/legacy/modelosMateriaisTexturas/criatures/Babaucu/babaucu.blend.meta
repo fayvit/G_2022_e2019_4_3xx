@@ -1,0 +1,602 @@
+fileFormatVersion: 2
+guid: 7864ba08c1e12cf489d18892d8114faf
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: B_zier_-_C_rculo
+    100002: //RootNode
+    100004: Esfera
+    100006: Arma__o
+    100008: bocaC
+    100010: bocaD
+    100012: bocaE
+    100014: bocB
+    100016: bracoD1
+    100018: bracoD2
+    100020: bracoD3
+    100022: bracoD4
+    100024: bracoE1
+    100026: bracoE3
+    100028: bracoE4
+    100030: bracoE_
+    100032: corpo
+    100034: olho_EC
+    100036: olhoDB
+    100038: olhoDC
+    100040: olhoEB
+    100042: preBracoD
+    100044: preBracoE
+    100046: esqueleto
+    100048: Cubo
+    400000: B_zier_-_C_rculo
+    400002: //RootNode
+    400004: Esfera
+    400006: Arma__o
+    400008: bocaC
+    400010: bocaD
+    400012: bocaE
+    400014: bocB
+    400016: bracoD1
+    400018: bracoD2
+    400020: bracoD3
+    400022: bracoD4
+    400024: bracoE1
+    400026: bracoE3
+    400028: bracoE4
+    400030: bracoE_
+    400032: corpo
+    400034: olho_EC
+    400036: olhoDB
+    400038: olhoDC
+    400040: olhoEB
+    400042: preBracoD
+    400044: preBracoE
+    400046: esqueleto
+    400048: Cubo
+    2300000: B_zier_-_C_rculo
+    2300002: Esfera
+    3300000: B_zier_-_C_rculo
+    3300002: Esfera
+    4300000: B_zier_-_C_rculo
+    4300002: Esfera
+    4300004: Cubo
+    7400000: padraoBabaucu
+    7400002: andandoBabaucu
+    7400004: dano1
+    7400006: dano2
+    7400008: cairBabaucu
+    7400010: Dentada
+    7400012: "chicotede m\xE3o"
+    7400014: andaBabaucu
+    7400016: chicoteDeMaoBabaucu
+    7400018: dano1Babaucu
+    7400020: dano2Babaucu
+    7400022: dentadaBabaucu
+    7400024: morteBabaucu
+    9500000: //RootNode
+    13700000: Esfera
+    13700002: Cubo
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: padraoBabaucu
+      takeName: padraoBabaucu
+      firstFrame: 0
+      lastFrame: 798
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Esfera
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/olho_EC
+        weight: 1
+      - path: esqueleto/corpo/olhoDB
+        weight: 1
+      - path: esqueleto/corpo/olhoDC
+        weight: 1
+      - path: esqueleto/corpo/olhoEB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: andaBabaucu
+      takeName: andaBabaucu
+      firstFrame: 825
+      lastFrame: 877
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: chicoteDeMaoBabaucu
+      takeName: chicoteDeMaoBabaucu
+      firstFrame: 1149
+      lastFrame: 1190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1Babaucu
+      takeName: dano1Babaucu
+      firstFrame: 889
+      lastFrame: 938
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano2Babaucu
+      takeName: dano2Babaucu
+      firstFrame: 946
+      lastFrame: 995
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dentadaBabaucu
+      takeName: dentadaBabaucu
+      firstFrame: 1103
+      lastFrame: 1144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: morteBabaucu
+      takeName: morteBabaucu
+      firstFrame: 1027
+      lastFrame: 1092
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/corpo
+        weight: 1
+      - path: esqueleto/corpo/bocaC
+        weight: 1
+      - path: esqueleto/corpo/bocaD
+        weight: 1
+      - path: esqueleto/corpo/bocaE
+        weight: 1
+      - path: esqueleto/corpo/bocB
+        weight: 1
+      - path: esqueleto/corpo/preBracoD
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3
+        weight: 1
+      - path: esqueleto/corpo/preBracoD/bracoD1/bracoD2/bracoD3/bracoD4
+        weight: 1
+      - path: esqueleto/corpo/preBracoE
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3
+        weight: 1
+      - path: esqueleto/corpo/preBracoE/bracoE1/bracoE_/bracoE3/bracoE4
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.3
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

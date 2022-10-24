@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7123942045059392294}
   - component: {fileID: 233235339114162892}
   - component: {fileID: 2900006255161427808}
-  - component: {fileID: 1902762499713503267}
+  - component: {fileID: -1643596781353474562}
   m_Layer: 9
   m_Name: cintura_4
   m_TagString: Untagged
@@ -789,7 +789,7 @@ Cloth:
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
   - {x: 0.5, y: 0.5, z: 0}
   m_VirtualParticleIndices: 
---- !u!114 &1902762499713503267
+--- !u!114 &-1643596781353474562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3715615873592529977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd819105397b654eb91831fc1e51574, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ce15f1cff364da4b863fee89e3094a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pai: {fileID: 0}

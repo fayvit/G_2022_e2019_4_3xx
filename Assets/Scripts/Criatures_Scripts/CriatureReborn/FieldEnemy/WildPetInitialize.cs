@@ -43,11 +43,12 @@ namespace Criatures2021
             G.name = "Enemy: " + s.Substring(0,7) ;
             PetManager Cc = G.GetComponent<PetManager>();
             MonoBehaviour.Destroy(Cc);
+            Cc.enabled = false;
             PetManagerEnemy C = G.AddComponent<PetManagerEnemy>();
             C.MeuCriatureBase = cBase;
-            G.AddComponent<MyOtimization>();
+            G.AddComponent<MyOtimization>().DistanceBehaviours=100;
             return C;
-
+            
             //RecolocadorDeStatus.VerificaInsereParticulaDeStatus(C);
         }
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 12146, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Terrainstamp_Rollinghills01_Brush
   m_EditorClassIdentifier: 
-  m_Mask: {fileID: 2800000, guid: ef3a42474254efb44a572b52d3ac06cd, type: 3}
+  m_Mask: {fileID: 2800000, guid: 17daa10b6f1e38845bd7e6807e39b104, type: 3}
   m_Falloff:
     serializedVersion: 2
     m_Curve:

@@ -70,7 +70,8 @@ namespace CustomizationSpace
             botas = 4096,
             particular = 8192,
             nariz = 16384,
-            empty = 32768
+            empty = 32768,
+            labio = 65536
         }
 
         public enum EditableType
@@ -273,7 +274,7 @@ namespace CustomizationSpace
                 case 2:
                     globalCM.StartHud(globalCM.RememberedColor, secManager.GuardOriginalColor.cor, secManager.VerifyColorReg(), secManager.GetTargetColorReg);
                     StartGlobalColorMenu();
-                    break;
+                break;
             }
 
             globalMenu.FinishHud();
@@ -571,30 +572,45 @@ namespace CustomizationSpace
             }
             else if (target.type == EditableType.personagemBase)
             {
-                if (secManager == secManagerH_Base)
+                ChangeBaseCharacter(secManager != secManagerH_Base);
+                DirectionalCamera cDir = CameraApplicator.cam.Cdir;
+                //CameraAplicator.cam.FocusBasicCam(secManager.transform, 0.2f, .7f);
+                CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
+                menusAtivos = FlagSectionDataBase.@base;
+                SupportSingleton.Instance.InvokeOnEndFrame(() =>
                 {
-                    ChangeBaseCharacter(false);
-                    DirectionalCamera cDir = CameraApplicator.cam.Cdir;
-                    //CameraAplicator.cam.FocusBasicCam(secManager.transform, 0.2f, .7f);
-                    CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
-                    SupportSingleton.Instance.InvokeOnEndFrame(() =>
-                    {
+                    Debug.Log("secmanager chamador: " + secManager);
+                    secManager.SetColorsByAssign(secManager != secManagerH_Base ? secManagerH_Base.ColorAssign: secManagerM_Base.ColorAssign);
+                    activeEditables = ActiveEditables;
+                    target = activeEditables[index];
+                    RestartMenu(target);
+                });
+                #region ReconfiguradoNoAddressableCrash
+                //if (secManager == secManagerH_Base)
+                //{
+                //    ChangeBaseCharacter(false);
+                //    DirectionalCamera cDir = CameraApplicator.cam.Cdir;
+                //    //CameraAplicator.cam.FocusBasicCam(secManager.transform, 0.2f, .7f);
+                //    CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
+                //    SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                //    {
 
-                        secManager.SetColorsByAssign(secManagerH_Base.ColorAssign);
-                    });
-                }
-                else if (secManager == secManagerM_Base)
-                {
-                    ChangeBaseCharacter(true);
-                    DirectionalCamera cDir = CameraApplicator.cam.Cdir;
-                    //CameraAplicator.cam.FocusBasicCam(secManager.transform, 0.2f, .7f);
-                    CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
-                    SupportSingleton.Instance.InvokeOnEndFrame(() =>
-                    {
-                        CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
-                        secManager.SetColorsByAssign(secManagerM_Base.ColorAssign);
-                    });
-                }
+                //        secManager.SetColorsByAssign(secManagerH_Base.ColorAssign);
+                //    });
+                //}
+                //else if (secManager == secManagerM_Base)
+                //{
+                //    ChangeBaseCharacter(true);
+                //    DirectionalCamera cDir = CameraApplicator.cam.Cdir;
+                //    //CameraAplicator.cam.FocusBasicCam(secManager.transform, 0.2f, .7f);
+                //    CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
+                //    SupportSingleton.Instance.InvokeOnEndFrame(() =>
+                //    {
+                //        CameraApplicator.cam.Cdir.VarVerticalHeightPoint = .7f;
+                //        secManager.SetColorsByAssign(secManagerM_Base.ColorAssign);
+                //    });
+                //} 
+                #endregion
             }
             else if (target.type == EditableType.conclusao)
             {
@@ -867,6 +883,7 @@ namespace CustomizationSpace
                     {
                         int i = Random.Range(0, lccd.Count);
                         CustomizationContainerDates ccd = lccd[i];
+                        MeDigaOsIndices.Diga(ccd);
                         if (ccd.PersBase == PersonagemBase.masculino)
                         {
                             ChangeBaseCharacter(true);

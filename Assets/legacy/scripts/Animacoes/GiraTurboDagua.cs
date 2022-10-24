@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class GiraTurboDagua : MonoBehaviour {
+	[SerializeField] private float rotVel = 400;
+	[SerializeField] private float afastamento = .5f;
 	float tempo = 0;
 	bool sinal;
 	bool naoAfastou = true;
@@ -12,13 +14,13 @@ public class GiraTurboDagua : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.RotateAround(transform.parent.position,transform.parent.forward,400*Time.deltaTime);
+		transform.RotateAround(transform.parent.position,transform.parent.forward,rotVel*Time.deltaTime);
 		tempo+=Time.deltaTime;
 
 		if(tempo>0.1f&&naoAfastou)
 		{
 			naoAfastou = false;
-			float novoX  = sinal ? 0.5f:-0.5f;
+			float novoX  = sinal ? afastamento: - afastamento;
 			float novoY = 0;
 
 			transform.localPosition = new Vector3(novoX,novoY,transform.localPosition.z);

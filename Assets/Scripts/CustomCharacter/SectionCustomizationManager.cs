@@ -3,7 +3,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using FayvitMessageAgregator;
 using FayvitBasicTools;
-using CustomizationSpace;
 
 namespace CustomizationSpace
 {
@@ -430,7 +429,7 @@ namespace CustomizationSpace
                 if (ca.coresEditaveis.Length > i)
                 {
                     material = GetMaterialForChangeElement(G, ccs[i]);
-
+                    
                     material.SetColor(ccs[i].ColorTargetName, ca.coresEditaveis[i].cor);
                 }
             }
@@ -443,28 +442,33 @@ namespace CustomizationSpace
             dbSb = null;
             G = null;
 
-            if (ces[0] is CombinedChangebleMesh)
-            {
-                CombinedMesh cm = GetCombinedMeshInListById(sdb);
-                dbSb = ces[cm.contador].coresEditaveis;
-                sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
-                G = cm.atual;
+            //Debug.Log("sdb: " + sdb + " ces length" + ces.Length);
 
-            }
-            else if (ces[0] is SimpleChangebleMesh)
+            if (ces!=null && ces.Length > 0)
             {
-                SimpleMesh sm = GetMeshInListById(sdb);
-                dbSb = ces[sm.contador].coresEditaveis;
-                sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
-                G = sm.atual;
-            }
-            else if (ces[0] is MaskedTexture)
-            {
-                CustomizationTextures ct = GetCustomizationTexInListByID(sdb);
-                MaskedTexture m = ces[ct.contador] as MaskedTexture;
-                G = GetGameObjectWithParentID(m.meshParent);
-                dbSb = ces[ct.contador].coresEditaveis;
-                sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
+                if (ces[0] is CombinedChangebleMesh)
+                {
+                    CombinedMesh cm = GetCombinedMeshInListById(sdb);
+                    dbSb = ces[cm.contador].coresEditaveis;
+                    sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
+                    G = cm.atual;
+
+                }
+                else if (ces[0] is SimpleChangebleMesh)
+                {
+                    SimpleMesh sm = GetMeshInListById(sdb);
+                    dbSb = ces[sm.contador].coresEditaveis;
+                    sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
+                    G = sm.atual;
+                }
+                else if (ces[0] is MaskedTexture)
+                {
+                    CustomizationTextures ct = GetCustomizationTexInListByID(sdb);
+                    MaskedTexture m = ces[ct.contador] as MaskedTexture;
+                    G = GetGameObjectWithParentID(m.meshParent);
+                    dbSb = ces[ct.contador].coresEditaveis;
+                    sb = GetColorAssignById(sdb).VetorDeCoresEditaveis;
+                }
             }
         }
         #endregion
@@ -634,7 +638,13 @@ namespace CustomizationSpace
             {
                 SimpleChangebleMesh[] scm = sdbc.GetDbMeshWithId(s.id);
                 SimpleMesh c2 = GetMeshInListById(s.id);
+                //Debug.Log(s.id);
                 c2.contador = s.contador;
+                //Debug.Log("c2: " + c2);
+                //Debug.Log("c2.atual: " + c2.atual);
+                //Debug.Log("scm"+scm);
+                //Debug.Log("scm[s.contador]" + scm[s.contador]);
+                //Debug.Log("scm[s.contador].mesh" + scm[s.contador].mesh);
                 MudarMesh(ref c2.atual, scm[s.contador].mesh);
 
             }
@@ -667,6 +677,7 @@ namespace CustomizationSpace
         public void SetColorsByAssign(List<ColorAssignements> receivedCA)
         {
             ColorAssignements baseAssign = null;
+            
             foreach (ColorAssignements ca in receivedCA)
             {
                 int cont = 0;
@@ -681,7 +692,7 @@ namespace CustomizationSpace
 
                     SetSignaturesAndGO(ca.id, out G, out sbs, out dbSbs);
 
-                    if (cont >= sbs.Length)
+                    if (sbs==null || cont >= sbs.Length)
                         break;
                     SignatureBase sb = sbs[cont];
 
@@ -692,6 +703,9 @@ namespace CustomizationSpace
                         transportInt = cont;
                         transportSDB = ca.id;
 
+                        //Debug.Log(ca.id + " : <color=#" + ColorUtility.ToHtmlStringRGB(ca.coresEditaveis[i].cor) + ">" + ca.coresEditaveis[i].cor+"</color>"+
+                        //    cont+" : "+sb.indiceDoMaterialAlvo+" : "+sb.meshOrChildren
+                        //    );
                         ApplyColor(ca.coresEditaveis[i].cor);
                         cont++;
                     }
@@ -701,7 +715,8 @@ namespace CustomizationSpace
             transportInt = 0;
             transportSDB = SectionDataBase.@base;
 
-            ApplyColor(baseAssign.coresEditaveis[0].cor);
+            if(baseAssign!=null&& baseAssign.coresEditaveis.Length>0)
+                ApplyColor(baseAssign.coresEditaveis[0].cor);
         }
 
         public void StartChangeColor(SectionDataBase sdb, int inIndex, ColorContainerStruct guardColor)
@@ -747,12 +762,18 @@ namespace CustomizationSpace
             SignatureBase sb = sbs[inIndex];
 
             Material material = GetMaterialForChangeElement(G, sb);
+            
+            //string s = ColorUtility.ToHtmlStringRGB(c);
+            //Debug.Log(s);
+            //Debug.Log("material dbSbs e inIndex: "+material+" : "+ + dbSbs.Length + " : " + inIndex);
+            //Debug.Log("nomeDoMaterial e <color=#"+s+">cor: </color>"+((ColorContainer)dbSbs[inIndex]).materialColorTarget.ToString()+" : "+c);
 
             if (dbSbs.Length > inIndex)
                 material.SetColor(((ColorContainer)dbSbs[inIndex]).materialColorTarget.ToString(), c);
 
             ColorContainerStruct[] ccs = GetColorAssignById(sdb).coresEditaveis;
 
+            //Debug.Log("ccs e inIndex: " + ccs.Length + " : " + inIndex);
             if (ccs.Length > inIndex)
                 ccs[inIndex].cor = c;
 

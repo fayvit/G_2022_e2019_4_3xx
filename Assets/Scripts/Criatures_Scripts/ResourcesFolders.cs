@@ -47,14 +47,14 @@ public class ResourcesFolders {
 
     public static GameObject GetPet(PetName NomeID)
     {
-        Resources.UnloadUnusedAssets();
+        //Resources.UnloadUnusedAssets();
         //return AddressablesResourcesManager.InstantGet("Criatures/" + NomeID);
         return Resources.Load<GameObject>("Criatures/" + NomeID.ToString());
     }
 
     internal static void OtimizePet(PetName NomeID, GameObject cA)
     {
-        AddressablesResourcesManager.OtimizePrefabs("Criatures/" + NomeID,cA);
+        //AddressablesResourcesManager.OtimizePrefabs("Criatures/" + NomeID,cA);
     }
 }
 

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: ID0cinturaBase
   m_EditorClassIdentifier: 
   subsection: 
   coresEditaveis: []
-  mesh: {fileID: 5072654446884900823, guid: 2b7c7a9735715634fb6b7adef8d89ff8, type: 3}
+  mesh: {fileID: 5072654446884900823, guid: 6137b7abcbb901243a731a518e47fc11, type: 3}
   textureSign: []

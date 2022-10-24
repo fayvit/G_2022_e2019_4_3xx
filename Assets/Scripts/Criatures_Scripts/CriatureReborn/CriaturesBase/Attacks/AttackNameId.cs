@@ -61,6 +61,7 @@ namespace Criatures2021
         sabreDeNadadeira,
         sabreDeEspada,
         tesoura,
-        ataqueEmGiro
+        ataqueEmGiro,
+        impulsoAquatico
     }
 }

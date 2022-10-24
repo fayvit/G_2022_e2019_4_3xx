@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f3bd875bdcb897499d29c51637a1620, type: 3}
+  m_Name: ID3Barba
+  m_EditorClassIdentifier: 
+  subsection: 
+  coresEditaveis:
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 19
+    registro: 5
+  baseTex: {fileID: 2800000, guid: 4e0d8acea51c2d44689296216eb2f821, type: 3}
+  maskTex: {fileID: 2800000, guid: 2c1b7e401545ff84d8605031d053c739, type: 3}
+  meshParent: 2

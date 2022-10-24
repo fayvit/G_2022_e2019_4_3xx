@@ -1,5 +1,4 @@
-﻿
-using FayvitSupportSingleton;
+﻿using FayvitSupportSingleton;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,22 +9,22 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
 {
     public class AddressablesResourcesManager
     {
-        static Dictionary<InfoCommandTexture, List<GameObject>> refInfoCommandTexture=new Dictionary<InfoCommandTexture, List<GameObject>>();
-        static Dictionary<InfoCommandTexture, AsyncOperationHandle<Sprite>> infoCommandOperations=new Dictionary<InfoCommandTexture, AsyncOperationHandle<Sprite>>();
+        static Dictionary<InfoCommandTexture, List<GameObject>> refInfoCommandTexture = new Dictionary<InfoCommandTexture, List<GameObject>>();
+        static Dictionary<InfoCommandTexture, AsyncOperationHandle<Sprite>> infoCommandOperations = new Dictionary<InfoCommandTexture, AsyncOperationHandle<Sprite>>();
         static Dictionary<string, List<GameObject>> refPrefabs = new Dictionary<string, List<GameObject>>();
         static Dictionary<string, AsyncOperationHandle<GameObject>> prefabsOperations = new Dictionary<string, AsyncOperationHandle<GameObject>>();
 
-        public static void SetSprite(InfoCommandTexture i,GameObject spriteContainer,System.Action<Sprite> onLoadSprite)
+        public static void SetSprite(InfoCommandTexture i, GameObject spriteContainer, System.Action<Sprite> onLoadSprite)
         {
-            if (infoCommandOperations.ContainsKey(i)&&infoCommandOperations[i].IsValid())
+            if (infoCommandOperations.ContainsKey(i) && infoCommandOperations[i].IsValid())
             {
-                if(infoCommandOperations[i].IsDone)
+                if (infoCommandOperations[i].IsDone)
                     onLoadSprite(infoCommandOperations[i].Result);
                 else
                     infoCommandOperations[i].Completed += v =>
                     {
                         onLoadSprite(v.Result);
-                        if(!refInfoCommandTexture.ContainsKey(i))
+                        if (!refInfoCommandTexture.ContainsKey(i))
                             refInfoCommandTexture.Add(i, new List<GameObject>() { spriteContainer });
                     };
 
@@ -81,10 +80,10 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
                 }
 
                 Resources.UnloadUnusedAssets();
-            },90);
+            }, 90);
         }
 
-        internal static GameObject InstantGet(string v,System.Action<GameObject> onLoad=null)
+        internal static GameObject InstantGet(string v, System.Action<GameObject> onLoad = null)
         {
             if (prefabsOperations.ContainsKey(v))
             {
@@ -128,7 +127,7 @@ namespace Assets.ScriptsLadoB.FayvitAdressable
                         }
                     }
                 }
-                
+
                 Resources.UnloadUnusedAssets();
             });
         }

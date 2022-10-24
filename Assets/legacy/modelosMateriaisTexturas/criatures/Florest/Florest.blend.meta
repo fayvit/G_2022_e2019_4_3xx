@@ -1,0 +1,889 @@
+fileFormatVersion: 2
+guid: 5bdcbf431e3de074ba096a6b2b4fe140
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arma__o
+    100002: B_zier_-_Curva_006
+    100004: B_zier_-_Curva_013
+    100006: bocaB
+    100008: bocaC
+    100010: bocaD
+    100012: bocaE
+    100014: bracoD
+    100016: bracoE
+    100018: corpo
+    100020: Esfera
+    100022: //RootNode
+    100024: maoD
+    100026: maoE
+    100028: olhoD
+    100030: olhoE
+    100032: palpebraBD
+    100034: palpebraBE
+    100036: palpebraCD
+    100038: palpebraCE
+    100040: peD
+    100042: peE
+    100044: pernaD1
+    100046: pernaD2
+    100048: pernaE1
+    100050: pernaE2
+    100052: quadrilD
+    100054: quadrilE
+    100056: rabo
+    400000: Arma__o
+    400002: B_zier_-_Curva_006
+    400004: B_zier_-_Curva_013
+    400006: bocaB
+    400008: bocaC
+    400010: bocaD
+    400012: bocaE
+    400014: bracoD
+    400016: bracoE
+    400018: corpo
+    400020: Esfera
+    400022: //RootNode
+    400024: maoD
+    400026: maoE
+    400028: olhoD
+    400030: olhoE
+    400032: palpebraBD
+    400034: palpebraBE
+    400036: palpebraCD
+    400038: palpebraCE
+    400040: peD
+    400042: peE
+    400044: pernaD1
+    400046: pernaD2
+    400048: pernaE1
+    400050: pernaE2
+    400052: quadrilD
+    400054: quadrilE
+    400056: rabo
+    4300000: B_zier_-_Curva_006
+    4300002: B_zier_-_Curva_013
+    4300004: Esfera
+    7400000: padraoFlorest
+    7400002: florestAndando
+    7400004: puloFlorest
+    7400006: emissorFlorest
+    7400008: dano1
+    7400010: quedaFlorest
+    7400012: garra
+    7400014: dano2Florest
+    7400016: tempestadeDeFolhas
+    9500000: //RootNode
+    13700000: B_zier_-_Curva_006
+    13700002: B_zier_-_Curva_013
+    13700004: Esfera
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: padraoFlorest
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 320
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: florestAndando
+      takeName: Arma__oAction
+      firstFrame: 320
+      lastFrame: 354
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: puloFlorest
+      takeName: Default Take
+      firstFrame: 357
+      lastFrame: 369
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: emissorFlorest
+      takeName: Default Take
+      firstFrame: 370
+      lastFrame: 390
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano1
+      takeName: Default Take
+      firstFrame: 396
+      lastFrame: 407
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: quedaFlorest
+      takeName: Default Take
+      firstFrame: 411
+      lastFrame: 425
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: garra
+      takeName: Default Take
+      firstFrame: 437
+      lastFrame: 472
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano2Florest
+      takeName: Default Take
+      firstFrame: 409
+      lastFrame: 416
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tempestadeDeFolhas
+      takeName: tempestadeDeFolhas
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bocaB
+        weight: 1
+      - path: Arma__o/corpo/bocaC
+        weight: 1
+      - path: Arma__o/corpo/bocaD
+        weight: 1
+      - path: Arma__o/corpo/bocaE
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/olhoD
+        weight: 1
+      - path: Arma__o/corpo/olhoE
+        weight: 1
+      - path: Arma__o/corpo/palpebraBD
+        weight: 1
+      - path: Arma__o/corpo/palpebraBE
+        weight: 1
+      - path: Arma__o/corpo/palpebraCD
+        weight: 1
+      - path: Arma__o/corpo/palpebraCE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: B_zier_-_Curva_006
+        weight: 1
+      - path: B_zier_-_Curva_013
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .300000012
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

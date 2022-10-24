@@ -17,7 +17,7 @@ public class TestApperanceSet : MonoBehaviour
 
         if (C)
         {
-            if (C.Ccd.PersBase == CustomizationSpace.PersonagemBase.masculino)
+            if (C.Ccd.PersBase == PersonagemBase.masculino)
             {
                 secManagerH.SetCustomDates(C.Ccd);
                 secManagerM.gameObject.SetActive(false);
@@ -39,8 +39,8 @@ public class TestApperanceSet : MonoBehaviour
 
     private void OnApperanceReceived(MsgApperanceTransport obj)
     {
-        CustomizationSpace.CustomizationContainerDates ccd = obj.lccd[Random.Range(0, obj.lccd.Count)];
-        if (ccd.PersBase == CustomizationSpace.PersonagemBase.masculino)
+        CustomizationContainerDates ccd = obj.lccd[Random.Range(0, obj.lccd.Count)];
+        if (ccd.PersBase == PersonagemBase.masculino)
         {
             secManagerH.SetCustomDates(ccd);
             secManagerM.gameObject.SetActive(false);

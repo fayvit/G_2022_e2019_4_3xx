@@ -1,18 +1,12 @@
 ﻿using FayvitCommandReader;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.ScriptsLadoB.FayvitAdressable;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
-using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-
-
-
 
 public class ChangeCommandInfoInHud : MonoBehaviour
 {

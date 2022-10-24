@@ -42,7 +42,7 @@ namespace Criatures2021
 
         public override void UpdateGolpe(GameObject G,GameObject focado = null)
         {
-            aImpacto.ImpactoAtivo(G, this, carac);
+            aImpacto.ImpactoAtivo(G, this, carac,focado:focado);
         }
 
         public override void FinalizaEspecificoDoGolpe()

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3761552204968048981}
   - component: {fileID: 4302373042275719720}
   - component: {fileID: 2956722144045540956}
-  - component: {fileID: 3050250309595485110}
+  - component: {fileID: 3250175441269701789}
+  - component: {fileID: 1047296511385743497}
   m_Layer: 0
   m_Name: cabelo_5_Bulma1 (1)
   m_TagString: skCabelo
@@ -62,7 +63,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: faee5bf0471b7ab4f9dd410db1999418, type: 2}
   - {fileID: 2100000, guid: 82f9d76970130a3418783bb71b220515, type: 2}
-  - {fileID: 2100000, guid: a7bee91441513a04e87ef6de77424f8f, type: 2}
+  - {fileID: 2100000, guid: 8eb39724ce426ef4aa4052d692b95480, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -915,7 +916,7 @@ Cloth:
   - {x: 0.6666667, y: 0.16666667, z: 0.16666667}
   - {x: 0.5, y: 0.5, z: 0}
   m_VirtualParticleIndices: 
---- !u!114 &3050250309595485110
+--- !u!114 &3250175441269701789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -924,7 +925,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4268007437393372977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb23c16e36544e4d8f0e39208123053, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ce15f1cff364da4b863fee89e3094a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pai: {fileID: 0}
+--- !u!114 &1047296511385743497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268007437393372977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73a21840f9d3b24dba3d20b4d66a7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetMR: {fileID: 4302373042275719720}

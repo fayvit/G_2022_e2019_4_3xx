@@ -19141,12 +19141,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4969689265876699615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 101034796e6eb06418d0dae6c53f2a56, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ff2a2765ea06748bf15e0dd4f5bb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startParticle: {fileID: 1213679329}
   updateParticle: {fileID: 803252720}
-  timeToSpawnUpdateParticle: 0.35
+  timeToSpawnUpdateParticle: 0.25
 --- !u!1 &5164731081547325819
 GameObject:
   m_ObjectHideFlags: 0

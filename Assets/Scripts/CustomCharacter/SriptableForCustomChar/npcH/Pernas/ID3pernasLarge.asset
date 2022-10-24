@@ -9,18 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72210dc1c359c2e49a6072707fc84765, type: 3}
+  m_Script: {fileID: 11500000, guid: 677ec01b67a5d9041b06684c4f3faf49, type: 3}
   m_Name: ID3pernasLarge
   m_EditorClassIdentifier: 
-  parent: 0
   subsection: 
   coresEditaveis:
   - indiceDoMaterialAlvo: 0
     meshOrChildren: 0
-    meshForSend: 1
     materialColorTarget: 6
     registro: 1
-  mesh: {fileID: 5962998609917577741, guid: 303b55fefb69fc9498452888554560f1, type: 3}
+  mesh: {fileID: 5962998609917577741, guid: a530b6fab0317124da6de96230c80286, type: 3}
   combinedWithDb: 13
   setID: 0
   toCombineId: 3

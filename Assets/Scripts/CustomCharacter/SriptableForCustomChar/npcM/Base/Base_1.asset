@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: Base_1
   m_EditorClassIdentifier: 
-  subsection: 0100000007000000030000000f00000002000000090000000a0000000b0000000c0000000d000000
+  subsection: 0100000003000000070000000f00000002000000090000000a0000000b0000000c0000000d000000
   coresEditaveis:
   - indiceDoMaterialAlvo: 0
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 0
-  mesh: {fileID: 6909751691388413926, guid: 9cfbe75ac3385f74e9fbc287fafd9a52, type: 3}
+  mesh: {fileID: 6909751691388413926, guid: dda8a8ed74583384181a9320270ec49a, type: 3}
   textureSign:
   - indiceDoMaterialAlvo: 0
     meshOrChildren: 0

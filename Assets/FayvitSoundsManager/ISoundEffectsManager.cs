@@ -55,6 +55,7 @@ namespace FayvitSounds
         keyDjeySound = 36,
         Fire6 = 37,
         finalisaAcaoPositiva = 38,
-        ItemImportante = 39
+        ItemImportante = 39,
+        Collapse3 = 40
     }
 }

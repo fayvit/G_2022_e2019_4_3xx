@@ -1,0 +1,526 @@
+fileFormatVersion: 2
+guid: 18e2264d6ca282b4c9bc7762dba7ac24
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bocaB
+    100004: bocaC
+    100006: c1
+    100008: c2
+    100010: c3
+    100012: cabeca
+    100014: centro
+    100016: centroReverso
+    100018: Cube
+    100020: esqueleto
+    100022: r1
+    100024: r2
+    100026: r3
+    100028: rabo
+    100030: cabeca_L
+    100032: cabeca_R
+    400000: //RootNode
+    400002: bocaB
+    400004: bocaC
+    400006: c1
+    400008: c2
+    400010: c3
+    400012: cabeca
+    400014: centro
+    400016: centroReverso
+    400018: Cube
+    400020: esqueleto
+    400022: r1
+    400024: r2
+    400026: r3
+    400028: rabo
+    400030: cabeca_L
+    400032: cabeca_R
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
+    7400000: padraoSerpente
+    7400002: andandoSerpente
+    7400004: dano1Serpente
+    7400006: emissorSerpente
+    7400008: pulaSerpente
+    7400010: chicoteDeCaldaSerpente
+    7400012: tempestadeDeFolhasSerpente
+    7400014: tempestadeDeFolhasSerpente0
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: padraoSerpente
+      takeName: padraoSerpente
+      firstFrame: -1
+      lastFrame: 659
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andandoSerpente
+      takeName: andandoSerpente
+      firstFrame: -1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano1Serpente
+      takeName: dano1Serpente
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: emissorSerpente
+      takeName: emissorSerpente
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pulaSerpente
+      takeName: pulaSerpente
+      firstFrame: -1
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: chicoteDeCaldaSerpente
+      takeName: chicoteDeCaldaSerpente
+      firstFrame: 0
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tempestadeDeFolhasSerpente0
+      takeName: tempestadeDeFolhasSerpente
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: esqueleto
+        weight: 1
+      - path: esqueleto/centro
+        weight: 1
+      - path: esqueleto/centro/c1
+        weight: 1
+      - path: esqueleto/centro/c1/c2
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaB
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/bocaC
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_L
+        weight: 1
+      - path: esqueleto/centro/c1/c2/c3/cabeca/cabeca_R
+        weight: 1
+      - path: esqueleto/centroReverso
+        weight: 1
+      - path: esqueleto/centroReverso/r1
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3
+        weight: 1
+      - path: esqueleto/centroReverso/r1/r2/r3/rabo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .349999994
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,698 @@
+fileFormatVersion: 2
+guid: cf6081e8f75f85143a96e45d5f624747
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cube_000
+  - first:
+      1: 100002
+    second: Cube_001
+  - first:
+      1: 100004
+    second: Cubo
+  - first:
+      1: 100006
+    second: //RootNode
+  - first:
+      1: 100008
+    second: Cubo_001
+  - first:
+      1: 100010
+    second: Arma__o
+  - first:
+      1: 100012
+    second: Bone
+  - first:
+      1: 100014
+    second: Bone_001
+  - first:
+      1: 100016
+    second: Bone_002
+  - first:
+      1: 100018
+    second: Bone_003
+  - first:
+      1: 100020
+    second: Bone_004
+  - first:
+      4: 400000
+    second: Cube_000
+  - first:
+      4: 400002
+    second: Cube_001
+  - first:
+      4: 400004
+    second: Cubo
+  - first:
+      4: 400006
+    second: //RootNode
+  - first:
+      4: 400008
+    second: Cubo_001
+  - first:
+      4: 400010
+    second: Arma__o
+  - first:
+      4: 400012
+    second: Bone
+  - first:
+      4: 400014
+    second: Bone_001
+  - first:
+      4: 400016
+    second: Bone_002
+  - first:
+      4: 400018
+    second: Bone_003
+  - first:
+      4: 400020
+    second: Bone_004
+  - first:
+      23: 2300000
+    second: Cube_000
+  - first:
+      23: 2300002
+    second: Cube_001
+  - first:
+      23: 2300004
+    second: Cubo
+  - first:
+      23: 2300006
+    second: Cubo_001
+  - first:
+      33: 3300000
+    second: Cube_000
+  - first:
+      33: 3300002
+    second: Cube_001
+  - first:
+      33: 3300004
+    second: Cubo
+  - first:
+      33: 3300006
+    second: Cubo_001
+  - first:
+      43: 4300000
+    second: Cube_000
+  - first:
+      43: 4300002
+    second: Cubo
+  - first:
+      43: 4300004
+    second: Cube_001
+  - first:
+      43: 4300006
+    second: Cubo_001
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: andandoNedak
+  - first:
+      74: 7400004
+    second: dano1Nedak
+  - first:
+      74: 7400006
+    second: emissorNedak
+  - first:
+      74: 7400008
+    second: padraNedak
+  - first:
+      74: 7400010
+    second: pulaNedak
+  - first:
+      74: 7400012
+    second: cairNedak
+  - first:
+      74: 7400014
+    second: hidroBombasNedak
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Cubo
+  - first:
+      137: 13700002
+    second: Cubo_001
+  - first:
+      137: 13700004
+    second: Cube_000
+  - first:
+      137: 13700006
+    second: Cube_001
+  - first:
+      74: -4783137264912587037
+    second: "Arma\xE7\xE3o|cairNedak"
+  - first:
+      74: 5497487525722415209
+    second: "Arma\xE7\xE3o|dano1Nedak"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NedakCorpo
+    second: {fileID: 2100000, guid: 5e16847ad3038ab4fb8e21232db809fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barbatanas
+    second: {fileID: 2100000, guid: 51caa867951f0a54e9a7781d2df7c3c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barraDaElise
+    second: {fileID: 2100000, guid: 2781bd16928b62d4da39270e35e45a08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elise
+    second: {fileID: 2100000, guid: 7774a812662c17142a2d887985f57c01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: interiorBarbatana
+    second: {fileID: 2100000, guid: f74706f2d037c3f44a868bc64db53336, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: olhoNedak
+    second: {fileID: 2100000, guid: fd8da8993f8ba664daf23285cb7379be, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: andandoNedak
+      takeName: andandoNedak
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "Arma\xE7\xE3o|cairNedak"
+      takeName: "Arma\xE7\xE3o|cairNedak"
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.93159616
+        functionName: olhoDeMorto
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "Arma\xE7\xE3o|dano1Nedak"
+      takeName: "Arma\xE7\xE3o|dano1Nedak"
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.45928338
+        functionName: piscadelas
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 74738a453a923e74499322e2bd681e9d,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: emissorNedak
+      takeName: emissorNedak
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: padraNedak
+      takeName: padraNedak
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pulaNedak
+      takeName: pulaNedak
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hidroBombasNedak
+      takeName: hidroBombasNedak
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/Bone
+        weight: 1
+      - path: Arma__o/Bone/Bone_001
+        weight: 1
+      - path: Arma__o/Bone/Bone_001/Bone_004
+        weight: 1
+      - path: Arma__o/Bone/Bone_002
+        weight: 1
+      - path: Arma__o/Bone/Bone_003
+        weight: 1
+      - path: Cube_000
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cubo
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.3
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.3
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

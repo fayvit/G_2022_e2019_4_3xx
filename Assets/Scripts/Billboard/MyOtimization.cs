@@ -17,6 +17,12 @@ public class MyOtimization : MonoBehaviour
 
     private static Transform target;
 
+    public float DistanceBehaviours
+    {
+        get => distanceBehaviours;
+        set => distanceBehaviours = value;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +41,7 @@ public class MyOtimization : MonoBehaviour
         MessageAgregator<MsgChangeToHero>.AddListener(OnChangeToHero);
         MessageAgregator<MsgChangeToPet>.AddListener(OnChangeToPet);
         
-
+        
     }
 
 

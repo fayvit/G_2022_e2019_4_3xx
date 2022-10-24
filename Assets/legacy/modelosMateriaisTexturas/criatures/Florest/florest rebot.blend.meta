@@ -1,0 +1,1147 @@
+fileFormatVersion: 2
+guid: 68742ee637ef9954298fe2b2ecbe26ed
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cube
+  - first:
+      1: 100002
+    second: Cubo
+  - first:
+      1: 100004
+    second: Cubo_001
+  - first:
+      1: 100006
+    second: Cubo_002
+  - first:
+      1: 100008
+    second: Cubo_003
+  - first:
+      1: 100010
+    second: Cubo_004
+  - first:
+      1: 100012
+    second: Cubo_005
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      1: 100016
+    second: Cubo_000
+  - first:
+      1: 100018
+    second: Arma__o
+  - first:
+      1: 100020
+    second: bracoD
+  - first:
+      1: 100022
+    second: bracoE
+  - first:
+      1: 100024
+    second: corpo
+  - first:
+      1: 100026
+    second: maoD
+  - first:
+      1: 100028
+    second: maoE
+  - first:
+      1: 100030
+    second: peD
+  - first:
+      1: 100032
+    second: peE
+  - first:
+      1: 100034
+    second: pernaD2
+  - first:
+      1: 100036
+    second: pernaE2
+  - first:
+      1: 100038
+    second: quadrilD
+  - first:
+      1: 100040
+    second: quadrilE
+  - first:
+      1: 100042
+    second: rabo
+  - first:
+      1: 100044
+    second: pernaD1
+  - first:
+      1: 100046
+    second: pernaE1
+  - first:
+      4: 400000
+    second: Cube
+  - first:
+      4: 400002
+    second: Cubo
+  - first:
+      4: 400004
+    second: Cubo_001
+  - first:
+      4: 400006
+    second: Cubo_002
+  - first:
+      4: 400008
+    second: Cubo_003
+  - first:
+      4: 400010
+    second: Cubo_004
+  - first:
+      4: 400012
+    second: Cubo_005
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      4: 400016
+    second: Cubo_000
+  - first:
+      4: 400018
+    second: Arma__o
+  - first:
+      4: 400020
+    second: bracoD
+  - first:
+      4: 400022
+    second: bracoE
+  - first:
+      4: 400024
+    second: corpo
+  - first:
+      4: 400026
+    second: maoD
+  - first:
+      4: 400028
+    second: maoE
+  - first:
+      4: 400030
+    second: peD
+  - first:
+      4: 400032
+    second: peE
+  - first:
+      4: 400034
+    second: pernaD2
+  - first:
+      4: 400036
+    second: pernaE2
+  - first:
+      4: 400038
+    second: quadrilD
+  - first:
+      4: 400040
+    second: quadrilE
+  - first:
+      4: 400042
+    second: rabo
+  - first:
+      4: 400044
+    second: pernaD1
+  - first:
+      4: 400046
+    second: pernaE1
+  - first:
+      23: 2300000
+    second: Cube
+  - first:
+      23: 2300002
+    second: Cubo
+  - first:
+      23: 2300004
+    second: Cubo_001
+  - first:
+      23: 2300006
+    second: Cubo_002
+  - first:
+      23: 2300008
+    second: Cubo_003
+  - first:
+      23: 2300010
+    second: Cubo_004
+  - first:
+      23: 2300012
+    second: Cubo_005
+  - first:
+      23: 2300014
+    second: Cubo_000
+  - first:
+      33: 3300000
+    second: Cube
+  - first:
+      33: 3300002
+    second: Cubo
+  - first:
+      33: 3300004
+    second: Cubo_001
+  - first:
+      33: 3300006
+    second: Cubo_002
+  - first:
+      33: 3300008
+    second: Cubo_003
+  - first:
+      33: 3300010
+    second: Cubo_004
+  - first:
+      33: 3300012
+    second: Cubo_005
+  - first:
+      33: 3300014
+    second: Cubo_000
+  - first:
+      43: 4300000
+    second: Cubo_005
+  - first:
+      43: 4300002
+    second: Cubo_001
+  - first:
+      43: 4300004
+    second: Cubo_002
+  - first:
+      43: 4300006
+    second: Cubo
+  - first:
+      43: 4300008
+    second: Cube
+  - first:
+      43: 4300010
+    second: Cubo_004
+  - first:
+      43: 4300012
+    second: Cubo_003
+  - first:
+      43: 4300014
+    second: Cubo_000
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Arma__oAction
+  - first:
+      74: 7400004
+    second: andandoFlorest
+  - first:
+      74: 7400006
+    second: dano1_Florest
+  - first:
+      74: 7400008
+    second: garraFlorest
+  - first:
+      74: 7400010
+    second: laminaDeFolhaFlorest
+  - first:
+      74: 7400012
+    second: morteFlorest
+  - first:
+      74: 7400014
+    second: padrao
+  - first:
+      74: 7400016
+    second: puloFlorest
+  - first:
+      74: 7400018
+    second: tempestadeDeFolhasFlorestR
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Cube
+  - first:
+      137: 13700002
+    second: Cubo_002
+  - first:
+      137: 13700004
+    second: Cubo_005
+  - first:
+      137: 13700006
+    second: Cubo_001
+  - first:
+      137: 13700008
+    second: Cubo_003
+  - first:
+      137: 13700010
+    second: Cubo_004
+  - first:
+      137: 13700012
+    second: Cubo_000
+  - first:
+      74: -2992010497625895913
+    second: dano1 Florest
+  - first:
+      74: 4202847201316008332
+    second: "Arma\xE7\xE3o|padrao.001"
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: andandoFlorest
+      takeName: andandoFlorest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: tempestadeDeFolhasFlorestR
+      takeName: tempestadeDeFolhasFlorestR
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1 Florest
+      takeName: dano1 Florest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: laminaDeFolhaFlorest
+      takeName: laminaDeFolhaFlorest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: padrao
+      takeName: padrao
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: garraFlorest
+      takeName: garraFlorest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: morteFlorest
+      takeName: morteFlorest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: puloFlorest
+      takeName: puloFlorest
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "Arma\xE7\xE3o|padrao.001"
+      takeName: "Arma\xE7\xE3o|padrao.001"
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 304
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpo
+        weight: 1
+      - path: Arma__o/corpo/bracoD
+        weight: 1
+      - path: Arma__o/corpo/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpo/bracoE
+        weight: 1
+      - path: Arma__o/corpo/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpo/quadrilD
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2
+        weight: 1
+      - path: Arma__o/corpo/quadrilD/pernaD1/pernaD2/peD
+        weight: 1
+      - path: Arma__o/corpo/quadrilE
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2
+        weight: 1
+      - path: Arma__o/corpo/quadrilE/pernaE1/pernaE2/peE
+        weight: 1
+      - path: Arma__o/corpo/rabo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cubo_000
+        weight: 1
+      - path: Cubo_001
+        weight: 1
+      - path: Cubo_002
+        weight: 1
+      - path: Cubo_005
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.3
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: florest rebot(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "Arma\xE7\xE3o"
+      parentName: florest rebot(Clone)
+      position: {x: -0.04696414, y: 0.013098866, z: 0.013271904}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: corpo
+      parentName: "Arma\xE7\xE3o"
+      position: {x: -0, y: -0.0000000035399688, z: 0.046888307}
+      rotation: {x: 0.68247885, y: -0.24385725, z: 0.24385718, w: 0.64443}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Cubo.000
+      parentName: corpo
+      position: {x: -0.05394197, y: 0.43664318, z: -0.058781076}
+      rotation: {x: 0.012008858, y: -0, z: -0, w: 0.99992794}
+      scale: {x: 0.10638088, y: 0.10638089, z: 0.10638089}
+    - name: Cubo.002
+      parentName: corpo
+      position: {x: -0.0016712135, y: 0.4490588, z: -0.00735698}
+      rotation: {x: -0.59210336, y: -0.15467255, z: -0.16080683, w: 0.7743586}
+      scale: {x: 0.32678694, y: 0.32678688, z: 0.326787}
+    - name: quadrilE
+      parentName: corpo
+      position: {x: -0.09752212, y: -0.068913, z: -0.009869054}
+      rotation: {x: 0.37727943, y: -0.82461596, z: 0.18461841, w: 0.37892595}
+      scale: {x: 1, y: 1.0000002, z: 1.0000061}
+    - name: pernaE1
+      parentName: quadrilE
+      position: {x: -0.0000000086613, y: 0.080273844, z: 0.0000000033527614}
+      rotation: {x: 0.029593669, y: -0.35737288, z: 0.006192296, w: 0.9334723}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pernaE2
+      parentName: pernaE1
+      position: {x: -0.000000015366822, y: 0.051784586, z: -0.0000000011175871}
+      rotation: {x: -0.10117574, y: 0.03362575, z: -0.08195215, w: 0.9909171}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.9999992}
+    - name: peE
+      parentName: pernaE2
+      position: {x: 0.0000000044703485, y: 0.05922195, z: -0.0000000013969839}
+      rotation: {x: -0.10162429, y: 0.6487207, z: -0.7541305, w: 0.011011023}
+      scale: {x: 1.0000013, y: 0.9999997, z: 1.0000013}
+    - name: peE_end
+      parentName: peE
+      position: {x: -0, y: 0.11250477, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: quadrilD
+      parentName: corpo
+      position: {x: 0.104214005, y: -0.068913, z: -0.009869054}
+      rotation: {x: 0.88114786, y: 0.38296172, z: -0.24831924, w: 0.123517066}
+      scale: {x: 1.0000002, y: 0.99999976, z: 1.000001}
+    - name: pernaD1
+      parentName: quadrilD
+      position: {x: 0.0000000030733647, y: 0.08046158, z: -0.0000000033527614}
+      rotation: {x: 0.029954467, y: 0.33091277, z: -0.025189215, w: 0.9428494}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: pernaD2
+      parentName: pernaD1
+      position: {x: -0.0000000011175871, y: 0.051721986, z: -0.0000000033527614}
+      rotation: {x: -0.09225566, y: -0.033471137, z: 0.03279833, w: 0.994632}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.99999994}
+    - name: peD
+      parentName: pernaD2
+      position: {x: -0.0000000061467293, y: 0.058873065, z: 0.0000000013969839}
+      rotation: {x: 0.08661094, y: 0.6484178, z: -0.75631136, w: 0.0067882426}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000007}
+    - name: peD_end
+      parentName: peD
+      position: {x: -0, y: 0.11250477, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bracoE
+      parentName: corpo
+      position: {x: -0.30675718, y: 0.17511228, z: 0.003693743}
+      rotation: {x: -0.52442074, y: 0.4508669, z: 0.4430854, w: 0.5704185}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.9999999}
+    - name: maoE
+      parentName: bracoE
+      position: {x: 0.0000000027939677, y: 0.14668688, z: 0.0000000055180864}
+      rotation: {x: 0.08727226, y: -0.713414, z: 0.0026527941, w: -0.6952819}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000001}
+    - name: maoE_end
+      parentName: maoE
+      position: {x: -0, y: 0.12118921, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bracoD
+      parentName: corpo
+      position: {x: 0.3050842, y: 0.18347712, z: 0.00034779983}
+      rotation: {x: -0.4165215, y: -0.50522006, z: -0.36697754, w: 0.6607497}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000002}
+    - name: maoD
+      parentName: bracoD
+      position: {x: 0.000000006705523, y: 0.13292539, z: 0.000000019557774}
+      rotation: {x: 0.5605682, y: 0.51445574, z: -0.5660609, w: -0.31729108}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: maoD_end
+      parentName: maoD
+      position: {x: -0, y: 0.13919885, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rabo
+      parentName: corpo
+      position: {x: -0.002392583, y: 0.043982204, z: -0.20630236}
+      rotation: {x: -0.6928875, y: 0.09624602, z: -0.11917327, w: 0.704586}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: Cubo.005
+      parentName: rabo
+      position: {x: 0.02520184, y: 0.120931, z: 0.007132787}
+      rotation: {x: 0.005857841, y: -0.198304, z: 0.0042241653, w: 0.980114}
+      scale: {x: 0.1350457, y: 0.1350457, z: 0.1350457}
+    - name: Cubo.001
+      parentName: rabo
+      position: {x: -0.09319146, y: 0.1803232, z: 0.28218043}
+      rotation: {x: -0.76254135, y: -0.12696548, z: -0.15238799, w: 0.61578274}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+    - name: rabo_end
+      parentName: rabo
+      position: {x: -0, y: 0.10589443, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: florest rebot(Clone)
+      position: {x: -0, y: 0.45311567, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.3
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

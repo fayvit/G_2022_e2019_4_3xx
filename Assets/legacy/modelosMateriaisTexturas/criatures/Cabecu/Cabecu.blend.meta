@@ -1,0 +1,590 @@
+fileFormatVersion: 2
+guid: 126af1215cd595a478213b62b7292dfe
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: C_rculo
+    100002: //RootNode
+    100004: corpo_000
+    100006: Arma__o
+    100008: base
+    100010: bocaB
+    100012: bocaC
+    100014: calcanharD
+    100016: cancanharE
+    100018: corpo
+    100020: orelhaD
+    100022: orelhaE
+    100024: peD1
+    100026: peD2
+    100028: peE1
+    100030: peE2
+    100032: pernaD
+    100034: pernaE
+    400000: C_rculo
+    400002: //RootNode
+    400004: corpo_000
+    400006: Arma__o
+    400008: base
+    400010: bocaB
+    400012: bocaC
+    400014: calcanharD
+    400016: cancanharE
+    400018: corpo
+    400020: orelhaD
+    400022: orelhaE
+    400024: peD1
+    400026: peD2
+    400028: peE1
+    400030: peE2
+    400032: pernaD
+    400034: pernaE
+    2300000: C_rculo
+    2300002: corpo_000
+    3300000: C_rculo
+    3300002: corpo_000
+    4300000: C_rculo
+    4300002: corpo_000
+    7400000: Default Take
+    7400002: padraoCabecu
+    7400004: andandoCabecu
+    7400006: cairCabecu
+    7400008: dano1Cabecu
+    7400010: dano2Cabecu
+    7400012: pulaCabecu
+    7400014: emissorCabecu
+    7400016: chuteCabecu
+    9500000: //RootNode
+    13700000: corpo_000
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: andandoCabecu
+      takeName: andandoCabecu
+      firstFrame: -1
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: padraoCabecu
+      takeName: padraoCabecu
+      firstFrame: 1
+      lastFrame: 528
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: cairCabecu
+      takeName: cairCabecu
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1Cabecu
+      takeName: dano1Cabecu
+      firstFrame: 0
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano2Cabecu
+      takeName: dano2Cabecu
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pulaCabecu
+      takeName: pulaCabecu
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: emissorCabecu
+      takeName: emissorCabecu
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: chuteCabecu
+      takeName: chuteCabecu
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/base
+        weight: 1
+      - path: Arma__o/base/corpo
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaD
+        weight: 1
+      - path: Arma__o/base/corpo/orelhaE
+        weight: 1
+      - path: Arma__o/base/pernaD
+        weight: 1
+      - path: Arma__o/base/pernaD/calcanharD
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1
+        weight: 1
+      - path: Arma__o/base/pernaD/peD1/peD2
+        weight: 1
+      - path: Arma__o/base/pernaE
+        weight: 1
+      - path: Arma__o/base/pernaE/cancanharE
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1
+        weight: 1
+      - path: Arma__o/base/pernaE/peE1/peE2
+        weight: 1
+      - path: corpo_000
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,979 @@
+fileFormatVersion: 2
+guid: 387ed58a3d59f0646a2ecd7325a24e8d
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cubo
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: Vazio
+  - first:
+      1: 100006
+    second: Arma__o
+  - first:
+      1: 100008
+    second: Bone
+  - first:
+      1: 100010
+    second: Bone_001
+  - first:
+      1: 100012
+    second: Bone_001_L
+  - first:
+      1: 100014
+    second: Bone_001_L_001
+  - first:
+      1: 100016
+    second: Bone_001_R
+  - first:
+      1: 100018
+    second: Bone_001_R_001
+  - first:
+      1: 100020
+    second: Bone_002
+  - first:
+      1: 100022
+    second: Bone_004
+  - first:
+      1: 100024
+    second: Bone_L
+  - first:
+      1: 100026
+    second: Bone_L_001
+  - first:
+      1: 100028
+    second: Bone_L_002
+  - first:
+      1: 100030
+    second: Bone_R
+  - first:
+      1: 100032
+    second: Bone_R_001
+  - first:
+      1: 100034
+    second: Bone_R_002
+  - first:
+      1: 100036
+    second: bracoD
+  - first:
+      1: 100038
+    second: bracoE
+  - first:
+      1: 100040
+    second: cabeca
+  - first:
+      1: 100042
+    second: corpoBase
+  - first:
+      1: 100044
+    second: corpoP
+  - first:
+      1: 100046
+    second: coxaD
+  - first:
+      1: 100048
+    second: coxaE
+  - first:
+      1: 100050
+    second: maoD
+  - first:
+      1: 100052
+    second: maoE
+  - first:
+      1: 100054
+    second: peD
+  - first:
+      1: 100056
+    second: peE
+  - first:
+      1: 100058
+    second: pernaD
+  - first:
+      1: 100060
+    second: pernaE
+  - first:
+      1: 100062
+    second: pescoco
+  - first:
+      1: 100064
+    second: cabeca_L
+  - first:
+      1: 100066
+    second: cabeca_R
+  - first:
+      1: 100068
+    second: olhoD
+  - first:
+      1: 100070
+    second: olhoE
+  - first:
+      4: 400000
+    second: Cubo
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Vazio
+  - first:
+      4: 400006
+    second: Arma__o
+  - first:
+      4: 400008
+    second: Bone
+  - first:
+      4: 400010
+    second: Bone_001
+  - first:
+      4: 400012
+    second: Bone_001_L
+  - first:
+      4: 400014
+    second: Bone_001_L_001
+  - first:
+      4: 400016
+    second: Bone_001_R
+  - first:
+      4: 400018
+    second: Bone_001_R_001
+  - first:
+      4: 400020
+    second: Bone_002
+  - first:
+      4: 400022
+    second: Bone_004
+  - first:
+      4: 400024
+    second: Bone_L
+  - first:
+      4: 400026
+    second: Bone_L_001
+  - first:
+      4: 400028
+    second: Bone_L_002
+  - first:
+      4: 400030
+    second: Bone_R
+  - first:
+      4: 400032
+    second: Bone_R_001
+  - first:
+      4: 400034
+    second: Bone_R_002
+  - first:
+      4: 400036
+    second: bracoD
+  - first:
+      4: 400038
+    second: bracoE
+  - first:
+      4: 400040
+    second: cabeca
+  - first:
+      4: 400042
+    second: corpoBase
+  - first:
+      4: 400044
+    second: corpoP
+  - first:
+      4: 400046
+    second: coxaD
+  - first:
+      4: 400048
+    second: coxaE
+  - first:
+      4: 400050
+    second: maoD
+  - first:
+      4: 400052
+    second: maoE
+  - first:
+      4: 400054
+    second: peD
+  - first:
+      4: 400056
+    second: peE
+  - first:
+      4: 400058
+    second: pernaD
+  - first:
+      4: 400060
+    second: pernaE
+  - first:
+      4: 400062
+    second: pescoco
+  - first:
+      4: 400064
+    second: cabeca_L
+  - first:
+      4: 400066
+    second: cabeca_R
+  - first:
+      4: 400068
+    second: olhoD
+  - first:
+      4: 400070
+    second: olhoE
+  - first:
+      23: 2300000
+    second: Cubo
+  - first:
+      33: 3300000
+    second: Cubo
+  - first:
+      43: 4300000
+    second: Cubo
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: padraoRabitler
+  - first:
+      74: 7400004
+    second: andandoRabitler
+  - first:
+      74: 7400006
+    second: pulaRabitler
+  - first:
+      74: 7400008
+    second: caindoRabitler
+  - first:
+      74: 7400010
+    second: dano1Rabitler
+  - first:
+      74: 7400012
+    second: dano2Rabitler
+  - first:
+      74: 7400014
+    second: emisorRabitler
+  - first:
+      74: 7400016
+    second: dentadaRabitler
+  - first:
+      74: 7400018
+    second: avalancheRabitler
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Cubo
+  - first:
+      74: -2390972666930637304
+    second: "Arma\xE7\xE3o|pulaRabitler"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: dc979dff91289da448732c31b6266690, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 73bee26627ca34e4c8f0375e8452e35e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 548f2223d2ac0ca44a4141e4556bff87, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: andandoRabitler
+      takeName: andandoRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: padraoRabitler
+      takeName: padraoRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 740
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: "Arma\xE7\xE3o|pulaRabitler"
+      takeName: "Arma\xE7\xE3o|pulaRabitler"
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: caindoRabitler
+      takeName: caindoRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1Rabitler
+      takeName: dano1Rabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano2Rabitler
+      takeName: dano2Rabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: emisorRabitler
+      takeName: emisorRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dentadaRabitler
+      takeName: dentadaRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: avalancheRabitler
+      takeName: avalancheRabitler
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o
+        weight: 1
+      - path: Arma__o/corpoBase
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoD/maoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/bracoE/maoE
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o/corpoBase/corpoP/pescoco/cabeca/olhoE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaD/pernaD/peD
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE
+        weight: 1
+      - path: Arma__o/corpoBase/coxaE/pernaE/peE
+        weight: 1
+      - path: Cubo
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.45
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.45
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

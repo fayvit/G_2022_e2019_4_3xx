@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: 741f828fbead71a46a0e68d5c0909da4
+timeCreated: 1492617244
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arma__o_001
+    100002: B_zier_-_Curva_001
+    100004: cabeca
+    100006: coluna1
+    100008: coluna2
+    100010: coluna3
+    100012: peD
+    100014: peE
+    100016: pernaD
+    100018: pernaE
+    100020: pescoco
+    100022: //RootNode
+    100024: rabo1
+    100026: rabo2
+    400000: Arma__o_001
+    400002: B_zier_-_Curva_001
+    400004: cabeca
+    400006: coluna1
+    400008: coluna2
+    400010: coluna3
+    400012: peD
+    400014: peE
+    400016: pernaD
+    400018: pernaE
+    400020: pescoco
+    400022: //RootNode
+    400024: rabo1
+    400026: rabo2
+    4300000: B_zier_-_Curva_001
+    7400000: Default Take
+    7400002: Arma__o_001Action
+    7400004: tosteAtaquePolyCharm
+    7400006: andandoPolyCharm_001
+    7400008: dano1PolyCharm
+    7400010: dano2PolyCharm
+    7400012: emissorPolyCHarm
+    7400014: GarraPolyCharm
+    7400016: mortePolyCharm
+    7400018: padraoPolyCharm
+    7400020: pulaPolyCharm
+    7400022: andandoPolyCharm
+    9500000: //RootNode
+    13700000: B_zier_-_Curva_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 187
+      lastFrame: 695
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: andandoPolyCharm
+      takeName: andandoPolyCharm
+      firstFrame: 119
+      lastFrame: 695
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano1PolyCharm
+      takeName: dano1PolyCharm
+      firstFrame: 720
+      lastFrame: 727
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dano2PolyCharm
+      takeName: dano2PolyCharm
+      firstFrame: 727
+      lastFrame: 732
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: emissorPolyCHarm
+      takeName: emissorPolyCHarm
+      firstFrame: 712
+      lastFrame: 717
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GarraPolyCharm
+      takeName: GarraPolyCharm
+      firstFrame: 740
+      lastFrame: 780
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: mortePolyCharm
+      takeName: mortePolyCharm
+      firstFrame: 727
+      lastFrame: 737
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: padraoPolyCharm
+      takeName: padraoPolyCharm
+      firstFrame: 189
+      lastFrame: 695
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pulaPolyCharm
+      takeName: pulaPolyCharm
+      firstFrame: 699
+      lastFrame: 712
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: tosteAtaquePolyCharm
+      takeName: tosteAtaquePolyCharm
+      firstFrame: -1
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva_001
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.3
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

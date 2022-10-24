@@ -10,6 +10,7 @@ namespace CustomizationSpace
     {
         [SerializeField] private bool vai;
         [SerializeField] private string sId;
+        [SerializeField] private bool manterPai;
         // Start is called before the first frame update
         void Start()
         {
@@ -65,10 +66,19 @@ namespace CustomizationSpace
 
             G.name = "Npc_" + sId;
 
+            Transform pai = null;
+            if (manterPai)
+                pai = transform.parent;
+
+            
+
             InEditorSupportSingleton.Instance.InvokeOnCountFrame(() =>
             {
                 G.transform.position = transform.position;
                 transform.parent = G.transform;
+                if(pai!=null)
+                    G.transform.SetParent(pai);
+
 
             }, 10);
         }

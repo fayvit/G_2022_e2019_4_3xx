@@ -181,7 +181,8 @@ namespace Criatures2021
         {
             if (obj.dono == gameObject&& !InTeste)
             {
-                SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
+                if (!InTeste)
+                    SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
             }
         }
 

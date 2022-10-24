@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
 using FayvitSounds;
 using FayvitUI;
-using FayvitLoadScene;
+//using FayvitLoadScene;
 using FayvitSave;
 using FayvitCommandReader;
 using TextBankSpace;
@@ -136,8 +136,6 @@ public class StartMenuSceneManager : MonoBehaviour
         state = LocalState.confirmationOpened;
     }
 
-    [SerializeField] private string DebugAutoKeyval;
-
     private void EscolhiQualCarregar(int indice)
     {
         state = LocalState.externalAction;
@@ -211,14 +209,14 @@ public class StartMenuSceneManager : MonoBehaviour
         });
     }
 
-    private void SeraHoraDoFadeIn(Scene arg0, LoadSceneMode arg1)
-    {
-        if (arg0 == SceneManager.GetSceneByName(NomesCenasEspeciais.CenaDeCarregamento.ToString()))
-        {
-            SceneManager.sceneLoaded -= SeraHoraDoFadeIn;
-            AbstractGlobalController.Instance.FadeV.StartFadeIn();
-        }
-    }
+    //private void SeraHoraDoFadeIn(Scene arg0, LoadSceneMode arg1)
+    //{
+    //    if (arg0 == SceneManager.GetSceneByName(NomesCenasEspeciais.CenaDeCarregamento.ToString()))
+    //    {
+    //        SceneManager.sceneLoaded -= SeraHoraDoFadeIn;
+    //        AbstractGlobalController.Instance.FadeV.StartFadeIn();
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()

@@ -79,6 +79,19 @@ namespace Criatures2021
                 controle.Move(ativa.VelocidadeDeGolpe * G.transform.forward * Time.deltaTime + Vector3.down * 9.8f);
             }
         }
+
+        public void Interromper(PetAttackBase P)
+        {
+            if (controle)
+            {
+                tempoDecorrido = P.TempoDeMoveMax;
+                GameObject G = GameObject.Find("colisor" + P.Nome.ToString());
+                if (G && HierarchyTools.EstaNaHierarquia(controle.transform, G.transform))
+                {
+                    MonoBehaviour.Destroy(G);
+                }
+            }
+        }
     }
 
     [System.Serializable]
@@ -109,7 +122,8 @@ namespace Criatures2021
         chuvaVenenosa,
         avalanche,
         colisorParaGarra,
-        colisorDentada
+        colisorDentada,
+        impulsoAquatico
     }
 
     public enum ImpactParticles
@@ -154,6 +168,7 @@ namespace Criatures2021
         particulaDoPoderPergaminhoFora,
         particulaPerfeicao,
         particulaDoPVpergaminho,
-        particulaDoPEpergaminho
+        particulaDoPEpergaminho,
+        preparaImpulsoAquatico
     }
 }

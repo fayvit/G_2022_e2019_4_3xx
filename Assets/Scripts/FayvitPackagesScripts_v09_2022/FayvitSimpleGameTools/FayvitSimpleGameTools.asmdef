@@ -1,9 +1,9 @@
 {
     "name": "FayvitSimpleGameTools",
     "references": [
-        "GUID:b237fa24ada51e64a92c59424705e7af",
-        "GUID:035d19e5a99de4a44934fff90abd1d94",
-        "GUID:ed0ac067c21139e42916354d711bcad0"
+        "GUID:420446f1fb130a342af534847951d018",
+        "GUID:98986850b7781cf4f8b797ba955cdfc5",
+        "GUID:809a2221ffcbfec42b9169318c87d2aa"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

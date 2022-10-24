@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: Nariz 3
   m_EditorClassIdentifier: 
-  mesh: {fileID: 6962009326359967269, guid: 4082b2592fec6424d8f6b1b46676b2a4, type: 3}
-  subsection: 0
+  subsection: 
   coresEditaveis:
   - indiceDoMaterialAlvo: 0
-    materialColorTarget: 1
     meshOrChildren: 0
+    materialColorTarget: 1
     registro: 0
-    meshForSend: 1
+  mesh: {fileID: 6962009326359967269, guid: 21d1b43de867757468c3d8e157c38944, type: 3}
+  textureSign: []

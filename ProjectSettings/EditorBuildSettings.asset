@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/cenas/planicieDeKatids.unity
     guid: 3db079379808e374a9ffc8ae0f0e4814
+  - enabled: 1
+    path: Assets/cenas/CutsceneRandomHooliganKatids.unity
+    guid: 27fdcd74492db8c479752386a697e5ca
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: ace9391c534221540baae8cad5038d94,
+    com.unity.addressableassets: {fileID: 11400000, guid: 9055d4f72544af14592c44899ec70088,
       type: 2}

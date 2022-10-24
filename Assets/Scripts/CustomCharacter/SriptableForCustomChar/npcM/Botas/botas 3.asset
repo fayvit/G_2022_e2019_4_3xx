@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72210dc1c359c2e49a6072707fc84765, type: 3}
+  m_Script: {fileID: 11500000, guid: 677ec01b67a5d9041b06684c4f3faf49, type: 3}
   m_Name: botas 3
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,9 +18,13 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 1
-  mesh: {fileID: 4369261211215164568, guid: 6c61ca41cc74d464489fa3490be41245, type: 3}
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 15
+    registro: 1
+  mesh: {fileID: 4369261211215164568, guid: e996126697951114a87af491e0a4d02f, type: 3}
   combinedWithDb: 12
   setID: 0
   toCombineId: 2
-  combinedWithId: 02000000030000000400000005000000
+  combinedWithId: 01000000020000000300000004000000
   textureSign: []

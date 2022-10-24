@@ -52,8 +52,8 @@ public class PersonagemParaTeste : MonoBehaviour
         
 
 
-
-        SceneManager.MoveGameObjectToScene(Ggg, SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()));
+        if(SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()).isLoaded)
+            SceneManager.MoveGameObjectToScene(Ggg, SceneManager.GetSceneByName(NomesCenasEspeciais.ComunsDeFase.ToString()));
 
         SupportSingleton.Instance.InvokeOnEndFrame(() =>
         {

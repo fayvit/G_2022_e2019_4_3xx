@@ -340,7 +340,8 @@ namespace TalkSpace
                 case ThisState.finalizacao:
                     
                     AbstractGameController.Instance.MyKeys.MudaAutoShift(chaveDaLuta, true);
-                    FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new Criatures2021.CriaturesSaveDates());
+                    if (!MyGlobalController.MainPlayer.InTeste)
+                        FayvitSave.SaveDatesManager.SalvarAtualizandoDados(new CriaturesSaveDates());
                     VoltarAoModoPasseio();
                 break;
                 case ThisState.conversaDeLutaGanha:

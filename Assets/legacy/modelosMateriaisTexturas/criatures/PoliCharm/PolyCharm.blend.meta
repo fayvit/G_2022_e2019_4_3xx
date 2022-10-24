@@ -1,0 +1,1325 @@
+fileFormatVersion: 2
+guid: 8ea7d1286587c3247aeb07b0707920d9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arma__o
+    100002: Arma__o_001
+    100004: B_zier_-_Curva
+    100006: boca
+    100008: Bone
+    100010: Bone_001
+    100012: Bone_002
+    100014: Bone_003
+    100016: Bone_004
+    100018: Bone_005
+    100020: Bone_006
+    100022: Bone_007
+    100024: Bone_008
+    100026: Bone_009
+    100028: Bone_010
+    100030: Bone_011
+    100032: Bone_012
+    100034: Bone_013
+    100036: Bone_014
+    100038: Bone_015
+    100040: Bone_016
+    100042: Bone_017
+    100044: Bone_018
+    100046: Bone_019
+    100048: Bone_020
+    100050: Bone_021
+    100052: cabeca
+    100054: coluna1
+    100056: coluna2
+    100058: coluna3
+    100060: Esfera
+    100062: olhoD
+    100064: olhoD_001
+    100066: olhoD_002
+    100068: OlhoE
+    100070: OlhoE_002
+    100072: palpebraEC
+    100074: peD
+    100076: peE
+    100078: pernaD
+    100080: pernaE
+    100082: pescoco
+    100084: //RootNode
+    100086: rabo1
+    100088: rabo2
+    400000: Arma__o
+    400002: Arma__o_001
+    400004: B_zier_-_Curva
+    400006: boca
+    400008: Bone
+    400010: Bone_001
+    400012: Bone_002
+    400014: Bone_003
+    400016: Bone_004
+    400018: Bone_005
+    400020: Bone_006
+    400022: Bone_007
+    400024: Bone_008
+    400026: Bone_009
+    400028: Bone_010
+    400030: Bone_011
+    400032: Bone_012
+    400034: Bone_013
+    400036: Bone_014
+    400038: Bone_015
+    400040: Bone_016
+    400042: Bone_017
+    400044: Bone_018
+    400046: Bone_019
+    400048: Bone_020
+    400050: Bone_021
+    400052: cabeca
+    400054: coluna1
+    400056: coluna2
+    400058: coluna3
+    400060: Esfera
+    400062: olhoD
+    400064: olhoD_001
+    400066: olhoD_002
+    400068: OlhoE
+    400070: OlhoE_002
+    400072: palpebraEC
+    400074: peD
+    400076: peE
+    400078: pernaD
+    400080: pernaE
+    400082: pescoco
+    400084: //RootNode
+    400086: rabo1
+    400088: rabo2
+    4300000: B_zier_-_Curva
+    4300002: Esfera
+    7400000: cabeloPolyCharm
+    7400002: andanDoPolyCharm
+    7400004: padraoPolyCharm
+    7400006: pulandoPoly
+    7400008: emissor
+    7400010: dano1
+    7400012: dano2Poly
+    7400014: quedaPoly
+    7400016: GARRApOLY
+    7400018: tosteAtaquePolyCharm
+    7400020: emissorPolyCharm
+    9500000: //RootNode
+    13700000: B_zier_-_Curva
+    13700002: Esfera
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: cabeloPolyCharm
+      takeName: Default Take
+      firstFrame: 80
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andanDoPolyCharm
+      takeName: Arma__o_001Action
+      firstFrame: 120
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: padraoPolyCharm
+      takeName: Default Take
+      firstFrame: 180
+      lastFrame: 699
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pulandoPoly
+      takeName: Default Take
+      firstFrame: 701
+      lastFrame: 710
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tosteAtaquePolyCharm
+      takeName: tosteAtaquePolyCharm
+      firstFrame: -1
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano1
+      takeName: Default Take
+      firstFrame: 721
+      lastFrame: 727
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: dano2Poly
+      takeName: Default Take
+      firstFrame: 728
+      lastFrame: 735
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: quedaPoly
+      takeName: Default Take
+      firstFrame: 728
+      lastFrame: 737
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: GARRApOLY
+      takeName: Default Take
+      firstFrame: 750
+      lastFrame: 775
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: emissorPolyCharm
+      takeName: Arma__o_001Action
+      firstFrame: 713
+      lastFrame: 716
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arma__o_001
+        weight: 1
+      - path: Arma__o_001/Arma__o
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_020
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone/Bone_021
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_001/Bone_005
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_002/Bone_003/Bone_004
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_006/Bone_007
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_008/Bone_009/Bone_010
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_011/Bone_012/Bone_013
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_014/Bone_015
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_016/Bone_017
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018
+        weight: 1
+      - path: Arma__o_001/Arma__o/Bone_018/Bone_019
+        weight: 1
+      - path: Arma__o_001/coluna1
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/boca
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_001
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/olhoD_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/OlhoE_002
+        weight: 1
+      - path: Arma__o_001/coluna1/coluna2/coluna3/pescoco/cabeca/palpebraEC
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaD/peD
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE
+        weight: 1
+      - path: Arma__o_001/coluna1/pernaE/peE
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1
+        weight: 1
+      - path: Arma__o_001/coluna1/rabo1/rabo2
+        weight: 1
+      - path: B_zier_-_Curva
+        weight: 1
+      - path: Esfera
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .25
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

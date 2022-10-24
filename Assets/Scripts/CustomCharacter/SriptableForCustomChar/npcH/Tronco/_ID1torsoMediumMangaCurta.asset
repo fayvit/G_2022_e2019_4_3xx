@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72210dc1c359c2e49a6072707fc84765, type: 3}
+  m_Script: {fileID: 11500000, guid: 677ec01b67a5d9041b06684c4f3faf49, type: 3}
   m_Name: _ID1torsoMediumMangaCurta
   m_EditorClassIdentifier: 
   subsection: 
@@ -42,9 +42,9 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 17
     registro: 1
-  mesh: {fileID: 1336381406755155612, guid: c6ddc7a6cf8418845a713ac74d815bb0, type: 3}
+  mesh: {fileID: 1336381406755155612, guid: d31dad102052c53489c06e8ba70ed323, type: 3}
   combinedWithDb: 10
   setID: 0
   toCombineId: 1
-  combinedWithId: 01000000
+  combinedWithId: 00000000
   textureSign: []

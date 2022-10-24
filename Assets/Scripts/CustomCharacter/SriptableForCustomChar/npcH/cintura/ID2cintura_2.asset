@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d49c452a9859444a0b075d2d514974, type: 3}
+  m_Script: {fileID: 11500000, guid: bc660910127ebcd46968ff4b94d57089, type: 3}
   m_Name: ID2cintura_2
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,5 +18,9 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 1
     registro: 1
-  mesh: {fileID: 8055411889603545549, guid: 85148881a6390a448b51ac83817a017a, type: 3}
+  - indiceDoMaterialAlvo: 0
+    meshOrChildren: 0
+    materialColorTarget: 15
+    registro: 1
+  mesh: {fileID: 8055411889603545549, guid: 9f7185ade98c5c94f9ddbbf50dd8162c, type: 3}
   textureSign: []

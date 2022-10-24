@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e062fdcc86ed4ed48bd6eae5050073ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f3bd875bdcb897499d29c51637a1620, type: 3}
   m_Name: Umidade_2
   m_EditorClassIdentifier: 
   subsection: 
@@ -18,6 +18,6 @@ MonoBehaviour:
     meshOrChildren: 0
     materialColorTarget: 4
     registro: 1
-  baseTex: {fileID: 2800000, guid: 6263596146df54b4b897a3a088b9868d, type: 3}
-  maskTex: {fileID: 2800000, guid: c69451331931a834c947f984d1d36027, type: 3}
+  baseTex: {fileID: 2800000, guid: 7f9fc74c934bf5446be8bba2d16b1525, type: 3}
+  maskTex: {fileID: 2800000, guid: 412dca6153acb5a4e8128df5b1dc584d, type: 3}
   meshParent: 0
