@@ -249,6 +249,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\Derek_FirstTalk.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\DisplayTextManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\FightForTrainerGround.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\IaFightForTrainerGround.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\IanMerchant.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\Ian_FirstTalkmanager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\TalkSpace\IniciarComTrueSeNaoConversado.cs" />

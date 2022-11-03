@@ -519,7 +519,8 @@ namespace TextBankSpace
                 "Hidro Bomba","Bola Psiquica","Toste Ataque","Tempestade de Folhas","Chuva Venenosa","Multiplicar","Tempestade Eletrica",
                 "Avalanche",/*ID=40*/"Anel do Olhar","Olhar Mal","Cortina de Terra","Teletransporte","Sobre Voo","Olhar Paralisante",
                 "Bomba de Gás","Rajada de Gás","Cortina de Fumaça","Bastão","Sabre de Asa","Sabre de Bastão","Sabre de Nadadeira",
-                "Sabre de Espada","Tesoura",/*ID=55*/"Ataque em Giro","Impulso Aquático"
+                "Sabre de Espada","Tesoura",/*ID=55*/"Ataque em Giro","Impulso Aquático","Impulso Flamejante","Deslizamento em Gosma",
+                "Flash Psiquico",/*ID=60*/"Impulso Eletrico"
             }
         },
      //   {

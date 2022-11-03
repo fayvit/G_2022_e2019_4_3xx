@@ -46,6 +46,15 @@ namespace Criatures2021
                 ModPersonagem = 0,
                 Colisor = new Colisor("Esqueleto/gomo1/cabeca"),
                 Nome = AttackNameId.olharEnfraquecedor,
+                TaxaDeUso = .1f,
+                DistanciaEmissora = 0.125f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 10,
+                ModPersonagem = 0,
+                Colisor = new Colisor("Esqueleto/gomo1/"),
+                Nome = AttackNameId.deslizamentoNaGosma,
                 TaxaDeUso = 1,
                 DistanciaEmissora = 0.125f
             },

@@ -12,6 +12,7 @@ namespace Criatures2021
         public AttackDiferentialId carac = AttackDiferentialId.colisao;
         public DamageBaseAtribute damageAtribute = DamageBaseAtribute.poder;
         public bool podeNoAr = false;
+        public bool ignoreDodge = false;
 
         public int potenciaMinima = 1;
         public int potenciaCorrente = 2;

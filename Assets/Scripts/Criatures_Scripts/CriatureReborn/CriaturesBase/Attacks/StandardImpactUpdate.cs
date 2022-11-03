@@ -69,8 +69,12 @@ namespace Criatures2021
 
             if (tempoDecorrido < ativa.TempoDeMoveMax)
             {
-                if (((int)(tempoDecorrido * 10)) % 2 == 0 && alvoProcurado)
-                    AttackHelper(alvoProcurado, G.transform);
+                if (alvoProcurado)
+                {
+                    float dot = Vector3.Dot(G.transform.forward, DirectionOnThePlane.NormalizedInTheUp(alvoProcurado.position - G.transform.position));
+                    if (((int)(tempoDecorrido * 10)) % 2 == 0 && dot > .75f)
+                        AttackHelper(alvoProcurado, G.transform);
+                }
 
                 ativa.DirDeREpulsao = G.transform.forward;
 
@@ -123,7 +127,12 @@ namespace Criatures2021
         avalanche,
         colisorParaGarra,
         colisorDentada,
-        impulsoAquatico
+        impulsoAquatico,
+        impulsoFlamejante,
+        deslizamentoNaGosma,
+        flashPsiquico,
+        impulsoEletrico,
+        simpleArea
     }
 
     public enum ImpactParticles
@@ -169,6 +178,13 @@ namespace Criatures2021
         particulaPerfeicao,
         particulaDoPVpergaminho,
         particulaDoPEpergaminho,
-        preparaImpulsoAquatico
+        preparaImpulsoAquatico,
+        preparaImpulsoFlamejante,
+        preparaDeslizamentoNaGosma,
+        preparaFlashPsiquico,
+        preparaImpulsoEletrico,
+        preparaImpactoAoChao,
+        impactoDePedraAoChao,
+        particulaPedraPartida
     }
 }

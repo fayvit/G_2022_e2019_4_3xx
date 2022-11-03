@@ -1,272 +1,780 @@
 fileFormatVersion: 2
 guid: b9aea39a7227c9f4faecebbf72ebc240
 ModelImporter:
-  serializedVersion: 16
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: corpo
-    100004: Esfera
-    100006: Esqueleto
-    100008: chest
-    100010: f_index_01_L
-    100012: f_index_01_L_001
-    100014: f_index_01_R
-    100016: f_index_01_R_001
-    100018: f_index_02_L
-    100020: f_index_02_L_001
-    100022: f_index_02_R
-    100024: f_index_02_R_001
-    100026: f_index_03_L
-    100028: f_index_03_L_001
-    100030: f_index_03_R
-    100032: f_index_03_R_001
-    100034: f_middle_01_L
-    100036: f_middle_01_L_001
-    100038: f_middle_01_R
-    100040: f_middle_01_R_001
-    100042: f_middle_02_L
-    100044: f_middle_02_L_001
-    100046: f_middle_02_R
-    100048: f_middle_02_R_001
-    100050: f_middle_03_L
-    100052: f_middle_03_L_001
-    100054: f_middle_03_R
-    100056: f_middle_03_R_001
-    100058: f_pinky_01_L
-    100060: f_pinky_01_L_001
-    100062: f_pinky_01_R
-    100064: f_pinky_01_R_001
-    100066: f_pinky_02_L
-    100068: f_pinky_02_L_001
-    100070: f_pinky_02_R
-    100072: f_pinky_02_R_001
-    100074: f_pinky_03_L
-    100076: f_pinky_03_L_001
-    100078: f_pinky_03_R
-    100080: f_pinky_03_R_001
-    100082: f_ring_01_L
-    100084: f_ring_01_L_001
-    100086: f_ring_01_R
-    100088: f_ring_01_R_001
-    100090: f_ring_02_L
-    100092: f_ring_02_L_001
-    100094: f_ring_02_R
-    100096: f_ring_02_R_001
-    100098: f_ring_03_L
-    100100: f_ring_03_L_001
-    100102: f_ring_03_R
-    100104: f_ring_03_R_001
-    100106: foot_L
-    100108: foot_R
-    100110: forearm_L
-    100112: forearm_L_001
-    100114: forearm_R
-    100116: forearm_R_001
-    100118: hand_L
-    100120: hand_L_001
-    100122: hand_R
-    100124: hand_R_001
-    100126: head
-    100128: heel_02_L
-    100130: heel_02_R
-    100132: heel_L
-    100134: heel_R
-    100136: hips
-    100138: metarig
-    100140: neck
-    100142: palm_01_L
-    100144: palm_01_L_001
-    100146: palm_01_R
-    100148: palm_01_R_001
-    100150: palm_02_L
-    100152: palm_02_L_001
-    100154: palm_02_R
-    100156: palm_02_R_001
-    100158: palm_03_L
-    100160: palm_03_L_001
-    100162: palm_03_R
-    100164: palm_03_R_001
-    100166: palm_04_L
-    100168: palm_04_L_001
-    100170: palm_04_R
-    100172: palm_04_R_001
-    100174: shin_L
-    100176: shin_R
-    100178: spine
-    100180: thigh_L
-    100182: thigh_R
-    100184: thumb_01_L
-    100186: thumb_01_L_001
-    100188: thumb_01_R
-    100190: thumb_01_R_001
-    100192: thumb_02_L
-    100194: thumb_02_L_001
-    100196: thumb_02_R
-    100198: thumb_02_R_001
-    100200: thumb_03_L
-    100202: thumb_03_L_001
-    100204: thumb_03_R
-    100206: thumb_03_R_001
-    100208: toe_L
-    100210: toe_R
-    100212: upper_arm_L
-    100214: upper_arm_L_001
-    100216: upper_arm_R
-    100218: upper_arm_R_001
-    100220: head_L
-    100222: head_L_001
-    100224: head_R
-    100226: head_R_001
-    400000: //RootNode
-    400002: corpo
-    400004: Esfera
-    400006: Esqueleto
-    400008: chest
-    400010: f_index_01_L
-    400012: f_index_01_L_001
-    400014: f_index_01_R
-    400016: f_index_01_R_001
-    400018: f_index_02_L
-    400020: f_index_02_L_001
-    400022: f_index_02_R
-    400024: f_index_02_R_001
-    400026: f_index_03_L
-    400028: f_index_03_L_001
-    400030: f_index_03_R
-    400032: f_index_03_R_001
-    400034: f_middle_01_L
-    400036: f_middle_01_L_001
-    400038: f_middle_01_R
-    400040: f_middle_01_R_001
-    400042: f_middle_02_L
-    400044: f_middle_02_L_001
-    400046: f_middle_02_R
-    400048: f_middle_02_R_001
-    400050: f_middle_03_L
-    400052: f_middle_03_L_001
-    400054: f_middle_03_R
-    400056: f_middle_03_R_001
-    400058: f_pinky_01_L
-    400060: f_pinky_01_L_001
-    400062: f_pinky_01_R
-    400064: f_pinky_01_R_001
-    400066: f_pinky_02_L
-    400068: f_pinky_02_L_001
-    400070: f_pinky_02_R
-    400072: f_pinky_02_R_001
-    400074: f_pinky_03_L
-    400076: f_pinky_03_L_001
-    400078: f_pinky_03_R
-    400080: f_pinky_03_R_001
-    400082: f_ring_01_L
-    400084: f_ring_01_L_001
-    400086: f_ring_01_R
-    400088: f_ring_01_R_001
-    400090: f_ring_02_L
-    400092: f_ring_02_L_001
-    400094: f_ring_02_R
-    400096: f_ring_02_R_001
-    400098: f_ring_03_L
-    400100: f_ring_03_L_001
-    400102: f_ring_03_R
-    400104: f_ring_03_R_001
-    400106: foot_L
-    400108: foot_R
-    400110: forearm_L
-    400112: forearm_L_001
-    400114: forearm_R
-    400116: forearm_R_001
-    400118: hand_L
-    400120: hand_L_001
-    400122: hand_R
-    400124: hand_R_001
-    400126: head
-    400128: heel_02_L
-    400130: heel_02_R
-    400132: heel_L
-    400134: heel_R
-    400136: hips
-    400138: metarig
-    400140: neck
-    400142: palm_01_L
-    400144: palm_01_L_001
-    400146: palm_01_R
-    400148: palm_01_R_001
-    400150: palm_02_L
-    400152: palm_02_L_001
-    400154: palm_02_R
-    400156: palm_02_R_001
-    400158: palm_03_L
-    400160: palm_03_L_001
-    400162: palm_03_R
-    400164: palm_03_R_001
-    400166: palm_04_L
-    400168: palm_04_L_001
-    400170: palm_04_R
-    400172: palm_04_R_001
-    400174: shin_L
-    400176: shin_R
-    400178: spine
-    400180: thigh_L
-    400182: thigh_R
-    400184: thumb_01_L
-    400186: thumb_01_L_001
-    400188: thumb_01_R
-    400190: thumb_01_R_001
-    400192: thumb_02_L
-    400194: thumb_02_L_001
-    400196: thumb_02_R
-    400198: thumb_02_R_001
-    400200: thumb_03_L
-    400202: thumb_03_L_001
-    400204: thumb_03_R
-    400206: thumb_03_R_001
-    400208: toe_L
-    400210: toe_R
-    400212: upper_arm_L
-    400214: upper_arm_L_001
-    400216: upper_arm_R
-    400218: upper_arm_R_001
-    400220: head_L
-    400222: head_L_001
-    400224: head_R
-    400226: head_R_001
-    2300000: //RootNode
-    2300002: Esfera
-    3300000: //RootNode
-    3300002: Esfera
-    4300000: Esfera
-    7400000: Default Take
-    7400002: andandoRocetler
-    7400004: padraoRocketler
-    7400006: pulandoRocketler
-    7400008: cairRocketler
-    7400010: dano1Rocketler
-    7400012: dano2Rocketler
-    7400014: emisorRocketler
-    7400016: cabecadaRocketler
-    7400018: avalancheRocketler
-    9500000: //RootNode
-    13700000: Esfera
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: corpo
+  - first:
+      1: 100004
+    second: Esfera
+  - first:
+      1: 100006
+    second: Esqueleto
+  - first:
+      1: 100008
+    second: chest
+  - first:
+      1: 100010
+    second: f_index_01_L
+  - first:
+      1: 100012
+    second: f_index_01_L_001
+  - first:
+      1: 100014
+    second: f_index_01_R
+  - first:
+      1: 100016
+    second: f_index_01_R_001
+  - first:
+      1: 100018
+    second: f_index_02_L
+  - first:
+      1: 100020
+    second: f_index_02_L_001
+  - first:
+      1: 100022
+    second: f_index_02_R
+  - first:
+      1: 100024
+    second: f_index_02_R_001
+  - first:
+      1: 100026
+    second: f_index_03_L
+  - first:
+      1: 100028
+    second: f_index_03_L_001
+  - first:
+      1: 100030
+    second: f_index_03_R
+  - first:
+      1: 100032
+    second: f_index_03_R_001
+  - first:
+      1: 100034
+    second: f_middle_01_L
+  - first:
+      1: 100036
+    second: f_middle_01_L_001
+  - first:
+      1: 100038
+    second: f_middle_01_R
+  - first:
+      1: 100040
+    second: f_middle_01_R_001
+  - first:
+      1: 100042
+    second: f_middle_02_L
+  - first:
+      1: 100044
+    second: f_middle_02_L_001
+  - first:
+      1: 100046
+    second: f_middle_02_R
+  - first:
+      1: 100048
+    second: f_middle_02_R_001
+  - first:
+      1: 100050
+    second: f_middle_03_L
+  - first:
+      1: 100052
+    second: f_middle_03_L_001
+  - first:
+      1: 100054
+    second: f_middle_03_R
+  - first:
+      1: 100056
+    second: f_middle_03_R_001
+  - first:
+      1: 100058
+    second: f_pinky_01_L
+  - first:
+      1: 100060
+    second: f_pinky_01_L_001
+  - first:
+      1: 100062
+    second: f_pinky_01_R
+  - first:
+      1: 100064
+    second: f_pinky_01_R_001
+  - first:
+      1: 100066
+    second: f_pinky_02_L
+  - first:
+      1: 100068
+    second: f_pinky_02_L_001
+  - first:
+      1: 100070
+    second: f_pinky_02_R
+  - first:
+      1: 100072
+    second: f_pinky_02_R_001
+  - first:
+      1: 100074
+    second: f_pinky_03_L
+  - first:
+      1: 100076
+    second: f_pinky_03_L_001
+  - first:
+      1: 100078
+    second: f_pinky_03_R
+  - first:
+      1: 100080
+    second: f_pinky_03_R_001
+  - first:
+      1: 100082
+    second: f_ring_01_L
+  - first:
+      1: 100084
+    second: f_ring_01_L_001
+  - first:
+      1: 100086
+    second: f_ring_01_R
+  - first:
+      1: 100088
+    second: f_ring_01_R_001
+  - first:
+      1: 100090
+    second: f_ring_02_L
+  - first:
+      1: 100092
+    second: f_ring_02_L_001
+  - first:
+      1: 100094
+    second: f_ring_02_R
+  - first:
+      1: 100096
+    second: f_ring_02_R_001
+  - first:
+      1: 100098
+    second: f_ring_03_L
+  - first:
+      1: 100100
+    second: f_ring_03_L_001
+  - first:
+      1: 100102
+    second: f_ring_03_R
+  - first:
+      1: 100104
+    second: f_ring_03_R_001
+  - first:
+      1: 100106
+    second: foot_L
+  - first:
+      1: 100108
+    second: foot_R
+  - first:
+      1: 100110
+    second: forearm_L
+  - first:
+      1: 100112
+    second: forearm_L_001
+  - first:
+      1: 100114
+    second: forearm_R
+  - first:
+      1: 100116
+    second: forearm_R_001
+  - first:
+      1: 100118
+    second: hand_L
+  - first:
+      1: 100120
+    second: hand_L_001
+  - first:
+      1: 100122
+    second: hand_R
+  - first:
+      1: 100124
+    second: hand_R_001
+  - first:
+      1: 100126
+    second: head
+  - first:
+      1: 100128
+    second: heel_02_L
+  - first:
+      1: 100130
+    second: heel_02_R
+  - first:
+      1: 100132
+    second: heel_L
+  - first:
+      1: 100134
+    second: heel_R
+  - first:
+      1: 100136
+    second: hips
+  - first:
+      1: 100138
+    second: metarig
+  - first:
+      1: 100140
+    second: neck
+  - first:
+      1: 100142
+    second: palm_01_L
+  - first:
+      1: 100144
+    second: palm_01_L_001
+  - first:
+      1: 100146
+    second: palm_01_R
+  - first:
+      1: 100148
+    second: palm_01_R_001
+  - first:
+      1: 100150
+    second: palm_02_L
+  - first:
+      1: 100152
+    second: palm_02_L_001
+  - first:
+      1: 100154
+    second: palm_02_R
+  - first:
+      1: 100156
+    second: palm_02_R_001
+  - first:
+      1: 100158
+    second: palm_03_L
+  - first:
+      1: 100160
+    second: palm_03_L_001
+  - first:
+      1: 100162
+    second: palm_03_R
+  - first:
+      1: 100164
+    second: palm_03_R_001
+  - first:
+      1: 100166
+    second: palm_04_L
+  - first:
+      1: 100168
+    second: palm_04_L_001
+  - first:
+      1: 100170
+    second: palm_04_R
+  - first:
+      1: 100172
+    second: palm_04_R_001
+  - first:
+      1: 100174
+    second: shin_L
+  - first:
+      1: 100176
+    second: shin_R
+  - first:
+      1: 100178
+    second: spine
+  - first:
+      1: 100180
+    second: thigh_L
+  - first:
+      1: 100182
+    second: thigh_R
+  - first:
+      1: 100184
+    second: thumb_01_L
+  - first:
+      1: 100186
+    second: thumb_01_L_001
+  - first:
+      1: 100188
+    second: thumb_01_R
+  - first:
+      1: 100190
+    second: thumb_01_R_001
+  - first:
+      1: 100192
+    second: thumb_02_L
+  - first:
+      1: 100194
+    second: thumb_02_L_001
+  - first:
+      1: 100196
+    second: thumb_02_R
+  - first:
+      1: 100198
+    second: thumb_02_R_001
+  - first:
+      1: 100200
+    second: thumb_03_L
+  - first:
+      1: 100202
+    second: thumb_03_L_001
+  - first:
+      1: 100204
+    second: thumb_03_R
+  - first:
+      1: 100206
+    second: thumb_03_R_001
+  - first:
+      1: 100208
+    second: toe_L
+  - first:
+      1: 100210
+    second: toe_R
+  - first:
+      1: 100212
+    second: upper_arm_L
+  - first:
+      1: 100214
+    second: upper_arm_L_001
+  - first:
+      1: 100216
+    second: upper_arm_R
+  - first:
+      1: 100218
+    second: upper_arm_R_001
+  - first:
+      1: 100220
+    second: head_L
+  - first:
+      1: 100222
+    second: head_L_001
+  - first:
+      1: 100224
+    second: head_R
+  - first:
+      1: 100226
+    second: head_R_001
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: corpo
+  - first:
+      4: 400004
+    second: Esfera
+  - first:
+      4: 400006
+    second: Esqueleto
+  - first:
+      4: 400008
+    second: chest
+  - first:
+      4: 400010
+    second: f_index_01_L
+  - first:
+      4: 400012
+    second: f_index_01_L_001
+  - first:
+      4: 400014
+    second: f_index_01_R
+  - first:
+      4: 400016
+    second: f_index_01_R_001
+  - first:
+      4: 400018
+    second: f_index_02_L
+  - first:
+      4: 400020
+    second: f_index_02_L_001
+  - first:
+      4: 400022
+    second: f_index_02_R
+  - first:
+      4: 400024
+    second: f_index_02_R_001
+  - first:
+      4: 400026
+    second: f_index_03_L
+  - first:
+      4: 400028
+    second: f_index_03_L_001
+  - first:
+      4: 400030
+    second: f_index_03_R
+  - first:
+      4: 400032
+    second: f_index_03_R_001
+  - first:
+      4: 400034
+    second: f_middle_01_L
+  - first:
+      4: 400036
+    second: f_middle_01_L_001
+  - first:
+      4: 400038
+    second: f_middle_01_R
+  - first:
+      4: 400040
+    second: f_middle_01_R_001
+  - first:
+      4: 400042
+    second: f_middle_02_L
+  - first:
+      4: 400044
+    second: f_middle_02_L_001
+  - first:
+      4: 400046
+    second: f_middle_02_R
+  - first:
+      4: 400048
+    second: f_middle_02_R_001
+  - first:
+      4: 400050
+    second: f_middle_03_L
+  - first:
+      4: 400052
+    second: f_middle_03_L_001
+  - first:
+      4: 400054
+    second: f_middle_03_R
+  - first:
+      4: 400056
+    second: f_middle_03_R_001
+  - first:
+      4: 400058
+    second: f_pinky_01_L
+  - first:
+      4: 400060
+    second: f_pinky_01_L_001
+  - first:
+      4: 400062
+    second: f_pinky_01_R
+  - first:
+      4: 400064
+    second: f_pinky_01_R_001
+  - first:
+      4: 400066
+    second: f_pinky_02_L
+  - first:
+      4: 400068
+    second: f_pinky_02_L_001
+  - first:
+      4: 400070
+    second: f_pinky_02_R
+  - first:
+      4: 400072
+    second: f_pinky_02_R_001
+  - first:
+      4: 400074
+    second: f_pinky_03_L
+  - first:
+      4: 400076
+    second: f_pinky_03_L_001
+  - first:
+      4: 400078
+    second: f_pinky_03_R
+  - first:
+      4: 400080
+    second: f_pinky_03_R_001
+  - first:
+      4: 400082
+    second: f_ring_01_L
+  - first:
+      4: 400084
+    second: f_ring_01_L_001
+  - first:
+      4: 400086
+    second: f_ring_01_R
+  - first:
+      4: 400088
+    second: f_ring_01_R_001
+  - first:
+      4: 400090
+    second: f_ring_02_L
+  - first:
+      4: 400092
+    second: f_ring_02_L_001
+  - first:
+      4: 400094
+    second: f_ring_02_R
+  - first:
+      4: 400096
+    second: f_ring_02_R_001
+  - first:
+      4: 400098
+    second: f_ring_03_L
+  - first:
+      4: 400100
+    second: f_ring_03_L_001
+  - first:
+      4: 400102
+    second: f_ring_03_R
+  - first:
+      4: 400104
+    second: f_ring_03_R_001
+  - first:
+      4: 400106
+    second: foot_L
+  - first:
+      4: 400108
+    second: foot_R
+  - first:
+      4: 400110
+    second: forearm_L
+  - first:
+      4: 400112
+    second: forearm_L_001
+  - first:
+      4: 400114
+    second: forearm_R
+  - first:
+      4: 400116
+    second: forearm_R_001
+  - first:
+      4: 400118
+    second: hand_L
+  - first:
+      4: 400120
+    second: hand_L_001
+  - first:
+      4: 400122
+    second: hand_R
+  - first:
+      4: 400124
+    second: hand_R_001
+  - first:
+      4: 400126
+    second: head
+  - first:
+      4: 400128
+    second: heel_02_L
+  - first:
+      4: 400130
+    second: heel_02_R
+  - first:
+      4: 400132
+    second: heel_L
+  - first:
+      4: 400134
+    second: heel_R
+  - first:
+      4: 400136
+    second: hips
+  - first:
+      4: 400138
+    second: metarig
+  - first:
+      4: 400140
+    second: neck
+  - first:
+      4: 400142
+    second: palm_01_L
+  - first:
+      4: 400144
+    second: palm_01_L_001
+  - first:
+      4: 400146
+    second: palm_01_R
+  - first:
+      4: 400148
+    second: palm_01_R_001
+  - first:
+      4: 400150
+    second: palm_02_L
+  - first:
+      4: 400152
+    second: palm_02_L_001
+  - first:
+      4: 400154
+    second: palm_02_R
+  - first:
+      4: 400156
+    second: palm_02_R_001
+  - first:
+      4: 400158
+    second: palm_03_L
+  - first:
+      4: 400160
+    second: palm_03_L_001
+  - first:
+      4: 400162
+    second: palm_03_R
+  - first:
+      4: 400164
+    second: palm_03_R_001
+  - first:
+      4: 400166
+    second: palm_04_L
+  - first:
+      4: 400168
+    second: palm_04_L_001
+  - first:
+      4: 400170
+    second: palm_04_R
+  - first:
+      4: 400172
+    second: palm_04_R_001
+  - first:
+      4: 400174
+    second: shin_L
+  - first:
+      4: 400176
+    second: shin_R
+  - first:
+      4: 400178
+    second: spine
+  - first:
+      4: 400180
+    second: thigh_L
+  - first:
+      4: 400182
+    second: thigh_R
+  - first:
+      4: 400184
+    second: thumb_01_L
+  - first:
+      4: 400186
+    second: thumb_01_L_001
+  - first:
+      4: 400188
+    second: thumb_01_R
+  - first:
+      4: 400190
+    second: thumb_01_R_001
+  - first:
+      4: 400192
+    second: thumb_02_L
+  - first:
+      4: 400194
+    second: thumb_02_L_001
+  - first:
+      4: 400196
+    second: thumb_02_R
+  - first:
+      4: 400198
+    second: thumb_02_R_001
+  - first:
+      4: 400200
+    second: thumb_03_L
+  - first:
+      4: 400202
+    second: thumb_03_L_001
+  - first:
+      4: 400204
+    second: thumb_03_R
+  - first:
+      4: 400206
+    second: thumb_03_R_001
+  - first:
+      4: 400208
+    second: toe_L
+  - first:
+      4: 400210
+    second: toe_R
+  - first:
+      4: 400212
+    second: upper_arm_L
+  - first:
+      4: 400214
+    second: upper_arm_L_001
+  - first:
+      4: 400216
+    second: upper_arm_R
+  - first:
+      4: 400218
+    second: upper_arm_R_001
+  - first:
+      4: 400220
+    second: head_L
+  - first:
+      4: 400222
+    second: head_L_001
+  - first:
+      4: 400224
+    second: head_R
+  - first:
+      4: 400226
+    second: head_R_001
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: Esfera
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: Esfera
+  - first:
+      43: 4300000
+    second: Esfera
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: andandoRocetler
+  - first:
+      74: 7400004
+    second: padraoRocketler
+  - first:
+      74: 7400006
+    second: pulandoRocketler
+  - first:
+      74: 7400008
+    second: cairRocketler
+  - first:
+      74: 7400010
+    second: dano1Rocketler
+  - first:
+      74: 7400012
+    second: dano2Rocketler
+  - first:
+      74: 7400014
+    second: emisorRocketler
+  - first:
+      74: 7400016
+    second: cabecadaRocketler
+  - first:
+      74: 7400018
+    second: avalancheRocketler
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Esfera
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 26b07f8f51a847e4a9a0e04cfb4f1fe3, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: andandoRocetler
       takeName: andandoRocetler
+      internalID: 0
       firstFrame: 0
       lastFrame: 17
       wrapMode: 0
@@ -274,6 +782,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -514,9 +1023,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: padraoRocketler
       takeName: padraoRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 835
       wrapMode: 0
@@ -524,6 +1035,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -764,9 +1276,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: pulandoRocketler
       takeName: pulandoRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -774,6 +1288,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1014,9 +1529,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: cairRocketler
       takeName: cairRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -1024,6 +1541,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1264,9 +1782,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: dano1Rocketler
       takeName: dano1Rocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -1274,6 +1794,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1514,9 +2035,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: dano2Rocketler
       takeName: dano2Rocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -1524,6 +2047,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -1764,9 +2288,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: emisorRocketler
       takeName: emisorRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 23
       wrapMode: 0
@@ -1774,6 +2300,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2014,9 +2541,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: cabecadaRocketler
       takeName: cabecadaRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -2024,6 +2553,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2264,9 +2794,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: avalancheRocketler
       takeName: avalancheRocketler
+      internalID: 0
       firstFrame: 0
       lastFrame: 14
       wrapMode: 0
@@ -2274,6 +2806,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -2514,41 +3047,68 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .25
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.25
     rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

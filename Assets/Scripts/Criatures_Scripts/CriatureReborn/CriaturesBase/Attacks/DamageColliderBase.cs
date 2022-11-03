@@ -20,7 +20,7 @@ namespace Criatures2021
 
             if (emQ.gameObject != dono
                &&
-               emQ.tag != "cenario" && emQ.tag != "gatilhoDePuzzle" && emQ.gameObject.layer != 2 /*|| velocidadeProjetil > 0*/
+               emQ.tag != "cenario" && emQ.tag != "gatilhoDePuzzle" && (emQ.gameObject.layer != 2||esseGolpe.IgnoreDodge) /*|| velocidadeProjetil > 0*/
                &&
                emQ.tag != "desvieCamera")
             {

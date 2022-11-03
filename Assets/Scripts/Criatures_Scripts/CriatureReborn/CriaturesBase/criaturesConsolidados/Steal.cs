@@ -43,6 +43,13 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("metarig/hips",_deslTrail:new Vector3(0,0.374f,-.25f),colisorScale: 2f),
                 TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.impulsoEletrico,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("metarig/hips",_deslTrail:new Vector3(0,1,1),_deslColisor:new Vector3(0,0,-1)),
+                TaxaDeUso = 1f
             }
         };
 

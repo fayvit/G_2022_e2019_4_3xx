@@ -58,6 +58,13 @@ namespace Criatures2021
             },
             new PetAttackDb()
             {
+                Nome = AttackNameId.pedraPartida,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("Esqueleto"),
+                TaxaDeUso=1
+            },
+            new PetAttackDb()
+            {
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 16,
                 Colisor = new Colisor("Esqueleto/hips/spine/chest/upper_arm.R/forearm.R/hand.R"),

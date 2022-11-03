@@ -41,6 +41,13 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor(),
                 TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.flashPsiquico,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Esqueleto/Bone"),
+                TaxaDeUso = 1f
             }
         };
 

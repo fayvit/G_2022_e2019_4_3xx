@@ -305,6 +305,15 @@ namespace TextBankSpace
         NPCdaRepresa,
         keyDjeyInfoInfo,
         hooliganEntregaKeyDjey,
-        hooliganSaiDaEntregaKeyDjey
+        hooliganSaiDaEntregaKeyDjey,
+        DevotaMilyAntesDaLuta,
+        DevotaMilyNoMomentoDaVitoria,
+        DevotaMilyDepoisDaVitoria,
+        DevotoNialDepoisDaVitoria,
+        DevotoNialNoMomentoDaVitoria,
+        DevotoNialAntesDaLuta,
+        DevotaSellenAntesDaLuta,
+        DevotaSellenNoMomentoDaVitoria,
+        DevotaSellenDepoisDaVitoria
     }
 }

@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000004, guid: b39167579bc6a9743b966e8f02c20c86,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -28915,7 +28915,7 @@ Camera:
   far clip plane: 1155.9358
   field of view: 60
   orthographic: 1
-  orthographic size: 9.818373
+  orthographic size: 1.58
   m_Depth: -3
   m_CullingMask:
     serializedVersion: 2
@@ -44776,7 +44776,7 @@ PrefabInstance:
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 446.5
+      value: 207.1
       objectReference: {fileID: 0}
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}
@@ -44786,7 +44786,7 @@ PrefabInstance:
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 499.2
+      value: 767
       objectReference: {fileID: 0}
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}
@@ -47013,7 +47013,7 @@ PrefabInstance:
     - target: {fileID: 1463676924892853874, guid: 5c6692562d28bda4d86088a6441ae51c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.499634
+      value: -8.499512
       objectReference: {fileID: 0}
     - target: {fileID: 1463676924956615041, guid: 5c6692562d28bda4d86088a6441ae51c,
         type: 3}
@@ -47024,7 +47024,7 @@ PrefabInstance:
     - target: {fileID: 1463676925534988832, guid: 5c6692562d28bda4d86088a6441ae51c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.499634
+      value: -8.499512
       objectReference: {fileID: 0}
     - target: {fileID: 1463676926066524836, guid: 5c6692562d28bda4d86088a6441ae51c,
         type: 3}
@@ -67160,7 +67160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3.9982605}
+  m_AnchoredPosition: {x: 0, y: -3.9983215}
   m_SizeDelta: {x: 17.48999, y: -3.4799805}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8331313720117461373

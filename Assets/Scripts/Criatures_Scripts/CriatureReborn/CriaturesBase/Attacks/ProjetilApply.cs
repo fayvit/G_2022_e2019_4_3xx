@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FayvitMessageAgregator;
 
 namespace Criatures2021
 {
@@ -42,6 +43,15 @@ namespace Criatures2021
             proj.dono = G;
             proj.esseGolpe = ativa;
 
+            MessageAgregator<MsgInstantiateProject>.Publish(new MsgInstantiateProject
+            {
+                collider = proj
+            });
         }
+    }
+
+    public struct MsgInstantiateProject : IMessageBase
+    {
+        public DamageColliderBase collider;
     }
 }

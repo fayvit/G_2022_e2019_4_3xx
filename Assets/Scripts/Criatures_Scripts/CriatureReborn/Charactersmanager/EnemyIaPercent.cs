@@ -19,6 +19,7 @@ namespace Criatures2021
         private GameObject atacante;
         private Vector3 guardDir;
         private ExtendState extendState = ExtendState.neutral;
+        private DamageColliderBase monitoredProjectile;
 
         [System.Serializable]
         private struct PercentManagerDodge
@@ -48,6 +49,7 @@ namespace Criatures2021
                 MessageAgregator<MsgInvokeStartAtk>.AddListener(OnAnyStartAtk);
                 MessageAgregator<MsgCriatureDefeated>.AddListener(OnCriatureDefeated);
                 MessageAgregator<MsgEnterInDamageState>.AddListener(OnEnterInDamageState);
+                MessageAgregator<MsgInstantiateProject>.AddListener(OnInstantiateProject);
                 iniciado = true;
             }
             base.Start(T, P, controll);
@@ -58,6 +60,15 @@ namespace Criatures2021
             MessageAgregator<MsgInvokeStartAtk>.RemoveListener(OnAnyStartAtk);
             MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
             MessageAgregator<MsgEnterInDamageState>.RemoveListener(OnEnterInDamageState);
+            MessageAgregator<MsgInstantiateProject>.RemoveListener(OnInstantiateProject);
+        }
+
+        private void OnInstantiateProject(MsgInstantiateProject obj)
+        {
+            if (HeroPet && obj.collider.dono == HeroPet.gameObject)
+            {
+                monitoredProjectile = obj.collider;
+            }
         }
 
         private void OnEnterInDamageState(MsgEnterInDamageState obj)
@@ -90,7 +101,7 @@ namespace Criatures2021
                 atacante = obj.atacante;
 
                 fDir = (atacante.transform.position - MeuTransform.position).normalized;
-                ddir = Vector3.Cross(fDir, Vector3.up);
+                ddir = Vector3.Cross(fDir, Vector3.up)*(Random.value>.5f?1:-1);
                 f = Vector3.Distance(MeuTransform.position, atacante.transform.position);
 
                 switch (esseAtk.Caracteristica)
@@ -232,6 +243,29 @@ namespace Criatures2021
                 EnterInAtkResponse();
             }
 
+        }
+
+        public void UpdateMonitoredProjectile()
+        {
+            if (monitoredProjectile)
+            {
+                float ff = Vector3.Distance(MeuTransform.position, monitoredProjectile.transform.position);
+
+                if (ff < 4.75f && DodgeThisAttack(monitoredProjectile.esseGolpe.Caracteristica))
+                {
+                    MessageAgregator<MsgRequestCpuRoll>.Publish(new MsgRequestCpuRoll()
+                    {
+                        dir = (ddir + fDir).normalized,
+                        sender = MeuTransform.gameObject
+                    });
+                }
+            }
+        }
+
+        protected override void AplicaIaDeAtaque()
+        {
+            UpdateMonitoredProjectile();
+            base.AplicaIaDeAtaque();
         }
 
         protected override void UpdateAtkResponse()

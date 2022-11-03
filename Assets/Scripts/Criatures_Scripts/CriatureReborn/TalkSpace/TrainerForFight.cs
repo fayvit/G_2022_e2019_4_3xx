@@ -9,6 +9,7 @@ using FayvitSounds;
 using FayvitMove;
 using FayvitSupportSingleton;
 using Npc2021;
+using System;
 
 namespace TalkSpace
 {
@@ -241,8 +242,6 @@ namespace TalkSpace
                         myActivePet = GameObject.Find("criatureDeTreinador").GetComponent<PetManager>();
                         
                         myActivePet = criaturesDoTreinador[indiceDoEnviado].PrepararInicioDoCriature(myActivePet);
-                        
-                        
 
                         PetFeatures P = myActivePet.MeuCriatureBase.PetFeat;
                         MessageAgregator<MsgRequestUpperLargeMessage>.Publish(new MsgRequestUpperLargeMessage()
@@ -255,6 +254,8 @@ namespace TalkSpace
                             myActivePet.MeuCriatureBase.GetNomeEmLinguas
                             )
                         });
+
+                        SetParticularEnemyDetails(myActivePet,indiceDoEnviado);
                         CameraApplicator.cam.StartExibitionCam(myActivePet.GetComponent<CharacterController>(),true);
                         tempoDecorrido = 0;
                         state = ThisState.showTrainerPet;
@@ -351,6 +352,11 @@ namespace TalkSpace
                     }
                 break;
             }
+        }
+
+        protected virtual void SetParticularEnemyDetails(PetManager myActivePet,int index)
+        {
+            
         }
 
         //private void OnPlayerChangeToPet(MsgChangeToPet obj)

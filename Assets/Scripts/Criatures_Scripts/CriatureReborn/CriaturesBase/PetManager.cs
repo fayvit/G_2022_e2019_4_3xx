@@ -176,6 +176,8 @@ namespace Criatures2021
             if (obj.oAtacado == gameObject)
             {
                 EndAtkUpdate();
+                EndRollState();
+                roll.ReturnTime();
                 DamageState.StartDamageState(obj.golpe);
                 state = LocalState.inDamage;
 

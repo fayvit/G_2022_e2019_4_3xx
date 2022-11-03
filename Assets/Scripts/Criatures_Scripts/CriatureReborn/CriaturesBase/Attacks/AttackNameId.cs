@@ -62,6 +62,11 @@ namespace Criatures2021
         sabreDeEspada,
         tesoura,
         ataqueEmGiro,
-        impulsoAquatico
+        impulsoAquatico,
+        impulsoFlamejante,
+        deslizamentoNaGosma,
+        flashPsiquico,
+        impulsoEletrico,
+        pedraPartida
     }
 }

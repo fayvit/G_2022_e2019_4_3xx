@@ -11,7 +11,7 @@ namespace Criatures2021
         {
             nome = AttackNameId.psicose,
             tipo = PetTypeName.Psiquico,
-            carac = AttackDiferentialId.projetil,
+            carac = AttackDiferentialId.projetilPerseguidor,
             damageAtribute = DamageBaseAtribute.poder,
             custoPE = 2,
             potenciaCorrente = 15,

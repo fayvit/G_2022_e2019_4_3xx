@@ -17,6 +17,7 @@ namespace Criatures2021
         basico,
         rigido,
         statusExpansivel,
-        direcional
+        direcional,
+        area
     }
 }

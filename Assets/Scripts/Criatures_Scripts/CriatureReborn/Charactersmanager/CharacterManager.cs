@@ -353,55 +353,58 @@ namespace Criatures2021
             //if(obj.dono==donoDessaHud)
             if (obj.pet == ActivePet)
             {
-                if (Dados.TemAlgumPetAtivoVivo())
+                SupportSingleton.Instance.InvokeInSeconds(() =>
                 {
-
-                    List<string> ls = TextBank.RetornaListaDeTextoDoIdioma(TextKey.apresentaDerrota);
-                    string message = string.Format(ls[0], obj.pet.MeuCriatureBase.GetNomeEmLinguas) + " \n\r " + ls[1];
-                    AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
+                    if (Dados.TemAlgumPetAtivoVivo())
                     {
-                        //StartFields(obj.dono);
-                        ThisState = CharacterState.stopedWithStoppedCam;
 
-                        MessageAgregator<MsgOpenPetList>.Publish(new MsgOpenPetList()
-                        {
-                            armagedom = false,
-                            dono = this
-                        });
-                    }, message,hideOpenSound:true);
-
-                    ThisState = CharacterState.activeSingleMessageOpened;
-                }
-                else
-                {
-                    MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
-                    {
-                        nmcvc = new FayvitSounds.NameMusicaComVolumeConfig()
-                        {
-                            Musica = FayvitSounds.NameMusic.Lamentos,
-                        },
-                        changeVel=true,
-                        newVel  = .75f
-                    });
-
-                    SupportSingleton.Instance.InvokeInSeconds(() =>
-                    {
+                        List<string> ls = TextBank.RetornaListaDeTextoDoIdioma(TextKey.apresentaDerrota);
+                        string message = string.Format(ls[0], obj.pet.MeuCriatureBase.GetNomeEmLinguas) + " \n\r " + ls[1];
                         AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
                         {
-
+                            //StartFields(obj.dono);
                             ThisState = CharacterState.stopedWithStoppedCam;
-                            AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() =>
+
+                            MessageAgregator<MsgOpenPetList>.Publish(new MsgOpenPetList()
                             {
-                                ContraTreinador = false;
-                                ReturnToArmagedomAfterDefeated.StartReturn(this);
+                                armagedom = false,
+                                dono = this
                             });
-                        }, TextBank.RetornaListaDeTextoDoIdioma(TextKey.apresentaDerrota)[2],hideOpenSound:true);
+                        }, message, hideOpenSound: true);
 
                         ThisState = CharacterState.activeSingleMessageOpened;
+                    }
+                    else
+                    {
+                        MessageAgregator<MsgStartMusic>.Publish(new MsgStartMusic()
+                        {
+                            nmcvc = new FayvitSounds.NameMusicaComVolumeConfig()
+                            {
+                                Musica = FayvitSounds.NameMusic.Lamentos,
+                            },
+                            changeVel = true,
+                            newVel = .75f
+                        });
 
-                        Debug.Log("Ir para o armagedom em atenção");
-                    }, 1.5f);
-                }
+                        SupportSingleton.Instance.InvokeInSeconds(() =>
+                        {
+                            AbstractGlobalController.Instance.OneMessage.StartMessagePanel(() =>
+                            {
+
+                                ThisState = CharacterState.stopedWithStoppedCam;
+                                AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() =>
+                                {
+                                    ContraTreinador = false;
+                                    ReturnToArmagedomAfterDefeated.StartReturn(this);
+                                });
+                            }, TextBank.RetornaListaDeTextoDoIdioma(TextKey.apresentaDerrota)[2], hideOpenSound: true);
+
+                            ThisState = CharacterState.activeSingleMessageOpened;
+
+                            Debug.Log("Ir para o armagedom em atenção");
+                        }, 1.5f);
+                    }
+                }, 1);
             }
         }
 
@@ -739,7 +742,6 @@ namespace Criatures2021
         {
             if (CurrentCommander.GetButtonDown(CommandConverterInt.updateMenu))
             {
-                Debug.Log("update commander");
                 OpenUpdateMenu(FluxoDeRetorno.heroi);
             }
             else

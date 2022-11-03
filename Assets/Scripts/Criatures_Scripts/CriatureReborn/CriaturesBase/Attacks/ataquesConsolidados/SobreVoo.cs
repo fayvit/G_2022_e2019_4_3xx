@@ -97,7 +97,7 @@ namespace Criatures2021
                     if (focado)
                         alvoProcurado = focado.transform;
                     else
-                        alvoProcurado = FindBestTarget.Procure(G, new string[1] { "Criature" },100);
+                        alvoProcurado = FindBestTarget.Procure(G,100,"Criature");
                 }
                 //alvoProcurado = CriaturesPerto.procureUmBomAlvo(G, 100);
 

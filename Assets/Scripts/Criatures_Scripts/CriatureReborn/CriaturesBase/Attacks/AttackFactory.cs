@@ -43,6 +43,9 @@ namespace Criatures2021
                 case AttackNameId.rajadaDeFogo:
                     retorno = new RajadaDeFogo();
                 break;
+                case AttackNameId.impulsoFlamejante:
+                    retorno = new ImpulsoFlamejante();
+                break;
                 case AttackNameId.ventania:
                     retorno = new Ventania();
                 break;
@@ -61,11 +64,17 @@ namespace Criatures2021
                 case AttackNameId.gosmaAcida:
                     retorno = new GosmaAcida();
                 break;
+                case AttackNameId.deslizamentoNaGosma:
+                    retorno = new DeslizamentoNaGosma();
+                break;
                 case AttackNameId.psicose:
                     retorno = new Psicose();
                 break;
                 case AttackNameId.bolaPsiquica:
                     retorno = new BolaPsiquica();
+                break;
+                case AttackNameId.flashPsiquico:
+                    retorno = new FlashPsiquico();
                 break;
                 case AttackNameId.chicoteDeMao:
                     retorno = new ChicoteDeMao();
@@ -91,6 +100,9 @@ namespace Criatures2021
                 case AttackNameId.cascalho:
                     retorno = new Cascalho();
                     break;
+                case AttackNameId.pedraPartida:
+                    retorno = new PedraPartida();
+                break;
                 case AttackNameId.cabecada:
                     retorno = new Cabecada();
                 break;
@@ -112,6 +124,9 @@ namespace Criatures2021
                 break;
                 case AttackNameId.eletricidadeConcentrada:
                     retorno = new EletricidadeConcentrada();
+                break;
+                case AttackNameId.impulsoEletrico:
+                    retorno = new ImpulsoEletrico();
                 break;
                 case AttackNameId.tempestadeEletrica:
                     retorno = new TempestadeEletrica();

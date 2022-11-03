@@ -47,7 +47,7 @@ namespace Criatures2021
                 if (focado)
                     alvoProcurado = focado.transform;
                 else
-                    alvoProcurado = FindBestTarget.Procure(G, new string[1] { "Criature" });//CriaturesPerto.procureUmBomAlvo(G);
+                    alvoProcurado = FindBestTarget.Procure(G, "Criature");//CriaturesPerto.procureUmBomAlvo(G);
 
                 procurouAlvo = true;
                 // Debug.Log(alvoProcurado + "  esse é o alvo");
@@ -179,19 +179,19 @@ namespace Criatures2021
                 //    AtualizadorDeImpactos.ajudaAtaque(alvo, G.transform);
             }
 
-            project = (Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up));
+            project = Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up).normalized;
 
-            if (Vector3.Dot(project, G.transform.forward) > 0)
+            if (Vector3.Dot(-project, G.transform.forward) > 0.75f)
                 G.transform.rotation = Quaternion.LookRotation(-project);
             else
                 G.transform.rotation = Quaternion.LookRotation(ativa.DirDeREpulsao);
 
 
-            if ((project.magnitude > distanciaDeParada
+            if (project.magnitude > distanciaDeParada
                 &&
                 G.transform.position.y - posInicial.y < 4
                 &&
-                !alcancouOApceDaAltura)
+                !alcancouOApceDaAltura
                &&
                tempoDecorrido < ativa.TempoDeMoveMax / 2)
             {
@@ -200,7 +200,7 @@ namespace Criatures2021
             else if (project.magnitude <= distanciaDeParada)
             {
                 Vector3 foco = velocidadeAvante * G.transform.forward + Vector3.down * 9.8f;
-                if (alvoProcurado && Vector3.Dot(-project, G.transform.forward) > 0)
+                if (alvoProcurado && Vector3.Dot(-project, G.transform.forward) > 0.75f)
                     foco = velocidadeAvante * (alvoProcurado.position - G.transform.position).normalized + 18.8f * Vector3.down;
 
                 dirDeslocamento = Vector3.Lerp(dirDeslocamento, foco, 20 * Time.deltaTime);

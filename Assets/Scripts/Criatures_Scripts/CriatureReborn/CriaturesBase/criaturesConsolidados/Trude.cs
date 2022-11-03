@@ -53,7 +53,14 @@ namespace Criatures2021
                                           new Vector3(-0.49f,0f,-0.3f)),
                 TaxaDeUso = 0.5f,
                 ModPersonagem = 15
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.impulsoEletrico,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("metarig/hips",_deslTrail:new Vector3(0,1,1),_deslColisor:new Vector3(0,0,-1)),
+                TaxaDeUso = 1f
+            },
         };
 
         public static PetBase Criature

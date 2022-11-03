@@ -553,7 +553,6 @@ namespace Criatures2021
                 Mov.LockTarget = candidato;
                 ColocarMiraNoInimigo();
             }
-
         }
 
         protected override void EndRollState()
@@ -580,7 +579,6 @@ namespace Criatures2021
 
                 RemoveDefeated(osPerto);
                 Mov.LockTarget = FindBestTarget.Procure(gameObject, osPerto,20,true);
-                //CameraAplicator.cam.SetarInimigosProximosParaFoco(osPerto);
 
                 if (Mov.LockTarget)
                 {

@@ -216,6 +216,11 @@ namespace Criatures2021
             }
         }
 
+        public bool IgnoreDodge
+        {
+            get { return container.ignoreDodge; }
+        }
+
         public SoundEffectID SomDoGolpe
         {
             get { return container.somDoGolpe; }

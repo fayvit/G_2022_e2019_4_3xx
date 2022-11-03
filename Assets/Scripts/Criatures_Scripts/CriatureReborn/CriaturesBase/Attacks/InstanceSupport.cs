@@ -25,7 +25,7 @@ namespace Criatures2021
             return InstancieEDestrua("particles/" + nomeParticles.ToString(), posInicial, forwardInicial, tempoDeGolpe);
         }
 
-        private static GameObject InstancieEDestrua(string nome,
+        public static GameObject InstancieEDestrua(string nome,
                                                     Vector3 posInicial,
                                                     Vector3 forwardInicial,
                                                     float tempoDeGolpe)

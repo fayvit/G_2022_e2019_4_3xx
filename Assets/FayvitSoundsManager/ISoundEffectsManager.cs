@@ -56,6 +56,9 @@ namespace FayvitSounds
         Fire6 = 37,
         finalisaAcaoPositiva = 38,
         ItemImportante = 39,
-        Collapse3 = 40
+        Collapse3 = 40,
+        Thunder11 = 41,
+        XP131_Earth03 = 42,
+        Explosion5 = 43
     }
 }

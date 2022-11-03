@@ -17,6 +17,8 @@ namespace Criatures2021
                     return G.AddComponent<ExpansiveStatusCollider>();
                 case ProjetilType.direcional:
                     return G.AddComponent<DamageColliderDirectional>();
+                case ProjetilType.area:
+                    return G.AddComponent<OnGroundAreaDamageCollider>();
                 default:
                     return null;
 

@@ -68,6 +68,15 @@ namespace Criatures2021
                                                    new Vector3(0f,0,0),
                                                    new Vector3(0,0,0)),
                 TaxaDeUso = 1.25f
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                ModPersonagem = 7,
+                Colisor = new Colisor("Armature/coluna1",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.26f,-0,0)),
+                Nome = AttackNameId.impulsoFlamejante,
+                TaxaDeUso = 1.25f
             }
         };
 

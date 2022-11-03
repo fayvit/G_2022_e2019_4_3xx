@@ -289,10 +289,21 @@ namespace Criatures2021
 
         void VerifiqueSigaOuAtaque(PetAttackBase GB, PetAtributes A)
         {
+            float atkDist;
+            Debug.Log(GB.Caracteristica);
+            switch (GB.Caracteristica)
+            {
+                case AttackDiferentialId.area:
+                    atkDist = 0.4f * GB.VelocidadeDeGolpe;
+                break;
+                default:
+                    atkDist = MOD_DISTANCIA_DE_ATAQUE *
+                (GB.TempoDeMoveMax - GB.TempoDeMoveMin);
+                break;
+            }
+
             if ((heroPet.transform.position - transform.position).magnitude
-                >
-                MOD_DISTANCIA_DE_ATAQUE *
-                (GB.TempoDeMoveMax - GB.TempoDeMoveMin)
+                > atkDist
                 )
             {
                 Debug.Log("verificação de status retirada [Refazer]");
@@ -448,7 +459,7 @@ namespace Criatures2021
                 Debug.Log("heroPet nulo");
         }
 
-        protected void AplicaIaDeAtaque()
+        protected virtual void AplicaIaDeAtaque()
         {
             if (heroPet && heroPet.MeuCriatureBase.PetFeat.meusAtributos.PV.Corrente <= 0)
             {
@@ -476,7 +487,9 @@ namespace Criatures2021
 
                 PetAttackBase GB = gg.meusGolpes[gg.golpeEscolhido];
 
-                if (GB.Caracteristica == AttackDiferentialId.colisao || GB.Caracteristica == AttackDiferentialId.colisaoComPow)
+                if (GB.Caracteristica == AttackDiferentialId.colisao 
+                    || GB.Caracteristica == AttackDiferentialId.colisaoComPow
+                    || GB.Caracteristica == AttackDiferentialId.area)
                 {
                     {
 
