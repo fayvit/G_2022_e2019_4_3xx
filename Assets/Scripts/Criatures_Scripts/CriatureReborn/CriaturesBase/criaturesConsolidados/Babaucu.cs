@@ -56,6 +56,13 @@ namespace Criatures2021
             },
             new PetAttackDb()
             {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("esqueleto"),
+                Nome = AttackNameId.ataqueEmGiro,
+                TaxaDeUso = 1.125f
+            },
+            new PetAttackDb()
+            {
                 NivelDoGolpe = 16,
                 Colisor = new Colisor("esqueleto"),
                 Nome = AttackNameId.olharEnfraquecedor,

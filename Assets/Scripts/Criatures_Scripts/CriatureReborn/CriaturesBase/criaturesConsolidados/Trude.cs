@@ -61,6 +61,13 @@ namespace Criatures2021
                 Colisor = new Colisor("metarig/hips",_deslTrail:new Vector3(0,1,1),_deslColisor:new Vector3(0,0,-1)),
                 TaxaDeUso = 1f
             },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sobreSalto,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("metarig/hips"),
+                TaxaDeUso = 1f
+            },
         };
 
         public static PetBase Criature

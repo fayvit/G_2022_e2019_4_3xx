@@ -105,6 +105,15 @@ namespace Criatures2021
                     state = IaState.stopped;
 
                     SupportSingleton.Instance.InvokeOnCountFrame(() => {
+                        if(
+                            MyGlobalController.MainPlayer.ActivePet 
+                            && 
+                            MyGlobalController.MainPlayer.ActivePet.gameObject 
+                            &&
+                            controll!=null && controll.Mov.Controller 
+                            && 
+                            controll.Mov.Controller.gameObject
+                        )
                         MessageAgregator<MsgCriatureDefeated>.Publish(new MsgCriatureDefeated()
                         {
                             atacker = MyGlobalController.MainPlayer.ActivePet.gameObject,
@@ -135,6 +144,9 @@ namespace Criatures2021
             SetMovePosition();
             currenStandTime = 0;
         }
+
+        public virtual void OnDestroy()
+        { }
 
         public void ChangeOnAttackResponse(AttackResponse response, GameObject atacante)
         {

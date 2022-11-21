@@ -7,7 +7,8 @@ namespace Criatures2021
 {
     public class DamageColliderBase : MonoBehaviour
     {
-
+        public bool preencherDirDeREpulsao;
+        public bool destroiAqui = true;
         public float velocidadeProjetil = 6f;
         public GameObject dono;
         public ImpactParticles noImpacto;
@@ -24,7 +25,7 @@ namespace Criatures2021
                &&
                emQ.tag != "desvieCamera")
             {
-                FacaImpacto(emQ.gameObject);
+                FacaImpacto(emQ.gameObject,destroiAqui:destroiAqui);
 
             }
 
@@ -51,8 +52,10 @@ namespace Criatures2021
 
         protected void FacaImpacto(GameObject emQ, bool destroiAqui = true, bool noTransform = false)
         {
+            if (preencherDirDeREpulsao)
+                esseGolpe.DirDeREpulsao = DirectionOnThePlane.NormalizedInTheUp(emQ.transform.position - transform.position);
 
-            if(noTransform)
+            if (noTransform)
                 InsertImpactView.Insert(noImpacto,transform.position,Qparticles);
             else
                 InsertImpactView.Insert(noImpacto, emQ.transform.position, Qparticles);

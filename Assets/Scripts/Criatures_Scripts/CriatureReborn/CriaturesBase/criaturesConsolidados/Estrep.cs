@@ -59,7 +59,22 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("Armação/Bone/Bone_end"),
                 TaxaDeUso = 1.25f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.terraVenenosa,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("Armação"),
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armação"),
+                Nome = AttackNameId.ataqueEmGiro,
+                TaxaDeUso = 1.125f,
+                ModPersonagem = 5
+            },
         };
 
         public static PetBase Criature

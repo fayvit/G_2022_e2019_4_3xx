@@ -520,7 +520,8 @@ namespace TextBankSpace
                 "Avalanche",/*ID=40*/"Anel do Olhar","Olhar Mal","Cortina de Terra","Teletransporte","Sobre Voo","Olhar Paralisante",
                 "Bomba de Gás","Rajada de Gás","Cortina de Fumaça","Bastão","Sabre de Asa","Sabre de Bastão","Sabre de Nadadeira",
                 "Sabre de Espada","Tesoura",/*ID=55*/"Ataque em Giro","Impulso Aquático","Impulso Flamejante","Deslizamento em Gosma",
-                "Flash Psiquico",/*ID=60*/"Impulso Eletrico"
+                "Flash Psiquico",/*ID=60*/"Impulso Eletrico","Pedra Partida","Terra Venenosa","Turbilhão Veloz","Nuvem de Terra",
+                "Spray Toxico",/*ID=66*/"Espiral de Cipó"
             }
         },
      //   {

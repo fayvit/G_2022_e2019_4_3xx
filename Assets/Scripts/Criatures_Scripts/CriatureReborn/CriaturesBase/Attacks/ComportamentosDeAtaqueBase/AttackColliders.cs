@@ -17,10 +17,10 @@ namespace Criatures2021
         }
         public static void AdicionaOColisor(GameObject G,
                                             PetAttackBase golpeAtivo,
-                                            ImpactFeatures caracteristica,
+                                            IImpactFeatures caracteristica,
                                             float tempoDecorrido)
         {
-            GameObject view = Resources.Load<GameObject>("DamageColliders/"+caracteristica.nomeTrail.ToString());
+            GameObject view = Resources.Load<GameObject>("DamageColliders/"+caracteristica.NomeTrail.ToString());
             //GameObject view = GameController.g.El.retornaColisor(caracteristica.nomeTrail);
             //		print(nomeColisor);
             Colisor C = GetCollider(G, golpeAtivo.Nome);// = new colisor();
@@ -30,7 +30,7 @@ namespace Criatures2021
             view2.transform.localRotation = view.transform.rotation;
 
 
-            if (caracteristica.parentearNoOsso)
+            if (caracteristica.ParentearNoOsso)
                 view2.transform.parent = G.transform.Find(C.osso).transform;
             else
                 view2.transform.parent = G.transform;
@@ -58,7 +58,7 @@ namespace Criatures2021
 
             DamageCollider proj = view2.AddComponent<DamageCollider>();
             proj.velocidadeProjetil = 0f;
-            proj.noImpacto = caracteristica.noImpacto;
+            proj.noImpacto = caracteristica.NoImpacto;
             proj.dono = G;
             proj.esseGolpe = golpeAtivo;
             //			proj.forcaDoDano = 25f;

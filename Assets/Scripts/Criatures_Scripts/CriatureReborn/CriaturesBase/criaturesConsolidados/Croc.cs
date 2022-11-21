@@ -55,7 +55,21 @@ namespace Criatures2021
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
                 TaxaDeUso = 0.125f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.pedraPartida,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("metarig"),
+                TaxaDeUso=1
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sobreSalto,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("metarig/"),
+                TaxaDeUso = .35f
+            },
         };
 
         public static PetBase Criature

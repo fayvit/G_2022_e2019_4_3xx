@@ -51,6 +51,15 @@ ModelImporter:
   - first:
       74: 8904406184500017969
     second: Esqueleto|pulaIruin
+  - first:
+      74: 292466046579155510
+    second: padraoIruin
+  - first:
+      74: 6770742178809314329
+    second: cabecadaIruin
+  - first:
+      74: 8321926054591686748
+    second: Esqueleto|cabecadaIruin
   externalObjects: {}
   materials:
     materialImportMode: 1

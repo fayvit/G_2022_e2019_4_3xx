@@ -50,6 +50,15 @@ namespace Criatures2021
                 NivelDoGolpe = 9,
                 Colisor = new Colisor("metarig/hips",_deslTrail:new Vector3(0,1,1),_deslColisor:new Vector3(0,0,-1)),
                 TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.chicoteDeCalda,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("metarig/hips/chest/preRabo/preRabo2/rabo1/rabo2",
+                    _deslColisor:new Vector3(0,0,-.6f),_deslTrail:new Vector3(0,0,.6f)),
+                TaxaDeUso = .5f,
+                ModPersonagem = 14
             }
         };
 

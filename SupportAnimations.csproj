@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,17 +53,15 @@
     <UnityVersion>2019.4.40f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\legacy\scripts\Animacoes\AnimaLuzPsiquica.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\AnimacaoDeSpriteParaUI.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\ControleDosOlhos.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\DanoAparecendo.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\DustInTheWind.cs" />
+    <Compile Include="Assets\legacy\scripts\Animacoes\EscalaParaSabre.cs" />
+    <Compile Include="Assets\legacy\scripts\Animacoes\ExpandirEClarearSpeederEffect.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\GeneralRotation.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\GiraTurboDagua.cs" />
-    <Compile Include="Assets\legacy\scripts\Animacoes\escalaParaSabre.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\giraFuracaoDeFolhas.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\giraGira.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\reflexoCilindro.cs" />

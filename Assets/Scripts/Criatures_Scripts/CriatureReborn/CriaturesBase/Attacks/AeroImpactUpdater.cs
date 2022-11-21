@@ -163,6 +163,60 @@ namespace Criatures2021
 
         }
 
+        //void AvanceEPareAbaixo(GameObject G,PetAttackBase ativa)
+        //{
+        //    float distanciaDeParada = 5.75f;
+        //    float velocidadeAvante = ativa.VelocidadeDeGolpe;
+
+        //    Vector3 V = posInicial + 10 * ativa.DirDeREpulsao;
+        //    Vector3 project;
+        //    if (alvoProcurado)
+        //    {
+        //        V = alvoProcurado.position;
+        //        // project = (Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up));
+        //        //  if (Vector3.Dot(project,G.transform.forward)>0)
+        //        //    AtualizadorDeImpactos.ajudaAtaque(alvo, G.transform);
+        //    }
+
+        //    project = Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up);
+
+        //    if (Vector3.Dot(project, G.transform.forward) > 0)
+        //        G.transform.rotation = Quaternion.LookRotation(-project);
+        //    else
+        //        G.transform.rotation = Quaternion.LookRotation(ativa.DirDeREpulsao);
+
+
+        //    if (project.magnitude > distanciaDeParada
+        //        &&
+        //        G.transform.position.y - posInicial.y < 4
+        //        &&
+        //        !alcancouOApceDaAltura
+        //       &&
+        //       tempoDecorrido < ativa.TempoDeMoveMax / 2)
+        //    {
+        //        dirDeslocamento = (velocidadeAvante * G.transform.forward + Vector3.up * 15);
+        //    }
+        //    else if (project.magnitude <= distanciaDeParada)
+        //    {
+        //        Vector3 foco = velocidadeAvante * G.transform.forward + Vector3.down * 9.8f;
+        //        if (alvoProcurado && Vector3.Dot(-project, G.transform.forward) > 0)
+        //            foco = velocidadeAvante * (alvoProcurado.position - G.transform.position).normalized + 18.8f * Vector3.down;
+
+        //        dirDeslocamento = Vector3.Lerp(dirDeslocamento, foco, 20 * Time.deltaTime);
+        //        alcancouOApceDaAltura = true;
+        //    }
+        //    else if (G.transform.position.y - posInicial.y > 4)
+        //    {
+        //        alcancouOApceDaAltura = true;
+        //    }
+        //    else
+        //    {
+        //        dirDeslocamento = Vector3.Lerp(dirDeslocamento, velocidadeAvante * G.transform.forward + Vector3.down * 18.8f, 20 * Time.deltaTime);
+        //    }
+
+        //    controle.Move(dirDeslocamento * Time.deltaTime);
+        //}
+
 
         void AvanceEPareAbaixo(GameObject G, PetAttackBase ativa)
         {
@@ -179,7 +233,7 @@ namespace Criatures2021
                 //    AtualizadorDeImpactos.ajudaAtaque(alvo, G.transform);
             }
 
-            project = Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up).normalized;
+            project = Vector3.ProjectOnPlane(G.transform.position - V, Vector3.up);
 
             if (Vector3.Dot(-project, G.transform.forward) > 0.75f)
                 G.transform.rotation = Quaternion.LookRotation(-project);

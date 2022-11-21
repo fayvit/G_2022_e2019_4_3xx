@@ -11,16 +11,6 @@ namespace Criatures2021
         {
             new PetAttackDb()
             {
-                NivelDoGolpe = -1,
-                Nome = AttackNameId.sabreDeAsa,
-                Colisor = new Colisor("metarig",
-                                   new Vector3(0.18f,0,0),
-                                   new Vector3(-0.867f,-0.585f,-0.26f)),
-                DistanciaEmissora = 1.5f,
-                AcimaDoChao = 0.25f
-            },
-            new PetAttackDb()
-            {
                 NivelDoGolpe = 1,
                 ModPersonagem = 0,
                 Colisor = new Colisor("metarig/hips/spine/chest/shoulder.R/upper_arm.R/forearm.R/hand.R/palm.02.R",
@@ -57,12 +47,32 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 Nome = AttackNameId.sobreVoo,
-                NivelDoGolpe = 11,
+                NivelDoGolpe = 7,
                 Colisor = new Colisor("metarig",
                                                    new Vector3(0,0,0),
                                                    new Vector3(-0.11f,-0,0.244f)),
                 TaxaDeUso = 1.25f
-            },new PetAttackDb()
+            },
+             new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("metarig",
+                                                 new Vector3(0,0,0),
+                                                 new Vector3(-0.11f,-0,0.244f)),
+                Nome = AttackNameId.turbilhaoVeloz,
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 11,
+                Nome = AttackNameId.sabreDeAsa,
+                Colisor = new Colisor("metarig",
+                                   new Vector3(0.18f,0,0),
+                                   new Vector3(-0.867f,-0.585f,-0.26f)),
+                DistanciaEmissora = 1.5f,
+                AcimaDoChao = 1f
+            },
+            new PetAttackDb()
             {
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 18,

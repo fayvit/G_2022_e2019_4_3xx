@@ -35,7 +35,7 @@ namespace Criatures2021
             }
         }
 
-        public void ImpactoAtivo(GameObject G, PetAttackBase ativa, ImpactFeatures caracteristica,GameObject focado=null)
+        public void ImpactoAtivo(GameObject G, PetAttackBase ativa, IImpactFeatures caracteristica,GameObject focado=null)
         {
 
             if (focado)
@@ -99,7 +99,7 @@ namespace Criatures2021
     }
 
     [System.Serializable]
-    public struct ImpactFeatures
+    public struct ImpactFeatures:IImpactFeatures
     {
         public AttacksTrails nomeTrail;
         public ImpactParticles noImpacto;
@@ -111,6 +111,12 @@ namespace Criatures2021
             this.noImpacto = noImpacto;
             this.parentearNoOsso = parentearOsso;
         }
+
+        public ImpactParticles NoImpacto => noImpacto;
+
+        public AttacksTrails NomeTrail => nomeTrail;
+
+        public bool ParentearNoOsso => parentearNoOsso;
     }
 
     public enum AttacksTrails
@@ -132,7 +138,11 @@ namespace Criatures2021
         deslizamentoNaGosma,
         flashPsiquico,
         impulsoEletrico,
-        simpleArea
+        simpleArea,
+        turbilhaoVeloz,
+        nuvemDeTerra,
+        espiralDeCipo,
+        energiaAnelar
     }
 
     public enum ImpactParticles
@@ -185,6 +195,13 @@ namespace Criatures2021
         preparaImpulsoEletrico,
         preparaImpactoAoChao,
         impactoDePedraAoChao,
-        particulaPedraPartida
+        particulaPedraPartida,
+        impulsoVenenoso,
+        particulaTerraVenenosa,
+        preparaTurbilhaoVeloz,
+        preparaNuvemDeTerra,
+        gasAoChao,
+        preparaAtkDeGas,
+        preparaEspiralDeCipo
     }
 }

@@ -56,6 +56,15 @@ namespace Criatures2021
                 TaxaDeUso = .5f,
                 DistanciaEmissora=.125f,
                 ModPersonagem = 1
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.energiaAnelar,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armature",_deslTrail:new Vector3(0,0,.35f)),
+                TaxaDeUso = .5f,
+                DistanciaEmissora=.125f,
+                ModPersonagem=5
             }
         };
 

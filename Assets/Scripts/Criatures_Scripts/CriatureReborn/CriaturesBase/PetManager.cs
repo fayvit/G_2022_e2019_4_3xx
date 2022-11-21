@@ -177,7 +177,7 @@ namespace Criatures2021
             {
                 EndAtkUpdate();
                 EndRollState();
-                roll.ReturnTime();
+                
                 DamageState.StartDamageState(obj.golpe);
                 state = LocalState.inDamage;
 

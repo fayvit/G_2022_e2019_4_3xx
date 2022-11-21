@@ -48,7 +48,16 @@ namespace Criatures2021
                 NivelDoGolpe = 9,
                 Colisor = new Colisor("Esqueleto/Bone"),
                 TaxaDeUso = 1f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.cabecada,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Esqueleto/Bone/Bone.001/Bone.002/Bone.003/Bone.004"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = 0.25f
+            },
         };
 
         public static PetBase Criature

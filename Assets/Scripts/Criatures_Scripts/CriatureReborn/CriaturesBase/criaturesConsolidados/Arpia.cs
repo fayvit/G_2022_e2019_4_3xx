@@ -8,13 +8,6 @@ namespace Criatures2021
     {
         static List<PetAttackDb> listaDosGolpes = new List<PetAttackDb>()
         {
-        new PetAttackDb()
-        {
-            NivelDoGolpe = -1,
-            Nome = AttackNameId.sabreDeAsa,
-            Colisor = new Colisor("Esqueleto/corpo1/corpo2/corpo3/pescoco/cabeca"),
-            DistanciaEmissora = 2
-        },
             new PetAttackDb()
             {
                 NivelDoGolpe = 1,
@@ -50,6 +43,22 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("Esqueleto"),
                 TaxaDeUso = 1.25f
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Esqueleto/corpo1",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.6f,-0,0)),
+                Nome = AttackNameId.turbilhaoVeloz,
+                TaxaDeUso = 1f
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 11,
+                Colisor = new Colisor("Esqueleto/corpo1/corpo2/corpo3/pescoco/cabeca"),
+                Nome = AttackNameId.sabreDeAsa,
+                TaxaDeUso = 1f,
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f
             }
         };
 

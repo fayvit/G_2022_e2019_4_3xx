@@ -44,6 +44,23 @@ namespace Criatures2021
                                                   new Vector3(-0.26f,-0,0)),
                 Nome = AttackNameId.hidroBomba,
                 TaxaDeUso = 1.25f
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armação/Tronco",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.26f,-0,0)),
+                Nome = AttackNameId.impulsoAquatico,
+                TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                ModPersonagem = 0,
+                Colisor = new Colisor("Armação/Tronco/pescoco/Cabeca/"),
+                Nome = AttackNameId.cabecada,
+                TaxaDeUso = .25f,
+                DistanciaEmissora = 0.5f
             }
         };
 

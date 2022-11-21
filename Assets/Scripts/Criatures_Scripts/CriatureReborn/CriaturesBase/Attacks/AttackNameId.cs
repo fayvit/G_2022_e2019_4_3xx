@@ -67,6 +67,14 @@ namespace Criatures2021
         deslizamentoNaGosma,
         flashPsiquico,
         impulsoEletrico,
-        pedraPartida
+        pedraPartida,
+        terraVenenosa,
+        turbilhaoVeloz,
+        nuvemDeTerra,
+        sprayToxico,
+        espiralDeCipo,
+        velocidade,
+        energiaAnelar,
+        soco
     }
 }

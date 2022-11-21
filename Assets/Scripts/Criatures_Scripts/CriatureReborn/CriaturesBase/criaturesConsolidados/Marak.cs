@@ -51,6 +51,14 @@ namespace Criatures2021
                 Colisor = new Colisor("Armação/corpo3/corpo2/corpo1/pescoco/cabeca/"),
                 TaxaDeUso = .5f,
                 DistanciaEmissora=.125f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.energiaAnelar,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armação",_deslTrail:new Vector3(0,0,.35f)),
+                TaxaDeUso = .5f,
+                DistanciaEmissora=.125f
             }
         };
 

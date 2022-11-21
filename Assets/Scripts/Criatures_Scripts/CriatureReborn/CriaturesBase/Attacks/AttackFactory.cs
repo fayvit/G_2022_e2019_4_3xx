@@ -36,6 +36,10 @@ namespace Criatures2021
                     retorno = new FuracaoDeFolhas();
                 break;
 
+                case AttackNameId.espiralDeCipo:
+                    retorno = new EspiralDeCipo();
+                break;
+
                 case AttackNameId.bolaDeFogo:
                     retorno = new BolaDeFogo();
                 break;
@@ -54,6 +58,9 @@ namespace Criatures2021
                 break;
                 case AttackNameId.ventosCortantes:
                     retorno = new VentosCortantes();
+                break;
+                case AttackNameId.turbilhaoVeloz:
+                    retorno = new TurbilhaoVeloz();
                 break;
                 case AttackNameId.chicoteDeCalda:
                     retorno = new ChicoteDeCalda();
@@ -90,6 +97,9 @@ namespace Criatures2021
                 break;
                 case AttackNameId.ondaVenenosa:
                     retorno = new OndaVenenosa();
+                break;
+                case AttackNameId.terraVenenosa:
+                    retorno = new TerraVenenosa();
                 break;
                 case AttackNameId.bastao:
                     retorno = new Bastao();
@@ -152,11 +162,17 @@ namespace Criatures2021
                 case AttackNameId.cortinaDeTerra:
                     retorno = new CortinaDeTerra();
                 break;
+                case AttackNameId.nuvemDeTerra:
+                    retorno = new NuvemDeTerra();
+                break;
                 case AttackNameId.rajadaDeGas:
                     retorno = new RajadaDeGas();
                     break;
                 case AttackNameId.bombaDeGas:
                     retorno = new BombaDeGas();
+                break;
+                case AttackNameId.sprayToxico:
+                    retorno = new SprayToxico();
                 break;
                 case AttackNameId.cortinaDeFumaca:
                     retorno = new CortinaDeFumaca();
@@ -179,18 +195,30 @@ namespace Criatures2021
                 case AttackNameId.tesoura:
                     retorno = new Tesoura();
                 break;
-                //case nomesGolpes.sabreDeAsa:
-                //case nomesGolpes.sabreDeBastao:
-                //case nomesGolpes.sabreDeEspada:
-                //case nomesGolpes.sabreDeNadadeira:
-                //    retorno = new Sabre(nome);
-                //    break;
+                case AttackNameId.sabreDeAsa:
+                case AttackNameId.sabreDeBastao:
+                case AttackNameId.sabreDeEspada:
+                case AttackNameId.sabreDeNadadeira:
+                    retorno = new Sabre(nome);
+                break;
                 case AttackNameId.olharMal:
                     retorno = new OlharMal();
                 break;
                 case AttackNameId.olharEnfraquecedor:
                     retorno = new OlharEnfraquecedor();
                 break;
+                case AttackNameId.ataqueEmGiro:
+                    retorno = new AtkEmGiro();
+                break;
+                case AttackNameId.velocidade:
+                    retorno = new Velocidade();
+                break;
+                case AttackNameId.energiaAnelar:
+                    retorno = new EnergiaAnelar();
+                break;
+                case AttackNameId.soco:
+                    retorno = new Soco();
+                    break;
                 default:
                     retorno = new NullPetAttack(new PetAttackFeatures());
                 break;

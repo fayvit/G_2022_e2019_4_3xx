@@ -71,6 +71,8 @@ namespace Criatures2021
             MessageAgregator<MsgRequestCpuRoll>.RemoveListener(OnRequestCpuRoll);
             MessageAgregator<MsgRequestAtkResponse>.RemoveListener(OnRequestJump);
             MessageAgregator<MsgClearPetTarget>.RemoveListener(OnRequestClearTarget);
+
+            enemyIa.OnDestroy();
         }
 
         private void OnRequestClearTarget(MsgClearPetTarget obj)

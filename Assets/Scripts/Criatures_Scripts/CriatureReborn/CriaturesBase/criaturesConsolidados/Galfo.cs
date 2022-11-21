@@ -89,6 +89,14 @@ namespace Criatures2021
             },
             new PetAttackDb()
             {
+                NivelDoGolpe = 10,
+                ModPersonagem = 0,
+                Colisor = new Colisor("Armature/spine"),
+                Nome = AttackNameId.deslizamentoNaGosma,
+                TaxaDeUso = 1
+            },
+            new PetAttackDb()
+            {
                 NivelDoGolpe = 13,
                 ModPersonagem = 9,
                 Colisor = new Colisor("Armature/spine/spine.001/spine.002/spine.003/upper_arm.R/forearm.R/hand.R/hand.R_end"),

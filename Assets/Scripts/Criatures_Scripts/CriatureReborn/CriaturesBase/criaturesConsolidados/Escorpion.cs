@@ -67,7 +67,23 @@ namespace Criatures2021
                 Nome = AttackNameId.olharMal,
                 TaxaDeUso = .125f,
                 AcimaDoChao = -0.75f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.terraVenenosa,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("Armação"),
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.garra,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armação/Bone/Bone_R/Bone_R.001/Bone_R.002/Bone_R.003/Bone_R.004",
+                    _deslTrail:0.5f*Vector3.one,
+                    _deslColisor:-0.5f*Vector3.one),
+                TaxaDeUso = 0.5f
+            },
         };
 
         public static PetBase Criature

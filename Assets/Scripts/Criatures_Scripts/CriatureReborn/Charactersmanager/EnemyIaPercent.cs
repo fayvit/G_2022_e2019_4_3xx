@@ -55,7 +55,7 @@ namespace Criatures2021
             base.Start(T, P, controll);
         }
 
-        void OnDestroy()
+        public override void OnDestroy()
         {
             MessageAgregator<MsgInvokeStartAtk>.RemoveListener(OnAnyStartAtk);
             MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
@@ -118,6 +118,9 @@ namespace Criatures2021
                     case AttackDiferentialId.hitNoChao:
                         RespostaAoHitNoChao();
                     break;
+                    case AttackDiferentialId.aeroImpulse:
+                        RespostaAeroImpulse();
+                    break;
                 }
             }
         }
@@ -168,15 +171,23 @@ namespace Criatures2021
             return per.dodgeChance;
         }
 
+        private void RespostaAeroImpulse()
+        {
+            controll.ModificarOndeChegar(MeuTransform.position - 9 * ddir - 15 * fDir);
+            extendState = ExtendState.emMoveDoColisaoComPow;
+            EnterInAtkResponse();
+
+            SupportSingleton.Instance.InvokeInSeconds(() => { ExitOutAtkResponse(); },
+                1.1f * esseAtk.TempoDeDestroy);
+        }
+
         private void RespostaColisaoComPow()
         {
             controll.ModificarOndeChegar(MeuTransform.position - 9 * ddir - 15 * fDir);
             extendState = ExtendState.emMoveDoColisaoComPow;
             EnterInAtkResponse();
 
-            SupportSingleton.Instance.InvokeInSeconds(() => { ExitOutAtkResponse(); }, 
-                esseAtk.Nome==AttackNameId.sobreVoo?
-                1.1f*esseAtk.TempoDeDestroy:
+            SupportSingleton.Instance.InvokeInSeconds(() => { ExitOutAtkResponse(); },
                 1.1f*esseAtk.TempoDeMoveMax);
         }
 

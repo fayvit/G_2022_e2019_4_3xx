@@ -44,7 +44,7 @@ namespace Criatures2021
                 Colisor = new Colisor("esqueleto"),
                 Nome = AttackNameId.dentada,
                 TaxaDeUso = 0.5f,
-                DistanciaEmissora = 0.5f
+                DistanciaEmissora = 1.5f
             },
             new PetAttackDb()
             {
@@ -58,9 +58,23 @@ namespace Criatures2021
             {
                 NivelDoGolpe = 10,
                 Colisor = new Colisor("esqueleto"),
+                Nome = AttackNameId.velocidade,
+                TaxaDeUso = 0.2f,
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 11,
+                Colisor = new Colisor("esqueleto"),
                 Nome = AttackNameId.olharEnfraquecedor,
                 TaxaDeUso = 0.125f,
                 DistanciaEmissora = 0.5f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("esqueleto/corpo.001/coxa_R/perna_R/pe_R",new Vector3(0,-1,-1),new Vector3(0,1,1)),
+                Nome = AttackNameId.chute,
+                TaxaDeUso = 0.4f
             }
         };
 

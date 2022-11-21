@@ -58,14 +58,8 @@ namespace Criatures2021
                     nomeAnima = Nome.ToString()
                 });
             }
-            ImpactFeatures i_f = new ImpactFeatures
-            {
-                noImpacto = feat.noImpacto,
-                nomeTrail = feat.trail,
-                parentearNoOsso = feat.parentearNoOsso
-            };
 
-            aImpacto.ImpactoAtivo(G, this, i_f, focado);
+            aImpacto.ImpactoAtivo(G, this, feat, focado);
         }
 
         public override void FinalizaEspecificoDoGolpe()
@@ -93,12 +87,18 @@ namespace Criatures2021
     }
 
     [System.Serializable]
-    public struct DelayedCollisionFeatures
+    public struct DelayedCollisionFeatures:IImpactFeatures
     {
         public ImpactParticles noImpacto;
         public AttacksTrails trail;
         public GeneralParticles prepara;
         public SoundEffectID onPrepareSound;
         public bool parentearNoOsso;
+
+        public ImpactParticles NoImpacto => noImpacto;
+
+        public AttacksTrails NomeTrail => trail;
+
+        public bool ParentearNoOsso => parentearNoOsso;
     }
 }

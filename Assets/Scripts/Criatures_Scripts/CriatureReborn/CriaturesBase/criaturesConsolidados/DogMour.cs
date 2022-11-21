@@ -42,6 +42,22 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor(),
                 TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sprayToxico,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Esqueleto"),
+                TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.cabecada,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Esqueleto/Bone/Bone.001/Bone.002/Bone.003/Bone.004/Bone.005"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = 0.25f
             }
         };
 

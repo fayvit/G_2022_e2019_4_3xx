@@ -91,6 +91,7 @@ namespace Criatures2021
         }
     }
 
+    [System.Serializable]
     public struct AreaFeatures
     {
         public ImpactParticles noImpacto;

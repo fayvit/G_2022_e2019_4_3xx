@@ -58,6 +58,13 @@ namespace Criatures2021
                 TaxaDeUso = 1,
                 DistanciaEmissora = 0.125f
             },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Esqueleto/gomo1/cabeca"),
+                Nome = AttackNameId.cabecada,
+                TaxaDeUso = .5f,
+            },
         };
 
         public static PetBase Criature

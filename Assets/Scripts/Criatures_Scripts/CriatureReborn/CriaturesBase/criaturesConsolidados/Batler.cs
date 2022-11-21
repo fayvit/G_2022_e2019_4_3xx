@@ -58,12 +58,31 @@ namespace Criatures2021
             new PetAttackDb()
             {
                 Nome = AttackNameId.sobreVoo,
-                NivelDoGolpe = 11,
+                NivelDoGolpe = 7,
                 Colisor = new Colisor("esqueleto/corpo/coxaD/pernaD/peD",
                                                    new Vector3(0,0,0),
                                                    new Vector3(-0.11f,-0,0.244f)),
                 TaxaDeUso = 1.25f
-            },new PetAttackDb()
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("esqueleto/corpo",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.6f,-0,0)),
+                Nome = AttackNameId.turbilhaoVeloz,
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sabreDeAsa,
+                NivelDoGolpe = 11,
+                Colisor = new Colisor("esqueleto/corpo"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = .75f
+            },
+            new PetAttackDb()
             {
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 18,

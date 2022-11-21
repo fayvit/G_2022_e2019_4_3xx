@@ -65,6 +65,16 @@ namespace Criatures2021
             },
             new PetAttackDb()
             {
+                Nome = AttackNameId.soco,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Esqueleto/hips/spine/chest/upper_arm.R/forearm.R/hand.R"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = .5f
+            }
+            ,
+            new PetAttackDb()
+            {
                 Nome = AttackNameId.olharMal,
                 NivelDoGolpe = 16,
                 Colisor = new Colisor("Esqueleto/hips/spine/chest/upper_arm.R/forearm.R/hand.R"),

@@ -53,6 +53,23 @@ namespace Criatures2021
                 TaxaDeUso = .125f
 
             },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.nuvemDeTerra,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("esqueleto"),
+                TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.dentada,
+                ModPersonagem = 5,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("esqueleto/centro/",
+                                                new Vector3(0,0,0.3f),
+                                           new Vector3(-0.2f,0f,0.723f)),
+                TaxaDeUso = 0.5f
+            },
         };
 
         public static PetBase Criature

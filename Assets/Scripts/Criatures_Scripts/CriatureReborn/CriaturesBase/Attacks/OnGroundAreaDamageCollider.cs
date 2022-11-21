@@ -11,7 +11,7 @@ namespace Criatures2021
             if (emQ.CompareTag("Criature"))
             {
                 PetManager P = emQ.GetComponent<PetManager>();
-                if(P&&P.Mov.IsGrounded)
+                if(P && P.Mov.IsGrounded)
                     FuncaoTrigger(emQ);
             }
         }

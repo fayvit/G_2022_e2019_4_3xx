@@ -88,7 +88,15 @@ namespace Criatures2021
                                                       new Vector3(0,0,0),
                                                       new Vector3(-0.163f,0.017f,0.139f)),
                 TaxaDeUso = 0.5f
-            }
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 11,
+                ModPersonagem = 0,
+                Colisor = new Colisor("Armação/Bone.001/"),
+                Nome = AttackNameId.deslizamentoNaGosma,
+                TaxaDeUso = 1
+            },
         };
 
         public static PetBase Criature

@@ -59,10 +59,26 @@ namespace Criatures2021
             {
                 NivelDoGolpe = 10,
                 Colisor = new Colisor("Armature"),
+                Nome = AttackNameId.velocidade,
+                TaxaDeUso = 0.25f,
+                ModPersonagem=1
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 11,
+                Colisor = new Colisor("Armature"),
                 Nome = AttackNameId.olharEnfraquecedor,
                 TaxaDeUso = 0.125f,
                 DistanciaEmissora = 0.5f,
                 ModPersonagem=1
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armature",_deslColisor:new Vector3(0,0,-1),new Vector3(0,-1,1)),
+                Nome = AttackNameId.chute,
+                TaxaDeUso = 0.4f,
+                ModPersonagem=3
             }
         };
 

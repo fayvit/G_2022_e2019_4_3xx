@@ -6,6 +6,7 @@ using FayvitSounds;
 using Criatures2021Hud;
 using TextBankSpace;
 using System;
+using FayvitMove;
 
 namespace Criatures2021
 {
@@ -27,6 +28,7 @@ namespace Criatures2021
             MessageAgregator<MsgOpenOneMessage>.AddListener(OnOpenOneMessage);
             MessageAgregator<MsgCloseMessagePanel>.AddListener(OnCloseOneMessage);
             MessageAgregator<MsgConfirmationPanelChangeOption>.AddListener(OnConfirmationOptionChange);
+            MessageAgregator<MsgStartRoll>.AddListener(OnStartRoll);
 
             base.Start();
         }
@@ -45,12 +47,18 @@ namespace Criatures2021
             MessageAgregator<MsgOpenOneMessage>.RemoveListener(OnOpenOneMessage);
             MessageAgregator<MsgCloseMessagePanel>.RemoveListener(OnCloseOneMessage);
             MessageAgregator<MsgConfirmationPanelChangeOption>.RemoveListener(OnConfirmationOptionChange);
+            MessageAgregator<MsgStartRoll>.RemoveListener(OnStartRoll);
 
 
             base.OnDestroy();
 
             Confirmation.ChangeBtnYesText(TextBank.RetornaFraseDoIdioma(TextKey.simOuNao));
             Confirmation.ChangeBtnNoText(TextBank.RetornaListaDeTextoDoIdioma(TextKey.simOuNao)[1]);
+        }
+
+        private void OnStartRoll(MsgStartRoll obj)
+        {
+            Sfx.Instantiate3dSound(obj.gameObject.transform, SoundEffectID.Evasion2);
         }
 
         private void OnConfirmationOptionChange(MsgConfirmationPanelChangeOption obj)

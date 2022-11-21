@@ -4222,6 +4222,7 @@ MonoBehaviour:
       carac: 1
       damageAtribute: 0
       podeNoAr: 0
+      ignoreDodge: 0
       potenciaMinima: 1
       potenciaCorrente: 2
       potenciaMaxima: 3
@@ -7919,7 +7920,7 @@ Transform:
   - {fileID: 1044446105}
   - {fileID: 807292354}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454680077
 GameObject:
@@ -9010,7 +9011,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7b740268e5388734784916e159628dcb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b740268e5388734784916e159628dcb,
         type: 3}
@@ -9398,6 +9399,7 @@ MonoBehaviour:
       carac: 1
       damageAtribute: 1
       podeNoAr: 0
+      ignoreDodge: 0
       potenciaMinima: 1
       potenciaCorrente: 2
       potenciaMaxima: 3
@@ -21304,6 +21306,7 @@ MonoBehaviour:
       carac: 1
       damageAtribute: 0
       podeNoAr: 0
+      ignoreDodge: 0
       potenciaMinima: 1
       potenciaCorrente: 2
       potenciaMaxima: 3
@@ -44974,6 +44977,7 @@ MonoBehaviour:
       carac: 1
       damageAtribute: 1
       podeNoAr: 0
+      ignoreDodge: 0
       potenciaMinima: 1
       potenciaCorrente: 2
       potenciaMaxima: 3
@@ -63670,7 +63674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969476631
 GameObject:
@@ -71654,7 +71658,7 @@ PrefabInstance:
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4008671975834971215, guid: 008fb82c62accbe44ba428826a02085c,
         type: 3}

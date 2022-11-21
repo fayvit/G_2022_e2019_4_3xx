@@ -8,16 +8,6 @@ namespace Criatures2021
     {
         static List<PetAttackDb> listaDosGolpes = new List<PetAttackDb>()
         {
-        new PetAttackDb()
-        {
-            NivelDoGolpe = -1,
-                Nome = AttackNameId.sabreDeAsa,
-                Colisor = new Colisor("esqueleto/corpo",
-                                       new Vector3(0.18f,0,0),
-                                       new Vector3(-0.867f,-0.585f,-0.26f)),
-                DistanciaEmissora = 1.5f,
-                AcimaDoChao = 0.25f
-        },
             new PetAttackDb()
             {
                 Nome = AttackNameId.ventania,
@@ -27,15 +17,6 @@ namespace Criatures2021
                                    new Vector3(-0.867f,-0.585f,-0.26f)),
                 TaxaDeUso = 1f
             },
-            //new PetAttackDb()
-            //{
-            //    Nome = AttackNameId.sobreSalto,
-            //    NivelDoGolpe = 2,
-            //    Colisor = new Colisor("esqueleto/corpo",
-            //                             new Vector3(0,-0.46f,1.4f),
-            //                             new Vector3(-0.365f,0.113f,-0.325f)),
-            //    TaxaDeUso = 1.25f
-            //},
             new PetAttackDb()
             {
                 NivelDoGolpe = 1,
@@ -73,7 +54,25 @@ namespace Criatures2021
                 DistanciaEmissora = 1f,
                 AcimaDoChao = 0.15f,
                 TaxaDeUso = .125f
-            }
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("esqueleto/corpo",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.6f,-0,0)),
+                Nome = AttackNameId.turbilhaoVeloz,
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sabreDeAsa,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("esqueleto/corpo"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = 1.125f
+            },
         };
 
         public static PetBase Criature

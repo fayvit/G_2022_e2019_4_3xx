@@ -54,6 +54,21 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("Armação/corpoBase/corpoP/pescoco/cabeca",new Vector3(-0f,0.83F,-0.36f),Vector3.zero,colisorScale:1.5F),
                 TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.pedraPartida,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armação"),
+                TaxaDeUso=1
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.cabecada,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armação/corpoBase/corpoP/pescoco/cabeca"),
+                TaxaDeUso = .45f,
+                ModPersonagem = 5
             }
         };
 

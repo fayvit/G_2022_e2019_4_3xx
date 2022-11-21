@@ -3,7 +3,7 @@ namespace Criatures2021
 {
 
     [System.Serializable]
-    public struct AeroImpactFeatures
+    public struct AeroImpactFeatures:IImpactFeatures
     {
         public ImpactParticles noImpacto;
         public AttacksTrails trail;
@@ -47,6 +47,12 @@ namespace Criatures2021
                 };
             }
         }
+
+        public ImpactParticles NoImpacto => noImpacto;
+
+        public AttacksTrails NomeTrail => NomeTrail;
+
+        public bool ParentearNoOsso => parentearNoOsso;
     }
 
     public enum ToutchingFloor

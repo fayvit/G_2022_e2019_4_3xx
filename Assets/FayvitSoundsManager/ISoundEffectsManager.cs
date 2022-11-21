@@ -59,6 +59,9 @@ namespace FayvitSounds
         Collapse3 = 40,
         Thunder11 = 41,
         XP131_Earth03 = 42,
-        Explosion5 = 43
+        Explosion5 = 43,
+        Evasion2 = 44,
+        Wind11 = 45,
+        velocidadeCriatures = 46
     }
 }

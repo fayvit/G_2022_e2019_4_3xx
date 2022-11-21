@@ -27,16 +27,24 @@ namespace Criatures2021
 
         public static GameObject InstancieEDestrua(string nome,
                                                     Vector3 posInicial,
-                                                    Vector3 forwardInicial,
+                                                    Quaternion forwardInicial,
                                                     float tempoDeGolpe)
         {
             GameObject golpeX = Resources.Load<GameObject>(nome);
 
-            golpeX = Object.Instantiate(golpeX, posInicial, Quaternion.LookRotation(forwardInicial));
+            golpeX = Object.Instantiate(golpeX, posInicial, forwardInicial);
 
             Object.Destroy(golpeX, tempoDeGolpe);
 
             return golpeX;
+        }
+
+        public static GameObject InstancieEDestrua(string nome,
+                                                    Vector3 posInicial,
+                                                    Vector3 forwardInicial,
+                                                    float tempoDeGolpe)
+        {
+            return InstancieEDestrua(nome, posInicial, Quaternion.LookRotation(forwardInicial), tempoDeGolpe);
         }
 
         public static GameObject InstanciaLigandoE_Destrua(GameObject G, Vector3 position, Quaternion rotation, float tempoDaDestruicao)

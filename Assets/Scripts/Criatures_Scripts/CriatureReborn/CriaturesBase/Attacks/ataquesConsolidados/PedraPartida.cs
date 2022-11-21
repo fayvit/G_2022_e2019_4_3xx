@@ -11,7 +11,7 @@ namespace Criatures2021
             tipo = PetTypeName.Pedra,
             carac = AttackDiferentialId.area,
             damageAtribute = DamageBaseAtribute.poder,
-            custoPE = 4,
+            custoPE = 6,
             potenciaCorrente = 37,
             potenciaMaxima = 48,
             potenciaMinima = 26,

@@ -19,14 +19,6 @@ namespace Criatures2021
                 AcimaDoChao = 0.25f,
                 TaxaDeUso=.125f
             },
-        new PetAttackDb()
-            {
-                NivelDoGolpe = -1,
-                Nome = AttackNameId.sabreDeBastao,
-                Colisor = new Colisor("Armação/Bone/Bone_R/Bone_R.001"),
-                DistanciaEmissora = 1.5f,
-                AcimaDoChao = 0.25f
-            },
         #endregion comPErgaminhos
             new PetAttackDb()
             {
@@ -70,7 +62,22 @@ namespace Criatures2021
                 NivelDoGolpe = 7,
                 Colisor = new Colisor("",new Vector3(0,0.62f,0.21f),Vector3.zero),
                 TaxaDeUso = 1.25f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.terraVenenosa,
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armação"),
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Nome = AttackNameId.sabreDeBastao,
+                Colisor = new Colisor("Armação/Bone/Bone_R/Bone_R.001"),
+                DistanciaEmissora = 1.5f,
+                AcimaDoChao = 0.25f
+            },
         };
 
         public static PetBase Criature

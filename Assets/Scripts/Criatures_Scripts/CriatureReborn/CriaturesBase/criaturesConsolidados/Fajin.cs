@@ -69,6 +69,24 @@ namespace Criatures2021
                                    new Vector3(-0.867f,-0.585f,-0.26f)),
                 TaxaDeUso = .75f
             },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Esqueleto/corpo1",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.6f,-0,0)),
+                Nome = AttackNameId.turbilhaoVeloz,
+                TaxaDeUso = 1f
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 14,
+                Colisor = new Colisor("Esqueleto/corpo1/corpo2/corpo3/pescoco/cabeca"),
+                Nome = AttackNameId.sabreDeAsa,
+                TaxaDeUso = 1f,
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f
+            }
         };
 
         public static PetBase Criature

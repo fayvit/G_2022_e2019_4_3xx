@@ -61,11 +61,13 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\AttackFactory.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\AttackFeatures.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\AttackNameId.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\AeroImpulseBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\AttackColliders.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\DamageCollider.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\DamageColliderDirectional.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\DamageManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\DelayedCollisionAttack.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\ExpansiveAreaAttack.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\ExpansiveStatusCollider.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\ImpactBase.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ComportamentosDeAtaqueBase\MultiplyedBehaviour.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\TempestadeEletrica.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\AgulhaVenenosa.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\AnelDoOlhar.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\AtkEmGiro.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Avalanche.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Bastao.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Bico.cs" />
@@ -123,7 +126,9 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\DeslizamentoNaGosma.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Eletricidade.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\EletricidadeConcentrada.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\EnergiaAnelar.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Espada.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\EspiralDeCipo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\FlashPsiquico.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\FuracaoDeFolhas.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Garra.cs" />
@@ -135,6 +140,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\ImpulsoFlamejante.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\LaminaDeFolhas.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Multiplicar.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\NuvemDeTerra.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\OlharEnfraquecedor.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\OlharMal.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\OndaVenenosa.cs" />
@@ -145,14 +151,20 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\RajadaDeFogo.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\RajadaDeGas.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\RajadaDeTerra.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Sabre.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\SobreSalto.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\SobreVoo.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Soco.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\SprayToxico.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Tapa.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Teletransporte.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\TempestadeDeFolhas.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\TerraVenenosa.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Tesoura.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\TosteAtaque.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\TurbilhaoVeloz.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\TurboDeAgua.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Velocidade.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\Ventania.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\VentosCortantes.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\CriaturesBase\Attacks\ataquesConsolidados\VingancaDaTerra.cs" />
@@ -829,6 +841,10 @@
     <ProjectReference Include="BasicEvents.csproj">
       <Project>{3C304215-9CD8-6DC4-E007-A70D86BD298C}</Project>
       <Name>BasicEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="SupportAnimations.csproj">
+      <Project>{AA7415BA-9058-335B-04DC-C29051880F1E}</Project>
+      <Name>SupportAnimations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -46,7 +46,7 @@ namespace Criatures2021
                 ModPersonagem = 5,
                 Colisor = new Colisor("Armature",
                                    new Vector3(0.18f,0,0),
-                                   new Vector3(-0.161F,.53F,0.767f)),
+                                   new Vector3(0,-1F,0.5f)),
                 TaxaDeUso = 0.5f
             },
             new PetAttackDb()
@@ -77,7 +77,16 @@ namespace Criatures2021
                                                   new Vector3(-0.26f,-0,0)),
                 Nome = AttackNameId.impulsoFlamejante,
                 TaxaDeUso = 1.25f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.cabecada,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armature/coluna1/coluna2/coluna3/pescoco/cabeca"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = 0.25f
+            },
         };
 
         public static PetBase Criature

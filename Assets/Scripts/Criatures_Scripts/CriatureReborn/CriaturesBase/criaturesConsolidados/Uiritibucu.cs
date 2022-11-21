@@ -11,12 +11,12 @@ namespace Criatures2021
         new PetAttackDb()
         {
             NivelDoGolpe = 1,
-                ModPersonagem = 28,
-                Colisor = new Colisor("esqueleto/corpo/corpo_R/corpo_R.001/corpo_R.002",
-                                          new Vector3(0,-0.16f,-1.12f),
-                                          new Vector3(0,.447f,1.357f)),
-                Nome = AttackNameId.chicoteDeMao,
-                TaxaDeUso = 0.5f
+            ModPersonagem = 28,
+            Colisor = new Colisor("esqueleto/corpo/corpo_R/corpo_R.001/corpo_R.002",
+                                        new Vector3(0,-0.16f,-1.12f),
+                                        new Vector3(0,.447f,1.357f)),
+            Nome = AttackNameId.chicoteDeMao,
+            TaxaDeUso = 0.5f
         },
             new PetAttackDb()
             {
@@ -58,12 +58,19 @@ namespace Criatures2021
             },
             new PetAttackDb()
             {
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("esqueleto"),
+                Nome = AttackNameId.ataqueEmGiro,
+                TaxaDeUso = 1.125f
+            },
+            new PetAttackDb()
+            {
                 NivelDoGolpe = 16,
                 Colisor = new Colisor("esqueleto"),
                 Nome = AttackNameId.olharEnfraquecedor,
                 TaxaDeUso = 0.125f,
                 DistanciaEmissora = 0.5f,
-                ModPersonagem=1,
+                ModPersonagem=7,
             }
         };
 

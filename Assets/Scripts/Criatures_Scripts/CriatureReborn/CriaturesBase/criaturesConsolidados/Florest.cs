@@ -68,7 +68,23 @@ namespace Criatures2021
                                                    new Vector3(0,0,0.3f),
                                                    new Vector3(0,0,0f)),
                 TaxaDeUso = 1.25f
-            }
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.espiralDeCipo,
+                NivelDoGolpe = 10,
+                Colisor = new Colisor("Arma__o/corpo"),
+                TaxaDeUso = 1.25f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.sobreSalto,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Arma__o/corpo",
+                                         new Vector3(0,-0.71f,.37f),
+                                         new Vector3(-0.37f,1.62f,-0.325f)),
+                TaxaDeUso = .5f
+            },
         };
 
         public static PetBase Criature

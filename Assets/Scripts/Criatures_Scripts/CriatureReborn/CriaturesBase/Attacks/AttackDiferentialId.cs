@@ -10,7 +10,9 @@
         projetilPerseguidor,
         especialComParalisia,
         hitNoChao,
-        colisaoComAtraso
+        colisaoComAtraso,
+        aeroImpulse,
+        expansiveArea
     }
 
     public enum DamageBaseAtribute

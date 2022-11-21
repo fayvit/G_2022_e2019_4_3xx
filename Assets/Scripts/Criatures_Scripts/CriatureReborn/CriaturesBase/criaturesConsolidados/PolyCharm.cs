@@ -64,7 +64,24 @@ namespace Criatures2021
                                                    new Vector3(0f,0,0),
                                                    new Vector3(0,0,0)),
                 TaxaDeUso = 1.25f
-            }
+            },new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Colisor = new Colisor("Armação.001/coluna1",
+                                                  new Vector3(0,0,0),
+                                                  new Vector3(-0.26f,-0,0)),
+                Nome = AttackNameId.impulsoFlamejante,
+                TaxaDeUso = 1.05f
+            },
+            new PetAttackDb()
+            {
+                Nome = AttackNameId.cabecada,
+                NivelDoGolpe = 12,
+                Colisor = new Colisor("Armação.001/coluna1/coluna2/coluna3/pescoco/cabeca"),
+                DistanciaEmissora = 1f,
+                AcimaDoChao = 0.15f,
+                TaxaDeUso = 0.25f
+            },
         };
 
         public static PetBase Criature

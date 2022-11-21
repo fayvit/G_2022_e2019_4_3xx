@@ -10,14 +10,6 @@ namespace Criatures2021
         {
             new PetAttackDb()
             {
-                NivelDoGolpe = -1,
-                Nome = AttackNameId.sabreDeEspada,
-                Colisor = new Colisor("esqueleto/corpo/"),
-                DistanciaEmissora = 2,
-                AcimaDoChao = 0.25f
-            },
-            new PetAttackDb()
-            {
                 NivelDoGolpe = 1,
                 ModPersonagem = 0,
                 Colisor = new Colisor("esqueleto/corpo/anteBracoD/bracoD/maoD",
@@ -51,7 +43,15 @@ namespace Criatures2021
                 Colisor = new Colisor("esqueleto/corpo/"),
                 DistanciaEmissora = 0.5f,
                 TaxaDeUso = 1.25f
-            }
+            },
+            new PetAttackDb()
+            {
+                NivelDoGolpe = 9,
+                Nome = AttackNameId.sabreDeEspada,
+                Colisor = new Colisor("esqueleto/corpo/"),
+                DistanciaEmissora = .5f,
+                TaxaDeUso = 1.05f
+            },
         };
 
         public static PetBase Criature
