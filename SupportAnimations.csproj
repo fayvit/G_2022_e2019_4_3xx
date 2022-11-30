@@ -62,6 +62,8 @@
     <Compile Include="Assets\legacy\scripts\Animacoes\ExpandirEClarearSpeederEffect.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\GeneralRotation.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\GiraTurboDagua.cs" />
+    <Compile Include="Assets\legacy\scripts\Animacoes\PoolParticles.cs" />
+    <Compile Include="Assets\legacy\scripts\Animacoes\PoolSound.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\giraFuracaoDeFolhas.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\giraGira.cs" />
     <Compile Include="Assets\legacy\scripts\Animacoes\reflexoCilindro.cs" />

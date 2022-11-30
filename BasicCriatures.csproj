@@ -54,6 +54,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\BasicCriatures\PetNames.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\BasicCriatures\PoolPets.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\BasicCriatures\PoolPets_ddepoisDoBugDaUnity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\BasicCriatures\BasicCriatures.asmdef" />

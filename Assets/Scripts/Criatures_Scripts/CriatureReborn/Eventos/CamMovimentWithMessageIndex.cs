@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using FayvitMessageAgregator;
 using FayvitUI;
 using TextBankSpace;
 using FayvitCam;
 using FayvitBasicTools;
 using TalkSpace;
-using System;
 
 namespace Criatures2021
 {
@@ -53,6 +51,7 @@ namespace Criatures2021
         private void OnTextBoxCommingMessage(MsgAddTextDisplayIndex obj)
         {
             Debug.Log(obj.message + " : " + TextBank.RetornaListaDeTextoDoIdioma(key)[index]);
+
             if (TextBank.RetornaListaDeTextoDoIdioma(key)[index] == obj.message)
             {
                 if (alvoDoMovimento != null)

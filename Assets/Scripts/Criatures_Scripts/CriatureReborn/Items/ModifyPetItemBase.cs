@@ -115,7 +115,7 @@ namespace Criatures2021
                     PetMenuManager.instance.Menu.ChangeOption(-commands.vChange);
                     if (commands.confirmButton)
                     {
-                        OpcaoEscolhida(ContainerBasicMenu.instance.Menu.SelectedOption);
+                        OpcaoEscolhida(PetMenuManager.instance.Menu.SelectedOption);
                     }
                     else if (commands.returnButton)
                     {
@@ -246,6 +246,8 @@ namespace Criatures2021
 
         protected virtual void OpcaoEscolhida(int escolha)
         {
+            //Debug.Log("Opção escolhida no uso de item: " + escolha);
+
             commands = new MsgSendExternalPanelCommand();
             CharacterManager manager = Dono.GetComponent<CharacterManager>();
             if (Consumivel)
@@ -263,6 +265,12 @@ namespace Criatures2021
             else
             {
                 TempoDecorrido = 0;
+
+                MessageAgregator<MsgStartUseItem>.Publish(new MsgStartUseItem
+                {
+                    usuario = Dono
+                });
+
                 InstaciarParticulaComSom();
                 Estado = ItemUseState.aplicandoItem;
             }

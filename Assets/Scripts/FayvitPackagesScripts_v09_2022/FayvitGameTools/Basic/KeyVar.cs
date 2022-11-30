@@ -192,6 +192,7 @@ namespace FayvitBasicTools
         entregouCanetaDeIan = 4,
         permitidoKeyDjey = 5,
         hooliganKeyDjey = 6,
+        CaesarFalaEmMarjan = 7,
     }
 
     public enum KeyCont

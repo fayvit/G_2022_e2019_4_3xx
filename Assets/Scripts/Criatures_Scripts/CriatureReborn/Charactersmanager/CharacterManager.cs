@@ -10,6 +10,7 @@ using FayvitSave;
 using Criatures2021Hud;
 using TextBankSpace;
 using CustomizationSpace;
+using System;
 
 namespace Criatures2021
 {
@@ -107,6 +108,7 @@ namespace Criatures2021
             MessageAgregator<MsgFinishChestInteraction>.AddListener(OnFinishChestInteraction);
             MessageAgregator<MsgRequestLastGroundedPosition>.AddListener(OnRequestLastGroundedPosition);
             MessageAgregator<MsgChangeKeyDjeyPermission>.AddListener(OnRequestChangeKeyDjeyPermission);
+            MessageAgregator<MsgItemAmountChange>.AddListener(OnItemAmountChange);
 
         }
 
@@ -139,7 +141,13 @@ namespace Criatures2021
             MessageAgregator<MsgAnimaCaptura>.RemoveListener(OnAnimateCapture);
             MessageAgregator<MsgFinishChestInteraction>.RemoveListener(OnFinishChestInteraction);
             MessageAgregator<MsgRequestLastGroundedPosition>.RemoveListener(OnRequestLastGroundedPosition);
-            MessageAgregator<MsgChangeKeyDjeyPermission>.AddListener(OnRequestChangeKeyDjeyPermission);
+            MessageAgregator<MsgChangeKeyDjeyPermission>.RemoveListener(OnRequestChangeKeyDjeyPermission);
+            MessageAgregator<MsgItemAmountChange>.RemoveListener(OnItemAmountChange);
+        }
+
+        private void OnItemAmountChange(MsgItemAmountChange obj)
+        {
+            VerifySelectedItem();
         }
 
         private void OnRequestChangeKeyDjeyPermission(MsgChangeKeyDjeyPermission obj)

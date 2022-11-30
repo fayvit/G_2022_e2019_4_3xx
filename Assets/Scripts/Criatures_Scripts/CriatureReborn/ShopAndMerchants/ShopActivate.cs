@@ -42,7 +42,9 @@ namespace Criatures2021
                             itensParaVenda[i].limitado > 0 ? itensParaVenda[i].limitado : -1);
                     }
 
-                    itensParaVenda[i].limitado = keyVar.VerificaAutoCont(ID + "item" + i);
+                    //Nâo me lembro qual o sentido disso mas causava um bug nas vendas do shopping
+                    //Os itens limitdos ficavam ilimitados apos zerados e carregando o jogo
+                    //itensParaVenda[i].limitado = keyVar.VerificaAutoCont(ID + "item" + i);
 
                 }
 

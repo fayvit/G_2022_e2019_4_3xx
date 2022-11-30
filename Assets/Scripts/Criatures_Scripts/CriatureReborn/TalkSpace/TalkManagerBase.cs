@@ -34,8 +34,9 @@ namespace TalkSpace
             fotoDoNPC = S;
         }
 
-        public void Start()
+        public void Start(GameObject G)
         {
+            GO_Reference = G;
             conversa = TextBank.RetornaListaDeTextoDoIdioma(chaveDaConversa).ToArray();
         }
 

@@ -12007,7 +12007,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetalhesDaBarba:
-        m_Texture: {fileID: 2800000, guid: 1d09aeaba5de45d48a3e47b5958278c9, type: 3}
+        m_Texture: {fileID: 2800000, guid: b1419def1df43cd4b85e3977d28bfd75, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetalhesDaIris:
@@ -12031,7 +12031,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MascaraDaBarba:
-        m_Texture: {fileID: 2800000, guid: b8cd1c63229d35748a05101b9fbd0439, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5011080ae24690940bfe37daa760ccfd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MascaraDaIris:
@@ -12263,7 +12263,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetalheDaSobrancelha:
-        m_Texture: {fileID: 2800000, guid: 77ae21848b3793942af511aebe62b9d9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b67eba283fcf9f4eaf195f7ce0595a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetalhesBrancoDosOlhos:
@@ -12307,7 +12307,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MascaraDaSobrancelha:
-        m_Texture: {fileID: 2800000, guid: e91adb2707a45024b9dc9265aff94df1, type: 3}
+        m_Texture: {fileID: 2800000, guid: fc1b54c87bab4064ca83a95e7701cd93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MascaraDaUmidade:

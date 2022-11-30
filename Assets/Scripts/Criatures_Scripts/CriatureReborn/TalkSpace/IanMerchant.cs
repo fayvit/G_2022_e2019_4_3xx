@@ -260,7 +260,7 @@ namespace Criatures2021
                 break;
                 case 2:
                     state = LocalState.conversaInterna;
-                    NPC.Start();
+                    NPC.Start(gameObject);
                     NPC.IniciaConversa();
                 break;
                 case 3:
@@ -279,7 +279,7 @@ namespace Criatures2021
         {
             state = LocalState.fraseDeFinalizacao;
 
-            despedidaDeIan.Start();
+            despedidaDeIan.Start(gameObject);
             despedidaDeIan.IniciaConversa();
             
         }

@@ -93,8 +93,7 @@ namespace TalkSpace
 
             }
 
-            NPC.GO_Reference = gameObject;
-            NPC.Start();
+            NPC.Start(gameObject);
             NPC.IniciaConversa();
 
 

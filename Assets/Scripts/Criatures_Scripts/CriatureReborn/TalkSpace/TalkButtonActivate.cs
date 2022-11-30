@@ -24,7 +24,7 @@ namespace TalkSpace
         protected void Start()
         {
             MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveCommands);
-            NPC.Start();
+            NPC.Start(gameObject);
 
             SempreEstaNoTrigger();
         }

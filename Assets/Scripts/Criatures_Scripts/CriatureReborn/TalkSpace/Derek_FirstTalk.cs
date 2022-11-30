@@ -45,7 +45,7 @@ namespace TalkSpace
             KeyVar keys = AbstractGameController.Instance.MyKeys;
             if (!keys.VerificaAutoShift(KeyShift.conversouPrimeiroComIan))
             {
-                npcDerekParaConversarPrimeiro.Start();
+                npcDerekParaConversarPrimeiro.Start(gameObject);
                 npcDerekParaConversarPrimeiro.IniciaConversa();
                 myState = LocalState.conversandoComDerek;
                 PreparandoConversa();

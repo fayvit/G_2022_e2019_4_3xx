@@ -498,7 +498,7 @@ namespace TalkSpace
                         //AplicadorDeCamera.cam.InicializaCameraExibicionista(MeuTransform, 1, true);
 
                         DisplayTextManager.instance.DisplayText.StartTextDisplay();
-                        npcAoGanharLuta.Start();
+                        npcAoGanharLuta.Start(gameObject);
                         npcAoGanharLuta.IniciaConversa();
                         state = ThisState.fraseDaFinalizacao;
                     }, .75f);
@@ -574,7 +574,7 @@ namespace TalkSpace
 
             if (!AbstractGameController.Instance.MyKeys.VerificaAutoShift(chaveDaLuta))
             {   
-                npcAntesDaLuta.Start();
+                npcAntesDaLuta.Start(gameObject);
                 npcAntesDaLuta.IniciaConversa();
                 state = ThisState.conversaAntesDaLuta;
                 
@@ -583,7 +583,7 @@ namespace TalkSpace
             }
             else {
                 
-                npcDepoisDaLutaGanha.Start();
+                npcDepoisDaLutaGanha.Start(gameObject);
                 npcDepoisDaLutaGanha.IniciaConversa();
                 state = ThisState.conversaDeLutaGanha;
             }

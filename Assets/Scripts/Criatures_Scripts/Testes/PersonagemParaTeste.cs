@@ -12,6 +12,7 @@ public class PersonagemParaTeste : MonoBehaviour
 {
     [SerializeField] private bool comecarSemKeyDjey;
     [SerializeField] private bool ignorarRestricoesDeKeyDjey;
+    [SerializeField] private bool ativarCenaDeCesarEmMarjan;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,8 @@ public class PersonagemParaTeste : MonoBehaviour
 
                     if(!comecarSemKeyDjey)
                         AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.hooliganKeyDjey, true);
+
+                    AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.CaesarFalaEmMarjan, !ativarCenaDeCesarEmMarjan);
                     AbstractGameController.Instance.MyKeys.MudaShift(KeyShift.permitidoKeyDjey,true);
                 }
         }, 3);

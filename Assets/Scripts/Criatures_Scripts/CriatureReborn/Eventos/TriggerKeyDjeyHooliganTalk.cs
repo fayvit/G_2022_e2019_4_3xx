@@ -138,7 +138,7 @@ public class TriggerKeyDjeyHooliganTalk : MonoBehaviour
                 {
                     MessageAgregator<MsgStartExternalInteraction>.Publish();
                     MessageAgregator<MsgSendExternalPanelCommand>.AddListener(OnReceiveCommands);
-                    npc.Start();
+                    npc.Start(gameObject);
                     npc.IniciaConversa();
                     fase = FasesDaqui.conversa;
                 }
@@ -212,7 +212,7 @@ public class TriggerKeyDjeyHooliganTalk : MonoBehaviour
 
     private void MsgCloseInfoMessage()
     {
-        npcSaida.Start();
+        npcSaida.Start(gameObject);
         npcSaida.IniciaConversa();
         fase = FasesDaqui.fraseDeSaidaHooligan;
     }
@@ -282,7 +282,7 @@ public class TriggerKeyDjeyHooliganTalk : MonoBehaviour
                         CameraApplicator.cam.transform.position = posInicialCamera.position;
                         CameraApplicator.cam.transform.rotation = posInicialCamera.rotation;
                     },.6f);                  
-                    OnLoadScene(default, default); 
+                    OnLoadScene(default, default);
                 });
                 SceneManager.sceneLoaded += OnLoadScene;
                 SceneManager.LoadSceneAsync("CutsceneRandomHooliganKatids", LoadSceneMode.Additive);

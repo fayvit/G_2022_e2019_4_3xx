@@ -186,7 +186,10 @@ namespace Criatures2021
         {
             
             int indice = lista.IndexOf(nomeItem);
+            
             Debug.Log("NOme do item: "+nomeItem+" : "+nomeItem.ID+" indice "+indice+" : ramanho da lista"+lista.Count);
+            
+
             if (indice > -1)
                 if (lista[indice].Estoque >= 1)
                 {
@@ -194,7 +197,6 @@ namespace Criatures2021
                     
 
                     Debug.Log("Condição para ser perguntada antes desse metodo [casos de não poder usar, como em luta e etc...]");
-              
 
                     MessageAgregator<MsgItemAmountChange>.Publish(new MsgItemAmountChange()
                     {
@@ -206,9 +208,8 @@ namespace Criatures2021
                         Debug.Log("metodo para remover item quando acionado [Parece estar funcionando]");
                         
                         lista.RemoveAt(indice);
-
-                        
                     }
+
                     return true;
                 }
 

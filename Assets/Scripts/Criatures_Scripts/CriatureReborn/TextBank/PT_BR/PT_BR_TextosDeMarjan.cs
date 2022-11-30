@@ -142,6 +142,17 @@ namespace TextBankSpace
                 " Os preços praticados por Baltazar Gladist acabam restringindo muito o comercio de pergaminhos",
                 "Cada vez que preciso repor meu estoque ele cobra mais caro pelos pergaminhos"
             } },
+              { TextKey.caesarEmMarjan,new List<string>()
+            {
+                "Muito bem novato você chegou a cidade de <color=yellow>Marjan</color>",
+                "Estamos perto do nosso primeiro objetivo. Precisamos juntar oito dos medalhões dos deuses.",
+                "E ao lado desta cidade há uma arena divina onde podemos obter o primeiro dos oito",
+                "Ao lado está a <color=yellow>Arena sagrada da deusa Alana</color>",
+                "Na arena você encontrará a sacerdotiza de Alana, a treinadora <color=orange>Amanda Leticia</color>",
+                "Ela é especialista em criatures do tipo normal, acredito que você sberá se preparar bem para o combate",
+                "Mantenha seu foco e logo poderemos confrontar o imperador",
+                "Acredito que nos veremos em breve nos caminhos a seguir. Até lá fique bem"
+            } },
         };
     }
 }

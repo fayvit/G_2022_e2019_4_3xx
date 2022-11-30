@@ -67,7 +67,7 @@ namespace Criatures2021
         protected virtual void IniciarConversar()
         {
             
-            NPC.Start();
+            NPC.Start(gameObject);
             SomDoIniciar();            
 
             MessageAgregator<MsgChangeShiftKey>.Publish(new MsgChangeShiftKey() { change = true, sKey = ID });
@@ -134,7 +134,7 @@ namespace Criatures2021
             CharRotateTo.RotateDir(dir, manager.gameObject);
             CharRotateTo.RotateDir(-dir, charRef.parent.gameObject);
 
-            NPCfalasIniciais.Start();
+            NPCfalasIniciais.Start(gameObject);
             NPCfalasIniciais.IniciaConversa();
         }
     }

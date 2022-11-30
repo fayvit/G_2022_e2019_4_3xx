@@ -21,6 +21,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 113619480128489042, guid: 2a8320a9c6f876848a8d829844aae198,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4447557472775091652, guid: 389a00d13209b5d468b861470f46f90e,
+        type: 3}
+    - target: {fileID: 113619480128489042, guid: 2a8320a9c6f876848a8d829844aae198,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -5643931161694583489, guid: 2a8320a9c6f876848a8d829844aae198,
+        type: 3}
+    - target: {fileID: 113619480128489042, guid: 2a8320a9c6f876848a8d829844aae198,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 671777865442558465, guid: 2a8320a9c6f876848a8d829844aae198,
         type: 3}
       propertyPath: m_RootOrder
@@ -79,7 +96,7 @@ PrefabInstance:
     - target: {fileID: 7989901490755556484, guid: 2a8320a9c6f876848a8d829844aae198,
         type: 3}
       propertyPath: m_Name
-      value: Tree (1)
+      value: ArvoreDeFora_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8320a9c6f876848a8d829844aae198, type: 3}

@@ -67,7 +67,7 @@ namespace Criatures2021
 
         public void InicializadorDosDados()
         {
-            cristais = 100;
+            cristais = 1500;
             CriaturesArmagedados = new List<PetBase>() {
                 new PetBase(PetName.DogMour,5),
                 new PetBase(PetName.Trude,5),

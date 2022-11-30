@@ -131,6 +131,7 @@
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\IanChangeToMerchantManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SlopeSlipManager.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\SpawnWildBase.cs" />
+    <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerCaesarEmMarjan.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerChangeKeyDjey.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerChangeKeyDjeyEnterAndExit.cs" />
     <Compile Include="Assets\Scripts\Criatures_Scripts\CriatureReborn\Eventos\TriggerKeyDjeyHooliganTalk.cs" />

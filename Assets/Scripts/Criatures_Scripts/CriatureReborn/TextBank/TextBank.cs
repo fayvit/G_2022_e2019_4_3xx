@@ -314,6 +314,7 @@ namespace TextBankSpace
         DevotoNialAntesDaLuta,
         DevotaSellenAntesDaLuta,
         DevotaSellenNoMomentoDaVitoria,
-        DevotaSellenDepoisDaVitoria
+        DevotaSellenDepoisDaVitoria,
+        caesarEmMarjan
     }
 }

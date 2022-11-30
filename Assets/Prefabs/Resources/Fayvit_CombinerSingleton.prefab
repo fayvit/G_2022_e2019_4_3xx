@@ -678,6 +678,18 @@ MonoBehaviour:
       myHBase: {fileID: 1892531688190006971}
       deltaVertex: 0
     guid: b9c5fa49-50bd-4aa6-b4bd-0084a8ffa957
+  - tCombiner:
+      myBase: {fileID: 1892531688190006971}
+      myMBase: {fileID: 0}
+      myHBase: {fileID: 1892531688190006971}
+      deltaVertex: 0
+    guid: 69695f2b-e6a7-45de-991b-e3ebf0d0d9b7
+  - tCombiner:
+      myBase: {fileID: 1892531688190006971}
+      myMBase: {fileID: 0}
+      myHBase: {fileID: 1892531688190006971}
+      deltaVertex: 0
+    guid: 92e941cf-11cb-4b42-84bf-bc50a1b0ae5b
 --- !u!114 &6950036339784950875
 MonoBehaviour:
   m_ObjectHideFlags: 0
