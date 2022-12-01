@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Criatures2021.BasicCriatures;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using FayvitBasicTools;
 
 namespace Criatures2021
 {
@@ -15,6 +18,9 @@ namespace Criatures2021
         // Use this for initialization
         void Start()
         {
+           if(StaticInstanceExistence<PoolPets_ddepoisDoBugDaUnity>.SchelduleExistence(Start,this,()=> {
+               return PoolPets_ddepoisDoBugDaUnity.instance;
+           }))
             InvokeRepeating("VerificarSpawn", 0, Random.Range(2.5f,3.5f));
         }
 
@@ -30,9 +36,11 @@ namespace Criatures2021
                 }
                 else if (Vector3.Distance(manager.transform.position, transform.position) > destroyDistance && petsSpawnados)
                 {
-                    foreach (var v in emCampo)
-                        if(v!=null)
-                        Destroy(v.gameObject);
+                    foreach (var v in emCampo.ToList())
+                        if (v != null)
+                        {
+                            PoolPets_ddepoisDoBugDaUnity.instance.DisablePetGO(v.gameObject, v.MeuCriatureBase.NomeID);
+                        }
 
                     emCampo.Clear();
                     petsSpawnados = false;

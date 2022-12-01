@@ -65,8 +65,8 @@ namespace Criatures2021.BasicCriatures
         }
 #endif
 
-		public Dictionary<PetName, List<GameObject>> ativos;
-		public Dictionary<PetName, List<GameObject>> inativos;
+		public Dictionary<PetName, List<GameObject>> ativos = new Dictionary<PetName, List<GameObject>>();
+		public Dictionary<PetName, List<GameObject>> inativos=new Dictionary<PetName, List<GameObject>>();
 
 		public static PoolPets_ddepoisDoBugDaUnity instance;
 
@@ -100,12 +100,16 @@ namespace Criatures2021.BasicCriatures
 				else
 					ativos.Add(p, new List<GameObject> { G });
 
+				G.SetActive(true);
 				return G;
 			}
 			else
 			{
 				GameObject G = Instantiate(Resources.Load<GameObject>("Criatures/" + p.ToString()));
-				ativos.Add(p, new List<GameObject> { G });
+				if (ativos.ContainsKey(p))
+					ativos[p].Add(G);
+				else
+					ativos.Add(p, new List<GameObject> { G });
 				return G;
 			}
 		}
@@ -117,6 +121,7 @@ namespace Criatures2021.BasicCriatures
 				inativos[p].Add(G);
 			else
 				inativos.Add(p, new List<GameObject> { G });
+			G.SetActive(false);
 		}
 	}
 }

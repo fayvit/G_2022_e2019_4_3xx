@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Criatures2021;
+using Criatures2021.BasicCriatures;
 
 public class SpawnPetOnLoad : SpawnWildBase
 {
@@ -22,9 +23,14 @@ public class SpawnPetOnLoad : SpawnWildBase
     // Start is called before the first frame update
     void Start()
     {
-
-        SpawnPets();
-        Destroy(gameObject);
+        if (FayvitBasicTools.StaticInstanceExistence<PoolPets_ddepoisDoBugDaUnity>.SchelduleExistence(Start, this, () =>
+        {
+            return PoolPets_ddepoisDoBugDaUnity.instance;
+        }))
+        {
+            SpawnPets();
+            Destroy(gameObject);
+        }
     }
 
     

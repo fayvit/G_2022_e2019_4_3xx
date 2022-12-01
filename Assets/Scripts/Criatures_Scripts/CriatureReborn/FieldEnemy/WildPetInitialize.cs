@@ -46,7 +46,9 @@ namespace Criatures2021
             Cc.enabled = false;
             PetManagerEnemy C = G.AddComponent<PetManagerEnemy>();
             C.MeuCriatureBase = cBase;
-            G.AddComponent<MyOtimization>().DistanceBehaviours=100;
+            MyOtimization my = G.GetComponent<MyOtimization>();
+            if(my==null)
+                G.AddComponent<MyOtimization>().DistanceBehaviours=100;
             return C;
             
             //RecolocadorDeStatus.VerificaInsereParticulaDeStatus(C);

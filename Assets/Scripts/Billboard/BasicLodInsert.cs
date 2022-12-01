@@ -11,13 +11,17 @@ public class BasicLodInsert
         {
             if (G != null)
             {
-                LODGroup L = G.AddComponent<LODGroup>();
+                LODGroup L = G.GetComponent<LODGroup>();
+                if (L == null)
+                {
+                    L = G.AddComponent<LODGroup>();
 
-                Renderer[] rs = G.GetComponentsInChildren<Renderer>();
+                    Renderer[] rs = G.GetComponentsInChildren<Renderer>();
 
 
-                LOD l = new LOD(lodTax, rs);
-                L.SetLODs(new LOD[1] { l });
+                    LOD l = new LOD(lodTax, rs);
+                    L.SetLODs(new LOD[1] { l });
+                }
             }
         }, 3);
     }

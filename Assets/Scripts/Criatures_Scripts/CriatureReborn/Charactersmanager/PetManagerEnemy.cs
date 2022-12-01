@@ -48,7 +48,11 @@ namespace Criatures2021
             if (this != null)
             {
                 if (transform.position.y < -100)
-                    Destroy(gameObject);
+                {
+                    BasicCriatures.PoolPets_ddepoisDoBugDaUnity.instance.DisablePetGO(gameObject, MeuCriatureBase.NomeID);
+                    //OnDestroy();
+                }
+                    //Destroy(gameObject);
 
 
                 SupportSingleton.Instance.InvokeInSeconds(VerifiqueChao, Random.Range(1f, 5f));
@@ -203,7 +207,9 @@ namespace Criatures2021
                     Destroy(
                     Instantiate(G, transform.position, Quaternion.identity), 5);
 
-                    Destroy(gameObject);
+                    BasicCriatures.PoolPets_ddepoisDoBugDaUnity.instance.DisablePetGO(gameObject, MeuCriatureBase.NomeID);
+
+                    //Destroy(gameObject);
                 }, 4);
             }
             //else if (obj.defeated.GetComponent<PetManagerTrainer>()

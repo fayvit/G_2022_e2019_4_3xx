@@ -1,3 +1,4 @@
+using Criatures2021.BasicCriatures;
 using FayvitLoadScene;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,12 +17,14 @@ namespace Criatures2021
         }
 
         public static GameObject Instantiate(Vector3 position,PetName NomeID,float customVarDir=0.1f) {
-            GameObject CA = ResourcesFolders.GetPet(NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
-            CA = MonoBehaviour.Instantiate(CA,
-                MelhoraInstancia3D.ProcuraPosNoMapa(position,customVarDir)
-                , Quaternion.identity)
-                as GameObject;
-            ResourcesFolders.OtimizePet(NomeID,CA);
+            //GameObject CA = ResourcesFolders.GetPet(NomeID);//Resources.Load<GameObject>("Criatures/"+criature.NomeID.ToString());
+            GameObject CA = PoolPets_ddepoisDoBugDaUnity.instance.GetPetGO(NomeID);
+            //CA = MonoBehaviour.Instantiate(CA,
+            //    MelhoraInstancia3D.ProcuraPosNoMapa(position,customVarDir)
+            //    , Quaternion.identity)
+            //    as GameObject;
+            CA.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(position, customVarDir);
+            //ResourcesFolders.OtimizePet(NomeID,CA);
             return CA;
         }
 
