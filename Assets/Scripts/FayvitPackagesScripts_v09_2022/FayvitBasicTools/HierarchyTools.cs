@@ -18,5 +18,16 @@ namespace FayvitBasicTools
 
             return false;
         }
+
+        public static Transform GetRootParent(Transform T)
+        {
+            Transform retorno = T;
+            while (retorno.parent!=null)
+            {
+                retorno = retorno.parent;
+            }
+
+            return retorno;
+        }
     }
 }

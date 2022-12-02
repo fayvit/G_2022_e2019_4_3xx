@@ -11,6 +11,7 @@ namespace TalkSpace
     {
         [SerializeField] private float minStoppedTime = 1;
         [SerializeField] private float maxStopeedTime = 10;
+        //[SerializeField] private bool iniciarControlle;
         [SerializeField] private ControlledMoveForCharacter controle;
         [SerializeField] private MovePointsForNPC currentPoints;
         private float targetTime = 100;
@@ -29,6 +30,9 @@ namespace TalkSpace
         // Start is called before the first frame update
         void Start()
         {
+            //if (iniciarControlle)
+                IniciarControlle(transform.parent);
+
             MessageAgregator<MsgDesyncStandardAnimation>.AddListener(OnDesync);
             MessageAgregator<MsgStartTextDisplay>.AddListener(OnStartTalk);
             MessageAgregator<MsgFinishTextDisplay>.AddListener(OnFinishTalk);

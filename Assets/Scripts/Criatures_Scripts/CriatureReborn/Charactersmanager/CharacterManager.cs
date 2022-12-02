@@ -19,10 +19,10 @@ namespace Criatures2021
         [SerializeField] private BasicMove mov;
         [SerializeField] private DadosDeJogador dados;
         [SerializeField] private DamageState damageState;
+        [SerializeField] private LastGroundPositionManager lastGroundedPosition;
         [SerializeField] private bool ignorarRestricoesDeKeyDjey;
 
         private bool deuTempoParaKeyDjey = true;
-        private Vector3 lastGroundedPosition;
 
         private const float INTERVALO_KEY_DJEY = .75F;
 
@@ -51,7 +51,7 @@ namespace Criatures2021
             damageState = new DamageState(transform);
             mov = new BasicMove(new MoveFeatures() { runSpeed=8, jumpFeat = new JumpFeatures() });
             mov.StartFields(transform);
-            lastGroundedPosition = transform.position;
+            lastGroundedPosition = new LastGroundPositionManager(transform.position);
             UpdateLastGroundedPosition();
 
             if (ThisState == CharacterState.notStarted)
@@ -166,7 +166,7 @@ namespace Criatures2021
         {
             if (obj.who == transform)
             {
-                transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(lastGroundedPosition);
+                transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(lastGroundedPosition.Get);
 
                 if (obj.petChangePosition)
                 {
@@ -574,20 +574,37 @@ namespace Criatures2021
             }
         }
 
+        bool PodeAtualizarGroundPosition()
+        {
+            if (ThisState == CharacterState.onFree && mov.IsGrounded &&
+                !mov._JumpM.isJumping)
+            {
+                return true;
+            }
+            else if (ThisState == CharacterState.withKeyDjey)
+            {
+                Transform keyDjeyPai = HierarchyTools.GetRootParent(transform);
+                
+                Collider[] cs = Physics.OverlapSphere(keyDjeyPai.position, 0.9f);
+                foreach (var c in cs)
+                {
+                    if (c.tag == "cenario")
+                        return true;
+                }
+
+                return false;
+            }
+
+            return false;
+        }
+
         private void UpdateLastGroundedPosition()
         {
             SupportSingleton.Instance.InvokeInSeconds(gameObject, () =>
             {
-                if ((ThisState==CharacterState.withKeyDjey|| ThisState == CharacterState.onFree) && mov.IsGrounded && !mov._JumpM.isJumping &&
-                Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit)
-                )
-                {
-                    float angle = Vector3.Angle(hit.normal, Vector3.up);
-                    if (angle < 65 )
-                        lastGroundedPosition = transform.position;
-                }
+                lastGroundedPosition.NoTimedUpdate(PodeAtualizarGroundPosition(), transform);
                 UpdateLastGroundedPosition();
-            }, 3);
+            }, lastGroundedPosition.IntervalToUpdate);
         }
 
         void ChangeSelectedItem(int change)
