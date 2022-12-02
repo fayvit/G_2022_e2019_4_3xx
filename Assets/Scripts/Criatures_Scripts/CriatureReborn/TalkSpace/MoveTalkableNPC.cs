@@ -74,13 +74,18 @@ namespace TalkSpace
         {
             if (obj.gameObject.transform == transform.parent)
             {
-                controle.StartFields(obj.gameObject.transform);
-                    //SupportSingleton.Instance.InvokeOnEndFrame(() =>
-                    //{
-
-                    IniciarCaminhadaComNovoPonto();
-                //});
+                IniciarControlle(obj.gameObject.transform);
             }
+        }
+
+        void IniciarControlle(Transform T)
+        {
+            controle.StartFields(T);
+            //SupportSingleton.Instance.InvokeOnEndFrame(() =>
+            //{
+
+            IniciarCaminhadaComNovoPonto();
+            //});
         }
 
         void IniciarCaminhadaComNovoPonto()
