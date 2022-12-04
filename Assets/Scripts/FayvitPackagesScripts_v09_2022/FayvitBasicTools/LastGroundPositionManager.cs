@@ -12,8 +12,9 @@ namespace FayvitBasicTools
 
         public float IntervalToUpdate => intervalToUpdate;
         public Vector3 Get { get { return lastPosition; } }
-        public LastGroundPositionManager(Vector3 startPosition)
+        public LastGroundPositionManager(Vector3 startPosition,float timeToUpdate=3)
         {
+            intervalToUpdate = timeToUpdate;
             lastPosition = startPosition;
         }
 

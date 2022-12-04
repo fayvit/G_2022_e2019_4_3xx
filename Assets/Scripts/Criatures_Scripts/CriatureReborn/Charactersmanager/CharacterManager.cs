@@ -10,7 +10,6 @@ using FayvitSave;
 using Criatures2021Hud;
 using TextBankSpace;
 using CustomizationSpace;
-using System;
 
 namespace Criatures2021
 {
@@ -51,7 +50,7 @@ namespace Criatures2021
             damageState = new DamageState(transform);
             mov = new BasicMove(new MoveFeatures() { runSpeed=8, jumpFeat = new JumpFeatures() });
             mov.StartFields(transform);
-            lastGroundedPosition = new LastGroundPositionManager(transform.position);
+            lastGroundedPosition = new LastGroundPositionManager(transform.position,5);
             UpdateLastGroundedPosition();
 
             if (ThisState == CharacterState.notStarted)
