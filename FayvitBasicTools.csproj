@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\ContadorCiclico.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\DirectionOnThePlane.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\HierarchyTools.cs" />
+    <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\LastGroundPositionManager.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\MelhoraInstancia3D.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\PiscaBarra.cs" />
     <Compile Include="Assets\Scripts\FayvitPackagesScripts_v09_2022\FayvitBasicTools\RetaNoPlano.cs" />

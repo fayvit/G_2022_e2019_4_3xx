@@ -120,6 +120,7 @@ namespace TalkSpace
                 {
                     v.Pet.EstadoPerfeito();
                 }
+                Manager = null;
                 MessageAgregator<MsgCriatureDefeated>.RemoveListener(OnCriatureDefeated);
 
             }

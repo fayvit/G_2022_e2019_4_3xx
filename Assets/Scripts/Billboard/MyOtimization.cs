@@ -13,6 +13,8 @@ public class MyOtimization : MonoBehaviour
     [SerializeField] private float distanceCloth = 20;
     [SerializeField] private float distanceAnimators = 100;
     [SerializeField] private float distanceBehaviours = 250;
+    [SerializeField] private bool insertLOD;
+    [SerializeField] private float hideTax = 0.04f;
     [SerializeField] private bool debug;
 
     private static Transform target;
@@ -26,6 +28,9 @@ public class MyOtimization : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(insertLOD)
+            BasicLodInsert.Insert(G:gameObject,lodTax:hideTax);
+
         cloths = gameObject.GetComponentsInChildren<Cloth>();
         //animators = new Animator[0];
         animators = gameObject.GetComponentsInChildren<Animator>();

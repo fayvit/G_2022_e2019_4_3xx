@@ -6,7 +6,6 @@ namespace Npc2021
 {
     public class NpcAppearanceConfiguration : MonoBehaviour
     {
-
         [SerializeField] private string sId;
         [SerializeField] private Vector3 startRotation = Vector3.forward;
 
