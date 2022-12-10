@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
 
-    public abstract class ButtonActivate : MonoBehaviour
+public abstract class ButtonActivate : MonoBehaviour
     {
         //[SerializeField] protected GameObject btn;
         [SerializeField] private bool debug;
@@ -46,21 +45,22 @@ using FayvitMessageAgregator;
                 && AbstractGlobalController.Instance.Players.Count > 0
                 )
                 
-                    if (gameObject!=null
+                    if (estaNoTrigger
+                        &&
+                        gameObject !=null
+                        &&
+                        gameObject.activeSelf
+                        &&
+                        AbstractGlobalController.Instance.Players[0].Manager.ThisState == CharacterState.onFree
                         &&
                         Vector3.Distance(
                             AbstractGlobalController.Instance.Players[0].Manager.transform.position, transform.position) 
                                 < distanciaParaAcionar
                         &&
-                        estaNoTrigger
-                        &&
-                        AbstractGlobalController.Instance.Players[0].Manager.ThisState == CharacterState.onFree
-                        &&
                         ActionManager.Instance.PodeVisualizarEste(this)
                         //  &&
                         // GameController.g.EmEstadoDeAcao()
-                        &&
-                        gameObject.activeSelf
+                        
                         )
                     {
                         MessageAgregator<MsgRequestShowActionHud>.Publish(

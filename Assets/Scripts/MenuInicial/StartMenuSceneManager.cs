@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.SceneManagement;
 using FayvitBasicTools;
 using FayvitMessageAgregator;
 using FayvitSounds;
 using FayvitUI;
-//using FayvitLoadScene;
 using FayvitSave;
 using FayvitCommandReader;
 using TextBankSpace;

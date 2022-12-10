@@ -23,42 +23,46 @@ namespace Eventos
 
         void EfetivarAcao()
         {
-            if (!AbstractGameController.Instance.MyKeys.VerificaAutoShift(trainer.ChaveDaLuta))
+
+
+            MessageAgregator<MsgStartExternalInteraction>.Publish();
+            AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() =>
             {
-                MessageAgregator<MsgStartExternalInteraction>.Publish();
-                AbstractGlobalController.Instance.FadeV.StartFadeOutWithAction(() => {
-                    CharacterController controle = MyGlobalController.MainPlayer.GetComponent<CharacterController>();
-                    controle.enabled = false;
-                    controle.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(heroTargetPosition.position);
-                    AbstractGlobalController.Instance.FadeV.StartFadeInWithAction(() =>
+                CharacterController controle = MyGlobalController.MainPlayer.GetComponent<CharacterController>();
+                controle.enabled = false;
+                controle.transform.position = MelhoraInstancia3D.ProcuraPosNoMapa(heroTargetPosition.position);
+                AbstractGlobalController.Instance.FadeV.StartFadeInWithAction(() =>
+                {
+                    controle.enabled = true;
+                    MessageAgregator<MsgRequestExternalFightStart>.Publish(new MsgRequestExternalFightStart()
                     {
-                        controle.enabled = true;
-                        MessageAgregator<MsgRequestExternalFightStart>.Publish(new MsgRequestExternalFightStart()
-                        {
-                            fighters = trainer.transform
-                        });
+                        fighters = trainer.transform
                     });
                 });
-            }
+            });
+
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (!AbstractGameController.Instance.MyKeys.VerificaAutoShift(trainer.ChaveDaLuta))
             {
-                //Debug.Log("Player no trigger");
-                if (MyGlobalController.MainPlayer.ThisState == CharacterState.onFree)
-                    EfetivarAcao();
-            }
-            else if (other.CompareTag("Criature"))
-            {
-                if (!iniciouLuta)
+                if (other.CompareTag("Player"))
                 {
-                    KeyDjeyTransportManager kTransport = other.GetComponent<KeyDjeyTransportManager>();
-                    if (kTransport)
-                    {
-                        kTransport.SairDoKeyDjey(returnState:CharacterState.stopped,melhorarPosicaoDoPet:false);
+                    //Debug.Log("Player no trigger");
+                    if (MyGlobalController.MainPlayer.ThisState == CharacterState.onFree)
                         EfetivarAcao();
+                }
+                else if (other.CompareTag("Criature"))
+                {
+                    if (!iniciouLuta)
+                    {
+                        KeyDjeyTransportManager kTransport = other.GetComponent<KeyDjeyTransportManager>();
+                        if (kTransport)
+                        {
+                            kTransport.SairDoKeyDjey(returnState: CharacterState.stopped, melhorarPosicaoDoPet: false);
+                            EfetivarAcao();
+                        }
                     }
                 }
             }

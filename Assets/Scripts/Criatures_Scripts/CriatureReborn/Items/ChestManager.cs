@@ -272,7 +272,7 @@ namespace Criatures2021
                 );
             }
 
-            MessageAgregator<MsgStartExternalInteraction>.Publish();
+            //MessageAgregator<MsgStartExternalInteraction>.Publish();
         }
 
 

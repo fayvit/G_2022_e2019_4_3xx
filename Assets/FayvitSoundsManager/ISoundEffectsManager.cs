@@ -62,6 +62,8 @@ namespace FayvitSounds
         Explosion5 = 43,
         Evasion2 = 44,
         Wind11 = 45,
-        velocidadeCriatures = 46
+        velocidadeCriatures = 46,
+        Parry = 47,
+        Buzzer1 = 48
     }
 }
